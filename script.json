@@ -1,0 +1,1035 @@
+{
+  "service_name": "script",
+  "url": "https://developers.google.com/apps-script/reference/script",
+  "classes": [
+    {
+      "name": "Enum AuthMode",
+      "url": "https://developers.google.com/apps-script/reference/script/auth-mode",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class AuthorizationInfo",
+      "url": "https://developers.google.com/apps-script/reference/script/authorization-info",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getAuthorizationStatus()",
+          "description": "Gets a value that indicates whether the user needs to authorize this script to use one or more\nservices (for example,ScriptApp.AuthorizationStatus.REQUIRED).",
+          "return_type": {
+            "name": "AuthorizationStatus",
+            "url": "https://developers.google.com/apps-script/reference/script/authorization-status"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAuthorizationUrl()",
+          "description": "Gets the authorization URL that can be used to grant access to the script. This method returnsnullif no authorization is required. The page at the URL will close automatically if\nit is accessed and the script does not require any authorization.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAuthorizedScopes()",
+          "description": "Gets a list of authorized scopes for the script. If authorization information is requested for\na specified list of scopes, returns the authorized scopes from the specified list.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum AuthorizationStatus",
+      "url": "https://developers.google.com/apps-script/reference/script/authorization-status",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class CalendarTriggerBuilder",
+      "url": "https://developers.google.com/apps-script/reference/script/calendar-trigger-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "create()",
+          "description": "Creates the trigger and returns it.",
+          "return_type": {
+            "name": "Trigger",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "onEventUpdated()",
+          "description": "Specifies a trigger that fires when a calendar entry is created, updated, or deleted.",
+          "return_type": {
+            "name": "CalendarTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ClockTriggerBuilder",
+      "url": "https://developers.google.com/apps-script/reference/script/clock-trigger-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "durationMilliseconds",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The minimum duration (in milliseconds) after the current time when\n    the trigger should run."
+            }
+          ],
+          "name": "after(durationMilliseconds)",
+          "description": "Specifies the minimum duration (in milliseconds) after the current time that the trigger runs.\nThe actual duration might vary, but won't be less than your specified minimum.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "A Date object representing when the trigger should run."
+            }
+          ],
+          "name": "at(date)",
+          "description": "Specifies when the trigger runs.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "year",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The calendar year to schedule the trigger."
+            },
+            {
+              "name": "month",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The calendar month to schedule the trigger (should be a number between 1 and 12,\n    inclusive)."
+            },
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The calendar day to schedule the trigger (should be a number between 1 and 31,\n    inclusive)."
+            }
+          ],
+          "name": "atDate(year, month, day)",
+          "description": "Specifies that the trigger fires on the given date, by default near midnight (+/- 15 minutes).",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "hour",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The hour at which to fire."
+            }
+          ],
+          "name": "atHour(hour)",
+          "description": "Specifies the hour the trigger at which the trigger runs.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "create()",
+          "description": "Creates the trigger.",
+          "return_type": {
+            "name": "Trigger",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "n",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of days between executions."
+            }
+          ],
+          "name": "everyDays(n)",
+          "description": "Specifies to run the trigger everyndays.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "n",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of hours between executions."
+            }
+          ],
+          "name": "everyHours(n)",
+          "description": "Specifies to run the trigger everynhours.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "n",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of minutes between executions."
+            }
+          ],
+          "name": "everyMinutes(n)",
+          "description": "Specifies to run the trigger everynminutes.nmust be 1, 5, 10, 15 or 30.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "n",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of weeks between executions."
+            }
+          ],
+          "name": "everyWeeks(n)",
+          "description": "Specifies to run the trigger everynweeks.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "timezone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The timezone with which to treat time information in the event."
+            }
+          ],
+          "name": "inTimezone(timezone)",
+          "description": "Specifies the timezone for the specified dates/time when the trigger runs. By default, the\ntimezone is that of the script.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "minute",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The minute at which to fire."
+            }
+          ],
+          "name": "nearMinute(minute)",
+          "description": "Specifies the minute at which the trigger runs (plus or minus 15 minutes). IfnearMinute()is not called, a random minute value is used.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The day of the month the trigger should be scheduled for."
+            }
+          ],
+          "name": "onMonthDay(day)",
+          "description": "Specifies the date in the month that the trigger runs.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "day",
+              "type": {
+                "name": "Weekday",
+                "url": "https://developers.google.com/apps-script/reference/base/weekday.html"
+              },
+              "description": "The day of the week to fire."
+            }
+          ],
+          "name": "onWeekDay(day)",
+          "description": "Specifies the day of the week that the trigger runs.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class DocumentTriggerBuilder",
+      "url": "https://developers.google.com/apps-script/reference/script/document-trigger-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "create()",
+          "description": "Creates and returns the new trigger.",
+          "return_type": {
+            "name": "Trigger",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "onOpen()",
+          "description": "Specifies a trigger that will fire when the document is opened.",
+          "return_type": {
+            "name": "DocumentTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum EventType",
+      "url": "https://developers.google.com/apps-script/reference/script/event-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class FormTriggerBuilder",
+      "url": "https://developers.google.com/apps-script/reference/script/form-trigger-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "create()",
+          "description": "Creates and returns the new trigger.",
+          "return_type": {
+            "name": "Trigger",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "onFormSubmit()",
+          "description": "Specifies a trigger that will fire when a response is submitted to the form.",
+          "return_type": {
+            "name": "FormTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "onOpen()",
+          "description": "Specifies a trigger that will fire when the form's edit view is opened.",
+          "return_type": {
+            "name": "FormTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum InstallationSource",
+      "url": "https://developers.google.com/apps-script/reference/script/installation-source",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class ScriptApp",
+      "url": "https://developers.google.com/apps-script/reference/script/script-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "trigger",
+              "type": {
+                "name": "Trigger",
+                "url": "https://developers.google.com/apps-script/reference/script/trigger"
+              },
+              "description": "The trigger to delete."
+            }
+          ],
+          "name": "deleteTrigger(trigger)",
+          "description": "Removes the given trigger so it no longer runs.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "authMode",
+              "type": {
+                "name": "AuthMode",
+                "url": "https://developers.google.com/apps-script/reference/script/auth-mode"
+              },
+              "description": "The authorization mode for which authorization information is requested; in\n    almost all cases, the value forauthModeshould beScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL), since no other authorization mode\n    requires that users grant authorization."
+            }
+          ],
+          "name": "getAuthorizationInfo(authMode)",
+          "description": "Gets an object that checks if the user has granted authorization for all the script\nrequirements. The object also provides an authorization URL for users to grant those\npermissions, in case any of the script requirements are not authorized.",
+          "return_type": {
+            "name": "AuthorizationInfo",
+            "url": "https://developers.google.com/apps-script/reference/script/authorization-info"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "authMode",
+              "type": {
+                "name": "AuthMode",
+                "url": "https://developers.google.com/apps-script/reference/script/auth-mode"
+              },
+              "description": "The authorization mode for which authorization information is requested; in\n    almost all cases, the value forauthModeshould beScriptApp.AuthMode.FULL,\n    since no other authorization mode requires that users grant authorization."
+            },
+            {
+              "name": "oAuthScopes",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "The OAuth scopes for which authorization information is requested."
+            }
+          ],
+          "name": "getAuthorizationInfo(authMode, oAuthScopes)",
+          "description": "Gets an object that checks if the user has granted authorization for the requested scopes. The\nobject also provides an authorization URL for users to grant those permissions, in case any of\nthe requested scopes are not authorized.",
+          "return_type": {
+            "name": "AuthorizationInfo",
+            "url": "https://developers.google.com/apps-script/reference/script/authorization-info"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getIdentityToken()",
+          "description": "Gets anOpenID Connectidentity token for the\neffective user, if theopenidscope has been granted. This scope is not included\nby default, and you must add it as anexplicit scopein the manifest\nfile to request it. Include the scopeshttps://www.googleapis.com/auth/userinfo.emailorhttps://www.googleapis.com/auth/userinfo.profileto return additional\nuser information in the token.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getInstallationSource()",
+          "description": "Returns an enum value that indicates how the script came to be installed as an add-on for the\ncurrent user (for example, whether the user installed it personally through the Chrome Web\nStore, or whether a domain administrator installed it for all users).",
+          "return_type": {
+            "name": "InstallationSource",
+            "url": "https://developers.google.com/apps-script/reference/script/installation-source"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getOAuthToken()",
+          "description": "Gets the OAuth 2.0access\ntokenfor the effective user. If the script's OAuth scopes are sufficient to authorize\nanother Google API that normally requires its own OAuth flow (likeGoogle Picker), scripts can bypass the\nsecond authorization prompt by passing this token instead. The token expires after a time (a\nfew minutes at minimum); scripts should handle authorization failures and call this method to\nobtain a fresh token when needed.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getProjectTriggers()",
+          "description": "Gets all installable triggers associated with the current project and current user.",
+          "return_type": {
+            "name": "Trigger[]",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getScriptId()",
+          "description": "Gets the script project's unique ID. This is the preferred method to get the unique identifier\nfor the script project as opposed togetProjectKey(). This ID can be used in all places\nwhere project key was previously provided.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getService()",
+          "description": "Gets an object used to control publishing the script as a web app.",
+          "return_type": {
+            "name": "Service",
+            "url": "https://developers.google.com/apps-script/reference/script/service"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "document",
+              "type": {
+                "name": "Document",
+                "url": "https://developers.google.com/apps-script/reference/document/document.html"
+              },
+              "description": "A Google Docs file that may contain installable triggers."
+            }
+          ],
+          "name": "getUserTriggers(document)",
+          "description": "Gets all installable triggers owned by this user in the given document, for this script or\nadd-on only. This method cannot be used to see the triggers attached to other scripts.",
+          "return_type": {
+            "name": "Trigger[]",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "form",
+              "type": {
+                "name": "Form",
+                "url": "https://developers.google.com/apps-script/reference/forms/form.html"
+              },
+              "description": "A Google Forms file that may contain installable triggers."
+            }
+          ],
+          "name": "getUserTriggers(form)",
+          "description": "Gets all installable triggers owned by this user in the given form, for this script or add-on\nonly. This method cannot be used to see the triggers attached to other scripts.",
+          "return_type": {
+            "name": "Trigger[]",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "spreadsheet",
+              "type": {
+                "name": "Spreadsheet",
+                "url": "https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet.html"
+              },
+              "description": "A Google Sheets file that may contain installable triggers."
+            }
+          ],
+          "name": "getUserTriggers(spreadsheet)",
+          "description": "Gets all installable triggers owned by this user in the given spreadsheet, for this script or\nadd-on only. This method cannot be used to see the triggers attached to other scripts.",
+          "return_type": {
+            "name": "Trigger[]",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "invalidateAuth()",
+          "description": "Invalidates the authorization the effective user has to execute the current script. Used to\ninvalidate any permissions for the current script. This is especially useful for functions\ntagged as one-shot authorization. Since one-shot authorization functions can only be called the\nfirst run after the script has acquired authorization, if you wish to perform an action\nafterwards, you must revoke any authorization the script had, so the user can see the\nauthorization dialog again.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newStateToken()",
+          "description": "Creates a builder for a state token that can be used in a callback API (like an OAuth flow).",
+          "return_type": {
+            "name": "StateTokenBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/state-token-builder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "functionName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The function to call when the trigger fires. You can use functions from\n    included libraries, such asLibrary.libFunction1."
+            }
+          ],
+          "name": "newTrigger(functionName)",
+          "description": "Begins the process of creating an installable trigger that, when fired, calls a given function.",
+          "return_type": {
+            "name": "TriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger-builder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "authMode",
+              "type": {
+                "name": "AuthMode",
+                "url": "https://developers.google.com/apps-script/reference/script/auth-mode"
+              },
+              "description": "The authorization mode for which script scopes needs to be evaluated, in almost\n    all cases, the value forauthModeshould beScriptApp.AuthMode.FULL, since\n    no other authorization mode requires that users grant authorization."
+            }
+          ],
+          "name": "requireAllScopes(authMode)",
+          "description": "Validates if the user has granted consent for all of the scopes requested by the script. Use\nthis method if an execution flow relies on all of the scopes that a script requests. If any\nconsents are missing, then this method ends the current execution and renders an authorization\nprompt to request the missing consents.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "authMode",
+              "type": {
+                "name": "AuthMode",
+                "url": "https://developers.google.com/apps-script/reference/script/auth-mode"
+              },
+              "description": "The authorization mode for which requested scopes needs to be evaluated, in\n    almost all cases, the value forauthModeshould beScriptApp.AuthMode.FULL,\n    since no other authorization mode requires that users grant authorization."
+            },
+            {
+              "name": "oAuthScopes",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "The OAuth scopes that are required to complete the given execution flow."
+            }
+          ],
+          "name": "requireScopes(authMode, oAuthScopes)",
+          "description": "Validates if the user has granted consent for the requested scopes. Use this method if an\nexecution flow relies on one or more services. If any of the specified consents are missing,\nthen this method ends the current execution and renders an authorization prompt to request the\nmissing consents. Scopes that are invalid or notrequiredby\nthe script lead to an error.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getProjectKey()",
+          "description": "Deprecated.usegetScriptId()instead.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getScriptTriggers()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Trigger[]",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Service",
+      "url": "https://developers.google.com/apps-script/reference/script/service",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getUrl()",
+          "description": "Returns the URL of the web app, if it has been deployed; otherwise returnsnull. If you\nare running the development mode web app, this returns the development mode url.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isEnabled()",
+          "description": "Returnstrueif the script is accessible as a web app.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "disable()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class SpreadsheetTriggerBuilder",
+      "url": "https://developers.google.com/apps-script/reference/script/spreadsheet-trigger-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "create()",
+          "description": "Creates the trigger and returns it.",
+          "return_type": {
+            "name": "Trigger",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "onChange()",
+          "description": "Specifies a trigger that will fire when the spreadsheet's content or structure is changed.",
+          "return_type": {
+            "name": "SpreadsheetTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "onEdit()",
+          "description": "Specifies a trigger that will fire when the spreadsheet is edited.",
+          "return_type": {
+            "name": "SpreadsheetTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "onFormSubmit()",
+          "description": "Specifies a trigger that will fire when the spreadsheet has a form submitted to it.",
+          "return_type": {
+            "name": "SpreadsheetTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "onOpen()",
+          "description": "Specifies a trigger that will fire when the spreadsheet is opened.",
+          "return_type": {
+            "name": "SpreadsheetTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class StateTokenBuilder",
+      "url": "https://developers.google.com/apps-script/reference/script/state-token-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "createToken()",
+          "description": "Constructs an encrypted string representation of the state token.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the argument"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value of the argument"
+            }
+          ],
+          "name": "withArgument(name, value)",
+          "description": "Adds an argument to the token. This method can be called multiple times.",
+          "return_type": {
+            "name": "StateTokenBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "method",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the callback function, represented as a string without parentheses or\n    arguments. You can use functions from included libraries, such asLibrary.libFunction1."
+            }
+          ],
+          "name": "withMethod(method)",
+          "description": "Sets a callback function. The default is a function namedcallback().",
+          "return_type": {
+            "name": "StateTokenBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "seconds",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the duration for which the token is valid; the maximum value is3600"
+            }
+          ],
+          "name": "withTimeout(seconds)",
+          "description": "Sets the duration (in seconds) for which the token is valid. The defaults is 60 seconds; the\nmaximum duration is 3600 seconds (1 hour).",
+          "return_type": {
+            "name": "StateTokenBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Trigger",
+      "url": "https://developers.google.com/apps-script/reference/script/trigger",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getEventType()",
+          "description": "Returns the event type that the trigger fires on.",
+          "return_type": {
+            "name": "EventType",
+            "url": "https://developers.google.com/apps-script/reference/script/event-type"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getHandlerFunction()",
+          "description": "Returns the function that will be called when the trigger fires.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTriggerSource()",
+          "description": "Returns the source of events that will cause the trigger to fire.",
+          "return_type": {
+            "name": "TriggerSource",
+            "url": "https://developers.google.com/apps-script/reference/script/trigger-source"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTriggerSourceId()",
+          "description": "Returns the id specific to the source.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUniqueId()",
+          "description": "Returns a unique identifier that can be used to distinguish triggers from each other.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class TriggerBuilder",
+      "url": "https://developers.google.com/apps-script/reference/script/trigger-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "document",
+              "type": {
+                "name": "Document",
+                "url": "https://developers.google.com/apps-script/reference/document/document.html"
+              },
+              "description": "the document"
+            }
+          ],
+          "name": "forDocument(document)",
+          "description": "Creates and returns aDocumentTriggerBuildertied to the given document.",
+          "return_type": {
+            "name": "DocumentTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/document-trigger-builder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the ID for the document"
+            }
+          ],
+          "name": "forDocument(key)",
+          "description": "Creates and returns aDocumentTriggerBuildertied to the document with the given ID.",
+          "return_type": {
+            "name": "DocumentTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/document-trigger-builder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "form",
+              "type": {
+                "name": "Form",
+                "url": "https://developers.google.com/apps-script/reference/forms/form.html"
+              },
+              "description": "the form"
+            }
+          ],
+          "name": "forForm(form)",
+          "description": "Creates and returns aFormTriggerBuildertied to the given form.",
+          "return_type": {
+            "name": "FormTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/form-trigger-builder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the ID for the form"
+            }
+          ],
+          "name": "forForm(key)",
+          "description": "Creates and returns aFormTriggerBuildertied to the form with the given ID.",
+          "return_type": {
+            "name": "FormTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/form-trigger-builder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "sheet",
+              "type": {
+                "name": "Spreadsheet",
+                "url": "https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet.html"
+              },
+              "description": "the spreadsheet"
+            }
+          ],
+          "name": "forSpreadsheet(sheet)",
+          "description": "Creates and returns aSpreadsheetTriggerBuildertied to the given spreadsheet.",
+          "return_type": {
+            "name": "SpreadsheetTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/spreadsheet-trigger-builder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the ID for the spreadsheet"
+            }
+          ],
+          "name": "forSpreadsheet(key)",
+          "description": "Creates and returns aSpreadsheetTriggerBuildertied to the spreadsheet with the given\nID.",
+          "return_type": {
+            "name": "SpreadsheetTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/spreadsheet-trigger-builder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "email ID of the user calendar the trigger monitors."
+            }
+          ],
+          "name": "forUserCalendar(emailId)",
+          "description": "Returns a builder for building calendar triggers.",
+          "return_type": {
+            "name": "CalendarTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/calendar-trigger-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "timeBased()",
+          "description": "Creates and returns aClockTriggerBuilderfor building time-based triggers.",
+          "return_type": {
+            "name": "ClockTriggerBuilder",
+            "url": "https://developers.google.com/apps-script/reference/script/clock-trigger-builder"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum TriggerSource",
+      "url": "https://developers.google.com/apps-script/reference/script/trigger-source",
+      "description": "",
+      "methods": []
+    }
+  ]
+}

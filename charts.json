@@ -1,0 +1,3405 @@
+{
+  "service_name": "charts",
+  "url": "https://developers.google.com/apps-script/reference/charts",
+  "classes": [
+    {
+      "name": "Class AreaChartBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/area-chart-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds the chart.",
+          "return_type": {
+            "name": "Chart",
+            "url": "https://developers.google.com/apps-script/reference/charts/chart"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "reverseCategories()",
+          "description": "Reverses the drawing of series in the domain axis. For vertical-range charts (such as line,\narea or column charts), this means the horizontal axis is drawn from right to left. For\nhorizontal-range charts (such as bar charts), this means the vertical axis is drawn from top to\nbottom. For pie charts, this means the slices are drawn counterclockwise.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValue",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The CSS value for the color (such as\"blue\"or\"#00f\")."
+            }
+          ],
+          "name": "setBackgroundColor(cssValue)",
+          "description": "Sets the background color for the chart.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValues",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of color CSS values, such as[\"red\", \"#acf\"]. The nth element\n    in the array represents the color of the nth line in the chart."
+            }
+          ],
+          "name": "setColors(cssValues)",
+          "description": "Sets the colors for the lines in the chart.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The data source URL, including any query parameters."
+            }
+          ],
+          "name": "setDataSourceUrl(url)",
+          "description": "Sets the data source URL that is used to pull data in from an external source, such as Google\nSheets. If a data source URL and a DataTable are provided, the data source URL is ignored.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "tableBuilder",
+              "type": {
+                "name": "DataTableBuilder",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder"
+              },
+              "description": "A data table builder. A new data table is created instantly as part of this\n    call, so any further updates to the builder won't be reflected in the chart."
+            }
+          ],
+          "name": "setDataTable(tableBuilder)",
+          "description": "Sets the data table to use for the chart using a DataTableBuilder. This is a convenience method\nfor setting the data table without needing to callbuild().",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "table",
+              "type": {
+                "name": "DataTableSource",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-source"
+              },
+              "description": "The data table to use for the chart."
+            }
+          ],
+          "name": "setDataTable(table)",
+          "description": "Sets the data table which contains the lines for the chart, as well as the X-axis labels. The\nfirst column should be a string, and contain the horizontal axis labels. Any number of columns\ncan follow, all must be numeric. Each column is displayed as a separate line.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "dataViewDefinition",
+              "type": {
+                "name": "DataViewDefinition",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition"
+              },
+              "description": "A data view definition object that defines the view that should be\n    derived from the given data source for the chart drawing."
+            }
+          ],
+          "name": "setDataViewDefinition(dataViewDefinition)",
+          "description": "Sets the data view definition to use for the chart.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of the chart, in pixels."
+            },
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The height of the chart, in pixels."
+            }
+          ],
+          "name": "setDimensions(width, height)",
+          "description": "Sets the dimensions for the chart.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "position",
+              "type": {
+                "name": "Position",
+                "url": "https://developers.google.com/apps-script/reference/charts/position"
+              },
+              "description": "The position of the legend."
+            }
+          ],
+          "name": "setLegendPosition(position)",
+          "description": "Sets the position of the legend with respect to the chart. By default, there is no legend.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart legend."
+            }
+          ],
+          "name": "setLegendTextStyle(textStyle)",
+          "description": "Sets the text style of the chart legend.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The option to set."
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setOption(option, value)",
+          "description": "Sets advanced options for this chart. Seethe available options for\nthis chart. This method has no effect if the given option is invalid.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "style",
+              "type": {
+                "name": "PointStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/point-style"
+              },
+              "description": "The style to use for points in the line."
+            }
+          ],
+          "name": "setPointStyle(style)",
+          "description": "Sets the style for points in the line. By default, points have no particular styles, and only\nthe line is visible.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the lowest grid line of the range axis."
+            },
+            {
+              "name": "end",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the highest grid line of the range axis."
+            }
+          ],
+          "name": "setRange(start, end)",
+          "description": "Sets the range for the chart.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setStacked()",
+          "description": "Uses stacked lines, meaning that line and bar values are stacked (accumulated). By default,\nthere is no stacking.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "chartTitle",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the chart title."
+            }
+          ],
+          "name": "setTitle(chartTitle)",
+          "description": "Sets the title of the chart. The title is displayed centered above the chart.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setTitleTextStyle(textStyle)",
+          "description": "Sets the text style of the chart title.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTextStyle(textStyle)",
+          "description": "Sets the horizontal axis text style.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the X-axis."
+            }
+          ],
+          "name": "setXAxisTitle(title)",
+          "description": "Adds a title to the horizontal axis. The title is centered and appears below the axis value\nlabels.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTitleTextStyle(textStyle)",
+          "description": "Sets the horizontal axis title text style.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTextStyle(textStyle)",
+          "description": "Sets the vertical axis text style.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the Y-axis."
+            }
+          ],
+          "name": "setYAxisTitle(title)",
+          "description": "Adds a title to the vertical axis. The title is centered and appears to the left of the value\nlabels.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTitleTextStyle(textStyle)",
+          "description": "Sets the vertical axis title text style.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "useLogScale()",
+          "description": "Makes the range axis into a logarithmic scale (requires all values to be positive). The range\naxis are the vertical axis for vertical charts (such as line, area, or column) and the\nhorizontal axis for horizontal charts (such as bar).",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class BarChartBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/bar-chart-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds the chart.",
+          "return_type": {
+            "name": "Chart",
+            "url": "https://developers.google.com/apps-script/reference/charts/chart"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "reverseCategories()",
+          "description": "Reverses the drawing of series in the domain axis. For vertical-range charts (such as line,\narea or column charts), this means the horizontal axis is drawn from right to left. For\nhorizontal-range charts (such as bar charts), this means the vertical axis is drawn from top to\nbottom. For pie charts, this means the slices are drawn counterclockwise.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "reverseDirection()",
+          "description": "Reverses the direction in which the bars grow along the horizontal axis. By default, values\ngrow from left to right. Calling this method causes them to grow from right to left.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValue",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The CSS value for the color (such as\"blue\"or\"#00f\")."
+            }
+          ],
+          "name": "setBackgroundColor(cssValue)",
+          "description": "Sets the background color for the chart.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValues",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of color CSS values, such as[\"red\", \"#acf\"]. The nth element\n    in the array represents the color of the nth line in the chart."
+            }
+          ],
+          "name": "setColors(cssValues)",
+          "description": "Sets the colors for the lines in the chart.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The data source URL, including any query parameters."
+            }
+          ],
+          "name": "setDataSourceUrl(url)",
+          "description": "Sets the data source URL that is used to pull data in from an external source, such as Google\nSheets. If a data source URL and a DataTable are provided, the data source URL is ignored.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "tableBuilder",
+              "type": {
+                "name": "DataTableBuilder",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder"
+              },
+              "description": "A data table builder. A new data table is created instantly as part of this\n    call, so any further updates to the builder won't be reflected in the chart."
+            }
+          ],
+          "name": "setDataTable(tableBuilder)",
+          "description": "Sets the data table to use for the chart using a DataTableBuilder. This is a convenience method\nfor setting the data table without needing to callbuild().",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "table",
+              "type": {
+                "name": "DataTableSource",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-source"
+              },
+              "description": "The data table to use for the chart."
+            }
+          ],
+          "name": "setDataTable(table)",
+          "description": "Sets the data table which contains the lines for the chart, as well as the X-axis labels. The\nfirst column should be a string, and contain the horizontal axis labels. Any number of columns\ncan follow, all must be numeric. Each column is displayed as a separate line.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "dataViewDefinition",
+              "type": {
+                "name": "DataViewDefinition",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition"
+              },
+              "description": "A data view definition object that defines the view that should be\n    derived from the given data source for the chart drawing."
+            }
+          ],
+          "name": "setDataViewDefinition(dataViewDefinition)",
+          "description": "Sets the data view definition to use for the chart.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of the chart, in pixels."
+            },
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The height of the chart, in pixels."
+            }
+          ],
+          "name": "setDimensions(width, height)",
+          "description": "Sets the dimensions for the chart.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "position",
+              "type": {
+                "name": "Position",
+                "url": "https://developers.google.com/apps-script/reference/charts/position"
+              },
+              "description": "The position of the legend."
+            }
+          ],
+          "name": "setLegendPosition(position)",
+          "description": "Sets the position of the legend with respect to the chart. By default, there is no legend.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart legend."
+            }
+          ],
+          "name": "setLegendTextStyle(textStyle)",
+          "description": "Sets the text style of the chart legend.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The option to set."
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setOption(option, value)",
+          "description": "Sets advanced options for this chart. Seethe available options for\nthis chart. This method has no effect if the given option is invalid.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the lowest grid line of the range axis."
+            },
+            {
+              "name": "end",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the highest grid line of the range axis."
+            }
+          ],
+          "name": "setRange(start, end)",
+          "description": "Sets the range for the chart.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setStacked()",
+          "description": "Uses stacked lines, meaning that line and bar values are stacked (accumulated). By default,\nthere is no stacking.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "chartTitle",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the chart title."
+            }
+          ],
+          "name": "setTitle(chartTitle)",
+          "description": "Sets the title of the chart. The title is displayed centered above the chart.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setTitleTextStyle(textStyle)",
+          "description": "Sets the text style of the chart title.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTextStyle(textStyle)",
+          "description": "Sets the horizontal axis text style.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the X-axis."
+            }
+          ],
+          "name": "setXAxisTitle(title)",
+          "description": "Adds a title to the horizontal axis. The title is centered and appears below the axis value\nlabels.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTitleTextStyle(textStyle)",
+          "description": "Sets the horizontal axis title text style.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTextStyle(textStyle)",
+          "description": "Sets the vertical axis text style.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the Y-axis."
+            }
+          ],
+          "name": "setYAxisTitle(title)",
+          "description": "Adds a title to the vertical axis. The title is centered and appears to the left of the value\nlabels.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTitleTextStyle(textStyle)",
+          "description": "Sets the vertical axis title text style.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "useLogScale()",
+          "description": "Makes the range axis into a logarithmic scale (requires all values to be positive). The range\naxis are the vertical axis for vertical charts (such as line, area, or column) and the\nhorizontal axis for horizontal charts (such as bar).",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Chart",
+      "url": "https://developers.google.com/apps-script/reference/charts/chart",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type to convert to. For most blobs,'application/pdf'is\n    the only valid option. For images in BMP, GIF, JPEG, or PNG format, any of'image/bmp','image/gif','image/jpeg', or'image/png'are also\n    valid. For a Google Docs document,'text/markdown'is also valid."
+            }
+          ],
+          "name": "getAs(contentType)",
+          "description": "Return the data inside this object as a blob converted to the specified content type. This\nmethod adds the appropriate extension to the filename—for example, \"myfile.pdf\". However, it\nassumes that the part of the filename that follows the last period (if any) is an existing\nextension that should be replaced. Consequently, \"ShoppingList.12.25.2014\" becomes\n\"ShoppingList.12.25.pdf\".",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBlob()",
+          "description": "Return the data inside this object as a blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getOptions()",
+          "description": "Returns the options for this chart, such as height, colors, and axes.",
+          "return_type": {
+            "name": "ChartOptions",
+            "url": "https://developers.google.com/apps-script/reference/charts/chart-options"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum ChartHiddenDimensionStrategy",
+      "url": "https://developers.google.com/apps-script/reference/charts/chart-hidden-dimension-strategy",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum ChartMergeStrategy",
+      "url": "https://developers.google.com/apps-script/reference/charts/chart-merge-strategy",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class ChartOptions",
+      "url": "https://developers.google.com/apps-script/reference/charts/chart-options",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The string representing the desired option."
+            }
+          ],
+          "name": "get(option)",
+          "description": "Returns a configured option for this chart.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The string representing the desired option."
+            }
+          ],
+          "name": "getOrDefault(option)",
+          "description": "Returns a configured option for this chart. If the chart option is not set, returns the default\nvalue of this option if available, or returnsnullif the default value is not\navailable.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum ChartType",
+      "url": "https://developers.google.com/apps-script/reference/charts/chart-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class Charts",
+      "url": "https://developers.google.com/apps-script/reference/charts/charts",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "newAreaChart()",
+          "description": "Starts building an area chart, as described in theGoogle Chart\nToolsdocumentation.",
+          "return_type": {
+            "name": "AreaChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/area-chart-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newBarChart()",
+          "description": "Starts building a bar chart, as described in theGoogle Chart\nToolsdocumentation.",
+          "return_type": {
+            "name": "BarChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/bar-chart-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newColumnChart()",
+          "description": "Starts building a column chart, as described in theGoogle Chart\nToolsdocumentation.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/column-chart-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newDataTable()",
+          "description": "Creates an empty data table, which can have its values set manually.",
+          "return_type": {
+            "name": "DataTableBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newDataViewDefinition()",
+          "description": "Creates a new data view definition.",
+          "return_type": {
+            "name": "DataViewDefinitionBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newLineChart()",
+          "description": "Starts building a line chart, as described in theGoogle Chart\nToolsdocumentation.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/line-chart-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newPieChart()",
+          "description": "Starts building a pie chart, as described in theGoogle Chart\nToolsdocumentation.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/pie-chart-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newScatterChart()",
+          "description": "Starts building a scatter chart, as described in theGoogle Chart\nToolsdocumentation.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/scatter-chart-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newTableChart()",
+          "description": "Starts building a table chart, as described in theGoogle Chart\nToolsdocumentation.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/table-chart-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newTextStyle()",
+          "description": "Creates a new text style builder.",
+          "return_type": {
+            "name": "TextStyleBuilder",
+            "url": "https://developers.google.com/apps-script/reference/charts/text-style-builder"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ColumnChartBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/column-chart-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds the chart.",
+          "return_type": {
+            "name": "Chart",
+            "url": "https://developers.google.com/apps-script/reference/charts/chart"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "reverseCategories()",
+          "description": "Reverses the drawing of series in the domain axis. For vertical-range charts (such as line,\narea or column charts), this means the horizontal axis is drawn from right to left. For\nhorizontal-range charts (such as bar charts), this means the vertical axis is drawn from top to\nbottom. For pie charts, this means the slices are drawn counterclockwise.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValue",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The CSS value for the color (such as\"blue\"or\"#00f\")."
+            }
+          ],
+          "name": "setBackgroundColor(cssValue)",
+          "description": "Sets the background color for the chart.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValues",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of color CSS values, such as[\"red\", \"#acf\"]. The nth element\n    in the array represents the color of the nth line in the chart."
+            }
+          ],
+          "name": "setColors(cssValues)",
+          "description": "Sets the colors for the lines in the chart.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The data source URL, including any query parameters."
+            }
+          ],
+          "name": "setDataSourceUrl(url)",
+          "description": "Sets the data source URL that is used to pull data in from an external source, such as Google\nSheets. If a data source URL and a DataTable are provided, the data source URL is ignored.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "tableBuilder",
+              "type": {
+                "name": "DataTableBuilder",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder"
+              },
+              "description": "A data table builder. A new data table is created instantly as part of this\n    call, so any further updates to the builder won't be reflected in the chart."
+            }
+          ],
+          "name": "setDataTable(tableBuilder)",
+          "description": "Sets the data table to use for the chart using a DataTableBuilder. This is a convenience method\nfor setting the data table without needing to callbuild().",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "table",
+              "type": {
+                "name": "DataTableSource",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-source"
+              },
+              "description": "The data table to use for the chart."
+            }
+          ],
+          "name": "setDataTable(table)",
+          "description": "Sets the data table which contains the lines for the chart, as well as the X-axis labels. The\nfirst column should be a string, and contain the horizontal axis labels. Any number of columns\ncan follow, all must be numeric. Each column is displayed as a separate line.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "dataViewDefinition",
+              "type": {
+                "name": "DataViewDefinition",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition"
+              },
+              "description": "A data view definition object that defines the view that should be\n    derived from the given data source for the chart drawing."
+            }
+          ],
+          "name": "setDataViewDefinition(dataViewDefinition)",
+          "description": "Sets the data view definition to use for the chart.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of the chart, in pixels."
+            },
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The height of the chart, in pixels."
+            }
+          ],
+          "name": "setDimensions(width, height)",
+          "description": "Sets the dimensions for the chart.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "position",
+              "type": {
+                "name": "Position",
+                "url": "https://developers.google.com/apps-script/reference/charts/position"
+              },
+              "description": "The position of the legend."
+            }
+          ],
+          "name": "setLegendPosition(position)",
+          "description": "Sets the position of the legend with respect to the chart. By default, there is no legend.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart legend."
+            }
+          ],
+          "name": "setLegendTextStyle(textStyle)",
+          "description": "Sets the text style of the chart legend.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The option to set."
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setOption(option, value)",
+          "description": "Sets advanced options for this chart. Seethe available options for\nthis chart. This method has no effect if the given option is invalid.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the lowest grid line of the range axis."
+            },
+            {
+              "name": "end",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the highest grid line of the range axis."
+            }
+          ],
+          "name": "setRange(start, end)",
+          "description": "Sets the range for the chart.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setStacked()",
+          "description": "Uses stacked lines, meaning that line and bar values are stacked (accumulated). By default,\nthere is no stacking.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "chartTitle",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the chart title."
+            }
+          ],
+          "name": "setTitle(chartTitle)",
+          "description": "Sets the title of the chart. The title is displayed centered above the chart.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setTitleTextStyle(textStyle)",
+          "description": "Sets the text style of the chart title.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTextStyle(textStyle)",
+          "description": "Sets the horizontal axis text style.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the X-axis."
+            }
+          ],
+          "name": "setXAxisTitle(title)",
+          "description": "Adds a title to the horizontal axis. The title is centered and appears below the axis value\nlabels.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTitleTextStyle(textStyle)",
+          "description": "Sets the horizontal axis title text style.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTextStyle(textStyle)",
+          "description": "Sets the vertical axis text style.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the Y-axis."
+            }
+          ],
+          "name": "setYAxisTitle(title)",
+          "description": "Adds a title to the vertical axis. The title is centered and appears to the left of the value\nlabels.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTitleTextStyle(textStyle)",
+          "description": "Sets the vertical axis title text style.",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "useLogScale()",
+          "description": "Makes the range axis into a logarithmic scale (requires all values to be positive). The range\naxis are the vertical axis for vertical charts (such as line, area, or column) and the\nhorizontal axis for horizontal charts (such as bar).",
+          "return_type": {
+            "name": "ColumnChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum ColumnType",
+      "url": "https://developers.google.com/apps-script/reference/charts/column-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum CurveStyle",
+      "url": "https://developers.google.com/apps-script/reference/charts/curve-style",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class DataTable",
+      "url": "https://developers.google.com/apps-script/reference/charts/data-table",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class DataTableBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "type",
+              "type": {
+                "name": "ColumnType",
+                "url": "https://developers.google.com/apps-script/reference/charts/column-type"
+              },
+              "description": "type of data in the column (number, string, or date)"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "label of the column (it's used for chart legends)."
+            }
+          ],
+          "name": "addColumn(type, label)",
+          "description": "Adds a column to the data table. Columns will be added from 0 to n.",
+          "return_type": {
+            "name": "DataTableBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "values",
+              "type": {
+                "name": "Object[]",
+                "url": null
+              },
+              "description": "values for the row, specified in the same order that the columns are entered."
+            }
+          ],
+          "name": "addRow(values)",
+          "description": "Adds a row to the data table.",
+          "return_type": {
+            "name": "DataTableBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds and returns a data table.",
+          "return_type": {
+            "name": "DataTable",
+            "url": "https://developers.google.com/apps-script/reference/charts/data-table"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "row",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the row index (the first row has index 0)"
+            },
+            {
+              "name": "column",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the column index (the first column has index 0)"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the value of the table cell (should have the right type for the column)."
+            }
+          ],
+          "name": "setValue(row, column, value)",
+          "description": "Sets a specific value in the table.",
+          "return_type": {
+            "name": "DataTableBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Interface DataTableSource",
+      "url": "https://developers.google.com/apps-script/reference/charts/data-table-source",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getDataTable()",
+          "description": "Return the data inside this object as a DataTable.",
+          "return_type": {
+            "name": "DataTable",
+            "url": "https://developers.google.com/apps-script/reference/charts/data-table"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class DataViewDefinition",
+      "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class DataViewDefinitionBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds and returns the data view definition object that was built using this builder.",
+          "return_type": {
+            "name": "DataViewDefinition",
+            "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "columns",
+              "type": {
+                "name": "Object[]",
+                "url": null
+              },
+              "description": "An array of column indexes, or column descriptions (an object), to include in\n    the data view. The column descriptions define a column role. The data table and the\n    enumeration for data view columns are zero-based."
+            }
+          ],
+          "name": "setColumns(columns)",
+          "description": "Sets the indexes of the columns to include in the data view as well as specifying role-column\ninformation. This subset of column indexes refer to the columns of the data source that the\ndata view is derived from.",
+          "return_type": {
+            "name": "DataViewDefinitionBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class LineChartBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/line-chart-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds the chart.",
+          "return_type": {
+            "name": "Chart",
+            "url": "https://developers.google.com/apps-script/reference/charts/chart"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "reverseCategories()",
+          "description": "Reverses the drawing of series in the domain axis. For vertical-range charts (such as line,\narea or column charts), this means the horizontal axis is drawn from right to left. For\nhorizontal-range charts (such as bar charts), this means the vertical axis is drawn from top to\nbottom. For pie charts, this means the slices are drawn counterclockwise.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValue",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The CSS value for the color (such as\"blue\"or\"#00f\")."
+            }
+          ],
+          "name": "setBackgroundColor(cssValue)",
+          "description": "Sets the background color for the chart.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValues",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of color CSS values, such as[\"red\", \"#acf\"]. The nth element\n    in the array represents the color of the nth line in the chart."
+            }
+          ],
+          "name": "setColors(cssValues)",
+          "description": "Sets the colors for the lines in the chart.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "style",
+              "type": {
+                "name": "CurveStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/curve-style"
+              },
+              "description": "The style for curves in the chart."
+            }
+          ],
+          "name": "setCurveStyle(style)",
+          "description": "Sets the style to use for curves in the chart. SeeCurveStylefor allowed curve\nstyles.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The data source URL, including any query parameters."
+            }
+          ],
+          "name": "setDataSourceUrl(url)",
+          "description": "Sets the data source URL that is used to pull data in from an external source, such as Google\nSheets. If a data source URL and a DataTable are provided, the data source URL is ignored.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "tableBuilder",
+              "type": {
+                "name": "DataTableBuilder",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder"
+              },
+              "description": "A data table builder. A new data table is created instantly as part of this\n    call, so any further updates to the builder won't be reflected in the chart."
+            }
+          ],
+          "name": "setDataTable(tableBuilder)",
+          "description": "Sets the data table to use for the chart using a DataTableBuilder. This is a convenience method\nfor setting the data table without needing to callbuild().",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "table",
+              "type": {
+                "name": "DataTableSource",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-source"
+              },
+              "description": "The data table to use for the chart."
+            }
+          ],
+          "name": "setDataTable(table)",
+          "description": "Sets the data table which contains the lines for the chart, as well as the X-axis labels. The\nfirst column should be a string, and contain the horizontal axis labels. Any number of columns\ncan follow, all must be numeric. Each column is displayed as a separate line.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "dataViewDefinition",
+              "type": {
+                "name": "DataViewDefinition",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition"
+              },
+              "description": "A data view definition object that defines the view that should be\n    derived from the given data source for the chart drawing."
+            }
+          ],
+          "name": "setDataViewDefinition(dataViewDefinition)",
+          "description": "Sets the data view definition to use for the chart.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of the chart, in pixels."
+            },
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The height of the chart, in pixels."
+            }
+          ],
+          "name": "setDimensions(width, height)",
+          "description": "Sets the dimensions for the chart.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "position",
+              "type": {
+                "name": "Position",
+                "url": "https://developers.google.com/apps-script/reference/charts/position"
+              },
+              "description": "The position of the legend."
+            }
+          ],
+          "name": "setLegendPosition(position)",
+          "description": "Sets the position of the legend with respect to the chart. By default, there is no legend.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart legend."
+            }
+          ],
+          "name": "setLegendTextStyle(textStyle)",
+          "description": "Sets the text style of the chart legend.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The option to set."
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setOption(option, value)",
+          "description": "Sets advanced options for this chart. Seethe available options for\nthis chart. This method has no effect if the given option is invalid.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "style",
+              "type": {
+                "name": "PointStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/point-style"
+              },
+              "description": "The style to use for points in the line."
+            }
+          ],
+          "name": "setPointStyle(style)",
+          "description": "Sets the style for points in the line. By default, points have no particular styles, and only\nthe line is visible.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the lowest grid line of the range axis."
+            },
+            {
+              "name": "end",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the highest grid line of the range axis."
+            }
+          ],
+          "name": "setRange(start, end)",
+          "description": "Sets the range for the chart.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "chartTitle",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the chart title."
+            }
+          ],
+          "name": "setTitle(chartTitle)",
+          "description": "Sets the title of the chart. The title is displayed centered above the chart.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setTitleTextStyle(textStyle)",
+          "description": "Sets the text style of the chart title.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTextStyle(textStyle)",
+          "description": "Sets the horizontal axis text style.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the X-axis."
+            }
+          ],
+          "name": "setXAxisTitle(title)",
+          "description": "Adds a title to the horizontal axis. The title is centered and appears below the axis value\nlabels.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTitleTextStyle(textStyle)",
+          "description": "Sets the horizontal axis title text style.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTextStyle(textStyle)",
+          "description": "Sets the vertical axis text style.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the Y-axis."
+            }
+          ],
+          "name": "setYAxisTitle(title)",
+          "description": "Adds a title to the vertical axis. The title is centered and appears to the left of the value\nlabels.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTitleTextStyle(textStyle)",
+          "description": "Sets the vertical axis title text style.",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "useLogScale()",
+          "description": "Makes the range axis into a logarithmic scale (requires all values to be positive). The range\naxis are the vertical axis for vertical charts (such as line, area, or column) and the\nhorizontal axis for horizontal charts (such as bar).",
+          "return_type": {
+            "name": "LineChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum MatchType",
+      "url": "https://developers.google.com/apps-script/reference/charts/match-type",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Returns the name of the match type to be used in the options JSON.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class NumberRangeFilterBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/number-range-filter-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "maxValue",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The maximum value of the slider."
+            }
+          ],
+          "name": "setMaxValue(maxValue)",
+          "description": "Sets the maximum allowed value for the range lower extent. If undefined, the value is inferred\nfrom the contents of the DataTable managed by the control.",
+          "return_type": {
+            "name": "NumberRangeFilterBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "minValue",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The minimum value of the slider."
+            }
+          ],
+          "name": "setMinValue(minValue)",
+          "description": "Sets the minimum allowed value for the range lower extent. If undefined, the value is inferred\nfrom the contents of the DataTable managed by the control.",
+          "return_type": {
+            "name": "NumberRangeFilterBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "orientation",
+              "type": {
+                "name": "Orientation",
+                "url": "https://developers.google.com/apps-script/reference/charts/orientation"
+              },
+              "description": "The slider orientation to set."
+            }
+          ],
+          "name": "setOrientation(orientation)",
+          "description": "Sets the slider orientation.",
+          "return_type": {
+            "name": "NumberRangeFilterBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "showRangeValues",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Iftrue, enables showing of labels next to the slider."
+            }
+          ],
+          "name": "setShowRangeValues(showRangeValues)",
+          "description": "Sets whether to have labels next to the slider displaying extents of the selected range.",
+          "return_type": {
+            "name": "NumberRangeFilterBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "ticks",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of ticks on the slider."
+            }
+          ],
+          "name": "setTicks(ticks)",
+          "description": "Sets the number of ticks (fixed positions in a range bar) a number range filter slider thumbs\ncan fall in.",
+          "return_type": {
+            "name": "NumberRangeFilterBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Orientation",
+      "url": "https://developers.google.com/apps-script/reference/charts/orientation",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum PickerValuesLayout",
+      "url": "https://developers.google.com/apps-script/reference/charts/picker-values-layout",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class PieChartBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/pie-chart-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds the chart.",
+          "return_type": {
+            "name": "Chart",
+            "url": "https://developers.google.com/apps-script/reference/charts/chart"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "reverseCategories()",
+          "description": "Reverses the drawing of series in the domain axis. For vertical-range charts (such as line,\narea or column charts), this means the horizontal axis is drawn from right to left. For\nhorizontal-range charts (such as bar charts), this means the vertical axis is drawn from top to\nbottom. For pie charts, this means the slices are drawn counterclockwise.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "set3D()",
+          "description": "Sets the chart to be three-dimensional.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValue",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The CSS value for the color (such as\"blue\"or\"#00f\")."
+            }
+          ],
+          "name": "setBackgroundColor(cssValue)",
+          "description": "Sets the background color for the chart.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValues",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of color CSS values, such as[\"red\", \"#acf\"]. The nth element\n    in the array represents the color of the nth line in the chart."
+            }
+          ],
+          "name": "setColors(cssValues)",
+          "description": "Sets the colors for the lines in the chart.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The data source URL, including any query parameters."
+            }
+          ],
+          "name": "setDataSourceUrl(url)",
+          "description": "Sets the data source URL that is used to pull data in from an external source, such as Google\nSheets. If a data source URL and a DataTable are provided, the data source URL is ignored.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "tableBuilder",
+              "type": {
+                "name": "DataTableBuilder",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder"
+              },
+              "description": "A data table builder. A new data table is created instantly as part of this\n    call, so any further updates to the builder won't be reflected in the chart."
+            }
+          ],
+          "name": "setDataTable(tableBuilder)",
+          "description": "Sets the data table to use for the chart using a DataTableBuilder. This is a convenience method\nfor setting the data table without needing to callbuild().",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "table",
+              "type": {
+                "name": "DataTableSource",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-source"
+              },
+              "description": "The data table to use for the chart."
+            }
+          ],
+          "name": "setDataTable(table)",
+          "description": "Sets the data table which contains the lines for the chart, as well as the X-axis labels. The\nfirst column should be a string, and contain the horizontal axis labels. Any number of columns\ncan follow, all must be numeric. Each column is displayed as a separate line.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "dataViewDefinition",
+              "type": {
+                "name": "DataViewDefinition",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition"
+              },
+              "description": "A data view definition object that defines the view that should be\n    derived from the given data source for the chart drawing."
+            }
+          ],
+          "name": "setDataViewDefinition(dataViewDefinition)",
+          "description": "Sets the data view definition to use for the chart.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of the chart, in pixels."
+            },
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The height of the chart, in pixels."
+            }
+          ],
+          "name": "setDimensions(width, height)",
+          "description": "Sets the dimensions for the chart.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "position",
+              "type": {
+                "name": "Position",
+                "url": "https://developers.google.com/apps-script/reference/charts/position"
+              },
+              "description": "The position of the legend."
+            }
+          ],
+          "name": "setLegendPosition(position)",
+          "description": "Sets the position of the legend with respect to the chart. By default, there is no legend.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart legend."
+            }
+          ],
+          "name": "setLegendTextStyle(textStyle)",
+          "description": "Sets the text style of the chart legend.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The option to set."
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setOption(option, value)",
+          "description": "Sets advanced options for this chart. Seethe available options for\nthis chart. This method has no effect if the given option is invalid.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "chartTitle",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the chart title."
+            }
+          ],
+          "name": "setTitle(chartTitle)",
+          "description": "Sets the title of the chart. The title is displayed centered above the chart.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setTitleTextStyle(textStyle)",
+          "description": "Sets the text style of the chart title.",
+          "return_type": {
+            "name": "PieChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum PointStyle",
+      "url": "https://developers.google.com/apps-script/reference/charts/point-style",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum Position",
+      "url": "https://developers.google.com/apps-script/reference/charts/position",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class ScatterChartBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/scatter-chart-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds the chart.",
+          "return_type": {
+            "name": "Chart",
+            "url": "https://developers.google.com/apps-script/reference/charts/chart"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValue",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The CSS value for the color (such as\"blue\"or\"#00f\")."
+            }
+          ],
+          "name": "setBackgroundColor(cssValue)",
+          "description": "Sets the background color for the chart.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValues",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of color CSS values, such as[\"red\", \"#acf\"]. The nth element\n    in the array represents the color of the nth line in the chart."
+            }
+          ],
+          "name": "setColors(cssValues)",
+          "description": "Sets the colors for the lines in the chart.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The data source URL, including any query parameters."
+            }
+          ],
+          "name": "setDataSourceUrl(url)",
+          "description": "Sets the data source URL that is used to pull data in from an external source, such as Google\nSheets. If a data source URL and a DataTable are provided, the data source URL is ignored.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "tableBuilder",
+              "type": {
+                "name": "DataTableBuilder",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder"
+              },
+              "description": "A data table builder. A new data table is created instantly as part of this\n    call, so any further updates to the builder won't be reflected in the chart."
+            }
+          ],
+          "name": "setDataTable(tableBuilder)",
+          "description": "Sets the data table to use for the chart using a DataTableBuilder. This is a convenience method\nfor setting the data table without needing to callbuild().",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "table",
+              "type": {
+                "name": "DataTableSource",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-source"
+              },
+              "description": "The data table to use for the chart."
+            }
+          ],
+          "name": "setDataTable(table)",
+          "description": "Sets the data table which contains the lines for the chart, as well as the X-axis labels. The\nfirst column should be a string, and contain the horizontal axis labels. Any number of columns\ncan follow, all must be numeric. Each column is displayed as a separate line.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "dataViewDefinition",
+              "type": {
+                "name": "DataViewDefinition",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition"
+              },
+              "description": "A data view definition object that defines the view that should be\n    derived from the given data source for the chart drawing."
+            }
+          ],
+          "name": "setDataViewDefinition(dataViewDefinition)",
+          "description": "Sets the data view definition to use for the chart.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of the chart, in pixels."
+            },
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The height of the chart, in pixels."
+            }
+          ],
+          "name": "setDimensions(width, height)",
+          "description": "Sets the dimensions for the chart.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "position",
+              "type": {
+                "name": "Position",
+                "url": "https://developers.google.com/apps-script/reference/charts/position"
+              },
+              "description": "The position of the legend."
+            }
+          ],
+          "name": "setLegendPosition(position)",
+          "description": "Sets the position of the legend with respect to the chart. By default, there is no legend.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart legend."
+            }
+          ],
+          "name": "setLegendTextStyle(textStyle)",
+          "description": "Sets the text style of the chart legend.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The option to set."
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setOption(option, value)",
+          "description": "Sets advanced options for this chart. Seethe available options for\nthis chart. This method has no effect if the given option is invalid.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "style",
+              "type": {
+                "name": "PointStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/point-style"
+              },
+              "description": "The style to use for points in the line."
+            }
+          ],
+          "name": "setPointStyle(style)",
+          "description": "Sets the style for points in the line. By default, points have no particular styles, and only\nthe line is visible.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "chartTitle",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the chart title."
+            }
+          ],
+          "name": "setTitle(chartTitle)",
+          "description": "Sets the title of the chart. The title is displayed centered above the chart.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the chart title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setTitleTextStyle(textStyle)",
+          "description": "Sets the text style of the chart title.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setXAxisLogScale()",
+          "description": "Makes the horizontal axis into a logarithmic scale (requires all values to be positive).",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the lowest grid line of the horizontal axis."
+            },
+            {
+              "name": "end",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the highest grid line of the horizontal axis."
+            }
+          ],
+          "name": "setXAxisRange(start, end)",
+          "description": "Sets the range for the horizontal axis of the chart.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTextStyle(textStyle)",
+          "description": "Sets the horizontal axis text style.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the X-axis."
+            }
+          ],
+          "name": "setXAxisTitle(title)",
+          "description": "Adds a title to the horizontal axis. The title is centered and appears below the axis value\nlabels.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setXAxisTitleTextStyle(textStyle)",
+          "description": "Sets the horizontal axis title text style.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setYAxisLogScale()",
+          "description": "Makes the vertical axis into a logarithmic scale (requires all values to be positive).",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the lowest grid line of the vertical axis."
+            },
+            {
+              "name": "end",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The value for the highest grid line of the vertical axis."
+            }
+          ],
+          "name": "setYAxisRange(start, end)",
+          "description": "Sets the range for the vertical axis of the chart. If any data points fall outside the range,\nthe range is expanded to include those data points.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTextStyle(textStyle)",
+          "description": "Sets the vertical axis text style.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the Y-axis."
+            }
+          ],
+          "name": "setYAxisTitle(title)",
+          "description": "Adds a title to the vertical axis. The title is centered and appears to the left of the value\nlabels.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "textStyle",
+              "type": {
+                "name": "TextStyle",
+                "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+              },
+              "description": "The text style to use for the horizontal axis title. You can create aTextStyleBuilderobject by callingCharts.newTextStyle()."
+            }
+          ],
+          "name": "setYAxisTitleTextStyle(textStyle)",
+          "description": "Sets the vertical axis title text style.",
+          "return_type": {
+            "name": "ScatterChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class StringFilterBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/string-filter-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "caseSensitive",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Iftrue, enables string matching case sensitivity."
+            }
+          ],
+          "name": "setCaseSensitive(caseSensitive)",
+          "description": "Sets whether matching should be case sensitive or not.",
+          "return_type": {
+            "name": "StringFilterBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "matchType",
+              "type": {
+                "name": "MatchType",
+                "url": "https://developers.google.com/apps-script/reference/charts/match-type"
+              },
+              "description": "The string matching type."
+            }
+          ],
+          "name": "setMatchType(matchType)",
+          "description": "Sets whether the control should match exact values only (MatchType.EXACT), prefixes\nstarting from the beginning of the value (MatchType.PREFIX), or any substring\n(MatchType.ANY).",
+          "return_type": {
+            "name": "StringFilterBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "realtimeTrigger",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Iftrue, sets events to be triggered at real time (when a key is\n    pressed)."
+            }
+          ],
+          "name": "setRealtimeTrigger(realtimeTrigger)",
+          "description": "Sets whether the control should match any time a key is pressed or only when the input field\n'changes' (loss of focus or pressing the Enter key).",
+          "return_type": {
+            "name": "StringFilterBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class TableChartBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/table-chart-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds the chart.",
+          "return_type": {
+            "name": "Chart",
+            "url": "https://developers.google.com/apps-script/reference/charts/chart"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "enablePaging",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif paging should be enabled,falseotherwise."
+            }
+          ],
+          "name": "enablePaging(enablePaging)",
+          "description": "Sets whether to enable paging through the data.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "pageSize",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of rows in each page of the table."
+            }
+          ],
+          "name": "enablePaging(pageSize)",
+          "description": "Enables paging and sets the number of rows in each page.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "pageSize",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of rows in each page of the table."
+            },
+            {
+              "name": "startPage",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The first table page to display (page numbers are zero-based)."
+            }
+          ],
+          "name": "enablePaging(pageSize, startPage)",
+          "description": "Enables paging, sets the number of rows in each page and the first table page to display (page\nnumbers are zero based).",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "rtlEnabled",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif right-to-left support should be enabled,falseotherwise."
+            }
+          ],
+          "name": "enableRtlTable(rtlEnabled)",
+          "description": "Adds basic support for right-to-left languages (such as Arabic or Hebrew) by reversing the\ncolumn order of the table, so that column zero is the right-most column, and the last column is\nthe left-most column.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "enableSorting",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueto enable sorting by clicking on column headers,falseotherwise."
+            }
+          ],
+          "name": "enableSorting(enableSorting)",
+          "description": "Sets whether to sort columns when the user clicks a column heading.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The data source URL, including any query parameters."
+            }
+          ],
+          "name": "setDataSourceUrl(url)",
+          "description": "Sets the data source URL that is used to pull data in from an external source, such as Google\nSheets. If a data source URL and a DataTable are provided, the data source URL is ignored.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "tableBuilder",
+              "type": {
+                "name": "DataTableBuilder",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-builder"
+              },
+              "description": "A data table builder. A new data table is created instantly as part of this\n    call, so any further updates to the builder won't be reflected in the chart."
+            }
+          ],
+          "name": "setDataTable(tableBuilder)",
+          "description": "Sets the data table to use for the chart using a DataTableBuilder. This is a convenience method\nfor setting the data table without needing to callbuild().",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "table",
+              "type": {
+                "name": "DataTableSource",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-table-source"
+              },
+              "description": "The data table to use for the chart."
+            }
+          ],
+          "name": "setDataTable(table)",
+          "description": "Sets the data table which contains the lines for the chart, as well as the X-axis labels. The\nfirst column should be a string, and contain the horizontal axis labels. Any number of columns\ncan follow, all must be numeric. Each column is displayed as a separate line.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "dataViewDefinition",
+              "type": {
+                "name": "DataViewDefinition",
+                "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition"
+              },
+              "description": "A data view definition object that defines the view that should be\n    derived from the given data source for the chart drawing."
+            }
+          ],
+          "name": "setDataViewDefinition(dataViewDefinition)",
+          "description": "Sets the data view definition to use for the chart.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of the chart, in pixels."
+            },
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The height of the chart, in pixels."
+            }
+          ],
+          "name": "setDimensions(width, height)",
+          "description": "Sets the dimensions for the chart.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "number",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The row number for the first row in the data table."
+            }
+          ],
+          "name": "setFirstRowNumber(number)",
+          "description": "Sets the row number for the first row in the data table.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "column",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of the column according to which the table should be initially sorted."
+            }
+          ],
+          "name": "setInitialSortingAscending(column)",
+          "description": "Sets the index of the column according to which the table should be initially sorted\n(ascending).",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "column",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The number of the column according to which the table should be initially sorted."
+            }
+          ],
+          "name": "setInitialSortingDescending(column)",
+          "description": "Sets the index of the column according to which the table should be initially sorted\n(descending).",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "option",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The option to set."
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setOption(option, value)",
+          "description": "Sets advanced options for this chart. Seethe available options for\nthis chart. This method has no effect if the given option is invalid.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "showRowNumber",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif the first column of the table should show the row number,falseotherwise."
+            }
+          ],
+          "name": "showRowNumberColumn(showRowNumber)",
+          "description": "Sets whether to show the row number as the first column of the table.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "alternate",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif color styles should be alternating,falseotherwise."
+            }
+          ],
+          "name": "useAlternatingRowStyle(alternate)",
+          "description": "Sets whether alternating color style is assigned to odd and even rows of a table chart.",
+          "return_type": {
+            "name": "TableChartBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class TextStyle",
+      "url": "https://developers.google.com/apps-script/reference/charts/text-style",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getColor()",
+          "description": "Gets the color of the text style.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFontName()",
+          "description": "Gets the font name of the text style.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFontSize()",
+          "description": "Gets the font size of the text style.",
+          "return_type": {
+            "name": "Number",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class TextStyleBuilder",
+      "url": "https://developers.google.com/apps-script/reference/charts/text-style-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds and returns a text style configuration object that was built using this builder.",
+          "return_type": {
+            "name": "TextStyle",
+            "url": "https://developers.google.com/apps-script/reference/charts/text-style"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "cssValue",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The CSS value for the color (such as\"blue\"or\"#00f\")."
+            }
+          ],
+          "name": "setColor(cssValue)",
+          "description": "Sets the color of the text style.",
+          "return_type": {
+            "name": "TextStyleBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "fontName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The font name to use for the text style."
+            }
+          ],
+          "name": "setFontName(fontName)",
+          "description": "Sets the font name of the text style.",
+          "return_type": {
+            "name": "TextStyleBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "fontSize",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The font size in pixels to use for the text style."
+            }
+          ],
+          "name": "setFontSize(fontSize)",
+          "description": "Sets the font size of the text style.",
+          "return_type": {
+            "name": "TextStyleBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    }
+  ]
+}

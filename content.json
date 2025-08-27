@@ -1,0 +1,161 @@
+{
+  "service_name": "content",
+  "url": "https://developers.google.com/apps-script/reference/content",
+  "classes": [
+    {
+      "name": "Class ContentService",
+      "url": "https://developers.google.com/apps-script/reference/content/content-service",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "createTextOutput()",
+          "description": "Create a newTextOutputobject.",
+          "return_type": {
+            "name": "TextOutput",
+            "url": "https://developers.google.com/apps-script/reference/content/text-output"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the content to serve."
+            }
+          ],
+          "name": "createTextOutput(content)",
+          "description": "Create a newTextOutputobject that can serve the given content.",
+          "return_type": {
+            "name": "TextOutput",
+            "url": "https://developers.google.com/apps-script/reference/content/text-output"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum MimeType",
+      "url": "https://developers.google.com/apps-script/reference/content/mime-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class TextOutput",
+      "url": "https://developers.google.com/apps-script/reference/content/text-output",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "addedContent",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the content to append"
+            }
+          ],
+          "name": "append(addedContent)",
+          "description": "Appends new content to the content that will be served.",
+          "return_type": {
+            "name": "TextOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "clear()",
+          "description": "Clears the current content.",
+          "return_type": {
+            "name": "TextOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "filename",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the filename to tell the browser to use"
+            }
+          ],
+          "name": "downloadAsFile(filename)",
+          "description": "Tells browsers to download rather than display this content.",
+          "return_type": {
+            "name": "TextOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContent()",
+          "description": "Gets the content that will be served.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFileName()",
+          "description": "Returns the file name to download this file as, or null if it should be displayed rather than\ndownloaded.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMimeType()",
+          "description": "Get the mime type this content will be served with.",
+          "return_type": {
+            "name": "MimeType",
+            "url": "https://developers.google.com/apps-script/reference/content/mime-type"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the content to serve"
+            }
+          ],
+          "name": "setContent(content)",
+          "description": "Sets the content that will be served.",
+          "return_type": {
+            "name": "TextOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "mimeType",
+              "type": {
+                "name": "MimeType",
+                "url": "https://developers.google.com/apps-script/reference/content/mime-type"
+              },
+              "description": "the mime type"
+            }
+          ],
+          "name": "setMimeType(mimeType)",
+          "description": "Sets the mime type for content that will be served. The default is plain text.",
+          "return_type": {
+            "name": "TextOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "service_name": "mail",
+  "url": "https://developers.google.com/apps-script/reference/mail",
+  "classes": [
+    {
+      "name": "Class MailApp",
+      "url": "https://developers.google.com/apps-script/reference/mail/mail-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getRemainingDailyQuota()",
+          "description": "Returns the number of recipients you can send emails to for the rest of the day. The returned\nvalue is valid for the current execution and might vary between executions.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "message",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object representing an email message"
+            }
+          ],
+          "name": "sendEmail(message)",
+          "description": "Sends an email message. This variation of the method is much more flexible, allowing for many\nmore options.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the addresses of the recipients, separated by commas"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the subject line"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            }
+          ],
+          "name": "sendEmail(recipient, subject, body)",
+          "description": "Sends an email message.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the addresses of the recipients, separated by commas"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the subject line"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "sendEmail(recipient, subject, body, options)",
+          "description": "Sends an email message with optional arguments.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "to",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the addresses of the recipients, separated by commas"
+            },
+            {
+              "name": "replyTo",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the reply-to address"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the subject line"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email in plain text"
+            }
+          ],
+          "name": "sendEmail(to, replyTo, subject, body)",
+          "description": "Sends an email message. This method allows a user to easily specify a Reply-To address for the\nsent message that can differ from the sender.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    }
+  ]
+}

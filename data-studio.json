@@ -1,0 +1,1781 @@
+{
+  "service_name": "data-studio",
+  "url": "https://developers.google.com/apps-script/reference/data-studio",
+  "classes": [
+    {
+      "name": "Enum AggregationType",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/aggregation-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum AuthType",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/auth-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class BigQueryConfig",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/big-query-config",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The parameter name."
+            },
+            {
+              "name": "type",
+              "type": {
+                "name": "BigQueryParameterType",
+                "url": "https://developers.google.com/apps-script/reference/data-studio/big-query-parameter-type"
+              },
+              "description": "The parameter type."
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The parameter value."
+            }
+          ],
+          "name": "addQueryParameter(name, type, value)",
+          "description": "Adds a query parameter to thisBigQueryConfig.",
+          "return_type": {
+            "name": "BigQueryConfig",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Validates this object and returns it in the format needed by Data Studio.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "printJson()",
+          "description": "Prints the JSON representation of this object. This is for debugging only.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "accessToken",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The access token to set."
+            }
+          ],
+          "name": "setAccessToken(accessToken)",
+          "description": "Sets the access token of thisBigQueryConfig.",
+          "return_type": {
+            "name": "BigQueryConfig",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "billingProjectId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The billing project ID to set."
+            }
+          ],
+          "name": "setBillingProjectId(billingProjectId)",
+          "description": "Sets the billing project ID of thisBigQueryConfig.",
+          "return_type": {
+            "name": "BigQueryConfig",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The query to set."
+            }
+          ],
+          "name": "setQuery(query)",
+          "description": "Sets the SQL query of thisBigQueryConfig.",
+          "return_type": {
+            "name": "BigQueryConfig",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "useStandardSql",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Iftrue, the query is interpreted as standard SQL. Iffalse, the query is interpreted as legacy SQL."
+            }
+          ],
+          "name": "setUseStandardSql(useStandardSql)",
+          "description": "Determines if the query is interpreted as standard or legacy SQL.",
+          "return_type": {
+            "name": "BigQueryConfig",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum BigQueryParameterType",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/big-query-parameter-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class Checkbox",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/checkbox",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "allowOverride",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether or not this config entry can be overridden in reports."
+            }
+          ],
+          "name": "setAllowOverride(allowOverride)",
+          "description": "Enables overriding for this config entry. If set totrue, data source creators have the\noption to enable this for report editors.",
+          "return_type": {
+            "name": "Checkbox",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "helpText",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The helpText to set."
+            }
+          ],
+          "name": "setHelpText(helpText)",
+          "description": "Sets the help text for this configuration entry.",
+          "return_type": {
+            "name": "Checkbox",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID to set."
+            }
+          ],
+          "name": "setId(id)",
+          "description": "Sets the unique ID for this configuration entry.",
+          "return_type": {
+            "name": "Checkbox",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isDynamic",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The dynamic status to set."
+            }
+          ],
+          "name": "setIsDynamic(isDynamic)",
+          "description": "Sets the dynamic status for this configuration entry.",
+          "return_type": {
+            "name": "Checkbox",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name to set."
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the display name for this configuration entry.",
+          "return_type": {
+            "name": "Checkbox",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class CommunityConnector",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/community-connector",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getConfig()",
+          "description": "Returns aConfigobject. Use this object to add configuration entries.",
+          "return_type": {
+            "name": "Config",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/config"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFields()",
+          "description": "Returns aFieldsobject. Use this object to add metric and dimensionFields.",
+          "return_type": {
+            "name": "Fields",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/fields"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newAuthTypeResponse()",
+          "description": "Returns a newGetAuthTypeResponseobject. Use this object to create a response for thegetAuthType()function you implement in your script project.",
+          "return_type": {
+            "name": "GetAuthTypeResponse",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/get-auth-type-response"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newBigQueryConfig()",
+          "description": "Returns a newBigQueryConfigobject. Use this object to create a response for thegetData()function you implement in your script project.",
+          "return_type": {
+            "name": "BigQueryConfig",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/big-query-config"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newDebugError()",
+          "description": "Returns a newDebugErrorobject. Use this object to create debug errors.",
+          "return_type": {
+            "name": "DebugError",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/debug-error"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newGetDataResponse()",
+          "description": "Returns a newGetDataResponseobject. Use this object to create a response for thegetData()function you implement in your script project.",
+          "return_type": {
+            "name": "GetDataResponse",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/get-data-response"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newGetSchemaResponse()",
+          "description": "Returns a newGetSchemaResponseobject. Use this object to create a response for thegetSchema()function you implement in your script project.",
+          "return_type": {
+            "name": "GetSchemaResponse",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/get-schema-response"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newSetCredentialsResponse()",
+          "description": "Returns a newSetCredentialsResponseobject. Use this object to create a response for\nthesetCredentials()function you implement in your script project.",
+          "return_type": {
+            "name": "SetCredentialsResponse",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/set-credentials-response"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newUserError()",
+          "description": "Returns a newUserErrorobject. Use this object to create user errors.",
+          "return_type": {
+            "name": "UserError",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/user-error"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Config",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/config",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Validates this object and returns it in the format needed by Data Studio.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newCheckbox()",
+          "description": "Returns a new checkbox configuration entry.",
+          "return_type": {
+            "name": "Checkbox",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/checkbox"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newInfo()",
+          "description": "Returns a new info configuration entry.",
+          "return_type": {
+            "name": "Info",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/info"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newOptionBuilder()",
+          "description": "Returns a new options builder.",
+          "return_type": {
+            "name": "OptionBuilder",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/option-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newSelectMultiple()",
+          "description": "Returns a new select multiple configuration entry.",
+          "return_type": {
+            "name": "SelectMultiple",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/select-multiple"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newSelectSingle()",
+          "description": "Returns a new select single configuration entry.",
+          "return_type": {
+            "name": "SelectSingle",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/select-single"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newTextArea()",
+          "description": "Returns a new text area configuration entry.",
+          "return_type": {
+            "name": "TextArea",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/text-area"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newTextInput()",
+          "description": "Returns a new text input configuration entry.",
+          "return_type": {
+            "name": "TextInput",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/text-input"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "printJson()",
+          "description": "Prints the JSON representation of this object. This is for debugging only.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "dateRangeRequired",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether or not a date range should be provided togetData()requests."
+            }
+          ],
+          "name": "setDateRangeRequired(dateRangeRequired)",
+          "description": "Iftrue, a date range is provided for getData() requests.",
+          "return_type": {
+            "name": "Config",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isSteppedConfig",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The stepped config status to set."
+            }
+          ],
+          "name": "setIsSteppedConfig(isSteppedConfig)",
+          "description": "Iftrue,getConfig()is called again with the current user configuration.",
+          "return_type": {
+            "name": "Config",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class DataStudioApp",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/data-studio-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "createCommunityConnector()",
+          "description": "Creates a new Community Connector.",
+          "return_type": {
+            "name": "CommunityConnector",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/community-connector"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class DebugError",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/debug-error",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "printJson()",
+          "description": "Prints the JSON representation of this object. This is for debugging only.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The error text."
+            }
+          ],
+          "name": "setText(text)",
+          "description": "Sets the text of the debug error, which is only shown to admins.",
+          "return_type": {
+            "name": "DebugError",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "throwException()",
+          "description": "Triggers this exception to be thrown.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Field",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getAggregation()",
+          "description": "Returns theAggregationTypeof thisField.AggregationTypedetermines\nhow Data Studio combines similar data into dimensions.",
+          "return_type": {
+            "name": "AggregationType",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/aggregation-type"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescription()",
+          "description": "Returns the description of thisField. Descriptions are short explanations of a field's\npurpose.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFormula()",
+          "description": "Returns the formula of thisField. Formulas define a data transformation that Data\nStudio runs at query-time.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGroup()",
+          "description": "Returns the group of thisField. Fields collected into a group are presented together\nin the Data Studio UI.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Returns the ID of thisField. IDs are unique per set of fields and are used in formulas\nto refer to fields.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getIsReaggregatable()",
+          "description": "Returnstrueif this field can be reaggregated,falseotherwise.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Returns the name of thisField. Names are shown to the user to distinguish fields.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getType()",
+          "description": "Returns theFieldTypeof thisField.",
+          "return_type": {
+            "name": "FieldType",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/field-type"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isDefault()",
+          "description": "Returnstrueif thisFieldis the default metric or dimension.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isDimension()",
+          "description": "Returnstrueif this field is a dimension.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isHidden()",
+          "description": "Returnstrueif thisFieldis hidden. You can use hidden fields in formulas,\nbut not in charts. You cannot hide fields containing formulas.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isMetric()",
+          "description": "Returnstrueif this field is a metric.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "aggregation",
+              "type": {
+                "name": "AggregationType",
+                "url": "https://developers.google.com/apps-script/reference/data-studio/aggregation-type"
+              },
+              "description": "The aggregation type to set."
+            }
+          ],
+          "name": "setAggregation(aggregation)",
+          "description": "Sets the aggregation type of thisField.AggregationTypedetermines how Data\nStudio combines similar data into dimensions. This throws an error if called on a metric.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The description to set."
+            }
+          ],
+          "name": "setDescription(description)",
+          "description": "Sets the description of thisField. Descriptions are short explanations of a field's\npurpose.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "formula",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The formula to set."
+            }
+          ],
+          "name": "setFormula(formula)",
+          "description": "Sets the formula of thisField. Formulas define a data transformation that Data Studio\nruns at query-time.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "group",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The group to set."
+            }
+          ],
+          "name": "setGroup(group)",
+          "description": "Sets the group of thisField. Fields collected into a group are presented together in\nthe Data Studio UI.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID to set."
+            }
+          ],
+          "name": "setId(id)",
+          "description": "Sets the ID of thisField. IDs are unique per set of fields and are used in formulas to\nrefer to fields.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isHidden",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The hidden status to set."
+            }
+          ],
+          "name": "setIsHidden(isHidden)",
+          "description": "Sets the hidden status of thisField. You can use hidden fields in formulas, but not in\ncharts. You cannot hide fields containing formulas.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isReaggregatable",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The reaggregation-permitted status to set."
+            }
+          ],
+          "name": "setIsReaggregatable(isReaggregatable)",
+          "description": "Sets the reaggregation-permitted status for aField. Attempting to set an aggregation\ntype on a field that can't be reaggregated results in an error.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name to set."
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the name of thisField. Names are shown to the user to distinguish fields.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "type",
+              "type": {
+                "name": "FieldType",
+                "url": "https://developers.google.com/apps-script/reference/data-studio/field-type"
+              },
+              "description": "The type to set."
+            }
+          ],
+          "name": "setType(type)",
+          "description": "Sets theFieldTypeof thisField.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum FieldType",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/field-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class Fields",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/fields",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "asArray()",
+          "description": "Returns a view of this object as an array.",
+          "return_type": {
+            "name": "Field[]",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Validates this object and returns it in the format needed by Data Studio.",
+          "return_type": {
+            "name": "Object[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "ids",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "The IDs of fields that should be kept."
+            }
+          ],
+          "name": "forIds(ids)",
+          "description": "Returns a newFieldsobject filtered toFields with an ID inids.",
+          "return_type": {
+            "name": "Fields",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDefaultDimension()",
+          "description": "Returns the default dimension to be used for the set of fields. The default dimension is\nselected automatically when a new visualization is made.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDefaultMetric()",
+          "description": "Returns the default metric to be used for the set of fields. The default metric is selected\nautomatically when a new visualization is made.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "fieldId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the field to get."
+            }
+          ],
+          "name": "getFieldById(fieldId)",
+          "description": "Returns a field with a given ID, ornullif no field with that ID is in thisFieldsobject.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newDimension()",
+          "description": "Returns a new dimensionField.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newMetric()",
+          "description": "Returns a new metricField.",
+          "return_type": {
+            "name": "Field",
+            "url": "https://developers.google.com/apps-script/reference/data-studio/field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "fieldId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the field to use as the default dimension. This ID must be present in\n    the set of fields."
+            }
+          ],
+          "name": "setDefaultDimension(fieldId)",
+          "description": "Sets the default dimension to be used for the set of fields. The default dimension is selected\nautomatically when a new visualization is made.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "fieldId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the field to use as the default metric. This ID must be present in the\n    set of fields."
+            }
+          ],
+          "name": "setDefaultMetric(fieldId)",
+          "description": "Sets the default metric to be used for the set of fields. The default metric is selected\nautomatically when a new visualization is made.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GetAuthTypeResponse",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/get-auth-type-response",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Validates this object and returns it in the format needed by Data Studio.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "printJson()",
+          "description": "Prints the JSON representation of this object. This is for debugging only.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "authType",
+              "type": {
+                "name": "AuthType",
+                "url": "https://developers.google.com/apps-script/reference/data-studio/auth-type"
+              },
+              "description": "The authentication type to set."
+            }
+          ],
+          "name": "setAuthType(authType)",
+          "description": "Sets theAuthTypeof the builder.",
+          "return_type": {
+            "name": "GetAuthTypeResponse",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "helpUrl",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The help URL to set."
+            }
+          ],
+          "name": "setHelpUrl(helpUrl)",
+          "description": "Sets the help URL of the builder.",
+          "return_type": {
+            "name": "GetAuthTypeResponse",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GetDataResponse",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/get-data-response",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "rows",
+              "type": {
+                "name": "String[][]",
+                "url": null
+              },
+              "description": "The rows of data to set."
+            }
+          ],
+          "name": "addAllRows(rows)",
+          "description": "Adds multiple rows of data to thisGetDataResponse.",
+          "return_type": {
+            "name": "GetDataResponse",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "row",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "The row of data to set."
+            }
+          ],
+          "name": "addRow(row)",
+          "description": "Adds a row of data to thisGetDataResponse.",
+          "return_type": {
+            "name": "GetDataResponse",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Validates this object and returns it in the format needed by Data Studio.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "fields",
+              "type": {
+                "name": "Fields",
+                "url": "https://developers.google.com/apps-script/reference/data-studio/fields"
+              },
+              "description": "The fields to set."
+            }
+          ],
+          "name": "setFields(fields)",
+          "description": "Sets theFieldsof the builder.",
+          "return_type": {
+            "name": "GetDataResponse",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "filtersApplied",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "- The filters applied status to set."
+            }
+          ],
+          "name": "setFiltersApplied(filtersApplied)",
+          "description": "Sets the filters applied status for this builder. Set totrueif all filters were\nsuccessfully applied,falseotherwise.",
+          "return_type": {
+            "name": "GetDataResponse",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GetSchemaResponse",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/get-schema-response",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Validates this object and returns it in the format needed by Data Studio.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "printJson()",
+          "description": "Prints the JSON representation of this object. This is for debugging only.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "fields",
+              "type": {
+                "name": "Fields",
+                "url": "https://developers.google.com/apps-script/reference/data-studio/fields"
+              },
+              "description": "The fields to set."
+            }
+          ],
+          "name": "setFields(fields)",
+          "description": "Sets theFieldsof the builder.",
+          "return_type": {
+            "name": "GetSchemaResponse",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Info",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/info",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID to set."
+            }
+          ],
+          "name": "setId(id)",
+          "description": "Sets the unique ID for this configuration entry.",
+          "return_type": {
+            "name": "Info",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The text to set."
+            }
+          ],
+          "name": "setText(text)",
+          "description": "Sets the text for this configuration entry.",
+          "return_type": {
+            "name": "Info",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class OptionBuilder",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/option-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The label to set."
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Sets the label of this option builder. Labels are the text that the user sees when selecting\none or more options from the dropdown.",
+          "return_type": {
+            "name": "OptionBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setValue(value)",
+          "description": "Sets the value of this option builder. Values are what is passed to the code when a user\nselects one or more options from the dropdown.",
+          "return_type": {
+            "name": "OptionBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class SelectMultiple",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/select-multiple",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "optionBuilder",
+              "type": {
+                "name": "OptionBuilder",
+                "url": "https://developers.google.com/apps-script/reference/data-studio/option-builder"
+              },
+              "description": "A builder for an option."
+            }
+          ],
+          "name": "addOption(optionBuilder)",
+          "description": "Adds a new select option.",
+          "return_type": {
+            "name": "SelectMultiple",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "allowOverride",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether or not this config entry can be overridden in reports."
+            }
+          ],
+          "name": "setAllowOverride(allowOverride)",
+          "description": "Enables overriding for this config entry. If set totrue, data source creators have the\noption to enable this for report editors.",
+          "return_type": {
+            "name": "SelectMultiple",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "helpText",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The help text to set."
+            }
+          ],
+          "name": "setHelpText(helpText)",
+          "description": "Sets the help text for this configuration entry.",
+          "return_type": {
+            "name": "SelectMultiple",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID to set."
+            }
+          ],
+          "name": "setId(id)",
+          "description": "Sets the unique ID for this configuration entry.",
+          "return_type": {
+            "name": "SelectMultiple",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isDynamic",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The dynamic status to set."
+            }
+          ],
+          "name": "setIsDynamic(isDynamic)",
+          "description": "Sets the dynamic status for this configuration entry.",
+          "return_type": {
+            "name": "SelectMultiple",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name to set."
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the display name for this configuration entry.",
+          "return_type": {
+            "name": "SelectMultiple",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class SelectSingle",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/select-single",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "optionBuilder",
+              "type": {
+                "name": "OptionBuilder",
+                "url": "https://developers.google.com/apps-script/reference/data-studio/option-builder"
+              },
+              "description": "A builder for an option."
+            }
+          ],
+          "name": "addOption(optionBuilder)",
+          "description": "Adds a new select option.",
+          "return_type": {
+            "name": "SelectSingle",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "allowOverride",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether or not this config entry can be overridden in reports."
+            }
+          ],
+          "name": "setAllowOverride(allowOverride)",
+          "description": "Enables overriding for this config entry. If set totrue, data source creators have the\noption to enable this for report editors.",
+          "return_type": {
+            "name": "SelectSingle",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "helpText",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The helpText to set."
+            }
+          ],
+          "name": "setHelpText(helpText)",
+          "description": "Sets the help text for this configuration entry.",
+          "return_type": {
+            "name": "SelectSingle",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID to set."
+            }
+          ],
+          "name": "setId(id)",
+          "description": "Sets the unique ID for this configuration entry.",
+          "return_type": {
+            "name": "SelectSingle",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isDynamic",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The dynamic status to set."
+            }
+          ],
+          "name": "setIsDynamic(isDynamic)",
+          "description": "Sets the dynamic status for this configuration entry.",
+          "return_type": {
+            "name": "SelectSingle",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name to set."
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the display name for this configuration entry.",
+          "return_type": {
+            "name": "SelectSingle",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class SetCredentialsResponse",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/set-credentials-response",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Validates this object and returns it in the format needed by Data Studio.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "printJson()",
+          "description": "Prints the JSON representation of this object. This is for debugging only.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isValid",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The valid status to set."
+            }
+          ],
+          "name": "setIsValid(isValid)",
+          "description": "Sets the valid status of thisSetCredentialsResponse. Set totrueif the\ncredentials provided in the request were valid,false, otherwise.",
+          "return_type": {
+            "name": "SetCredentialsResponse",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class TextArea",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/text-area",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "allowOverride",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether or not this config entry can be overridden in reports."
+            }
+          ],
+          "name": "setAllowOverride(allowOverride)",
+          "description": "Enables overriding for this config entry. If set totrue, data source creators have the\noption to enable this for report editors.",
+          "return_type": {
+            "name": "TextArea",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "helpText",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The helpText to set."
+            }
+          ],
+          "name": "setHelpText(helpText)",
+          "description": "Sets the help text for this configuration entry.",
+          "return_type": {
+            "name": "TextArea",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID to set."
+            }
+          ],
+          "name": "setId(id)",
+          "description": "Sets the unique ID for this configuration entry.",
+          "return_type": {
+            "name": "TextArea",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isDynamic",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The dynamic status to set."
+            }
+          ],
+          "name": "setIsDynamic(isDynamic)",
+          "description": "Sets the dynamic status for this configuration entry.",
+          "return_type": {
+            "name": "TextArea",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name to set."
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the display name for this configuration entry.",
+          "return_type": {
+            "name": "TextArea",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "placeholder",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The placeholder text to set."
+            }
+          ],
+          "name": "setPlaceholder(placeholder)",
+          "description": "Sets the placeholder text for this configuration entry.",
+          "return_type": {
+            "name": "TextArea",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class TextInput",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/text-input",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "allowOverride",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether or not this config entry can be overridden in reports."
+            }
+          ],
+          "name": "setAllowOverride(allowOverride)",
+          "description": "Enables overriding for this config entry. If set totrue, data source creators have the\noption to enable this for report editors",
+          "return_type": {
+            "name": "TextInput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "helpText",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The helpText to set."
+            }
+          ],
+          "name": "setHelpText(helpText)",
+          "description": "Sets the help text for this configuration entry.",
+          "return_type": {
+            "name": "TextInput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID to set."
+            }
+          ],
+          "name": "setId(id)",
+          "description": "Sets the unique ID for this configuration entry.",
+          "return_type": {
+            "name": "TextInput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "isDynamic",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The dynamic status to set."
+            }
+          ],
+          "name": "setIsDynamic(isDynamic)",
+          "description": "Sets the dynamic status for this configuration entry.",
+          "return_type": {
+            "name": "TextInput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name to set."
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the display name for this configuration entry.",
+          "return_type": {
+            "name": "TextInput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "placeholder",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The placeholder text to set."
+            }
+          ],
+          "name": "setPlaceholder(placeholder)",
+          "description": "Sets the placeholder text for this configuration entry.",
+          "return_type": {
+            "name": "TextInput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class UserError",
+      "url": "https://developers.google.com/apps-script/reference/data-studio/user-error",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "printJson()",
+          "description": "Prints the JSON representation of this object. This is for debugging only.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The error text."
+            }
+          ],
+          "name": "setDebugText(text)",
+          "description": "Sets the text of the debug error, which is only shown to admins.",
+          "return_type": {
+            "name": "UserError",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The error text."
+            }
+          ],
+          "name": "setText(text)",
+          "description": "Sets the text of the user error.",
+          "return_type": {
+            "name": "UserError",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "throwException()",
+          "description": "Triggers this exception to be thrown.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    }
+  ]
+}

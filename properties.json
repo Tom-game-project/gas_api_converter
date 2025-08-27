@@ -1,0 +1,460 @@
+{
+  "service_name": "properties",
+  "url": "https://developers.google.com/apps-script/reference/properties",
+  "classes": [
+    {
+      "name": "Class Properties",
+      "url": "https://developers.google.com/apps-script/reference/properties/properties",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "deleteAllProperties()",
+          "description": "Deletes all properties in the currentPropertiesstore.",
+          "return_type": {
+            "name": "Properties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the key for the property to delete"
+            }
+          ],
+          "name": "deleteProperty(key)",
+          "description": "Deletes the property with the given key in the currentPropertiesstore.",
+          "return_type": {
+            "name": "Properties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getKeys()",
+          "description": "Gets all keys in the currentPropertiesstore.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getProperties()",
+          "description": "Gets a copy of all key-value pairs in the currentPropertiesstore. Note that the\nreturned object is not a live view of the store. Consequently, changing the properties on the\nreturned object will not automatically update them in storage, or vice versa.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the key for the property value to retrieve"
+            }
+          ],
+          "name": "getProperty(key)",
+          "description": "Gets the value associated with the given key in the currentPropertiesstore, ornullif no such key exists.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "properties",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "an object containing key-values pairs to set"
+            }
+          ],
+          "name": "setProperties(properties)",
+          "description": "Sets all key-value pairs from the given object in the currentPropertiesstore.",
+          "return_type": {
+            "name": "Properties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "properties",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "an object containing key-values pairs to set"
+            },
+            {
+              "name": "deleteAllOthers",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueto delete all other key-value pairs in the properties\n    object;falseto not"
+            }
+          ],
+          "name": "setProperties(properties, deleteAllOthers)",
+          "description": "Sets all key-value pairs from the given object in the currentPropertiesstore,\noptionally deleting all other properties in the store.",
+          "return_type": {
+            "name": "Properties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the key for the property"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value to associate with the key"
+            }
+          ],
+          "name": "setProperty(key, value)",
+          "description": "Sets the given key-value pair in the currentPropertiesstore.",
+          "return_type": {
+            "name": "Properties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class PropertiesService",
+      "url": "https://developers.google.com/apps-script/reference/properties/properties-service",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getDocumentProperties()",
+          "description": "Gets a property store (for this script only) that all users can access within the open\ndocument, spreadsheet, or form. It is only available if the script is published and executing\nas an add-on or if it isboundto a Google file\ntype. When document properties are not available this method returnsnull. Document\nproperties created by a script are not accessible outside that script, even by other scripts\naccessing the same document.",
+          "return_type": {
+            "name": "Properties",
+            "url": "https://developers.google.com/apps-script/reference/properties/properties"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getScriptProperties()",
+          "description": "Gets a property store that all users can access, but only within this script.",
+          "return_type": {
+            "name": "Properties",
+            "url": "https://developers.google.com/apps-script/reference/properties/properties"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUserProperties()",
+          "description": "Gets a property store that only the current user can access, and only within this script.",
+          "return_type": {
+            "name": "Properties",
+            "url": "https://developers.google.com/apps-script/reference/properties/properties"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ScriptProperties",
+      "url": "https://developers.google.com/apps-script/reference/properties/script-properties",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "deleteAllProperties()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ScriptProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "key for property to delete"
+            }
+          ],
+          "name": "deleteProperty(key)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ScriptProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getKeys()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getProperties()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "key for the value to retrieve"
+            }
+          ],
+          "name": "getProperty(key)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "properties",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "an object containing the properties to set."
+            }
+          ],
+          "name": "setProperties(properties)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ScriptProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "properties",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "an object containing the properties to set."
+            },
+            {
+              "name": "deleteAllOthers",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether to delete all existing properties."
+            }
+          ],
+          "name": "setProperties(properties, deleteAllOthers)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ScriptProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "key for property"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "value to associate with the key"
+            }
+          ],
+          "name": "setProperty(key, value)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ScriptProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class UserProperties",
+      "url": "https://developers.google.com/apps-script/reference/properties/user-properties",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "deleteAllProperties()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "UserProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "key for property to delete"
+            }
+          ],
+          "name": "deleteProperty(key)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "UserProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getKeys()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getProperties()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "key for the value to retrieve"
+            }
+          ],
+          "name": "getProperty(key)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "properties",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "an object containing the properties to set."
+            }
+          ],
+          "name": "setProperties(properties)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "UserProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "properties",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "an object containing the properties to set."
+            },
+            {
+              "name": "deleteAllOthers",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether to delete all existing properties."
+            }
+          ],
+          "name": "setProperties(properties, deleteAllOthers)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "UserProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "key for property"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "value to associate with the key"
+            }
+          ],
+          "name": "setProperty(key, value)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "UserProperties",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    }
+  ]
+}

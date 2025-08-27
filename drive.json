@@ -1,0 +1,2468 @@
+{
+  "service_name": "drive",
+  "url": "https://developers.google.com/apps-script/reference/drive",
+  "classes": [
+    {
+      "name": "Enum Access",
+      "url": "https://developers.google.com/apps-script/reference/drive/access",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class DriveApp",
+      "url": "https://developers.google.com/apps-script/reference/drive/drive-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "continuationToken",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A continuation token from a previous file iterator."
+            }
+          ],
+          "name": "continueFileIterator(continuationToken)",
+          "description": "Resumes a file iteration using a continuation token from a previous iterator. This method is\nuseful if processing an iterator in one execution exceeds the maximum execution time.\nContinuation tokens are generally valid for one week.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "continuationToken",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A continuation token from a previous folder iterator."
+            }
+          ],
+          "name": "continueFolderIterator(continuationToken)",
+          "description": "Resumes a folder iteration using a continuation token from a previous iterator. This method is\nuseful if processing an iterator in one execution exceeds the maximum execution time.\nContinuation tokens are generally valid for one week.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "blob",
+              "type": {
+                "name": "BlobSource",
+                "url": "https://developers.google.com/apps-script/reference/base/blob-source.html"
+              },
+              "description": "The data for the new file."
+            }
+          ],
+          "name": "createFile(blob)",
+          "description": "Creates a file in the root of the user's Drive from a givenBlobof arbitrary data.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the new file."
+            },
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The content for the new file."
+            }
+          ],
+          "name": "createFile(name, content)",
+          "description": "Creates a text file in the root of the user's Drive with the given name and contents. Throws an\nexception ifcontentis larger than 50 MB.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the new file."
+            },
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The content for the new file."
+            },
+            {
+              "name": "mimeType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type of the new file."
+            }
+          ],
+          "name": "createFile(name, content, mimeType)",
+          "description": "Creates a file in the root of the user's Drive with the given name, contents, and MIME type. Throws\nan exception ifcontentis larger than 10MB.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the new folder."
+            }
+          ],
+          "name": "createFolder(name)",
+          "description": "Creates a folder in the root of the user's Drive with the given name.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "targetId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The file ID of the target file or folder."
+            }
+          ],
+          "name": "createShortcut(targetId)",
+          "description": "Creates a shortcut to the provided Drive item ID, and returns it.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "targetId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the target file or folder."
+            },
+            {
+              "name": "targetResourceKey",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The resource key of the target file or folder."
+            }
+          ],
+          "name": "createShortcutForTargetIdAndResourceKey(targetId, targetResourceKey)",
+          "description": "Creates a shortcut to the provided Drive item ID and resource key, and returns it. A resource\nkey is an additional parameter that needs to be passed to access the target file or folder that\nhas been shared using a link.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "value",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "The new state of the enforceSingleParent flag."
+            }
+          ],
+          "name": "enforceSingleParent(value)",
+          "description": "Enables or disables enforceSingleParent behavior for all calls affecting item parents.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the file."
+            }
+          ],
+          "name": "getFileById(id)",
+          "description": "Gets the file with the given ID. Throws a scripting exception if the file does not exist or the\nuser does not have permission to access it.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the file."
+            },
+            {
+              "name": "resourceKey",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The resource key of the folder."
+            }
+          ],
+          "name": "getFileByIdAndResourceKey(id, resourceKey)",
+          "description": "Gets the file with the given ID and resource key. Resource keys are an additional parameter\nwhich need to be passed to access files that have been shared using a link.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFiles()",
+          "description": "Gets a collection of all files in the user's Drive.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the files to find."
+            }
+          ],
+          "name": "getFilesByName(name)",
+          "description": "Gets a collection of all files in the user's Drive that have the given name.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "mimeType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type of the files to find."
+            }
+          ],
+          "name": "getFilesByType(mimeType)",
+          "description": "Gets a collection of all files in the user's Drive that have the given MIME type.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the folder."
+            }
+          ],
+          "name": "getFolderById(id)",
+          "description": "Gets the folder with the given ID. Throws a scripting exception if the folder does not exist or\nthe user does not have permission to access it.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the folder."
+            },
+            {
+              "name": "resourceKey",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The resource key of the folder."
+            }
+          ],
+          "name": "getFolderByIdAndResourceKey(id, resourceKey)",
+          "description": "Gets the folder with the given ID and resource key. Resource keys are an additional parameter\nwhich need to be passed to access folders that have been shared using a link.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFolders()",
+          "description": "Gets a collection of all folders in the user's Drive.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the folders to find."
+            }
+          ],
+          "name": "getFoldersByName(name)",
+          "description": "Gets a collection of all folders in the user's Drive that have the given name.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getRootFolder()",
+          "description": "Gets the folder at the root of the user's Drive.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getStorageLimit()",
+          "description": "Gets the number of bytes the user is allowed to store in Drive.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getStorageUsed()",
+          "description": "Gets the number of bytes the user is currently storing in Drive.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTrashedFiles()",
+          "description": "Gets a collection of all the files in the trash of the user's Drive.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTrashedFolders()",
+          "description": "Gets a collection of all the folders in the trash of the user's Drive.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "params",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The search criteria, as detailed in theGoogle Drive SDK documentation."
+            }
+          ],
+          "name": "searchFiles(params)",
+          "description": "Gets a collection of all files in the user's Drive that match the given search\ncriteria. The search criteria are detailed in theGoogle Drive SDK documentation. Note that the Drive\nservice uses v2 of the Drive API and some query fields differ from v3. Review thefield\ndifferences between v2 and v3.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "params",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The search criteria, as detailed in theGoogle Drive SDK documentation."
+            }
+          ],
+          "name": "searchFolders(params)",
+          "description": "Gets a collection of all folders in the user's Drive that match the given search\ncriteria. The search criteria are detailed in theGoogle Drive SDK documentation. Note that the Drive\nservice uses v2 of the Drive API and some query fields differ from v3. Review thefield\ndifferences between v2 and v3.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "child",
+              "type": {
+                "name": "File",
+                "url": "https://developers.google.com/apps-script/reference/drive/file"
+              },
+              "description": "The child file to add."
+            }
+          ],
+          "name": "addFile(child)",
+          "description": "Deprecated.Instead, useFile.moveTo(destination)orFolder.createShortcut(targetId).",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "child",
+              "type": {
+                "name": "Folder",
+                "url": "https://developers.google.com/apps-script/reference/drive/folder"
+              },
+              "description": "The child folder to add."
+            }
+          ],
+          "name": "addFolder(child)",
+          "description": "Deprecated.Instead, useFolder.moveTo(destination)orFolder.createShortcut(targetId).",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "child",
+              "type": {
+                "name": "File",
+                "url": "https://developers.google.com/apps-script/reference/drive/file"
+              },
+              "description": "The child file to remove."
+            }
+          ],
+          "name": "removeFile(child)",
+          "description": "Deprecated.Instead, useFile.moveTo(destination).",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "child",
+              "type": {
+                "name": "Folder",
+                "url": "https://developers.google.com/apps-script/reference/drive/folder"
+              },
+              "description": "The child folder to remove."
+            }
+          ],
+          "name": "removeFolder(child)",
+          "description": "Deprecated.Instead, useFolder.moveTo(destination).",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class File",
+      "url": "https://developers.google.com/apps-script/reference/drive/file",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to add."
+            }
+          ],
+          "name": "addCommenter(emailAddress)",
+          "description": "Add the given user to the list of commenters for theFile. If the user was\nalready on the list of viewers, this method promotes the user out of the list of viewers.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to add."
+            }
+          ],
+          "name": "addCommenter(user)",
+          "description": "Add the given user to the list of commenters for theFile. If the user was\nalready on the list of viewers, this method promotes the user out of the list of viewers.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddresses",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of email addresses of the users to add."
+            }
+          ],
+          "name": "addCommenters(emailAddresses)",
+          "description": "Add the given array of users to the list of commenters for theFile. If any\nof the users were already on the list of viewers, this method promotes them out of the list of\nviewers.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to add."
+            }
+          ],
+          "name": "addEditor(emailAddress)",
+          "description": "Adds the given user to the list of editors for theFile. If the user was already\non the list of viewers, this method promotes the user out of the list of viewers.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to add."
+            }
+          ],
+          "name": "addEditor(user)",
+          "description": "Adds the given user to the list of editors for theFile. If the user was already\non the list of viewers, this method promotes the user out of the list of viewers.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddresses",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of email addresses of the users to add."
+            }
+          ],
+          "name": "addEditors(emailAddresses)",
+          "description": "Adds the given array of users to the list of editors for theFile. If any of the\nusers were already on the list of viewers, this method promotes them out of the list of\nviewers.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to add."
+            }
+          ],
+          "name": "addViewer(emailAddress)",
+          "description": "Adds the given user to the list of viewers for theFile. If the user was already\non the list of editors, this method has no effect.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to add."
+            }
+          ],
+          "name": "addViewer(user)",
+          "description": "Adds the given user to the list of viewers for theFile. If the user was already\non the list of editors, this method has no effect.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddresses",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of email addresses of the users to add."
+            }
+          ],
+          "name": "addViewers(emailAddresses)",
+          "description": "Adds the given array of users to the list of viewers for theFile. If any of the\nusers were already on the list of editors, this method has no effect for them.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user whose permissions should be checked. Google Groups\n    aren't supported."
+            }
+          ],
+          "name": "getAccess(email)",
+          "description": "Gets the permission granted to a specific user. The method doesn't support returning\npermissions for a Google Group or permissions inherited through Google Groups.",
+          "return_type": {
+            "name": "Permission",
+            "url": "https://developers.google.com/apps-script/reference/drive/permission"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user whose permissions should be checked."
+            }
+          ],
+          "name": "getAccess(user)",
+          "description": "Gets the permission granted to a specific user. The method doesn't support returning\npermissions for a Google Group or permissions inherited through Google Groups.",
+          "return_type": {
+            "name": "Permission",
+            "url": "https://developers.google.com/apps-script/reference/drive/permission"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type to convert to. For most blobs,'application/pdf'is\n    the only valid option. For images in BMP, GIF, JPEG, or PNG format, any of'image/bmp','image/gif','image/jpeg', or'image/png'are also\n    valid. For a Google Docs document,'text/markdown'is also valid."
+            }
+          ],
+          "name": "getAs(contentType)",
+          "description": "Return the data inside this object as a blob converted to the specified content type. This\nmethod adds the appropriate extension to the filename—for example, \"myfile.pdf\". However, it\nassumes that the part of the filename that follows the last period (if any) is an existing\nextension that should be replaced. Consequently, \"ShoppingList.12.25.2014\" becomes\n\"ShoppingList.12.25.pdf\".",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBlob()",
+          "description": "Return the data inside this object as a blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDateCreated()",
+          "description": "Gets the date theFilewas created.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescription()",
+          "description": "Gets the description for theFile.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDownloadUrl()",
+          "description": "Gets the URL that can be used to download the file. Only users with permission to open the file\nin Google Drive can access the URL. You can use this URL in a browser to download the file, but\nyou can't use to fetch the file withUrlFetchApp. If you want the contents of the\nfile in the script, usegetBlob().",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEditors()",
+          "description": "Gets the list of editors for thisFile. If the user who executes the script\ndoes not have edit access to theFile, this method returns an empty array.",
+          "return_type": {
+            "name": "User[]",
+            "url": "https://developers.google.com/apps-script/reference/drive/user"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the ID of theFile.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLastUpdated()",
+          "description": "Gets the date theFilewas last updated.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMimeType()",
+          "description": "Gets the MIME type of the file.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of theFile.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getOwner()",
+          "description": "Gets the file owner.",
+          "return_type": {
+            "name": "User",
+            "url": "https://developers.google.com/apps-script/reference/drive/user"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParents()",
+          "description": "Gets a collection of folders that are immediate parents of theFile.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getResourceKey()",
+          "description": "Gets the resource key of theFilethat is required to access items that\nhave been shared using a link.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSecurityUpdateEligible()",
+          "description": "Gets whether thisFileis eligible to apply the security update that\nrequires a resource key for access when it's shared using a link.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSecurityUpdateEnabled()",
+          "description": "Gets whether thisFilerequires a resource key for access when it's\nshared using a link. This requirement is turned on by default for eligible files and folders.\nTo turn the resource key requirement on or off for eligible files, usesetSecurityUpdateEnabled.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSharingAccess()",
+          "description": "Gets which class of users can access theFile, besides any individual\nusers who have been explicitly given access.",
+          "return_type": {
+            "name": "Access",
+            "url": "https://developers.google.com/apps-script/reference/drive/access"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSharingPermission()",
+          "description": "Gets the permission granted to those users who can access theFile,\nbesides any individual users who have been explicitly given access.",
+          "return_type": {
+            "name": "Permission",
+            "url": "https://developers.google.com/apps-script/reference/drive/permission"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSize()",
+          "description": "Gets the number of bytes used to store theFilein Drive. Note that\nGoogle Workspace application files do not count toward Drive storage limits and thus return0bytes.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTargetId()",
+          "description": "If this is a Shortcut, returns the ID of the item it points to.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTargetMimeType()",
+          "description": "If this is a Shortcut, returns the mime type of the item it points to.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTargetResourceKey()",
+          "description": "If the file is a shortcut, returns the resource key of the item it points to. A resource key is\nan additional parameter that you need to pass to access files that have been shared using a\nlink.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getThumbnail()",
+          "description": "Gets a thumbnail image for the file, ornullif no thumbnail exists.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUrl()",
+          "description": "Gets the URL that can be used to open theFilein a Google App like\nDrive or Docs.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getViewers()",
+          "description": "Gets the list of viewers and commenters for thisFile. If the user who\nexecutes the script does not have edit access to theFile, this method\nreturns an empty array.",
+          "return_type": {
+            "name": "User[]",
+            "url": "https://developers.google.com/apps-script/reference/drive/user"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isShareableByEditors()",
+          "description": "Determines whether users with edit permissions to theFileare allowed to\nshare with other users or change the permissions.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isStarred()",
+          "description": "Determines whether theFilehas been starred in the user's Drive.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isTrashed()",
+          "description": "Determines whether theFileis in the trash of the user's Drive.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "makeCopy()",
+          "description": "Creates a copy of the file.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "destination",
+              "type": {
+                "name": "Folder",
+                "url": "https://developers.google.com/apps-script/reference/drive/folder"
+              },
+              "description": "The directory to copy the file into."
+            }
+          ],
+          "name": "makeCopy(destination)",
+          "description": "Creates a copy of the file in the destination directory.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The filename that should be applied to the new copy."
+            }
+          ],
+          "name": "makeCopy(name)",
+          "description": "Creates a copy of the file and names it with the name provided.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The filename that should be applied to the new copy."
+            },
+            {
+              "name": "destination",
+              "type": {
+                "name": "Folder",
+                "url": "https://developers.google.com/apps-script/reference/drive/folder"
+              },
+              "description": "The directory to copy the file into."
+            }
+          ],
+          "name": "makeCopy(name, destination)",
+          "description": "Creates a copy of the file in the destination directory and names it with the name provided.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "destination",
+              "type": {
+                "name": "Folder",
+                "url": "https://developers.google.com/apps-script/reference/drive/folder"
+              },
+              "description": "The folder that becomes the new parent."
+            }
+          ],
+          "name": "moveTo(destination)",
+          "description": "Moves this item to the provided destination folder.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to remove."
+            }
+          ],
+          "name": "removeCommenter(emailAddress)",
+          "description": "Removes the given user from the list of commenters for theFile. This method\ndoes not block users from access theFileif they belong to a class of users\nwho have general access — for example, if theFileis shared with the user's\nentire domain.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to remove."
+            }
+          ],
+          "name": "removeCommenter(user)",
+          "description": "Removes the given user from the list of commenters for theFile. This method\ndoes not block users from access theFileif they belong to a class of users\nwho have general access — for example, if theFileis shared with the user's\nentire domain.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to remove."
+            }
+          ],
+          "name": "removeEditor(emailAddress)",
+          "description": "Removes the given user from the list of editors for theFile. This method doesn't\nblock users from accessing theFileif they belong to a class of users who have\ngeneral access—for example, if theFileis shared with the user's entire\ndomain, or if theFileis in a shared drive that the user can access.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to remove."
+            }
+          ],
+          "name": "removeEditor(user)",
+          "description": "Removes the given user from the list of editors for theFile. This method doesn't\nblock users from accessing theFileif they belong to a class of users who have\ngeneral access—for example, if theFileis shared with the user's entire\ndomain, or if theFileis in a shared drive that the user can access.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to remove."
+            }
+          ],
+          "name": "removeViewer(emailAddress)",
+          "description": "Removes the given user from the list of viewers and commenters for theFile. This\nmethod has no effect if the user is an editor, not a viewer or commenter. This method also\ndoesn't block users from accessing theFileif they belong to a class of users who\nhave general access—for example, if theFileis shared with the user's\nentire domain, or if theFileis in a shared drive that the user can access.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to remove."
+            }
+          ],
+          "name": "removeViewer(user)",
+          "description": "Removes the given user from the list of viewers and commenters for theFile. This\nmethod has no effect if the user is an editor, not a viewer. This method also doesn't block\nusers from accessing theFileif they belong to a class of users who have general\naccess—for example, if theFileis shared with the user's entire domain, or\nif theFileis in a shared drive that the user can access.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user whose access should be revoked."
+            }
+          ],
+          "name": "revokePermissions(emailAddress)",
+          "description": "Revokes the access to theFilegranted to the given user. This method doesn't\nblock users from accessing theFileif they belong to a class of users who\nhave general access — for example, if theFileis shared with the user's\nentire domain.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user whose access should be revoked."
+            }
+          ],
+          "name": "revokePermissions(user)",
+          "description": "Revokes the access to theFilegranted to the given user. This method doesn't\nblock users from accessing theFileif they belong to a class of users who\nhave general access — for example, if theFileis shared with the user's\nentire domain.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The new content for the file."
+            }
+          ],
+          "name": "setContent(content)",
+          "description": "Overwrites the content of the file with a given replacement. Throws an exception ifcontentis larger than 10MB.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new description for theFile"
+            }
+          ],
+          "name": "setDescription(description)",
+          "description": "Sets the description for theFile.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new name of theFile"
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the name of theFile.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the email address of the user who should become the new owner"
+            }
+          ],
+          "name": "setOwner(emailAddress)",
+          "description": "Changes the owner of theFile. This method also gives the previous owner\nexplicit edit access to theFile.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "a representation of the user who should become the new owner"
+            }
+          ],
+          "name": "setOwner(user)",
+          "description": "Changes the owner of theFile. This method also gives the previous owner\nexplicit edit access to theFile.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "enabled",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether to enable the resource key requirement for theFile."
+            }
+          ],
+          "name": "setSecurityUpdateEnabled(enabled)",
+          "description": "Sets whether theFilerequires a resource key for access when it's\nshared using a link. Eligible files and folders are enabled by default.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "shareable",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif users with edit permissions should be allowed to share with\n    other users or change the permissions;falseif not"
+            }
+          ],
+          "name": "setShareableByEditors(shareable)",
+          "description": "Sets whether users with edit permissions to theFileare allowed to share\nwith other users or change the permissions. The default for a newFileistrue.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "accessType",
+              "type": {
+                "name": "Access",
+                "url": "https://developers.google.com/apps-script/reference/drive/access"
+              },
+              "description": "which class of users should be able to access theFile"
+            },
+            {
+              "name": "permissionType",
+              "type": {
+                "name": "Permission",
+                "url": "https://developers.google.com/apps-script/reference/drive/permission"
+              },
+              "description": "the permissions that should be granted to users who can access theFile"
+            }
+          ],
+          "name": "setSharing(accessType, permissionType)",
+          "description": "Sets which class of users can access theFileand what permissions\nthose users are granted, besides any individual users who have been explicitly given access.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "starred",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif theFileshould be starred in the user's\n    Drive;falseif not"
+            }
+          ],
+          "name": "setStarred(starred)",
+          "description": "Sets whether theFileis starred in the user's Drive. The default for\nnewFiles isfalse.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "trashed",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif theFileshould be moved to the trash of\n    the user's Drive;falseif not"
+            }
+          ],
+          "name": "setTrashed(trashed)",
+          "description": "Sets whether theFileis in the trash of the user's Drive. Only the\nowner may trash theFile. The default for newFiles isfalse.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class FileIterator",
+      "url": "https://developers.google.com/apps-script/reference/drive/file-iterator",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getContinuationToken()",
+          "description": "Gets a token that can be used to resume this iteration at a later time. This method is useful\nif processing an iterator in one execution would exceed the maximum execution time.\nContinuation tokens are generally valid for one week.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "hasNext()",
+          "description": "Determines whether callingnext()will return an item.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "next()",
+          "description": "Gets the next item in the collection of files or folders. Throws an exception if no items\nremain.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Folder",
+      "url": "https://developers.google.com/apps-script/reference/drive/folder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to add."
+            }
+          ],
+          "name": "addEditor(emailAddress)",
+          "description": "Adds the given user to the list of editors for theFolder. If the user was already\non the list of viewers, this method promotes the user out of the list of viewers.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to add."
+            }
+          ],
+          "name": "addEditor(user)",
+          "description": "Adds the given user to the list of editors for theFolder. If the user was already\non the list of viewers, this method promotes the user out of the list of viewers.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddresses",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of email addresses of the users to add."
+            }
+          ],
+          "name": "addEditors(emailAddresses)",
+          "description": "Adds the given array of users to the list of editors for theFolder. If any of the\nusers were already on the list of viewers, this method promotes them out of the list of\nviewers.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to add."
+            }
+          ],
+          "name": "addViewer(emailAddress)",
+          "description": "Adds the given user to the list of viewers for theFolder. If the user was already\non the list of editors, this method has no effect.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to add."
+            }
+          ],
+          "name": "addViewer(user)",
+          "description": "Adds the given user to the list of viewers for theFolder. If the user was already\non the list of editors, this method has no effect.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddresses",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "An array of email addresses of the users to add."
+            }
+          ],
+          "name": "addViewers(emailAddresses)",
+          "description": "Adds the given array of users to the list of viewers for theFolder. If any of the\nusers were already on the list of editors, this method has no effect for them.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "blob",
+              "type": {
+                "name": "BlobSource",
+                "url": "https://developers.google.com/apps-script/reference/base/blob-source.html"
+              },
+              "description": "The data for the new file."
+            }
+          ],
+          "name": "createFile(blob)",
+          "description": "Creates a file in the current folder from a givenBlobof arbitrary data.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the new file."
+            },
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The content for the new file."
+            }
+          ],
+          "name": "createFile(name, content)",
+          "description": "Creates a text file in the current folder with the given name and contents. Throws an\nexception ifcontentis larger than 50 MB.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the new file."
+            },
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The content for the new file."
+            },
+            {
+              "name": "mimeType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type of the new file."
+            }
+          ],
+          "name": "createFile(name, content, mimeType)",
+          "description": "Creates a file in the current folder with the given name, contents, and MIME type. Throws\nan exception ifcontentis larger than 10MB.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the new folder."
+            }
+          ],
+          "name": "createFolder(name)",
+          "description": "Creates a folder in the current folder with the given name.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "targetId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The file ID of the target file or folder."
+            }
+          ],
+          "name": "createShortcut(targetId)",
+          "description": "Creates a shortcut to the provided Drive item ID, and returns it.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "targetId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the target file or folder."
+            },
+            {
+              "name": "targetResourceKey",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The resource key of the target file or folder."
+            }
+          ],
+          "name": "createShortcutForTargetIdAndResourceKey(targetId, targetResourceKey)",
+          "description": "Creates a shortcut to the provided Drive item ID and resource key, and returns it. A resource\nkey is an additional parameter that needs to be passed to access the target file or folder that\nhas been shared using a link.",
+          "return_type": {
+            "name": "File",
+            "url": "https://developers.google.com/apps-script/reference/drive/file"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user whose permissions should be checked. Google Groups\n    aren't supported."
+            }
+          ],
+          "name": "getAccess(email)",
+          "description": "Gets the permission granted to a specific user. The method doesn't support returning\npermissions for a Google Group or permissions inherited through Google Groups.",
+          "return_type": {
+            "name": "Permission",
+            "url": "https://developers.google.com/apps-script/reference/drive/permission"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user whose permissions should be checked."
+            }
+          ],
+          "name": "getAccess(user)",
+          "description": "Gets the permission granted to a specific user. The method doesn't support returning\npermissions for a Google Group or permissions inherited through Google Groups.",
+          "return_type": {
+            "name": "Permission",
+            "url": "https://developers.google.com/apps-script/reference/drive/permission"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDateCreated()",
+          "description": "Gets the date theFolderwas created.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescription()",
+          "description": "Gets the description for theFolder.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEditors()",
+          "description": "Gets the list of editors for thisFolder. If the user who executes the script\ndoes not have edit access to theFolder, this method returns an empty array.",
+          "return_type": {
+            "name": "User[]",
+            "url": "https://developers.google.com/apps-script/reference/drive/user"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFiles()",
+          "description": "Gets a collection of all files that are children of the current folder.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the files to find."
+            }
+          ],
+          "name": "getFilesByName(name)",
+          "description": "Gets a collection of all files that are children of the current folder and have the given name.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "mimeType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type of the files to find."
+            }
+          ],
+          "name": "getFilesByType(mimeType)",
+          "description": "Gets a collection of all files that are children of the current folder and have the given MIME type.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFolders()",
+          "description": "Gets a collection of all folders that are children of the current folder.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the folders to find."
+            }
+          ],
+          "name": "getFoldersByName(name)",
+          "description": "Gets a collection of all folders that are children of the current folder and have the given name.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the ID of theFolder.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLastUpdated()",
+          "description": "Gets the date theFolderwas last updated.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of theFolder.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getOwner()",
+          "description": "Gets the owner of thisFolder.",
+          "return_type": {
+            "name": "User",
+            "url": "https://developers.google.com/apps-script/reference/drive/user"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParents()",
+          "description": "Gets a collection of folders that are immediate parents of theFolder.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getResourceKey()",
+          "description": "Gets the resource key of theFolderthat is required to access items that\nhave been shared using a link.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSecurityUpdateEligible()",
+          "description": "Gets whether thisFolderis eligible to apply the security update that\nrequires a resource key for access when it's shared using a link.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSecurityUpdateEnabled()",
+          "description": "Gets whether thisFolderrequires a resource key for access when it's\nshared using a link. This requirement is turned on by default for eligible files and folders.\nTo turn the resource key requirement on or off for eligible files, usesetSecurityUpdateEnabled.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSharingAccess()",
+          "description": "Gets which class of users can access theFolder, besides any individual\nusers who have been explicitly given access.",
+          "return_type": {
+            "name": "Access",
+            "url": "https://developers.google.com/apps-script/reference/drive/access"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSharingPermission()",
+          "description": "Gets the permission granted to those users who can access theFolder,\nbesides any individual users who have been explicitly given access.",
+          "return_type": {
+            "name": "Permission",
+            "url": "https://developers.google.com/apps-script/reference/drive/permission"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSize()",
+          "description": "Gets the number of bytes used to store theFolderin Drive. Note that\nGoogle Workspace application files do not count toward Drive storage limits and thus return0bytes.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUrl()",
+          "description": "Gets the URL that can be used to open theFolderin a Google App like\nDrive or Docs.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getViewers()",
+          "description": "Gets the list of viewers and commenters for thisFolder. If the user who\nexecutes the script does not have edit access to theFolder, this method\nreturns an empty array.",
+          "return_type": {
+            "name": "User[]",
+            "url": "https://developers.google.com/apps-script/reference/drive/user"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isShareableByEditors()",
+          "description": "Determines whether users with edit permissions to theFolderare allowed to\nshare with other users or change the permissions.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isStarred()",
+          "description": "Determines whether theFolderhas been starred in the user's Drive.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isTrashed()",
+          "description": "Determines whether theFolderis in the trash of the user's Drive.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "destination",
+              "type": {
+                "name": "Folder",
+                "url": "https://developers.google.com/apps-script/reference"
+              },
+              "description": "The folder that becomes the new parent."
+            }
+          ],
+          "name": "moveTo(destination)",
+          "description": "Moves this item to the provided destination folder.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to remove."
+            }
+          ],
+          "name": "removeEditor(emailAddress)",
+          "description": "Removes the given user from the list of editors for theFolder. This method doesn't\nblock users from accessing theFolderif they belong to a class of users who have\ngeneral access—for example, if theFolderis shared with the user's entire\ndomain, or if theFolderis in a shared drive that the user can access.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to remove."
+            }
+          ],
+          "name": "removeEditor(user)",
+          "description": "Removes the given user from the list of editors for theFolder. This method doesn't\nblock users from accessing theFolderif they belong to a class of users who have\ngeneral access—for example, if theFolderis shared with the user's entire\ndomain, or if theFolderis in a shared drive that the user can access.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user to remove."
+            }
+          ],
+          "name": "removeViewer(emailAddress)",
+          "description": "Removes the given user from the list of viewers and commenters for theFolder. This\nmethod has no effect if the user is an editor, not a viewer or commenter. This method also\ndoesn't block users from accessing theFolderif they belong to a class of users who\nhave general access—for example, if theFolderis shared with the user's\nentire domain, or if theFolderis in a shared drive that the user can access.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user to remove."
+            }
+          ],
+          "name": "removeViewer(user)",
+          "description": "Removes the given user from the list of viewers and commenters for theFolder. This\nmethod has no effect if the user is an editor, not a viewer. This method also doesn't block\nusers from accessing theFolderif they belong to a class of users who have general\naccess—for example, if theFolderis shared with the user's entire domain, or\nif theFolderis in a shared drive that the user can access.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the user whose access should be revoked."
+            }
+          ],
+          "name": "revokePermissions(emailAddress)",
+          "description": "Revokes the access to theFoldergranted to the given user. This method doesn't\nblock users from accessing theFolderif they belong to a class of users who\nhave general access — for example, if theFolderis shared with the user's\nentire domain.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "A representation of the user whose access should be revoked."
+            }
+          ],
+          "name": "revokePermissions(user)",
+          "description": "Revokes the access to theFoldergranted to the given user. This method doesn't\nblock users from accessing theFolderif they belong to a class of users who\nhave general access — for example, if theFolderis shared with the user's\nentire domain.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "params",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The search criteria, as detailed in theGoogle Drive SDK documentation."
+            }
+          ],
+          "name": "searchFiles(params)",
+          "description": "Gets a collection of all files that are children of the current folder and match the given search\ncriteria. The search criteria are detailed in theGoogle Drive SDK documentation. Note that the Drive\nservice uses v2 of the Drive API and some query fields differ from v3. Review thefield\ndifferences between v2 and v3.",
+          "return_type": {
+            "name": "FileIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/file-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "params",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The search criteria, as detailed in theGoogle Drive SDK documentation."
+            }
+          ],
+          "name": "searchFolders(params)",
+          "description": "Gets a collection of all folders that are children of the current folder and match the given search\ncriteria. The search criteria are detailed in theGoogle Drive SDK documentation. Note that the Drive\nservice uses v2 of the Drive API and some query fields differ from v3. Review thefield\ndifferences between v2 and v3.",
+          "return_type": {
+            "name": "FolderIterator",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new description for theFolder"
+            }
+          ],
+          "name": "setDescription(description)",
+          "description": "Sets the description for theFolder.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new name of theFolder"
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the name of theFolder.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the email address of the user who should become the new owner"
+            }
+          ],
+          "name": "setOwner(emailAddress)",
+          "description": "Changes the owner of theFolder. This method also gives the previous owner\nexplicit edit access to theFolder.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "a representation of the user who should become the new owner"
+            }
+          ],
+          "name": "setOwner(user)",
+          "description": "Changes the owner of theFolder. This method also gives the previous owner\nexplicit edit access to theFolder.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "enabled",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether to enable the resource key requirement for theFolder."
+            }
+          ],
+          "name": "setSecurityUpdateEnabled(enabled)",
+          "description": "Sets whether theFolderrequires a resource key for access when it's\nshared using a link. Eligible files and folders are enabled by default.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "shareable",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif users with edit permissions should be allowed to share with\n    other users or change the permissions;falseif not"
+            }
+          ],
+          "name": "setShareableByEditors(shareable)",
+          "description": "Sets whether users with edit permissions to theFolderare allowed to share\nwith other users or change the permissions. The default for a newFolderistrue.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "accessType",
+              "type": {
+                "name": "Access",
+                "url": "https://developers.google.com/apps-script/reference/drive/access"
+              },
+              "description": "which class of users should be able to access theFolder"
+            },
+            {
+              "name": "permissionType",
+              "type": {
+                "name": "Permission",
+                "url": "https://developers.google.com/apps-script/reference/drive/permission"
+              },
+              "description": "the permissions that should be granted to users who can access theFolder"
+            }
+          ],
+          "name": "setSharing(accessType, permissionType)",
+          "description": "Sets which class of users can access theFolderand what permissions\nthose users are granted, besides any individual users who have been explicitly given access.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "starred",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif theFoldershould be starred in the user's\n    Drive;falseif not"
+            }
+          ],
+          "name": "setStarred(starred)",
+          "description": "Sets whether theFolderis starred in the user's Drive. The default for\nnewFolders isfalse.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "trashed",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueif theFoldershould be moved to the trash of\n    the user's Drive;falseif not"
+            }
+          ],
+          "name": "setTrashed(trashed)",
+          "description": "Sets whether theFolderis in the trash of the user's Drive. Only the\nowner may trash theFolder. The default for newFolders isfalse.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "child",
+              "type": {
+                "name": "File",
+                "url": "https://developers.google.com/apps-script/reference/drive/file"
+              },
+              "description": "The child file to add."
+            }
+          ],
+          "name": "addFile(child)",
+          "description": "Deprecated.Instead, useFile.moveTo(destination)orcreateShortcut(targetId).",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "child",
+              "type": {
+                "name": "Folder",
+                "url": "https://developers.google.com/apps-script/reference"
+              },
+              "description": "The child folder to add."
+            }
+          ],
+          "name": "addFolder(child)",
+          "description": "Deprecated.Instead, usemoveTo(destination)orcreateShortcut(targetId).",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "child",
+              "type": {
+                "name": "File",
+                "url": "https://developers.google.com/apps-script/reference/drive/file"
+              },
+              "description": "The child file to remove."
+            }
+          ],
+          "name": "removeFile(child)",
+          "description": "Deprecated.Instead, useFile.moveTo(destination).",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "child",
+              "type": {
+                "name": "Folder",
+                "url": "https://developers.google.com/apps-script/reference"
+              },
+              "description": "The child folder to remove."
+            }
+          ],
+          "name": "removeFolder(child)",
+          "description": "Deprecated.Instead, usemoveTo(destination).",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class FolderIterator",
+      "url": "https://developers.google.com/apps-script/reference/drive/folder-iterator",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getContinuationToken()",
+          "description": "Gets a token that can be used to resume this iteration at a later time. This method is useful\nif processing an iterator in one execution would exceed the maximum execution time.\nContinuation tokens are generally valid for one week.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "hasNext()",
+          "description": "Determines whether callingnext()will return an item.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "next()",
+          "description": "Gets the next item in the collection of files or folders. Throws an exception if no items\nremain.",
+          "return_type": {
+            "name": "Folder",
+            "url": "https://developers.google.com/apps-script/reference/drive/folder"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Permission",
+      "url": "https://developers.google.com/apps-script/reference/drive/permission",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class User",
+      "url": "https://developers.google.com/apps-script/reference/drive/user",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getDomain()",
+          "description": "Gets the domain name associated with the user's account.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEmail()",
+          "description": "Gets the user's email address. The user's email address is only available if the user has\nchosen to share the address from the Google+ account settings page, or if the user belongs to\nthe same domain as the user running the script and the domain administrator has allowed all\nusers within the domain to see other users' email addresses.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the user's name. This method returnsnullif the user's name is not available.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPhotoUrl()",
+          "description": "Gets the URL for the user's photo. This method returnsnullif the user's photo is not\navailable.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUserLoginId()",
+          "description": "Deprecated.As of June 24, 2013, replaced bygetEmail().",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    }
+  ]
+}

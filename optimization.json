@@ -1,0 +1,441 @@
+{
+  "service_name": "optimization",
+  "url": "https://developers.google.com/apps-script/reference/optimization",
+  "classes": [
+    {
+      "name": "Class LinearOptimizationConstraint",
+      "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-constraint",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "variableName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of variable for which the coefficient is being set"
+            },
+            {
+              "name": "coefficient",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "coefficient being set"
+            }
+          ],
+          "name": "setCoefficient(variableName, coefficient)",
+          "description": "Sets the coefficient of a variable in the constraint. By default, variables have a coefficient\nof 0.",
+          "return_type": {
+            "name": "LinearOptimizationConstraint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class LinearOptimizationEngine",
+      "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-engine",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "lowerBound",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "lower bound of the constraint"
+            },
+            {
+              "name": "upperBound",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "upper bound of the constraint"
+            }
+          ],
+          "name": "addConstraint(lowerBound, upperBound)",
+          "description": "Adds a new linear constraint in the model. The upper and lower bound of the constraint are\ndefined at creation time. Coefficients for the variables are defined via calls toLinearOptimizationConstraint.setCoefficient(variableName, coefficient).",
+          "return_type": {
+            "name": "LinearOptimizationConstraint",
+            "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-constraint"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "lowerBounds",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "lower bounds of the constraints"
+            },
+            {
+              "name": "upperBounds",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "upper bounds of the constraints"
+            },
+            {
+              "name": "variableNames",
+              "type": {
+                "name": "String[][]",
+                "url": null
+              },
+              "description": "the names of variables for which the coefficients are being set"
+            },
+            {
+              "name": "coefficients",
+              "type": {
+                "name": "Number[][]",
+                "url": null
+              },
+              "description": "coefficients being set"
+            }
+          ],
+          "name": "addConstraints(lowerBounds, upperBounds, variableNames, coefficients)",
+          "description": "Adds constraints in batch to the model.",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "unique name of the variable"
+            },
+            {
+              "name": "lowerBound",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "lower bound of the variable"
+            },
+            {
+              "name": "upperBound",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "upper bound of the variable"
+            }
+          ],
+          "name": "addVariable(name, lowerBound, upperBound)",
+          "description": "Adds a new continuous variable to the model. The variable is referenced by its name. The type\nis set toVariableType.CONTINUOUS.",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "unique name of the variable"
+            },
+            {
+              "name": "lowerBound",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "lower bound of the variable"
+            },
+            {
+              "name": "upperBound",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "upper bound of the variable"
+            },
+            {
+              "name": "type",
+              "type": {
+                "name": "VariableType",
+                "url": "https://developers.google.com/apps-script/reference/optimization/variable-type"
+              },
+              "description": "type of the variable, can be one ofVariableType"
+            }
+          ],
+          "name": "addVariable(name, lowerBound, upperBound, type)",
+          "description": "Adds a new variable to the model. The variable is referenced by its name.",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "unique name of the variable"
+            },
+            {
+              "name": "lowerBound",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "lower bound of the variable"
+            },
+            {
+              "name": "upperBound",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "upper bound of the variable"
+            },
+            {
+              "name": "type",
+              "type": {
+                "name": "VariableType",
+                "url": "https://developers.google.com/apps-script/reference/optimization/variable-type"
+              },
+              "description": "type of the variable, can be one ofVariableType"
+            },
+            {
+              "name": "objectiveCoefficient",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "objective coefficient of the variable"
+            }
+          ],
+          "name": "addVariable(name, lowerBound, upperBound, type, objectiveCoefficient)",
+          "description": "Adds a new variable to the model. The variable is referenced by its name.",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "names",
+              "type": {
+                "name": "String[]",
+                "url": null
+              },
+              "description": "unique names of the variables"
+            },
+            {
+              "name": "lowerBounds",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "lower bounds of the variables"
+            },
+            {
+              "name": "upperBounds",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "upper bounds of the variables"
+            },
+            {
+              "name": "types",
+              "type": {
+                "name": "VariableType[]",
+                "url": "https://developers.google.com/apps-script/reference/optimization/variable-type"
+              },
+              "description": "types of the variables, can be one ofVariableType"
+            },
+            {
+              "name": "objectiveCoefficients",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "objective coefficients of the variables"
+            }
+          ],
+          "name": "addVariables(names, lowerBounds, upperBounds, types, objectiveCoefficients)",
+          "description": "Adds variables in batch to the model. The variables are referenced by their names.",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setMaximization()",
+          "description": "Sets the optimization direction to maximizing the linear objective function.",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setMinimization()",
+          "description": "Sets the optimization direction to minimizing the linear objective function.",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "variableName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "name of variable for which the coefficient is being set"
+            },
+            {
+              "name": "coefficient",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "coefficient of the variable in the objective function"
+            }
+          ],
+          "name": "setObjectiveCoefficient(variableName, coefficient)",
+          "description": "Sets the coefficient of a variable in the linear objective function.",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "solve()",
+          "description": "Solves the current linear program with the default deadline of 30 seconds. Returns the solution found.",
+          "return_type": {
+            "name": "LinearOptimizationSolution",
+            "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-solution"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "seconds",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "deadline for solving the problem, in seconds; the maximum deadline is 300 seconds"
+            }
+          ],
+          "name": "solve(seconds)",
+          "description": "Solves the current linear program. Returns the solution found. and if it is an optimal\nsolution.",
+          "return_type": {
+            "name": "LinearOptimizationSolution",
+            "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-solution"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class LinearOptimizationService",
+      "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-service",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "createEngine()",
+          "description": "Creates an engine to to solve linear programs (potentially mixed-integer programs).",
+          "return_type": {
+            "name": "LinearOptimizationEngine",
+            "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-engine"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class LinearOptimizationSolution",
+      "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-solution",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getObjectiveValue()",
+          "description": "Gets the value of the objective function in the current solution.",
+          "return_type": {
+            "name": "Number",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getStatus()",
+          "description": "Gets the status of the solution. Before solving a problem, the status will beNOT_SOLVED.",
+          "return_type": {
+            "name": "Status",
+            "url": "https://developers.google.com/apps-script/reference/optimization/status"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "variableName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "name of the variable"
+            }
+          ],
+          "name": "getVariableValue(variableName)",
+          "description": "Gets the value of a variable in the solution created by the last call toLinearOptimizationEngine.solve().",
+          "return_type": {
+            "name": "Number",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isValid()",
+          "description": "Determines whether the solution is either feasible or optimal.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Status",
+      "url": "https://developers.google.com/apps-script/reference/optimization/status",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum VariableType",
+      "url": "https://developers.google.com/apps-script/reference/optimization/variable-type",
+      "description": "",
+      "methods": []
+    }
+  ]
+}

@@ -1,0 +1,3045 @@
+{
+  "service_name": "contacts",
+  "url": "https://developers.google.com/apps-script/reference/contacts",
+  "classes": [
+    {
+      "name": "Class AddressField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/address-field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getAddress()",
+          "description": "Get the address for this field.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLabel()",
+          "description": "Gets the label for this field. This may be a Field, ExtendedField, or a String.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isPrimary()",
+          "description": "Gets whether this is the primary field value.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new address"
+            }
+          ],
+          "name": "setAddress(address)",
+          "description": "Sets the address of this field.",
+          "return_type": {
+            "name": "AddressField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setAsPrimary()",
+          "description": "Sets this field to primary.",
+          "return_type": {
+            "name": "AddressField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "field",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the new standard label"
+            }
+          ],
+          "name": "setLabel(field)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "AddressField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new label for this field"
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "AddressField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteAddressField()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class CompanyField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/company-field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "deleteCompanyField()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCompanyName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getJobTitle()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isPrimary()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setAsPrimary()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CompanyField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "company",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new name for the company"
+            }
+          ],
+          "name": "setCompanyName(company)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CompanyField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new job title for the contact at this company"
+            }
+          ],
+          "name": "setJobTitle(title)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CompanyField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Contact",
+      "url": "https://developers.google.com/apps-script/reference/contacts/contact",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label of the new address, either from ContactsApp.Field or a custom string"
+            },
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new address"
+            }
+          ],
+          "name": "addAddress(label, address)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "AddressField",
+            "url": "https://developers.google.com/apps-script/reference/contacts/address-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "company",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the company to add to this contact"
+            },
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the job title associated with this contact for this company"
+            }
+          ],
+          "name": "addCompany(company, title)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CompanyField",
+            "url": "https://developers.google.com/apps-script/reference/contacts/company-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label of the new address, either from ContactsApp.ExtendedField or a custom\n    string"
+            },
+            {
+              "name": "content",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the value to store in the custom field"
+            }
+          ],
+          "name": "addCustomField(label, content)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CustomField",
+            "url": "https://developers.google.com/apps-script/reference/contacts/custom-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label of the new date, either from ContactsApp.Field or a custom string"
+            },
+            {
+              "name": "month",
+              "type": {
+                "name": "Month",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the month, from ContactApps.Month"
+            },
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day"
+            },
+            {
+              "name": "year",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the year"
+            }
+          ],
+          "name": "addDate(label, month, day, year)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "DateField",
+            "url": "https://developers.google.com/apps-script/reference/contacts/date-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label of the new email, either from ContactsApp.Field or a custom string"
+            },
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new email address"
+            }
+          ],
+          "name": "addEmail(label, address)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "EmailField",
+            "url": "https://developers.google.com/apps-script/reference/contacts/email-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label of the new IM address, either from ContactsApp.Field or a custom string"
+            },
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new IM address"
+            }
+          ],
+          "name": "addIM(label, address)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "IMField",
+            "url": "https://developers.google.com/apps-script/reference/contacts/im-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label of the new phone number, either from ContactsApp.Field or a custom\n    string"
+            },
+            {
+              "name": "number",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new phone number"
+            }
+          ],
+          "name": "addPhone(label, number)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "PhoneField",
+            "url": "https://developers.google.com/apps-script/reference/contacts/phone-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "group",
+              "type": {
+                "name": "ContactGroup",
+                "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+              },
+              "description": "the contact group to add this contact to"
+            }
+          ],
+          "name": "addToGroup(group)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label of the new address, either from ContactsApp.Field or a custom string"
+            },
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new URL"
+            }
+          ],
+          "name": "addUrl(label, url)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "UrlField",
+            "url": "https://developers.google.com/apps-script/reference/contacts/url-field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteContact()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAddresses()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "AddressField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/address-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label to match, either from ContactsApp.Field or a custom string"
+            }
+          ],
+          "name": "getAddresses(label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "AddressField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/address-field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCompanies()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CompanyField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/company-field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContactGroups()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCustomFields()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CustomField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/custom-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label to match, either from ContactsApp.ExtendedField or a custom string"
+            }
+          ],
+          "name": "getCustomFields(label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CustomField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/custom-field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDates()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "DateField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/date-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label to match, either from ContactsApp.Field or a custom string"
+            }
+          ],
+          "name": "getDates(label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "DateField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/date-field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEmailAddresses()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEmails()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "EmailField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/email-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label to match, either from ContactsApp.Field or a custom string"
+            }
+          ],
+          "name": "getEmails(label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "EmailField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/email-field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFamilyName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFullName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGivenName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getHomeAddress()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getHomeFax()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getHomePhone()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getIMs()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "IMField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/im-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label to match, either from ContactsApp.Field or a custom string"
+            }
+          ],
+          "name": "getIMs(label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "IMField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/im-field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getInitials()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLastUpdated()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMaidenName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMiddleName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMobilePhone()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getNickname()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getNotes()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPager()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPhones()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "PhoneField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/phone-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label to match, either from ContactsApp.Field or a custom string"
+            }
+          ],
+          "name": "getPhones(label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "PhoneField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/phone-field"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPrefix()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPrimaryEmail()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getShortName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSuffix()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUrls()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "UrlField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/url-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the label to match, either from ContactsApp.Field or a custom string"
+            }
+          ],
+          "name": "getUrls(label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "UrlField[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/url-field"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the key can be any basic type (String, int, etc.)"
+            }
+          ],
+          "name": "getUserDefinedField(key)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUserDefinedFields()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getWorkAddress()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getWorkFax()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getWorkPhone()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "group",
+              "type": {
+                "name": "ContactGroup",
+                "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+              },
+              "description": "the contact group to remove this contact from"
+            }
+          ],
+          "name": "removeFromGroup(group)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "familyName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new family name of the contact"
+            }
+          ],
+          "name": "setFamilyName(familyName)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "fullName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new full name of the contact"
+            }
+          ],
+          "name": "setFullName(fullName)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "givenName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new given name of the contact"
+            }
+          ],
+          "name": "setGivenName(givenName)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "addr",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the home address to set"
+            }
+          ],
+          "name": "setHomeAddress(addr)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "phone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the home fax number to set"
+            }
+          ],
+          "name": "setHomeFax(phone)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "phone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the home phone number to set"
+            }
+          ],
+          "name": "setHomePhone(phone)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "initials",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new initials of the contact"
+            }
+          ],
+          "name": "setInitials(initials)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "maidenName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new maiden name of the contact"
+            }
+          ],
+          "name": "setMaidenName(maidenName)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "middleName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new middle name of the contact"
+            }
+          ],
+          "name": "setMiddleName(middleName)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "phone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the mobile phone number to set"
+            }
+          ],
+          "name": "setMobilePhone(phone)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "nickname",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new nickname of the contact"
+            }
+          ],
+          "name": "setNickname(nickname)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "notes",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the notes to be stored for this contact"
+            }
+          ],
+          "name": "setNotes(notes)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "phone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the pager number to set"
+            }
+          ],
+          "name": "setPager(phone)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prefix",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new prefix of the contact's name"
+            }
+          ],
+          "name": "setPrefix(prefix)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "primaryEmail",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the primary email address to set"
+            }
+          ],
+          "name": "setPrimaryEmail(primaryEmail)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "shortName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new short name of the contact"
+            }
+          ],
+          "name": "setShortName(shortName)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "suffix",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new suffix of the contact's name"
+            }
+          ],
+          "name": "setSuffix(suffix)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the key can be any basic type (String, int, etc.)"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value can be any basic type (String, int, etc.)"
+            }
+          ],
+          "name": "setUserDefinedField(key, value)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "o",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "an Object with one or more properties in the form {key: value}"
+            }
+          ],
+          "name": "setUserDefinedFields(o)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "addr",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the work address to set"
+            }
+          ],
+          "name": "setWorkAddress(addr)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "phone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the work fax number to set"
+            }
+          ],
+          "name": "setWorkFax(phone)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "phone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the work phone number to set"
+            }
+          ],
+          "name": "setWorkPhone(phone)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ContactGroup",
+      "url": "https://developers.google.com/apps-script/reference/contacts/contact-group",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "contact",
+              "type": {
+                "name": "Contact",
+                "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+              },
+              "description": "the contact to be added to the group"
+            }
+          ],
+          "name": "addContact(contact)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteGroup()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContacts()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGroupName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isSystemGroup()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contact",
+              "type": {
+                "name": "Contact",
+                "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+              },
+              "description": "the contact to be removed from the group"
+            }
+          ],
+          "name": "removeContact(contact)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name to set for this group"
+            }
+          ],
+          "name": "setGroupName(name)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new name for the contact group"
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ContactsApp",
+      "url": "https://developers.google.com/apps-script/reference/contacts/contacts-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "givenName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the first name of the contact"
+            },
+            {
+              "name": "familyName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the last name of the contact"
+            },
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the email address of the contact"
+            }
+          ],
+          "name": "createContact(givenName, familyName, email)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the new contact group"
+            }
+          ],
+          "name": "createContactGroup(name)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contact",
+              "type": {
+                "name": "Contact",
+                "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+              },
+              "description": "the contact to be deleted"
+            }
+          ],
+          "name": "deleteContact(contact)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "group",
+              "type": {
+                "name": "ContactGroup",
+                "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+              },
+              "description": "the contact group to delete"
+            }
+          ],
+          "name": "deleteContactGroup(group)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the email address of the contact to be found"
+            }
+          ],
+          "name": "findByEmailAddress(email)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the contact group to find"
+            }
+          ],
+          "name": "findContactGroup(name)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllContacts()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "emailAddress",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the email address of the contact"
+            }
+          ],
+          "name": "getContact(emailAddress)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the id of the contact to retrieve"
+            }
+          ],
+          "name": "getContactById(id)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the contact group to match"
+            }
+          ],
+          "name": "getContactGroup(name)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the id of the contact group to match"
+            }
+          ],
+          "name": "getContactGroupById(id)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContactGroups()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "ContactGroup[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContacts()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's addresses"
+            }
+          ],
+          "name": "getContactsByAddress(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's addresses"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the field to search within"
+            }
+          ],
+          "name": "getContactsByAddress(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's addresses with the specified custom address\n    label"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the custom address label to search within"
+            }
+          ],
+          "name": "getContactsByAddress(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's company field"
+            }
+          ],
+          "name": "getContactsByCompany(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the string to search for in contact's custom field"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "ExtendedField",
+                "url": "https://developers.google.com/apps-script/reference/contacts/extended-field"
+              },
+              "description": "the custom field to search within"
+            }
+          ],
+          "name": "getContactsByCustomField(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "month",
+              "type": {
+                "name": "Month",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the month to match, as one of the values from ContactsApp.Month"
+            },
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day to match"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the field to search within, from ContactsApp.Field"
+            }
+          ],
+          "name": "getContactsByDate(month, day, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "month",
+              "type": {
+                "name": "Month",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the month to match, as one of the values from ContactsApp.Month"
+            },
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day to match"
+            },
+            {
+              "name": "year",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the year to match, can be null"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the field to search within, from ContactsApp.Field"
+            }
+          ],
+          "name": "getContactsByDate(month, day, year, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "month",
+              "type": {
+                "name": "Month",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the month to match, as one of the values from ContactsApp.Month"
+            },
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day to match"
+            },
+            {
+              "name": "year",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the year to match, can be null"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the custom field to search within"
+            }
+          ],
+          "name": "getContactsByDate(month, day, year, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "month",
+              "type": {
+                "name": "Month",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the month to match, as one of the values from ContactsApp.Month"
+            },
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day to match"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the custom field to search within"
+            }
+          ],
+          "name": "getContactsByDate(month, day, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact email addresses"
+            }
+          ],
+          "name": "getContactsByEmailAddress(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact email addresses"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the field to search within"
+            }
+          ],
+          "name": "getContactsByEmailAddress(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact email addresses with the specified custom\n    email address label"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the custom email address label to search within"
+            }
+          ],
+          "name": "getContactsByEmailAddress(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "group",
+              "type": {
+                "name": "ContactGroup",
+                "url": "https://developers.google.com/apps-script/reference/contacts/contact-group"
+              },
+              "description": "the group of contacts"
+            }
+          ],
+          "name": "getContactsByGroup(group)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's instant messaging addresses"
+            }
+          ],
+          "name": "getContactsByIM(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's instant messaging addresses"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the field to search within"
+            }
+          ],
+          "name": "getContactsByIM(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's instant messaging addresses with the\n    specified custom instant messaging label"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the custom instant messaging label to search within"
+            }
+          ],
+          "name": "getContactsByIM(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's job title field"
+            }
+          ],
+          "name": "getContactsByJobTitle(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact names"
+            }
+          ],
+          "name": "getContactsByName(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact names"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the field to search within"
+            }
+          ],
+          "name": "getContactsByName(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's notes field"
+            }
+          ],
+          "name": "getContactsByNotes(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's phone numbers"
+            }
+          ],
+          "name": "getContactsByPhone(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's phone numbers"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the field to search within"
+            }
+          ],
+          "name": "getContactsByPhone(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's phone numbers with the specified custom\n    phone number label"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the custom phone number label to search within"
+            }
+          ],
+          "name": "getContactsByPhone(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's URLs"
+            }
+          ],
+          "name": "getContactsByUrl(query)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's URLs"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the field to search within"
+            }
+          ],
+          "name": "getContactsByUrl(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the string to search for in contact's URLs with the specified custom URL label"
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the custom URL label to search within"
+            }
+          ],
+          "name": "getContactsByUrl(query, label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Contact[]",
+            "url": "https://developers.google.com/apps-script/reference/contacts/contact"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class CustomField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/custom-field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getLabel()",
+          "description": "Gets the label for this field. This may be a Field, ExtendedField, or a String.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new label for this field"
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "CustomField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteCustomField()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "field",
+              "type": {
+                "name": "ExtendedField",
+                "url": "https://developers.google.com/apps-script/reference/contacts/extended-field"
+              },
+              "description": "the new standard label"
+            }
+          ],
+          "name": "setLabel(field)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CustomField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "value",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the new value"
+            }
+          ],
+          "name": "setValue(value)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "CustomField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class DateField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/date-field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getLabel()",
+          "description": "Gets the label for this field. This may be a Field, ExtendedField, or a String.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new label for this field"
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "DateField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteDateField()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDay()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMonth()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Month",
+            "url": "https://developers.google.com/apps-script/reference/base/month.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getYear()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "month",
+              "type": {
+                "name": "Month",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the month"
+            },
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day"
+            }
+          ],
+          "name": "setDate(month, day)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "DateField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "month",
+              "type": {
+                "name": "Month",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the month"
+            },
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day"
+            },
+            {
+              "name": "year",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the year"
+            }
+          ],
+          "name": "setDate(month, day, year)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "DateField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the new standard label"
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "DateField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class EmailField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/email-field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getAddress()",
+          "description": "Get the address for this field.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLabel()",
+          "description": "Gets the label for this field. This may be a Field, ExtendedField, or a String.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isPrimary()",
+          "description": "Gets whether this is the primary field value.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new address"
+            }
+          ],
+          "name": "setAddress(address)",
+          "description": "Sets the address of this field.",
+          "return_type": {
+            "name": "EmailField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setAsPrimary()",
+          "description": "Sets this field to primary.",
+          "return_type": {
+            "name": "EmailField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "field",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the new standard label"
+            }
+          ],
+          "name": "setLabel(field)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "EmailField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new label for this field"
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "EmailField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteEmailField()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDisplayName()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new display name for this email address"
+            }
+          ],
+          "name": "setDisplayName(name)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "EmailField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum ExtendedField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/extended-field",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum Field",
+      "url": "https://developers.google.com/apps-script/reference/contacts/field",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum Gender",
+      "url": "https://developers.google.com/apps-script/reference/contacts/gender",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class IMField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/im-field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getAddress()",
+          "description": "Get the address for this field.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLabel()",
+          "description": "Gets the label for this field. This may be a Field, ExtendedField, or a String.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isPrimary()",
+          "description": "Gets whether this is the primary field value.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new address"
+            }
+          ],
+          "name": "setAddress(address)",
+          "description": "Sets the address of this field.",
+          "return_type": {
+            "name": "IMField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setAsPrimary()",
+          "description": "Sets this field to primary.",
+          "return_type": {
+            "name": "IMField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "field",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the new standard label"
+            }
+          ],
+          "name": "setLabel(field)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "IMField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new label for this field"
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "IMField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteIMField()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class PhoneField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/phone-field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getLabel()",
+          "description": "Gets the label for this field. This may be a Field, ExtendedField, or a String.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isPrimary()",
+          "description": "Gets whether this is the primary field value.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setAsPrimary()",
+          "description": "Sets this field to primary.",
+          "return_type": {
+            "name": "PhoneField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "field",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the new standard label"
+            }
+          ],
+          "name": "setLabel(field)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "PhoneField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new label for this field"
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "PhoneField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deletePhoneField()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPhoneNumber()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "number",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new number"
+            }
+          ],
+          "name": "setPhoneNumber(number)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "PhoneField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Priority",
+      "url": "https://developers.google.com/apps-script/reference/contacts/priority",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum Sensitivity",
+      "url": "https://developers.google.com/apps-script/reference/contacts/sensitivity",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class UrlField",
+      "url": "https://developers.google.com/apps-script/reference/contacts/url-field",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getAddress()",
+          "description": "Get the address for this field.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLabel()",
+          "description": "Gets the label for this field. This may be a Field, ExtendedField, or a String.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isPrimary()",
+          "description": "Gets whether this is the primary field value.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new address"
+            }
+          ],
+          "name": "setAddress(address)",
+          "description": "Sets the address of this field.",
+          "return_type": {
+            "name": "UrlField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setAsPrimary()",
+          "description": "Sets this field to primary.",
+          "return_type": {
+            "name": "UrlField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "field",
+              "type": {
+                "name": "Field",
+                "url": "https://developers.google.com/apps-script/reference/contacts/field"
+              },
+              "description": "the new standard label"
+            }
+          ],
+          "name": "setLabel(field)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "UrlField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new label for this field"
+            }
+          ],
+          "name": "setLabel(label)",
+          "description": "Sets the label of this field.",
+          "return_type": {
+            "name": "UrlField",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteUrlField()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    }
+  ]
+}

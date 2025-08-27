@@ -1,0 +1,2642 @@
+{
+  "service_name": "gmail",
+  "url": "https://developers.google.com/apps-script/reference/gmail",
+  "classes": [
+    {
+      "name": "Class GmailApp",
+      "url": "https://developers.google.com/apps-script/reference/gmail/gmail-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "comma separated list of email addresses"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "subject of the email"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "body of the email"
+            }
+          ],
+          "name": "createDraft(recipient, subject, body)",
+          "description": "Creates a draft email message. The size of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the addresses of the recipient"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the subject line"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createDraft(recipient, subject, body, options)",
+          "description": "Creates a draft email message with optional arguments. The email can contain plain text or an\nHTML body. The size of the email (including headers, but excluding attachments) isquota limited.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the new label"
+            }
+          ],
+          "name": "createLabel(name)",
+          "description": "Create a new user label of the given name.",
+          "return_type": {
+            "name": "GmailLabel",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-label"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "GmailLabel",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-label"
+              },
+              "description": "the label to delete"
+            }
+          ],
+          "name": "deleteLabel(label)",
+          "description": "Deletes the specified label.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAliases()",
+          "description": "Gets a list of the emails that are set up as aliases for this account in Gmail.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "draftId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the ID of the draft to retrieve"
+            }
+          ],
+          "name": "getDraft(draftId)",
+          "description": "Retrieve an email message draft by ID.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDraftMessages()",
+          "description": "Retrieves all draft messages.",
+          "return_type": {
+            "name": "GmailMessage[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDrafts()",
+          "description": "Gets all Gmail draft messages.",
+          "return_type": {
+            "name": "GmailDraft[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getInboxThreads()",
+          "description": "Retrieves all Inbox threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index of the first thread to retrieve"
+            },
+            {
+              "name": "max",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the maximum number of threads to retrieve"
+            }
+          ],
+          "name": "getInboxThreads(start, max)",
+          "description": "Retrieves a range of Inbox threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getInboxUnreadCount()",
+          "description": "Gets the number of unread threads in the inbox.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the ID of the message to retrieve"
+            }
+          ],
+          "name": "getMessageById(id)",
+          "description": "Gets a message by ID.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread of messages to retrieve"
+            }
+          ],
+          "name": "getMessagesForThread(thread)",
+          "description": "Retrieve all messages in the specified thread.",
+          "return_type": {
+            "name": "GmailMessage[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the threads of messages to retrieve"
+            }
+          ],
+          "name": "getMessagesForThreads(threads)",
+          "description": "Retrieve all messages in the specified threads.",
+          "return_type": {
+            "name": "GmailMessage[][]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPriorityInboxThreads()",
+          "description": "Retrieves all Priority Inbox threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index of the first thread to retrieve"
+            },
+            {
+              "name": "max",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the maximum number of threads to retrieve"
+            }
+          ],
+          "name": "getPriorityInboxThreads(start, max)",
+          "description": "Retrieves a range of Priority Inbox threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPriorityInboxUnreadCount()",
+          "description": "Gets the number of unread threads in the Priority Inbox.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSpamThreads()",
+          "description": "Retrieves all spam threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index of the first thread to retrieve"
+            },
+            {
+              "name": "max",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the maximum number of threads to retrieve"
+            }
+          ],
+          "name": "getSpamThreads(start, max)",
+          "description": "Retrieves a range of spam threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSpamUnreadCount()",
+          "description": "Gets the number of unread threads that are spam.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getStarredThreads()",
+          "description": "Retrieves all starred threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index of the first thread to retrieve"
+            },
+            {
+              "name": "max",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the maximum number of threads to retrieve"
+            }
+          ],
+          "name": "getStarredThreads(start, max)",
+          "description": "Retrieves a range of starred threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getStarredUnreadCount()",
+          "description": "Gets the number of unread threads that are starred.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the thread to retrieve."
+            }
+          ],
+          "name": "getThreadById(id)",
+          "description": "Gets a thread by ID.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTrashThreads()",
+          "description": "Retrieves all trash threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index of the first thread to retrieve"
+            },
+            {
+              "name": "max",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the maximum number of threads to retrieve"
+            }
+          ],
+          "name": "getTrashThreads(start, max)",
+          "description": "Retrieves a range of trash threads irrespective of labels.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the label to retrieve"
+            }
+          ],
+          "name": "getUserLabelByName(name)",
+          "description": "Retrieves a label given the label name.",
+          "return_type": {
+            "name": "GmailLabel",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-label"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUserLabels()",
+          "description": "Retrieves a list of user-created labels.",
+          "return_type": {
+            "name": "GmailLabel[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-label"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "message",
+              "type": {
+                "name": "GmailMessage",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "the message to mark as read"
+            }
+          ],
+          "name": "markMessageRead(message)",
+          "description": "Marks this message read and forces the message to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "message",
+              "type": {
+                "name": "GmailMessage",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "the message to mark as unread"
+            }
+          ],
+          "name": "markMessageUnread(message)",
+          "description": "Marks this message unread and forces the message to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "messages",
+              "type": {
+                "name": "GmailMessage[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "an array of messages to mark as read"
+            }
+          ],
+          "name": "markMessagesRead(messages)",
+          "description": "Marks these messages read and forces the messages to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "messages",
+              "type": {
+                "name": "GmailMessage[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "an array of messages to mark as unread"
+            }
+          ],
+          "name": "markMessagesUnread(messages)",
+          "description": "Marks these messages unread and forces the messages to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to mark as important"
+            }
+          ],
+          "name": "markThreadImportant(thread)",
+          "description": "Marks this thread as important and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to mark as read"
+            }
+          ],
+          "name": "markThreadRead(thread)",
+          "description": "Marks this thread as read and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to mark as unimportant"
+            }
+          ],
+          "name": "markThreadUnimportant(thread)",
+          "description": "Marks this thread as unimportant and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to mark as unread"
+            }
+          ],
+          "name": "markThreadUnread(thread)",
+          "description": "Marks this thread unread and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "an array of threads to mark as important"
+            }
+          ],
+          "name": "markThreadsImportant(threads)",
+          "description": "Marks these threads as important and forces the threads to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "an array of threads to mark as read"
+            }
+          ],
+          "name": "markThreadsRead(threads)",
+          "description": "Marks these threads as read and forces the threads to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "an array of threads to mark as unimportant"
+            }
+          ],
+          "name": "markThreadsUnimportant(threads)",
+          "description": "Marks these threads as unimportant and forces the threads to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "an array of threads to mark as unread"
+            }
+          ],
+          "name": "markThreadsUnread(threads)",
+          "description": "Marks these threads as unread and forces the threads to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "message",
+              "type": {
+                "name": "GmailMessage",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "the message to be trashed"
+            }
+          ],
+          "name": "moveMessageToTrash(message)",
+          "description": "Moves the message to the trash and forces the message to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "messages",
+              "type": {
+                "name": "GmailMessage[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "the messages to be trashed"
+            }
+          ],
+          "name": "moveMessagesToTrash(messages)",
+          "description": "Moves the specified messages to the trash and forces the messages to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to be archive"
+            }
+          ],
+          "name": "moveThreadToArchive(thread)",
+          "description": "Moves this thread to the archive and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to be moved to the inbox"
+            }
+          ],
+          "name": "moveThreadToInbox(thread)",
+          "description": "Moves this thread to the inbox and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to be moved to spam"
+            }
+          ],
+          "name": "moveThreadToSpam(thread)",
+          "description": "Moves this thread to spam and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to be trashed"
+            }
+          ],
+          "name": "moveThreadToTrash(thread)",
+          "description": "Moves this thread to the trash and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "an array of threads to be archived"
+            }
+          ],
+          "name": "moveThreadsToArchive(threads)",
+          "description": "Moves these threads to the archive and forces the threads to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "an array of threads to be moved to the inbox"
+            }
+          ],
+          "name": "moveThreadsToInbox(threads)",
+          "description": "Moves these threads to the inbox and forces the threads to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "an array of threads to be moved to spam"
+            }
+          ],
+          "name": "moveThreadsToSpam(threads)",
+          "description": "Moves these threads to spam and forces the threads to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "an array of threads to be trashed"
+            }
+          ],
+          "name": "moveThreadsToTrash(threads)",
+          "description": "Moves these threads to the trash and forces the threads to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "message",
+              "type": {
+                "name": "GmailMessage",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "the message to be refreshed"
+            }
+          ],
+          "name": "refreshMessage(message)",
+          "description": "Reloads the message and associated state from Gmail (useful in case the labels, read state,\netc., have changed).",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "messages",
+              "type": {
+                "name": "GmailMessage[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "the messages to be refreshed"
+            }
+          ],
+          "name": "refreshMessages(messages)",
+          "description": "Reloads the messages and associated state from Gmail (useful in case the labels, read state,\netc., have changed).",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the thread to be refreshed"
+            }
+          ],
+          "name": "refreshThread(thread)",
+          "description": "Reloads the thread and associated state from Gmail (useful in case the labels, read state,\netc., have changed).",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "the threads to be refreshed"
+            }
+          ],
+          "name": "refreshThreads(threads)",
+          "description": "Reloads the threads and associated state from Gmail (useful in case the labels, read state,\netc., have changed).",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the search query, as you would type it into Gmail"
+            }
+          ],
+          "name": "search(query)",
+          "description": "Search Gmail with the given query.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "query",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the search query, as you would type it into Gmail"
+            },
+            {
+              "name": "start",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index of the starting thread"
+            },
+            {
+              "name": "max",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the maximum number of threads to return"
+            }
+          ],
+          "name": "search(query, start, max)",
+          "description": "Search Gmail with the given query.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "comma separated list of email addresses"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "subject of the email (250 characters maximum)"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "body of the email"
+            }
+          ],
+          "name": "sendEmail(recipient, subject, body)",
+          "description": "Sends an email message. The size of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the addresses of the recipient"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the subject line (250 characters maximum)"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "sendEmail(recipient, subject, body, options)",
+          "description": "Sends an email message with optional arguments. The email can contain plain text or an HTML\nbody. The size of the email (including headers, but excluding attachments) isquota limited.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "accessToken",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the temporary access token obtained from a Gmail add-onaction event object."
+            }
+          ],
+          "name": "setCurrentMessageAccessToken(accessToken)",
+          "description": "Sets thecurrent message\naccess tokenthat enables the script to access the currentGmailMessageproperties.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "message",
+              "type": {
+                "name": "GmailMessage",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "the message to star"
+            }
+          ],
+          "name": "starMessage(message)",
+          "description": "Adds a star to this message and forces the message to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "messages",
+              "type": {
+                "name": "GmailMessage[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "an array of messages to star"
+            }
+          ],
+          "name": "starMessages(messages)",
+          "description": "Adds stars to these messages and forces the messages to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "message",
+              "type": {
+                "name": "GmailMessage",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "the message to unstar"
+            }
+          ],
+          "name": "unstarMessage(message)",
+          "description": "Removes a star from this message and forces the message to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "messages",
+              "type": {
+                "name": "GmailMessage[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+              },
+              "description": "an array of messages to unstar"
+            }
+          ],
+          "name": "unstarMessages(messages)",
+          "description": "Removes stars from these messages and forces the messages to refresh.",
+          "return_type": {
+            "name": "GmailApp",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getChatThreads()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index of the first thread to retrieve"
+            },
+            {
+              "name": "max",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the maximum number of threads to retrieve"
+            }
+          ],
+          "name": "getChatThreads(start, max)",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GmailAttachment",
+      "url": "https://developers.google.com/apps-script/reference/gmail/gmail-attachment",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "copyBlob()",
+          "description": "Returns a copy of this blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type to convert to. For most blobs,'application/pdf'is\n    the only valid option. For images in BMP, GIF, JPEG, or PNG format, any of'image/bmp','image/gif','image/jpeg', or'image/png'are also\n    valid. For a Google Docs document,'text/markdown'is also valid."
+            }
+          ],
+          "name": "getAs(contentType)",
+          "description": "Return the data inside this object as a blob converted to the specified content type. This\nmethod adds the appropriate extension to the filename—for example, \"myfile.pdf\". However, it\nassumes that the part of the filename that follows the last period (if any) is an existing\nextension that should be replaced. Consequently, \"ShoppingList.12.25.2014\" becomes\n\"ShoppingList.12.25.pdf\".",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBytes()",
+          "description": "Gets the data stored in this blob.",
+          "return_type": {
+            "name": "Byte[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContentType()",
+          "description": "Gets the content type of the bytes in this blob.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDataAsString()",
+          "description": "Gets the data of this blob as a String with UTF-8 encoding.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "charset",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The charset to use in encoding the data in this blob as a string."
+            }
+          ],
+          "name": "getDataAsString(charset)",
+          "description": "Gets the data of this blob as a string with the specified encoding.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getHash()",
+          "description": "Gets the SHA1 content hash for this attachment. This method does not count against the Gmail\nread quota.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of this blob.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSize()",
+          "description": "Gets the size of this attachment. This method is faster than callinggetBytes().lengthand does not count against the Gmail read quota.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isGoogleType()",
+          "description": "Returns whether this blob is a Google Workspace file (Sheets, Docs, etc.).",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "data",
+              "type": {
+                "name": "Byte[]",
+                "url": null
+              },
+              "description": "The new data."
+            }
+          ],
+          "name": "setBytes(data)",
+          "description": "Sets the data stored in this blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The new contentType."
+            }
+          ],
+          "name": "setContentType(contentType)",
+          "description": "Sets the content type of the bytes in this blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setContentTypeFromExtension()",
+          "description": "Sets the content type of the bytes in this blob based on the file extension. The contentType isnullif it cannot be guessed from its extension.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "string",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The string data."
+            }
+          ],
+          "name": "setDataFromString(string)",
+          "description": "Sets the data of this blob from a string with UTF-8 encoding.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "string",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The string data."
+            },
+            {
+              "name": "charset",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The charset to use in interpreting the string as bytes."
+            }
+          ],
+          "name": "setDataFromString(string, charset)",
+          "description": "Sets the data of this blob from a string with the specified encoding.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The new name."
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the name of this blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllBlobs()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Blob[]",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GmailDraft",
+      "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "deleteDraft()",
+          "description": "Deletes this draft message.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the ID of this draft message.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMessage()",
+          "description": "Returns a GmailMessage representing this draft.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMessageId()",
+          "description": "Returns the ID of theGmailMessagerepresenting this draft.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "send()",
+          "description": "Sends this draft email message. The size of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "comma separated list of email addresses"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "subject of the email (250 characters maximum)"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "body of the email"
+            }
+          ],
+          "name": "update(recipient, subject, body)",
+          "description": "Replaces the contents of this draft message. The size of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "comma separated list of email addresses"
+            },
+            {
+              "name": "subject",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "subject of the email (250 characters maximum)"
+            },
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "body of the email"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "update(recipient, subject, body, options)",
+          "description": "Replaces the contents of this draft message using optional arguments. The email can contain\nplain text or an HTML body. The size of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GmailLabel",
+      "url": "https://developers.google.com/apps-script/reference/gmail/gmail-label",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "The thread to be labeled."
+            }
+          ],
+          "name": "addToThread(thread)",
+          "description": "Adds this label to the given thread and forces the thread to refresh (GmailThread.refresh()).",
+          "return_type": {
+            "name": "GmailLabel",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "An array of threads to be labeled."
+            }
+          ],
+          "name": "addToThreads(threads)",
+          "description": "Adds this label to the given threads and forces the threads to refresh. You can add labels for\nup to 100 threads per batch.",
+          "return_type": {
+            "name": "GmailLabel",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteLabel()",
+          "description": "Deletes this label.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the id of this label.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of this label.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getThreads()",
+          "description": "Gets the threads that are marked with this label.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "start",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The index of the starting thread."
+            },
+            {
+              "name": "max",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The maximum number of threads to return."
+            }
+          ],
+          "name": "getThreads(start, max)",
+          "description": "Gets a range of threads marked with this label.",
+          "return_type": {
+            "name": "GmailThread[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUnreadCount()",
+          "description": "Gets the number of unread threads tagged with this label.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "thread",
+              "type": {
+                "name": "GmailThread",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "The thread be unlabeled."
+            }
+          ],
+          "name": "removeFromThread(thread)",
+          "description": "Removes this label from the given thread and forces the thread to refresh.",
+          "return_type": {
+            "name": "GmailLabel",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "threads",
+              "type": {
+                "name": "GmailThread[]",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+              },
+              "description": "An array of threads to be unlabeled."
+            }
+          ],
+          "name": "removeFromThreads(threads)",
+          "description": "Removes this label from the given threads and forces the threads to refresh. You can remove\nlabels for up to 100 threads per batch.",
+          "return_type": {
+            "name": "GmailLabel",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GmailMessage",
+      "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The body of the email."
+            }
+          ],
+          "name": "createDraftReply(body)",
+          "description": "Creates a draft message replying to the sender of this message using the reply-to address. The\nsize of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The body of the email."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "createDraftReply(body, options)",
+          "description": "Creates a draft message replying to the sender of this message using the reply-to address, with\noptional arguments.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The body of the email."
+            }
+          ],
+          "name": "createDraftReplyAll(body)",
+          "description": "Creates a draft message replying to the sender using the reply-to address and all recipients of\nthis message. The size of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The body of the email."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "createDraftReplyAll(body, options)",
+          "description": "Creates a draft message replying to the sender of this message using the reply-to address and\nall recipients, with optional arguments.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A comma-separated list of email addresses."
+            }
+          ],
+          "name": "forward(recipient)",
+          "description": "Forwards this message to new recipients. The size of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recipient",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A comma-separated list of email addresses."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "forward(recipient, options)",
+          "description": "Forwards this message to new recipients, with optional arguments.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAttachments()",
+          "description": "Gets all the attachments for this message.",
+          "return_type": {
+            "name": "GmailAttachment[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-attachment"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "getAttachments(options)",
+          "description": "Gets all the attachments for this message.",
+          "return_type": {
+            "name": "GmailAttachment[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-attachment"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBcc()",
+          "description": "Gets the comma-separated recipients bcc'd on this message.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBody()",
+          "description": "Gets the HTML content of the body of this message.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCc()",
+          "description": "Gets the comma-separated recipients cc'd on this message.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDate()",
+          "description": "Gets the date and time of this message.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFrom()",
+          "description": "Gets the sender of this message.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the RFC header, without the colon separating it from the value."
+            }
+          ],
+          "name": "getHeader(name)",
+          "description": "Gets the value of an RFC 2822 header given the header name.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the ID of this message.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPlainBody()",
+          "description": "Gets the content of the body of this message without HTML formatting. This is more complex thangetBody()and takes longer.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getRawContent()",
+          "description": "Gets the raw content of this message. This is equivalent to \"Show Original\" in the Gmail UI.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getReplyTo()",
+          "description": "Gets the reply-to address of this message (usually the sender).",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSubject()",
+          "description": "Gets the subject of this message.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getThread()",
+          "description": "Gets the thread that contains this message.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTo()",
+          "description": "Gets the comma-separated recipients of this message.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isDraft()",
+          "description": "Gets whether this message is a draft.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInChats()",
+          "description": "Gets whether this message is a chat.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInInbox()",
+          "description": "Gets whether this message is in the inbox.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInPriorityInbox()",
+          "description": "Returnstrueif this message is in the priority inbox; returnsfalseotherwise.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInTrash()",
+          "description": "Gets whether this message is in the trash.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isStarred()",
+          "description": "Gets whether this message is starred.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isUnread()",
+          "description": "Gets whether this message is unread.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "markRead()",
+          "description": "Marks the message as read.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "markUnread()",
+          "description": "Marks the message as unread.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "moveToTrash()",
+          "description": "Moves the message to the trash.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "refresh()",
+          "description": "Reloads this message and associated state from Gmail (useful in case the labels, read state,\netc., have changed).",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The body of the email."
+            }
+          ],
+          "name": "reply(body)",
+          "description": "Replies to the sender of this message using the reply-to address. The size of the email\n(including headers) isquota\nlimited.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The body of the email."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "reply(body, options)",
+          "description": "Replies to the sender of this message using the reply-to address, with optional arguments.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The body of the email."
+            }
+          ],
+          "name": "replyAll(body)",
+          "description": "Replies to the sender using the reply-to address and all recipients of this message. The size\nof the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The body of the email."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "replyAll(body, options)",
+          "description": "Replies to the sender of this message using the reply-to address and all recipients, with\noptional arguments.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "star()",
+          "description": "Stars the message.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "unstar()",
+          "description": "Unstars the message.",
+          "return_type": {
+            "name": "GmailMessage",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GmailThread",
+      "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "GmailLabel",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-label"
+              },
+              "description": "the label to apply to this thread"
+            }
+          ],
+          "name": "addLabel(label)",
+          "description": "Adds this label to the thread.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            }
+          ],
+          "name": "createDraftReply(body)",
+          "description": "Creates a draft message replying to the sender of the last message in this thread using the\nreply-to address. The size of the email (including headers) isquota limited.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createDraftReply(body, options)",
+          "description": "Creates a draft message replying to the sender of the last message in this thread using the\nreply-to address, with optional arguments.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            }
+          ],
+          "name": "createDraftReplyAll(body)",
+          "description": "Creates a draft message replying to the sender of the last message in this thread, using the\nreply-to address and all recipients of this message. The size of the email (including headers)\nisquota limited.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createDraftReplyAll(body, options)",
+          "description": "Creates a draft message replying to the sender of the last message in this thread, using the\nreply-to address and all recipients, with optional arguments.",
+          "return_type": {
+            "name": "GmailDraft",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-draft"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFirstMessageSubject()",
+          "description": "Gets the subject of the first message in the thread.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the ID of this thread. The ID of a thread varies based on the messages it contains; for a\nconsistent ID for a particular message in the thread, callgetMessages()[0].getId()instead.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLabels()",
+          "description": "Returns the user-created labels on this thread.",
+          "return_type": {
+            "name": "GmailLabel[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-label"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLastMessageDate()",
+          "description": "Gets the date of this thread's most recent message.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMessageCount()",
+          "description": "Returns the number of messages in the thread.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMessages()",
+          "description": "Gets the messages in this thread.",
+          "return_type": {
+            "name": "GmailMessage[]",
+            "url": "https://developers.google.com/apps-script/reference/gmail/gmail-message"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPermalink()",
+          "description": "Gets a permalink for this thread.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "hasStarredMessages()",
+          "description": "Returns whether the thread has any starred messages.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isImportant()",
+          "description": "Returns whether the thread is marked as important.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInChats()",
+          "description": "Returns whether the thread is labeled a chat.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInInbox()",
+          "description": "Returns whether the thread is in the inbox.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInPriorityInbox()",
+          "description": "Returns true if this thread is in the priority inbox; returns false otherwise.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInSpam()",
+          "description": "Returns whether the thread is marked as spam.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isInTrash()",
+          "description": "Returns whether the thread is in the trash.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isUnread()",
+          "description": "Returns whether the thread has any unread messages.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "markImportant()",
+          "description": "Marks this thread as important.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "markRead()",
+          "description": "Marks this thread as read.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "markUnimportant()",
+          "description": "Marks this thread as unimportant.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "markUnread()",
+          "description": "Marks this thread as unread.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "moveToArchive()",
+          "description": "Moves this thread to the archive.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "moveToInbox()",
+          "description": "Moves this thread to the inbox.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "moveToSpam()",
+          "description": "Moves this thread to spam.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "moveToTrash()",
+          "description": "Moves this thread to the trash.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "refresh()",
+          "description": "Reloads this thread, and associated state from Gmail (useful in case the labels, read state,\netc., have changed).",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "GmailLabel",
+                "url": "https://developers.google.com/apps-script/reference/gmail/gmail-label"
+              },
+              "description": "the label to remove from this thread"
+            }
+          ],
+          "name": "removeLabel(label)",
+          "description": "Removes this label from the thread.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            }
+          ],
+          "name": "reply(body)",
+          "description": "Reply to the sender of the last message on this thread using the replyTo address.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "reply(body, options)",
+          "description": "Reply to the sender of the last message on this thread using the replyTo address, with optional\narguments. The email can contain both plain text, and also an HTML body. Note that the total\nsize of the email (including all headers, but excluding attachments) may not exceed 20KB.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            }
+          ],
+          "name": "replyAll(body)",
+          "description": "Reply to the sender (using the replyTo address), and all recipients of the last message on this\nthread.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "body",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the body of the email"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "replyAll(body, options)",
+          "description": "Reply to the sender (using thereplyToaddress), and all recipients of the last message\non this thread, with optional arguments. The email can contain both plain text, and also an\nHTML body. Note that the total size of the email (including all headers, but excluding\nattachments) may not exceed 20KB.",
+          "return_type": {
+            "name": "GmailThread",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    }
+  ]
+}

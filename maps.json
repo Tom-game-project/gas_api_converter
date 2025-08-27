@@ -1,0 +1,1229 @@
+{
+  "service_name": "maps",
+  "url": "https://developers.google.com/apps-script/reference/maps",
+  "classes": [
+    {
+      "name": "Enum Avoid",
+      "url": "https://developers.google.com/apps-script/reference/maps/avoid",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum Color",
+      "url": "https://developers.google.com/apps-script/reference/maps/color",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class DirectionFinder",
+      "url": "https://developers.google.com/apps-script/reference/maps/direction-finder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "Latitude of the waypoint."
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "Longitude of the waypoint."
+            }
+          ],
+          "name": "addWaypoint(latitude, longitude)",
+          "description": "Adds a waypoint that the route must pass through, using a point (lat/lng).",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "An address."
+            }
+          ],
+          "name": "addWaypoint(address)",
+          "description": "Adds a waypoint that the route must pass through, using an address.",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "clearWaypoints()",
+          "description": "Clears the current set of waypoints.",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDirections()",
+          "description": "Gets the directions using the origin, destination, and other options that were set.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "useAlternatives",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "true to return alternative routes, false otherwise"
+            }
+          ],
+          "name": "setAlternatives(useAlternatives)",
+          "description": "Sets whether or not alternative routes should be returned, instead of just the highest ranked\nroute (defaults to false). If true, the resulting object'sroutesarray may\ncontain multiple entries.",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "time",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the time of arrival"
+            }
+          ],
+          "name": "setArrive(time)",
+          "description": "Sets the desired time of arrival (when applicable).",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "avoid",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "a constant value fromAvoid"
+            }
+          ],
+          "name": "setAvoid(avoid)",
+          "description": "Sets whether to avoid certain types of restrictions.",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "time",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the time of departure"
+            }
+          ],
+          "name": "setDepart(time)",
+          "description": "Sets the desired time of departure (when applicable).",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the latitude of the ending location"
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the longitude of the ending location"
+            }
+          ],
+          "name": "setDestination(latitude, longitude)",
+          "description": "Sets the ending location for which to calculate directions to, using a point (lat/lng).",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the ending address"
+            }
+          ],
+          "name": "setDestination(address)",
+          "description": "Sets the ending location for which to calculate directions to, using an address.",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "language",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "a BCP-47 language identifier"
+            }
+          ],
+          "name": "setLanguage(language)",
+          "description": "Sets the language to be used for the directions.",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "mode",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "a constant value fromMode"
+            }
+          ],
+          "name": "setMode(mode)",
+          "description": "Sets the mode of travel (defaults to driving).",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "optimizeOrder",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "true to optimize the order, or false otherwise"
+            }
+          ],
+          "name": "setOptimizeWaypoints(optimizeOrder)",
+          "description": "Sets whether or not to optimize the provided route by rearranging the waypoints in a more\nefficient order (defaults to false).",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the latitude of the starting location"
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the longitude of the starting location"
+            }
+          ],
+          "name": "setOrigin(latitude, longitude)",
+          "description": "Sets the starting location from which to calculate directions, using a point (lat/lng).",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the starting address"
+            }
+          ],
+          "name": "setOrigin(address)",
+          "description": "Sets the starting location from which to calculate directions, using an address.",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "region",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the region code to use"
+            }
+          ],
+          "name": "setRegion(region)",
+          "description": "Sets a region to use when interpreting location names. The supported region codes correspond to\nthe ccTLDs supported by Google Maps. For example, the region code \"uk\" corresponds to\n\"maps.google.co.uk\".",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class DirectionFinderEnums",
+      "url": "https://developers.google.com/apps-script/reference/maps/direction-finder-enums",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class ElevationSampler",
+      "url": "https://developers.google.com/apps-script/reference/maps/elevation-sampler",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the latitude of the point to sample"
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the longitude of the point to sample"
+            }
+          ],
+          "name": "sampleLocation(latitude, longitude)",
+          "description": "Returns elevation data for a single point (lat/lng).",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "points",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "an array of latitude/longitude pairs"
+            }
+          ],
+          "name": "sampleLocations(points)",
+          "description": "Returns elevation data for a series of points (lat/lng).",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "encodedPolyline",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "an encoded polyline of points to sample"
+            }
+          ],
+          "name": "sampleLocations(encodedPolyline)",
+          "description": "Returns elevation data for the points in an encoded polyline.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "points",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "an array of latitude/longitude pairs defining a path to sample over"
+            },
+            {
+              "name": "numSamples",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of points to sample along the path of points"
+            }
+          ],
+          "name": "samplePath(points, numSamples)",
+          "description": "Returns elevation data for a number of samples along a line, defined using a series of points.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "encodedPolyline",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "an encoded polyline of points defining a path to sample over"
+            },
+            {
+              "name": "numSamples",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of points to sample along the path of points"
+            }
+          ],
+          "name": "samplePath(encodedPolyline, numSamples)",
+          "description": "Returns elevation data for a number of samples along a line, defined using an encoded polyline.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Format",
+      "url": "https://developers.google.com/apps-script/reference/maps/format",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class Geocoder",
+      "url": "https://developers.google.com/apps-script/reference/maps/geocoder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "an address"
+            }
+          ],
+          "name": "geocode(address)",
+          "description": "Gets the approximate geographic points for a given address.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the latitude of the point"
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the longitude of the point"
+            }
+          ],
+          "name": "reverseGeocode(latitude, longitude)",
+          "description": "Gets the approximate addresses for a given geographic point.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "swLatitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the latitude of the south west corner of the bounds"
+            },
+            {
+              "name": "swLongitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the longitude of the south west corner of the bounds"
+            },
+            {
+              "name": "neLatitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the latitude of the north east corner of the bounds"
+            },
+            {
+              "name": "neLongitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "the longitude of the north east corner of the bounds"
+            }
+          ],
+          "name": "setBounds(swLatitude, swLongitude, neLatitude, neLongitude)",
+          "description": "Sets the bounds of an area that should be given extra preference in the results.",
+          "return_type": {
+            "name": "Geocoder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "language",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "a BCP-47 language identifier"
+            }
+          ],
+          "name": "setLanguage(language)",
+          "description": "Sets the language to be used in the results.",
+          "return_type": {
+            "name": "Geocoder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "region",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the region code to use"
+            }
+          ],
+          "name": "setRegion(region)",
+          "description": "Sets a region to use when interpreting location names. The supported region codes correspond to\nthe ccTLDs supported by Google Maps. For example, the region code \"uk\" corresponds to\n\"maps.google.co.uk\".",
+          "return_type": {
+            "name": "Geocoder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Maps",
+      "url": "https://developers.google.com/apps-script/reference/maps/maps",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "polyline",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "An encoded polyline to decode."
+            }
+          ],
+          "name": "decodePolyline(polyline)",
+          "description": "Decodes an encoded polyline string back into an array of points.",
+          "return_type": {
+            "name": "Number[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "points",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "An array of latitude/longitude pairs to encode."
+            }
+          ],
+          "name": "encodePolyline(points)",
+          "description": "Encodes an array of points into a string.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newDirectionFinder()",
+          "description": "Creates a new DirectionFinder object.",
+          "return_type": {
+            "name": "DirectionFinder",
+            "url": "https://developers.google.com/apps-script/reference/maps/direction-finder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newElevationSampler()",
+          "description": "Creates an ElevationSampler object.",
+          "return_type": {
+            "name": "ElevationSampler",
+            "url": "https://developers.google.com/apps-script/reference/maps/elevation-sampler"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newGeocoder()",
+          "description": "Creates a new Geocoder object.",
+          "return_type": {
+            "name": "Geocoder",
+            "url": "https://developers.google.com/apps-script/reference/maps/geocoder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newStaticMap()",
+          "description": "Creates a new StaticMap object.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference/maps/static-map"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "clientId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A client identifier."
+            },
+            {
+              "name": "signingKey",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A private signing key."
+            }
+          ],
+          "name": "setAuthentication(clientId, signingKey)",
+          "description": "Enables the use of an externally establishedGoogle Maps APIs Premium Planaccount,\nto leverage additionalquota\nallowances. Your client ID and signing key can be obtained from the Google Enterprise\nSupport Portal. Set these values tonullto go back to using the default quota\nallowances.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum MarkerSize",
+      "url": "https://developers.google.com/apps-script/reference/maps/marker-size",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum Mode",
+      "url": "https://developers.google.com/apps-script/reference/maps/mode",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class StaticMap",
+      "url": "https://developers.google.com/apps-script/reference/maps/static-map",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "An address to add."
+            }
+          ],
+          "name": "addAddress(address)",
+          "description": "Adds a new address to the current path definition.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The latitude of the new marker."
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The longitude of the new marker."
+            }
+          ],
+          "name": "addMarker(latitude, longitude)",
+          "description": "Adds a marker to the map using a point (lat/lng).",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The address at which to place the new marker."
+            }
+          ],
+          "name": "addMarker(address)",
+          "description": "Adds a marker to the map using an address.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "points",
+              "type": {
+                "name": "Number[]",
+                "url": null
+              },
+              "description": "An array of latitude/longitude pairs that define the path."
+            }
+          ],
+          "name": "addPath(points)",
+          "description": "Adds a path to the map using an array of points.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "polyline",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "An encoded polyline."
+            }
+          ],
+          "name": "addPath(polyline)",
+          "description": "Adds a path to the map using an encoded polyline.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The latitude of the point."
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The longitude of the point."
+            }
+          ],
+          "name": "addPoint(latitude, longitude)",
+          "description": "Adds a new point (lat/lng) to the current path definition.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The latitude of the point."
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The longitude of the point."
+            }
+          ],
+          "name": "addVisible(latitude, longitude)",
+          "description": "Adds a point (lat/lng) location that must be visible in the map.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "An address that must be visible in the map."
+            }
+          ],
+          "name": "addVisible(address)",
+          "description": "Adds an address location that must be visible in the map.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "beginPath()",
+          "description": "Starts a new path definition. Calls toaddAddress()andaddPoint()define each\nnew vertex in the path. The path is completed whenendPath()is called.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "clearMarkers()",
+          "description": "Clears the current set of markers.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "clearPaths()",
+          "description": "Clear the current set of paths.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "clearVisibles()",
+          "description": "Clears the current set of visible locations.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "endPath()",
+          "description": "Completes a path definition started with beginPath().",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type to convert to. For most blobs,'application/pdf'is\n    the only valid option. For images in BMP, GIF, JPEG, or PNG format, any of'image/bmp','image/gif','image/jpeg', or'image/png'are also\n    valid. For a Google Docs document,'text/markdown'is also valid."
+            }
+          ],
+          "name": "getAs(contentType)",
+          "description": "Return the data inside this object as a blob converted to the specified content type. This\nmethod adds the appropriate extension to the filename—for example, \"myfile.pdf\". However, it\nassumes that the part of the filename that follows the last period (if any) is an existing\nextension that should be replaced. Consequently, \"ShoppingList.12.25.2014\" becomes\n\"ShoppingList.12.25.pdf\".",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBlob()",
+          "description": "Gets the image data as aBlob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMapImage()",
+          "description": "Gets the raw image data as a byte array.",
+          "return_type": {
+            "name": "Byte[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMapUrl()",
+          "description": "Gets the URL of the map image.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "latitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The latitude of the center."
+            },
+            {
+              "name": "longitude",
+              "type": {
+                "name": "Number",
+                "url": null
+              },
+              "description": "The longitude of the center."
+            }
+          ],
+          "name": "setCenter(latitude, longitude)",
+          "description": "Sets the center of the map using a point (lat/lng).",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "address",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The address of the center."
+            }
+          ],
+          "name": "setCenter(address)",
+          "description": "Sets the center of the map using an address.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "imageUrl",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "Specifies a URL to use as the marker's custom icon. Images may be in PNG, JPEG\n    or GIF formats, though PNG is recommended."
+            },
+            {
+              "name": "useShadow",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Indicates that the marker should have a shadow generated, based on the image's\n    visible region and its opacity/transparency."
+            }
+          ],
+          "name": "setCustomMarkerStyle(imageUrl, useShadow)",
+          "description": "Sets the custom marker image to use when creating new markers. Markers that have already been\nadded are not affected.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "format",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A constant value fromFormat."
+            }
+          ],
+          "name": "setFormat(format)",
+          "description": "Sets the format of the map image.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "language",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A BCP-47 language identifier."
+            }
+          ],
+          "name": "setLanguage(language)",
+          "description": "Sets the language to be used for text on the map (where available).",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "mapType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A constant value fromType."
+            }
+          ],
+          "name": "setMapType(mapType)",
+          "description": "Sets the type of map to be shown.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "size",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A constant value fromMarkerSize."
+            },
+            {
+              "name": "color",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A string in the format \"0xrrggbb\" or a constant value fromColor."
+            },
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A string containing a single character A-Z or 0-9."
+            }
+          ],
+          "name": "setMarkerStyle(size, color, label)",
+          "description": "Sets the marker style to use when creating new markers. Markers that have already been added\nare not affected.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "useMobileTiles",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "Whether or not to use mobile tiles."
+            }
+          ],
+          "name": "setMobile(useMobileTiles)",
+          "description": "Sets whether or not to use specialized tile sets for mobile devices.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "weight",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of lines in pixels."
+            },
+            {
+              "name": "color",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The line color, as a string in the format \"0xrrggbb\" or a constant value fromColor."
+            },
+            {
+              "name": "fillColor",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The fill color, a string in the format \"0xrrggbb\" or a constant value fromColor."
+            }
+          ],
+          "name": "setPathStyle(weight, color, fillColor)",
+          "description": "Sets the path style to use when creating new paths. Paths that have already been added are not\naffected.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The width of the image in pixels."
+            },
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The height of the image in pixels."
+            }
+          ],
+          "name": "setSize(width, height)",
+          "description": "Sets the width and height of the map image in pixels.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "zoom",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "A value from zero to 21, inclusive."
+            }
+          ],
+          "name": "setZoom(zoom)",
+          "description": "Sets the zoom factor, or magnification level, used for the map.",
+          "return_type": {
+            "name": "StaticMap",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class StaticMapEnums",
+      "url": "https://developers.google.com/apps-script/reference/maps/static-map-enums",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum Type",
+      "url": "https://developers.google.com/apps-script/reference/maps/type",
+      "description": "",
+      "methods": []
+    }
+  ]
+}

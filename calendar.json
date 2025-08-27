@@ -1,0 +1,3741 @@
+{
+  "service_name": "calendar",
+  "url": "https://developers.google.com/apps-script/reference/calendar",
+  "classes": [
+    {
+      "name": "Class Calendar",
+      "url": "https://developers.google.com/apps-script/reference/calendar/calendar",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the event."
+            },
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date of the event (only the day is used; the time is ignored)."
+            }
+          ],
+          "name": "createAllDayEvent(title, date)",
+          "description": "Creates a new all-day event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the event."
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date when the event starts (only the day is used; the time is ignored)."
+            },
+            {
+              "name": "endDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date when the event ends (only the day is used; the time is ignored). The\n    end date is exclusive."
+            }
+          ],
+          "name": "createAllDayEvent(title, startDate, endDate)",
+          "description": "Creates a new all-day event that can span multiple days.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the event."
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date when the event starts (only the day is used; the time is ignored)."
+            },
+            {
+              "name": "endDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date when the event ends (only the day is used; the time is ignored). The\n    end date is exclusive."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "createAllDayEvent(title, startDate, endDate, options)",
+          "description": "Creates a new all-day event that can span multiple days.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the event."
+            },
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date of the event (only the day is used; the time is ignored)."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "createAllDayEvent(title, date, options)",
+          "description": "Creates a new all-day event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the events in the series"
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date of the first event in the series (only the day is used; the time is\n    ignored)"
+            },
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence settings of the event series"
+            }
+          ],
+          "name": "createAllDayEventSeries(title, startDate, recurrence)",
+          "description": "Creates a new all-day event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the events in the series"
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date of the first event in the series (only the day is used; the time is\n    ignored)"
+            },
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence settings of the event series"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createAllDayEventSeries(title, startDate, recurrence, options)",
+          "description": "Creates a new all-day event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the event"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the event starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the event ends"
+            }
+          ],
+          "name": "createEvent(title, startTime, endTime)",
+          "description": "Creates a new event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the event"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the event starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the event ends"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createEvent(title, startTime, endTime, options)",
+          "description": "Creates a new event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "a free-form description of the event"
+            }
+          ],
+          "name": "createEventFromDescription(description)",
+          "description": "Creates an event from a free-form description.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the events in the series"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series ends"
+            },
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence settings of the event series"
+            }
+          ],
+          "name": "createEventSeries(title, startTime, endTime, recurrence)",
+          "description": "Creates a new event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the events in the series"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series ends"
+            },
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence settings of the event series"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createEventSeries(title, startTime, endTime, recurrence, options)",
+          "description": "Creates a new event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteCalendar()",
+          "description": "Deletes the calendar permanently. A user can only delete a calendar they own.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getColor()",
+          "description": "Gets the color of the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescription()",
+          "description": "Gets the description of the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "iCalId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "ID of the event."
+            }
+          ],
+          "name": "getEventById(iCalId)",
+          "description": "Gets the event with the given ID. If the series belongs to a calendar other than the default\ncalendar, this method must be called from that calendar. CallingCalendarApp.getEventById(iCalId)only\nreturns an event in the default calendar.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "iCalId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "ID of the event series."
+            }
+          ],
+          "name": "getEventSeriesById(iCalId)",
+          "description": "Gets the event series with the given ID. If the ID given is for a singleCalendarEvent,\nthen aCalendarEventSeriesis returned with a single event in the series. Note that if\nthe event series belongs to a calendar other than the default calendar, this method must be\ncalled from thatCalendar; callingCalendarApp.getEventSeriesById(iCalId)directly only returns an event series that exists in the default calendar.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the start of the time range"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the end of the time range, non-inclusive"
+            }
+          ],
+          "name": "getEvents(startTime, endTime)",
+          "description": "Gets all events that occur within a given time range.",
+          "return_type": {
+            "name": "CalendarEvent[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the start of the time range"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the end of the time range, non-inclusive"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "getEvents(startTime, endTime, options)",
+          "description": "Gets all events that occur within a given time range and meet the specified criteria.",
+          "return_type": {
+            "name": "CalendarEvent[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date to retrieve events for (only the day is used; the time is ignored)"
+            }
+          ],
+          "name": "getEventsForDay(date)",
+          "description": "Gets all events that occur on a given day.",
+          "return_type": {
+            "name": "CalendarEvent[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date to retrieve events for (only the day is used; the time is ignored)"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "advanced filtering options"
+            }
+          ],
+          "name": "getEventsForDay(date, options)",
+          "description": "Gets all events that occur on a given day and meet specified criteria.",
+          "return_type": {
+            "name": "CalendarEvent[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the ID of the calendar. The ID for a user's default calendar is their email address.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTimeZone()",
+          "description": "Gets the time zone of the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isHidden()",
+          "description": "Determines whether the calendar is hidden in the user interface.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isMyPrimaryCalendar()",
+          "description": "Determines whether the calendar is the primary calendar for the effective user.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isOwnedByMe()",
+          "description": "Determines whether the calendar is owned by you.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isSelected()",
+          "description": "Determines whether the calendar's events are displayed in the user interface.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "color",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "ACalendarApp.Coloror a hexadecimal color string\n    (\"#rrggbb\")."
+            }
+          ],
+          "name": "setColor(color)",
+          "description": "Sets the color of the calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the description of this calendar"
+            }
+          ],
+          "name": "setDescription(description)",
+          "description": "Sets the description of a calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "hidden",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueto hide the calendar in the user interface;falseto show it"
+            }
+          ],
+          "name": "setHidden(hidden)",
+          "description": "Sets whether the calendar is visible in the user interface.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new name"
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the name of the calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "selected",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueto show the calendar's events in the user interface;falseto hide them"
+            }
+          ],
+          "name": "setSelected(selected)",
+          "description": "Sets whether the calendar's events are displayed in the user interface.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "timeZone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The time zone, specified in \"long\" format (such as \"America/New_York\", as\n    listed byJoda.org)."
+            }
+          ],
+          "name": "setTimeZone(timeZone)",
+          "description": "Sets the time zone of the calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "unsubscribeFromCalendar()",
+          "description": "Unsubscribes the user from a calendar. A user can't unsubscribe from calendars listed under theMy calendarslist. They can unsubscribe from calendars listed underOther\ncalendars.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class CalendarApp",
+      "url": "https://developers.google.com/apps-script/reference/calendar/calendar-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the event."
+            },
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date of the event (only the day is used; the time is ignored)."
+            }
+          ],
+          "name": "createAllDayEvent(title, date)",
+          "description": "Creates a new all-day event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the event."
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date when the event starts (only the day is used; the time is ignored)."
+            },
+            {
+              "name": "endDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date when the event ends (only the day is used; the time is ignored). The\n    end date is exclusive."
+            }
+          ],
+          "name": "createAllDayEvent(title, startDate, endDate)",
+          "description": "Creates a new all-day event that can span multiple days.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the event."
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date when the event starts (only the day is used; the time is ignored)."
+            },
+            {
+              "name": "endDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date when the event ends (only the day is used; the time is ignored). The\n    end date is exclusive."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "createAllDayEvent(title, startDate, endDate, options)",
+          "description": "Creates a new all-day event that can span multiple days.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the event."
+            },
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "The date of the event (only the day is used; the time is ignored)."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "createAllDayEvent(title, date, options)",
+          "description": "Creates a new all-day event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the events in the series"
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date of the first event in the series (only the day is used; the time is\n    ignored)"
+            },
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence settings of the event series"
+            }
+          ],
+          "name": "createAllDayEventSeries(title, startDate, recurrence)",
+          "description": "Creates a new all-day event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the events in the series"
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date of the first event in the series (only the day is used; the time is\n    ignored)"
+            },
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence settings of the event series"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createAllDayEventSeries(title, startDate, recurrence, options)",
+          "description": "Creates a new all-day event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the new calendar"
+            }
+          ],
+          "name": "createCalendar(name)",
+          "description": "Creates a new calendar, owned by the user.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the new calendar"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createCalendar(name, options)",
+          "description": "Creates a new calendar, owned by the user.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the event"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the event starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the event ends"
+            }
+          ],
+          "name": "createEvent(title, startTime, endTime)",
+          "description": "Creates a new event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the event"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the event starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the event ends"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createEvent(title, startTime, endTime, options)",
+          "description": "Creates a new event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "a free-form description of the event"
+            }
+          ],
+          "name": "createEventFromDescription(description)",
+          "description": "Creates an event from a free-form description.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the events in the series"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series ends"
+            },
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence settings of the event series"
+            }
+          ],
+          "name": "createEventSeries(title, startTime, endTime, recurrence)",
+          "description": "Creates a new event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the title of the events in the series"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series ends"
+            },
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence settings of the event series"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "createEventSeries(title, startTime, endTime, recurrence, options)",
+          "description": "Creates a new event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllCalendars()",
+          "description": "Gets all calendars that the user owns or is subscribed to.",
+          "return_type": {
+            "name": "Calendar[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllOwnedCalendars()",
+          "description": "Gets all calendars that the user owns.",
+          "return_type": {
+            "name": "Calendar[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the calendar ID"
+            }
+          ],
+          "name": "getCalendarById(id)",
+          "description": "Gets the calendar with the given ID.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the calendar name"
+            }
+          ],
+          "name": "getCalendarsByName(name)",
+          "description": "Gets all calendars with a given name that the user owns or is subscribed to. Names are not\ncase-sensitive.",
+          "return_type": {
+            "name": "Calendar[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getColor()",
+          "description": "Gets the color of the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDefaultCalendar()",
+          "description": "Gets the user's default calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescription()",
+          "description": "Gets the description of the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "iCalId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "ID of the event."
+            }
+          ],
+          "name": "getEventById(iCalId)",
+          "description": "Gets the event with the given ID. If the series belongs to a calendar other than the default\ncalendar, this method must be called from that calendar. CallinggetEventById(iCalId)only\nreturns an event in the default calendar.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "iCalId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "ID of the event series."
+            }
+          ],
+          "name": "getEventSeriesById(iCalId)",
+          "description": "Gets the event series with the given ID. If the ID given is for a singleCalendarEvent,\nthen aCalendarEventSeriesis returned with a single event in the series. Note that if\nthe event series belongs to a calendar other than the default calendar, this method must be\ncalled from thatCalendarApp; callinggetEventSeriesById(iCalId)directly only returns an event series that exists in the default calendar.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the start of the time range"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the end of the time range, non-inclusive"
+            }
+          ],
+          "name": "getEvents(startTime, endTime)",
+          "description": "Gets all events that occur within a given time range.",
+          "return_type": {
+            "name": "CalendarEvent[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the start of the time range"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the end of the time range, non-inclusive"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a JavaScript object that specifies advanced parameters, as listed below"
+            }
+          ],
+          "name": "getEvents(startTime, endTime, options)",
+          "description": "Gets all events that occur within a given time range and meet the specified criteria.",
+          "return_type": {
+            "name": "CalendarEvent[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date to retrieve events for (only the day is used; the time is ignored)"
+            }
+          ],
+          "name": "getEventsForDay(date)",
+          "description": "Gets all events that occur on a given day.",
+          "return_type": {
+            "name": "CalendarEvent[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date to retrieve events for (only the day is used; the time is ignored)"
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "advanced filtering options"
+            }
+          ],
+          "name": "getEventsForDay(date, options)",
+          "description": "Gets all events that occur on a given day and meet specified criteria.",
+          "return_type": {
+            "name": "CalendarEvent[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the ID of the calendar. The ID for a user's default calendar is their email address.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the calendar id"
+            }
+          ],
+          "name": "getOwnedCalendarById(id)",
+          "description": "Gets the calendar with the given ID, if the user owns it.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the calendar name"
+            }
+          ],
+          "name": "getOwnedCalendarsByName(name)",
+          "description": "Gets all calendars with a given name that the user owns. Names are not case-sensitive.",
+          "return_type": {
+            "name": "Calendar[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTimeZone()",
+          "description": "Gets the time zone of the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isHidden()",
+          "description": "Determines whether the calendar is hidden in the user interface.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isMyPrimaryCalendar()",
+          "description": "Determines whether the calendar is the primary calendar for the effective user.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isOwnedByMe()",
+          "description": "Determines whether the calendar is owned by you.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isSelected()",
+          "description": "Determines whether the calendar's events are displayed in the user interface.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newRecurrence()",
+          "description": "Creates a new recurrence object, which can be used to create rules for event recurrence.",
+          "return_type": {
+            "name": "EventRecurrence",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "color",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "ACalendarApp.Coloror a hexadecimal color string\n    (\"#rrggbb\")."
+            }
+          ],
+          "name": "setColor(color)",
+          "description": "Sets the color of the calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the description of this calendar"
+            }
+          ],
+          "name": "setDescription(description)",
+          "description": "Sets the description of a calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "hidden",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueto hide the calendar in the user interface;falseto show it"
+            }
+          ],
+          "name": "setHidden(hidden)",
+          "description": "Sets whether the calendar is visible in the user interface.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new name"
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the name of the calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "selected",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueto show the calendar's events in the user interface;falseto hide them"
+            }
+          ],
+          "name": "setSelected(selected)",
+          "description": "Sets whether the calendar's events are displayed in the user interface.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "timeZone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The time zone, specified in \"long\" format (such as \"America/New_York\", as\n    listed byJoda.org)."
+            }
+          ],
+          "name": "setTimeZone(timeZone)",
+          "description": "Sets the time zone of the calendar.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the ID of the calendar to subscribe to"
+            }
+          ],
+          "name": "subscribeToCalendar(id)",
+          "description": "Subscribes the user to the calendar with the given ID, if the user is allowed to subscribe.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID of the calendar to subscribe to."
+            },
+            {
+              "name": "options",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "A JavaScript object that specifies advanced parameters, as listed below."
+            }
+          ],
+          "name": "subscribeToCalendar(id, options)",
+          "description": "Subscribes the user to the calendar with the given ID, if the user is allowed to subscribe.",
+          "return_type": {
+            "name": "Calendar",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class CalendarEvent",
+      "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "minutesBefore",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of minutes before the event"
+            }
+          ],
+          "name": "addEmailReminder(minutesBefore)",
+          "description": "Adds a new email reminder to the event. The reminder must be at least 5 minutes, and at most 4\nweeks (40320 minutes), before the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the guest."
+            }
+          ],
+          "name": "addGuest(email)",
+          "description": "Adds a guest to the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "minutesBefore",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of minutes before the event"
+            }
+          ],
+          "name": "addPopupReminder(minutesBefore)",
+          "description": "Adds a new pop-up notification to the event. The notification must be at least 5 minutes, and\nat most 4 weeks (40320 minutes), before the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "minutesBefore",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of minutes before the event"
+            }
+          ],
+          "name": "addSmsReminder(minutesBefore)",
+          "description": "Adds a new SMS reminder to the event. The reminder must be at least 5 minutes, and at most 4\nweeks (40320 minutes), before the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "anyoneCanAddSelf()",
+          "description": "Determines whether people can add themselves as guests to a Calendar event.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteEvent()",
+          "description": "Deletes a Calendar event.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the tag key"
+            }
+          ],
+          "name": "deleteTag(key)",
+          "description": "Deletes a key/value tag from the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllDayEndDate()",
+          "description": "Gets the date on which this all-day calendar event ends. (If this is not an all-day event, then\nthis method throws an exception.) The returnedDaterepresents midnight at the\nbeginning of the day after the event endsin the script's time zone. To use the\ncalendar's time zone instead, callgetEndTime().",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllDayStartDate()",
+          "description": "Gets the date on which this all-day calendar event begins. (If this is not an all-day event,\nthen this method throws an exception.) The returnedDaterepresents midnight at the\nbeginning of the day on which the event startsin the script's time zone. To use the\ncalendar's time zone instead, callgetStartTime().",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllTagKeys()",
+          "description": "Gets all keys for tags that have been set on the event.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getColor()",
+          "description": "Returns the color of the calendar event.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCreators()",
+          "description": "Gets the creators of an event.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDateCreated()",
+          "description": "Gets the date the event was created. You must have access to the calendar.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescription()",
+          "description": "Gets the description of the event. You must have edit access to the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEmailReminders()",
+          "description": "Gets the minute values for all email reminders for the event. You must have edit access to the\ncalendar.",
+          "return_type": {
+            "name": "Integer[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEndTime()",
+          "description": "Gets the date and time at which this calendar event ends. You must have access to the calendar.\nFor non–all-day events, this is the instant in time at which the event was defined to\nend. For all-day events, which only store an end date (not a date and time), this is midnight\nat the beginning of the day after the event endsin the calendar's time zone. This\nallows meaningful comparison of end times for all types of events; however, it does not\nnecessarily preserve the original day-of-year unmodified.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEventSeries()",
+          "description": "Gets the series of recurring events that this event belongs to. You must have access to the\ncalendar. ACalendarEventSeriesobject is returned even if this event doesn't belong to\na series, so that you can add new recurrence settings.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEventType()",
+          "description": "Gets theEventTypeof this event.",
+          "return_type": {
+            "name": "EventType",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-type"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the address of the guest"
+            }
+          ],
+          "name": "getGuestByEmail(email)",
+          "description": "Gets a guest by email address.",
+          "return_type": {
+            "name": "EventGuest",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-guest"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGuestList()",
+          "description": "Gets the guests for the event, not including the event owner.",
+          "return_type": {
+            "name": "EventGuest[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-guest"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "includeOwner",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether to include the owners as a guest"
+            }
+          ],
+          "name": "getGuestList(includeOwner)",
+          "description": "Gets the guests for the event, potentially including the event owners.",
+          "return_type": {
+            "name": "EventGuest[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-guest"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the unique iCalUID of the event. Note that the iCalUID and the eventidused by theCalendar v3 APIandCalendar advanced serviceare not identical and\ncannot be used interchangeably. One difference in their semantics is that in recurring events\nall occurrences of one event have differentidswhile they all share the same iCalUIDs.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLastUpdated()",
+          "description": "Gets the date the event was last updated.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLocation()",
+          "description": "Gets the location of the event.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMyStatus()",
+          "description": "Gets the event status (such as attending or invited) of the effective user. Always returnsGuestStatus.OWNERif the effective user is the owner of the event.",
+          "return_type": {
+            "name": "GuestStatus",
+            "url": "https://developers.google.com/apps-script/reference/calendar/guest-status"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getOriginalCalendarId()",
+          "description": "Get the ID of the calendar where this event was originally created.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPopupReminders()",
+          "description": "Gets the minute values for all pop-up reminders for the event.",
+          "return_type": {
+            "name": "Integer[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSmsReminders()",
+          "description": "Gets the minute values for all SMS reminders for the event.",
+          "return_type": {
+            "name": "Integer[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getStartTime()",
+          "description": "Gets the date and time at which this calendar event begins. For non–all-day events, this\nis the instant in time at which the event was defined to start. For all-day events, which only\nstore a start date (not a date and time), this is midnight at the beginning of the day on which\nthe event startsin the calendar's time zone. This allows meaningful comparison of\nstart times for all types of events; however, it is not necessarily preserve the original\nday-of-year unmodified.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the key"
+            }
+          ],
+          "name": "getTag(key)",
+          "description": "Gets a tag value of the event.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTitle()",
+          "description": "Gets the title of the event.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTransparency()",
+          "description": "Gets the transparency of the event. Use this method to determine whether an event isTRANSPARENT, meaning the calendar shows as Available during that time, orOPAQUE, meaning the calendar shows as Busy during that time.",
+          "return_type": {
+            "name": "EventTransparency",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-transparency"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getVisibility()",
+          "description": "Gets the visibility of the event.",
+          "return_type": {
+            "name": "Visibility",
+            "url": "https://developers.google.com/apps-script/reference/calendar/visibility"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "guestsCanInviteOthers()",
+          "description": "Determines whether guests can invite other guests.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "guestsCanModify()",
+          "description": "Determines whether guests can modify the event.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "guestsCanSeeGuests()",
+          "description": "Determines whether guests can see other guests.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isAllDayEvent()",
+          "description": "Determines whether this is an all-day event.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isOwnedByMe()",
+          "description": "Determines whether you're the owner of the event.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isRecurringEvent()",
+          "description": "Determines whether the event is part of an event series.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "removeAllReminders()",
+          "description": "Removes all reminders from the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the email address of the guest"
+            }
+          ],
+          "name": "removeGuest(email)",
+          "description": "Removes a guest from the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "resetRemindersToDefault()",
+          "description": "Resets the reminders using the calendar's default settings.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date for the event (the time is ignored)"
+            }
+          ],
+          "name": "setAllDayDate(date)",
+          "description": "Sets the date of the event. Applying this method changes a regular event into an all-day event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date when the event starts (the time is ignored)"
+            },
+            {
+              "name": "endDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date when the event ends (the time is ignored)"
+            }
+          ],
+          "name": "setAllDayDates(startDate, endDate)",
+          "description": "Sets the dates of the event. Applying this method changes a regular event into an all-day\nevent.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "anyoneCanAddSelf",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether anyone can invite themselves"
+            }
+          ],
+          "name": "setAnyoneCanAddSelf(anyoneCanAddSelf)",
+          "description": "Sets whether non-guests can add themselves to the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "color",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "An integer color index as a string, or a value fromCalendarApp.EventColor."
+            }
+          ],
+          "name": "setColor(color)",
+          "description": "Sets the color of the calendar event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new description"
+            }
+          ],
+          "name": "setDescription(description)",
+          "description": "Sets the description of the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "guestsCanInviteOthers",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether guests can invite others"
+            }
+          ],
+          "name": "setGuestsCanInviteOthers(guestsCanInviteOthers)",
+          "description": "Sets whether guests can invite other guests.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "guestsCanModify",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether guests can modify the event"
+            }
+          ],
+          "name": "setGuestsCanModify(guestsCanModify)",
+          "description": "Sets whether guests can modify the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "guestsCanSeeGuests",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether guests can see others"
+            }
+          ],
+          "name": "setGuestsCanSeeGuests(guestsCanSeeGuests)",
+          "description": "Sets whether guests can see other guests.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "location",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new location"
+            }
+          ],
+          "name": "setLocation(location)",
+          "description": "Sets the location of the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "status",
+              "type": {
+                "name": "GuestStatus",
+                "url": "https://developers.google.com/apps-script/reference/calendar/guest-status"
+              },
+              "description": "the new status"
+            }
+          ],
+          "name": "setMyStatus(status)",
+          "description": "Sets the event status (such as attending or invited) of the effective user.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the tag key"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the tag value"
+            }
+          ],
+          "name": "setTag(key, value)",
+          "description": "Sets a key/value tag on the event, for storing custom metadata.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the new start of the event"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the new end of the event"
+            }
+          ],
+          "name": "setTime(startTime, endTime)",
+          "description": "Sets the dates and times for the start and end of the event. Applying this method changes an\nall-day event into a regular event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new title"
+            }
+          ],
+          "name": "setTitle(title)",
+          "description": "Sets the title of the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "transparency",
+              "type": {
+                "name": "EventTransparency",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-transparency"
+              },
+              "description": "The transparency value."
+            }
+          ],
+          "name": "setTransparency(transparency)",
+          "description": "Sets the transparency of the event. Use this method to set whether an event isTRANSPARENT, meaning the calendar shows as Available during that time, orOPAQUE, meaning the calendar shows as Busy during that time.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "visibility",
+              "type": {
+                "name": "Visibility",
+                "url": "https://developers.google.com/apps-script/reference/calendar/visibility"
+              },
+              "description": ""
+            }
+          ],
+          "name": "setVisibility(visibility)",
+          "description": "Sets the visibility of the event.",
+          "return_type": {
+            "name": "CalendarEvent",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class CalendarEventSeries",
+      "url": "https://developers.google.com/apps-script/reference/calendar/calendar-event-series",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "minutesBefore",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of minutes before the event"
+            }
+          ],
+          "name": "addEmailReminder(minutesBefore)",
+          "description": "Adds a new email reminder to the event. The reminder must be at least 5 minutes, and at most 4\nweeks (40320 minutes), before the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the guest."
+            }
+          ],
+          "name": "addGuest(email)",
+          "description": "Adds a guest to the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "minutesBefore",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of minutes before the event"
+            }
+          ],
+          "name": "addPopupReminder(minutesBefore)",
+          "description": "Adds a new pop-up notification to the event. The notification must be at least 5 minutes, and\nat most 4 weeks (40320 minutes), before the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "minutesBefore",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of minutes before the event"
+            }
+          ],
+          "name": "addSmsReminder(minutesBefore)",
+          "description": "Adds a new SMS reminder to the event. The reminder must be at least 5 minutes, and at most 4\nweeks (40320 minutes), before the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "anyoneCanAddSelf()",
+          "description": "Determines whether people can add themselves as guests to a Calendar event.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "deleteEventSeries()",
+          "description": "Deletes the event series.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the tag key"
+            }
+          ],
+          "name": "deleteTag(key)",
+          "description": "Deletes a key/value tag from the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllTagKeys()",
+          "description": "Gets all keys for tags that have been set on the event.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getColor()",
+          "description": "Returns the color of the calendar event.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCreators()",
+          "description": "Gets the creators of an event.",
+          "return_type": {
+            "name": "String[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDateCreated()",
+          "description": "Gets the date the event was created. You must have access to the calendar.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescription()",
+          "description": "Gets the description of the event. You must have edit access to the calendar.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEmailReminders()",
+          "description": "Gets the minute values for all email reminders for the event. You must have edit access to the\ncalendar.",
+          "return_type": {
+            "name": "Integer[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEventType()",
+          "description": "Gets theEventTypeof this event.",
+          "return_type": {
+            "name": "EventType",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-type"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the address of the guest"
+            }
+          ],
+          "name": "getGuestByEmail(email)",
+          "description": "Gets a guest by email address.",
+          "return_type": {
+            "name": "EventGuest",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-guest"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGuestList()",
+          "description": "Gets the guests for the event, not including the event owner.",
+          "return_type": {
+            "name": "EventGuest[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-guest"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "includeOwner",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether to include the owners as a guest"
+            }
+          ],
+          "name": "getGuestList(includeOwner)",
+          "description": "Gets the guests for the event, potentially including the event owners.",
+          "return_type": {
+            "name": "EventGuest[]",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-guest"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getId()",
+          "description": "Gets the unique iCalUID of the event. Note that the iCalUID and the eventidused by theCalendar v3 APIandCalendar advanced serviceare not identical and\ncannot be used interchangeably. One difference in their semantics is that in recurring events\nall occurrences of one event have differentidswhile they all share the same iCalUIDs.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLastUpdated()",
+          "description": "Gets the date the event was last updated.",
+          "return_type": {
+            "name": "Date",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLocation()",
+          "description": "Gets the location of the event.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMyStatus()",
+          "description": "Gets the event status (such as attending or invited) of the effective user. Always returnsGuestStatus.OWNERif the effective user is the owner of the event.",
+          "return_type": {
+            "name": "GuestStatus",
+            "url": "https://developers.google.com/apps-script/reference/calendar/guest-status"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getOriginalCalendarId()",
+          "description": "Get the ID of the calendar where this event was originally created.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPopupReminders()",
+          "description": "Gets the minute values for all pop-up reminders for the event.",
+          "return_type": {
+            "name": "Integer[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSmsReminders()",
+          "description": "Gets the minute values for all SMS reminders for the event.",
+          "return_type": {
+            "name": "Integer[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the key"
+            }
+          ],
+          "name": "getTag(key)",
+          "description": "Gets a tag value of the event.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTitle()",
+          "description": "Gets the title of the event.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTransparency()",
+          "description": "Gets the transparency of the event. Use this method to determine whether an event isTRANSPARENT, meaning the calendar shows as Available during that time, orOPAQUE, meaning the calendar shows as Busy during that time.",
+          "return_type": {
+            "name": "EventTransparency",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-transparency"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getVisibility()",
+          "description": "Gets the visibility of the event.",
+          "return_type": {
+            "name": "Visibility",
+            "url": "https://developers.google.com/apps-script/reference/calendar/visibility"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "guestsCanInviteOthers()",
+          "description": "Determines whether guests can invite other guests.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "guestsCanModify()",
+          "description": "Determines whether guests can modify the event.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "guestsCanSeeGuests()",
+          "description": "Determines whether guests can see other guests.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isOwnedByMe()",
+          "description": "Determines whether you're the owner of the event.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "removeAllReminders()",
+          "description": "Removes all reminders from the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the email address of the guest"
+            }
+          ],
+          "name": "removeGuest(email)",
+          "description": "Removes a guest from the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "resetRemindersToDefault()",
+          "description": "Resets the reminders using the calendar's default settings.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "anyoneCanAddSelf",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether anyone can invite themselves"
+            }
+          ],
+          "name": "setAnyoneCanAddSelf(anyoneCanAddSelf)",
+          "description": "Sets whether non-guests can add themselves to the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "color",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "An integer color index as a string, or a value fromCalendarApp.EventColor."
+            }
+          ],
+          "name": "setColor(color)",
+          "description": "Sets the color of the calendar event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new description"
+            }
+          ],
+          "name": "setDescription(description)",
+          "description": "Sets the description of the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "guestsCanInviteOthers",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether guests can invite others"
+            }
+          ],
+          "name": "setGuestsCanInviteOthers(guestsCanInviteOthers)",
+          "description": "Sets whether guests can invite other guests.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "guestsCanModify",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether guests can modify the event"
+            }
+          ],
+          "name": "setGuestsCanModify(guestsCanModify)",
+          "description": "Sets whether guests can modify the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "guestsCanSeeGuests",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "whether guests can see others"
+            }
+          ],
+          "name": "setGuestsCanSeeGuests(guestsCanSeeGuests)",
+          "description": "Sets whether guests can see other guests.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "location",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new location"
+            }
+          ],
+          "name": "setLocation(location)",
+          "description": "Sets the location of the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "status",
+              "type": {
+                "name": "GuestStatus",
+                "url": "https://developers.google.com/apps-script/reference/calendar/guest-status"
+              },
+              "description": "the new status"
+            }
+          ],
+          "name": "setMyStatus(status)",
+          "description": "Sets the event status (such as attending or invited) of the effective user.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence rules to use"
+            },
+            {
+              "name": "startDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date of the first event in the series (only the day is used; the time is\n    ignored)"
+            }
+          ],
+          "name": "setRecurrence(recurrence, startDate)",
+          "description": "Sets the recurrence rules for an all-day event series. Applying this method changes a regular\nevent series into an all-day event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "recurrence",
+              "type": {
+                "name": "EventRecurrence",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+              },
+              "description": "the recurrence rules to use"
+            },
+            {
+              "name": "startTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series starts"
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": "the date and time when the first event in the series ends"
+            }
+          ],
+          "name": "setRecurrence(recurrence, startTime, endTime)",
+          "description": "Sets the recurrence rules for this event series. Applying this method changes an all-day event\nseries into a regular event series.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the tag key"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the tag value"
+            }
+          ],
+          "name": "setTag(key, value)",
+          "description": "Sets a key/value tag on the event, for storing custom metadata.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the new title"
+            }
+          ],
+          "name": "setTitle(title)",
+          "description": "Sets the title of the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "transparency",
+              "type": {
+                "name": "EventTransparency",
+                "url": "https://developers.google.com/apps-script/reference/calendar/event-transparency"
+              },
+              "description": "The transparency value."
+            }
+          ],
+          "name": "setTransparency(transparency)",
+          "description": "Sets the transparency of the event. Use this method to set whether an event isTRANSPARENT, meaning the calendar shows as Available during that time, orOPAQUE, meaning the calendar shows as Busy during that time.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "visibility",
+              "type": {
+                "name": "Visibility",
+                "url": "https://developers.google.com/apps-script/reference/calendar/visibility"
+              },
+              "description": ""
+            }
+          ],
+          "name": "setVisibility(visibility)",
+          "description": "Sets the visibility of the event.",
+          "return_type": {
+            "name": "CalendarEventSeries",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Color",
+      "url": "https://developers.google.com/apps-script/reference/calendar/color",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum EventColor",
+      "url": "https://developers.google.com/apps-script/reference/calendar/event-color",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class EventGuest",
+      "url": "https://developers.google.com/apps-script/reference/calendar/event-guest",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getAdditionalGuests()",
+          "description": "Gets the number of additional people that this guest has said are attending.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEmail()",
+          "description": "Gets the email address of the guest.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGuestStatus()",
+          "description": "Gets the status of the guest for the event.",
+          "return_type": {
+            "name": "GuestStatus",
+            "url": "https://developers.google.com/apps-script/reference/calendar/guest-status"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of the guest. If the name of the guest is not available, this method returns the\nguest's email address.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getStatus()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class EventRecurrence",
+      "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "addDailyExclusion()",
+          "description": "Adds a rule that excludes occurrences on a daily basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addDailyRule()",
+          "description": "Adds a rule that causes the event to recur on a daily basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": ""
+            }
+          ],
+          "name": "addDate(date)",
+          "description": "Adds a rule that causes the event to recur on a specific date.",
+          "return_type": {
+            "name": "EventRecurrence",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": ""
+            }
+          ],
+          "name": "addDateExclusion(date)",
+          "description": "Adds a rule that excludes an occurrence for a specific date.",
+          "return_type": {
+            "name": "EventRecurrence",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addMonthlyExclusion()",
+          "description": "Adds a rule that excludes occurrences on a monthly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addMonthlyRule()",
+          "description": "Adds a rule that causes the event to recur on a monthly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addWeeklyExclusion()",
+          "description": "Adds a rule that excludes occurrences on a weekly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addWeeklyRule()",
+          "description": "Adds a rule that causes the event to recur on a weekly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addYearlyExclusion()",
+          "description": "Adds a rule that excludes occurrences on a yearly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addYearlyRule()",
+          "description": "Adds a rule that causes the event to recur on a yearly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "timeZone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the time zone, specified in \"long\" format (e.g., 'America/New_York', as listed\n    byJoda.org)"
+            }
+          ],
+          "name": "setTimeZone(timeZone)",
+          "description": "Sets the time zone for this recurrence. This affects the date and time that events recur on,\nand whether the event shifts with daylight savings time. Defaults to the calendar's time zone.",
+          "return_type": {
+            "name": "EventRecurrence",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum EventTransparency",
+      "url": "https://developers.google.com/apps-script/reference/calendar/event-transparency",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum EventType",
+      "url": "https://developers.google.com/apps-script/reference/calendar/event-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum GuestStatus",
+      "url": "https://developers.google.com/apps-script/reference/calendar/guest-status",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class RecurrenceRule",
+      "url": "https://developers.google.com/apps-script/reference/calendar/recurrence-rule",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "addDailyExclusion()",
+          "description": "Adds a rule that excludes occurrences on a daily basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addDailyRule()",
+          "description": "Adds a rule that causes the event to recur on a daily basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": ""
+            }
+          ],
+          "name": "addDate(date)",
+          "description": "Adds a rule that causes the event to recur on a specific date.",
+          "return_type": {
+            "name": "EventRecurrence",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "date",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": ""
+            }
+          ],
+          "name": "addDateExclusion(date)",
+          "description": "Adds a rule that excludes an occurrence for a specific date.",
+          "return_type": {
+            "name": "EventRecurrence",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addMonthlyExclusion()",
+          "description": "Adds a rule that excludes occurrences on a monthly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addMonthlyRule()",
+          "description": "Adds a rule that causes the event to recur on a monthly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addWeeklyExclusion()",
+          "description": "Adds a rule that excludes occurrences on a weekly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addWeeklyRule()",
+          "description": "Adds a rule that causes the event to recur on a weekly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addYearlyExclusion()",
+          "description": "Adds a rule that excludes occurrences on a yearly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addYearlyRule()",
+          "description": "Adds a rule that causes the event to recur on a yearly basis.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "interval",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the interval in the rule's time unit"
+            }
+          ],
+          "name": "interval(interval)",
+          "description": "Configures the rule to only apply at this interval of the rule's time unit.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "month",
+              "type": {
+                "name": "Month",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the month"
+            }
+          ],
+          "name": "onlyInMonth(month)",
+          "description": "Configures the rule to only apply to a specific month.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "months",
+              "type": {
+                "name": "Month[]",
+                "url": "https://developers.google.com/apps-script/reference/base/month.html"
+              },
+              "description": "the months"
+            }
+          ],
+          "name": "onlyInMonths(months)",
+          "description": "Configures the rule to only apply to specific months.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day of the month"
+            }
+          ],
+          "name": "onlyOnMonthDay(day)",
+          "description": "Configures the rule to only apply to a specific day of the month.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "days",
+              "type": {
+                "name": "Integer[]",
+                "url": null
+              },
+              "description": "the days of the month"
+            }
+          ],
+          "name": "onlyOnMonthDays(days)",
+          "description": "Configures the rule to only apply to specific days of the month.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "week",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the week"
+            }
+          ],
+          "name": "onlyOnWeek(week)",
+          "description": "Configures the rule to only apply to a specific week of the year.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "day",
+              "type": {
+                "name": "Weekday",
+                "url": "https://developers.google.com/apps-script/reference/base/weekday.html"
+              },
+              "description": "the day of the week"
+            }
+          ],
+          "name": "onlyOnWeekday(day)",
+          "description": "Configures the rule to only apply to a specific day of the week.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "days",
+              "type": {
+                "name": "Weekday[]",
+                "url": "https://developers.google.com/apps-script/reference/base/weekday.html"
+              },
+              "description": "the days of the week"
+            }
+          ],
+          "name": "onlyOnWeekdays(days)",
+          "description": "Configures the rule to only apply to specific days of the week.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "weeks",
+              "type": {
+                "name": "Integer[]",
+                "url": null
+              },
+              "description": "the weeks"
+            }
+          ],
+          "name": "onlyOnWeeks(weeks)",
+          "description": "Configures the rule to only apply to specific weeks of the year.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "day",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the day of the year"
+            }
+          ],
+          "name": "onlyOnYearDay(day)",
+          "description": "Configures the rule to only apply to a specific day of the year.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "days",
+              "type": {
+                "name": "Integer[]",
+                "url": null
+              },
+              "description": "the days of the year"
+            }
+          ],
+          "name": "onlyOnYearDays(days)",
+          "description": "Configures the rule to only apply to specific days of the year.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "timeZone",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the time zone, specified in \"long\" format (e.g., 'America/New_York', as listed\n    byJoda.org)"
+            }
+          ],
+          "name": "setTimeZone(timeZone)",
+          "description": "Sets the time zone for this recurrence. This affects the date and time that events recur on,\nand whether the event shifts with daylight savings time. Defaults to the calendar's time zone.",
+          "return_type": {
+            "name": "EventRecurrence",
+            "url": "https://developers.google.com/apps-script/reference/calendar/event-recurrence"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "times",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the number of times to recur"
+            }
+          ],
+          "name": "times(times)",
+          "description": "Configures the rule to end after a given number of occurrences.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "endDate",
+              "type": {
+                "name": "Date",
+                "url": null
+              },
+              "description": ""
+            }
+          ],
+          "name": "until(endDate)",
+          "description": "Configures the rule to end on a given date (inclusive).",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "day",
+              "type": {
+                "name": "Weekday",
+                "url": "https://developers.google.com/apps-script/reference/base/weekday.html"
+              },
+              "description": "the day on which the week starts"
+            }
+          ],
+          "name": "weekStartsOn(day)",
+          "description": "Configures which day a week starts on, for the purposes of applying the rule.",
+          "return_type": {
+            "name": "RecurrenceRule",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Visibility",
+      "url": "https://developers.google.com/apps-script/reference/calendar/visibility",
+      "description": "",
+      "methods": []
+    }
+  ]
+}

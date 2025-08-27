@@ -1,0 +1,101 @@
+{
+  "service_name": "lock",
+  "url": "https://developers.google.com/apps-script/reference/lock",
+  "classes": [
+    {
+      "name": "Class Lock",
+      "url": "https://developers.google.com/apps-script/reference/lock/lock",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "hasLock()",
+          "description": "Returns true if the lock was acquired. This method will return false iftryLock(timeoutInMillis)orwaitLock(timeoutInMillis)were never called, timed out before the lock could be retrieved, or ifreleaseLock()was called.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "releaseLock()",
+          "description": "Releases the lock, allowing other processes waiting on the lock to continue. The lock is\nautomatically released when the script terminates, but for efficiency it is best to release it\nas soon as you no longer need exclusive access to a section of code. This method has no effect\nif the lock has not been acquired.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "timeoutInMillis",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "how long to wait to acquire the lock, in milliseconds"
+            }
+          ],
+          "name": "tryLock(timeoutInMillis)",
+          "description": "Attempts to acquire the lock, timing out after the provided number of milliseconds. This method\nhas no effect if the lock has already been acquired.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "timeoutInMillis",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "how long to wait to acquire the lock, in milliseconds"
+            }
+          ],
+          "name": "waitLock(timeoutInMillis)",
+          "description": "Attempts to acquire the lock, timing out with an exception after the provided number of\nmilliseconds. This method is the same astryLock(timeoutInMillis)except that it throws an exception\nwhen the lock could not be acquired instead of returning false.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class LockService",
+      "url": "https://developers.google.com/apps-script/reference/lock/lock-service",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getDocumentLock()",
+          "description": "Gets a lock that prevents any user of the current document from concurrently running a section\nof code. A code section guarded by a document lock can be executed simultaneously by script\ninstances running in the context of different documents, but by no more than one execution for\nany given document. Note that the lock is not actually acquired untilLock.tryLock(timeoutInMillis)orLock.waitLock(timeoutInMillis)is called. If this method is called outside of the context of a\ncontaining document (such as from a standalone script or webapp),nullis returned.",
+          "return_type": {
+            "name": "Lock",
+            "url": "https://developers.google.com/apps-script/reference/lock/lock"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getScriptLock()",
+          "description": "Gets a lock that prevents any user from concurrently running a section of code. A code section\nguarded by a script lock cannot be executed simultaneously regardless of the identity of the\nuser. Note that the lock is not actually acquired untilLock.tryLock(timeoutInMillis)orLock.waitLock(timeoutInMillis)is called.",
+          "return_type": {
+            "name": "Lock",
+            "url": "https://developers.google.com/apps-script/reference/lock/lock"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUserLock()",
+          "description": "Gets a lock that prevents the current user from concurrently running a section of code. A code\nsection guarded by a user lock can be executed simultaneously by different users, but by no\nmore than one execution for any given user. The lock is \"private\" to the user. Note that the\nlock is not actually acquired untilLock.tryLock(timeoutInMillis)orLock.waitLock(timeoutInMillis)is\ncalled.",
+          "return_type": {
+            "name": "Lock",
+            "url": "https://developers.google.com/apps-script/reference/lock/lock"
+          }
+        }
+      ]
+    }
+  ]
+}

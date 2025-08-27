@@ -1,0 +1,1223 @@
+{
+  "service_name": "base",
+  "url": "https://developers.google.com/apps-script/reference/base",
+  "classes": [
+    {
+      "name": "Class Blob",
+      "url": "https://developers.google.com/apps-script/reference/base/blob",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "copyBlob()",
+          "description": "Returns a copy of this blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type to convert to. For most blobs,'application/pdf'is\n    the only valid option. For images in BMP, GIF, JPEG, or PNG format, any of'image/bmp','image/gif','image/jpeg', or'image/png'are also\n    valid. For a Google Docs document,'text/markdown'is also valid."
+            }
+          ],
+          "name": "getAs(contentType)",
+          "description": "Return the data inside this object as a blob converted to the specified content type. This\nmethod adds the appropriate extension to the filename—for example, \"myfile.pdf\". However, it\nassumes that the part of the filename that follows the last period (if any) is an existing\nextension that should be replaced. Consequently, \"ShoppingList.12.25.2014\" becomes\n\"ShoppingList.12.25.pdf\".",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBytes()",
+          "description": "Gets the data stored in this blob.",
+          "return_type": {
+            "name": "Byte[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContentType()",
+          "description": "Gets the content type of the bytes in this blob.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDataAsString()",
+          "description": "Gets the data of this blob as a String with UTF-8 encoding.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "charset",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The charset to use in encoding the data in this blob as a string."
+            }
+          ],
+          "name": "getDataAsString(charset)",
+          "description": "Gets the data of this blob as a string with the specified encoding.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of this blob.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isGoogleType()",
+          "description": "Returns whether this blob is a Google Workspace file (Sheets, Docs, etc.).",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "data",
+              "type": {
+                "name": "Byte[]",
+                "url": null
+              },
+              "description": "The new data."
+            }
+          ],
+          "name": "setBytes(data)",
+          "description": "Sets the data stored in this blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The new contentType."
+            }
+          ],
+          "name": "setContentType(contentType)",
+          "description": "Sets the content type of the bytes in this blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "setContentTypeFromExtension()",
+          "description": "Sets the content type of the bytes in this blob based on the file extension. The contentType isnullif it cannot be guessed from its extension.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "string",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The string data."
+            }
+          ],
+          "name": "setDataFromString(string)",
+          "description": "Sets the data of this blob from a string with UTF-8 encoding.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "string",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The string data."
+            },
+            {
+              "name": "charset",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The charset to use in interpreting the string as bytes."
+            }
+          ],
+          "name": "setDataFromString(string, charset)",
+          "description": "Sets the data of this blob from a string with the specified encoding.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The new name."
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the name of this blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllBlobs()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "Blob[]",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Interface BlobSource",
+      "url": "https://developers.google.com/apps-script/reference/base/blob-source",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type to convert to. For most blobs,'application/pdf'is\n    the only valid option. For images in BMP, GIF, JPEG, or PNG format, any of'image/bmp','image/gif','image/jpeg', or'image/png'are also\n    valid. For a Google Docs document,'text/markdown'is also valid."
+            }
+          ],
+          "name": "getAs(contentType)",
+          "description": "Return the data inside this object as a blob converted to the specified content type. This\nmethod adds the appropriate extension to the filename—for example, \"myfile.pdf\". However, it\nassumes that the part of the filename that follows the last period (if any) is an existing\nextension that should be replaced. Consequently, \"ShoppingList.12.25.2014\" becomes\n\"ShoppingList.12.25.pdf\".",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBlob()",
+          "description": "Return the data inside this object as a blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Browser",
+      "url": "https://developers.google.com/apps-script/reference/base/browser",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The text to be displayed in the dialog box."
+            }
+          ],
+          "name": "inputBox(prompt)",
+          "description": "Pops up a dialog box with a text input box in the user's browser.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The text to be displayed in the dialog box."
+            },
+            {
+              "name": "buttons",
+              "type": {
+                "name": "ButtonSet",
+                "url": "https://developers.google.com/apps-script/reference/base/button-set"
+              },
+              "description": "The type of button set to use."
+            }
+          ],
+          "name": "inputBox(prompt, buttons)",
+          "description": "Pops up a dialog box with a text input box in the user's browser.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title for the dialog box."
+            },
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The text to be displayed in the dialog box."
+            },
+            {
+              "name": "buttons",
+              "type": {
+                "name": "ButtonSet",
+                "url": "https://developers.google.com/apps-script/reference/base/button-set"
+              },
+              "description": "The type of button set to use."
+            }
+          ],
+          "name": "inputBox(title, prompt, buttons)",
+          "description": "Pops up a dialog box with a text input box in the user's browser.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The text to be displayed in the dialog box."
+            }
+          ],
+          "name": "msgBox(prompt)",
+          "description": "Pops up a dialog box with the given message and an OK button in the user's browser.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The text to be displayed in the dialog box."
+            },
+            {
+              "name": "buttons",
+              "type": {
+                "name": "ButtonSet",
+                "url": "https://developers.google.com/apps-script/reference/base/button-set"
+              },
+              "description": "The type of button set to use."
+            }
+          ],
+          "name": "msgBox(prompt, buttons)",
+          "description": "Pops up a dialog box with the given message and specified buttons in the user's browser.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the dialog box."
+            },
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The text to be displayed in the dialog box."
+            },
+            {
+              "name": "buttons",
+              "type": {
+                "name": "ButtonSet",
+                "url": "https://developers.google.com/apps-script/reference/base/button-set"
+              },
+              "description": "The type of button set to use."
+            }
+          ],
+          "name": "msgBox(title, prompt, buttons)",
+          "description": "Pops up a dialog box with the given title, message and specified buttons in the user's browser.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Button",
+      "url": "https://developers.google.com/apps-script/reference/base/button",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum ButtonSet",
+      "url": "https://developers.google.com/apps-script/reference/base/button-set",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum ColorType",
+      "url": "https://developers.google.com/apps-script/reference/base/color-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class console",
+      "url": "https://developers.google.com/apps-script/reference/base/console",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "error()",
+          "description": "Outputs a blank ERROR level message to Stackdriver Logging.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "formatOrObject",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a string containing zero or more substitution strings, or a JavaScript\n    object to be logged as a JavaScript object if no other parameters."
+            },
+            {
+              "name": "values",
+              "type": {
+                "name": "Object...",
+                "url": null
+              },
+              "description": "objects with which to replace substitution strings within the message. This gives\n    you additional control over the format of the output."
+            }
+          ],
+          "name": "error(formatOrObject, values)",
+          "description": "Outputs an ERROR level message to Stackdriver Logging.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "info()",
+          "description": "Outputs blank INFO level message to Stackdriver Logging.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "formatOrObject",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a string containing zero or more substitution strings, or a JavaScript\n    object to be logged as a JavaScript object if no other parameters."
+            },
+            {
+              "name": "values",
+              "type": {
+                "name": "Object...",
+                "url": null
+              },
+              "description": "objects with which to replace substitution strings within the message. This gives\n    you additional control over the format of the output."
+            }
+          ],
+          "name": "info(formatOrObject, values)",
+          "description": "Outputs an INFO level message to Stackdriver Logging.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "log()",
+          "description": "Outputs a blank DEBUG level message to Stackdriver Logging.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "formatOrObject",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a string containing zero or more substitution strings, or a JavaScript\n    object to be logged as a JavaScript object if no other parameters."
+            },
+            {
+              "name": "values",
+              "type": {
+                "name": "Object...",
+                "url": null
+              },
+              "description": "objects with which to replace substitution strings within the message. This gives\n    you additional control over the format of the output."
+            }
+          ],
+          "name": "log(formatOrObject, values)",
+          "description": "Outputs a DEBUG level message to Stackdriver Logging.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name to give the new timer."
+            }
+          ],
+          "name": "time(label)",
+          "description": "Starts a timer you can use to track how long an operation takes.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "label",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the timer to stop."
+            }
+          ],
+          "name": "timeEnd(label)",
+          "description": "Stops a timer that was previously started by callingconsole.time(). The time duration\nis logged in Stackdriver.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "warn()",
+          "description": "Outputs a blank WARNING level message to Stackdriver Logging.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "formatOrObject",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "a string containing zero or more substitution strings, or a JavaScript\n    object to be logged as a JavaScript object if no other parameters."
+            },
+            {
+              "name": "values",
+              "type": {
+                "name": "Object...",
+                "url": null
+              },
+              "description": "objects with which to replace substitution strings within the message. This gives\n    you additional control over the format of the output."
+            }
+          ],
+          "name": "warn(formatOrObject, values)",
+          "description": "Outputs a WARNING level message to Stackdriver Logging.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Logger",
+      "url": "https://developers.google.com/apps-script/reference/base/logger",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "clear()",
+          "description": "Clears the log.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getLog()",
+          "description": "Returns a complete list of messages in the current log. This method can be used to save or\nemail the entire log output generated during script execution.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "data",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "the object to log"
+            }
+          ],
+          "name": "log(data)",
+          "description": "Writes the data to the log. The data can be a string, a JavaScript object, or an object with amessageproperty.",
+          "return_type": {
+            "name": "Logger",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "format",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "a format string that contains as many instances of%sas the number ofvaluesarguments"
+            },
+            {
+              "name": "values",
+              "type": {
+                "name": "Object...",
+                "url": null
+              },
+              "description": "a variable number of values to insert into the format string"
+            }
+          ],
+          "name": "log(format, values)",
+          "description": "Writes a formatted string to the logging console, using the format and values provided. The\nstring can include multiple%splaceholders, which are replaced with corresponding\nvalues from the list of arguments, converted to strings.",
+          "return_type": {
+            "name": "Logger",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Menu",
+      "url": "https://developers.google.com/apps-script/reference/base/menu",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "caption",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The label for the menu item, with only the first word capitalized."
+            },
+            {
+              "name": "functionName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The name of the function to invoke when the user selects the item. You can\n    use functions from included libraries, such asLibrary.libFunction1."
+            }
+          ],
+          "name": "addItem(caption, functionName)",
+          "description": "Adds an item to the menu. The label for a menu item should be in sentence case (only the first\nword capitalized).",
+          "return_type": {
+            "name": "Menu",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addSeparator()",
+          "description": "Adds a visual separator to the menu.",
+          "return_type": {
+            "name": "Menu",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "menu",
+              "type": {
+                "name": "Menu",
+                "url": "https://developers.google.com/apps-script/reference"
+              },
+              "description": "The sub-menu, constructed like a top-level menu."
+            }
+          ],
+          "name": "addSubMenu(menu)",
+          "description": "Adds a sub-menu to the menu.",
+          "return_type": {
+            "name": "Menu",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "addToUi()",
+          "description": "Inserts the menu into the instance of the editor's user interface.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum MimeType",
+      "url": "https://developers.google.com/apps-script/reference/base/mime-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum Month",
+      "url": "https://developers.google.com/apps-script/reference/base/month",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class PromptResponse",
+      "url": "https://developers.google.com/apps-script/reference/base/prompt-response",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getResponseText()",
+          "description": "Gets the text that the user entered in the dialog's input field. The text is available even if\nthe user closed the dialog by clicking a button with a negative connotation, like \"Cancel\" or\nthe close button in the dialog's title bar.getSelectedButton()can help to determine\nwhether the user intended the response text to be valid.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSelectedButton()",
+          "description": "Gets the button that the user clicked to dismiss the dialog. If the user clicked the close\nbutton that is included in every dialog's title bar, this method returnsButton.CLOSE.",
+          "return_type": {
+            "name": "Button",
+            "url": "https://developers.google.com/apps-script/reference/base/button"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class RgbColor",
+      "url": "https://developers.google.com/apps-script/reference/base/rgb-color",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "asHexString()",
+          "description": "Returns the color as a CSS-style 7 character hexadecimal string (#rrggbb) or 9 character\nhexadecimal string (#aarrggbb).",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBlue()",
+          "description": "The blue channel of this color, as a number from 0 to 255.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getColorType()",
+          "description": "Get the type of this color.",
+          "return_type": {
+            "name": "ColorType",
+            "url": "https://developers.google.com/apps-script/reference/base/color-type"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGreen()",
+          "description": "The green channel of this color, as a number from 0 to 255.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getRed()",
+          "description": "The red channel of this color, as a number from 0 to 255.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Session",
+      "url": "https://developers.google.com/apps-script/reference/base/session",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getActiveUser()",
+          "description": "Gets information about the current user. If security policies do not allow access to the user's\nidentity,User.getEmail()returns a blank string. The circumstances in which the\nemail address is available vary: for example, the user's email address is not available in any\ncontext that allows a script to run without that user's authorization, like a simpleonOpen(e)oronEdit(e)trigger, a custom function in Google Sheets, or a web app\ndeployed to \"execute as me\" (that is, authorized by the developer instead of the user).\nHowever, these restrictions generally do not apply if the developer runs the script themselves\nor belongs to the same Google Workspace domain as the user.",
+          "return_type": {
+            "name": "User",
+            "url": "https://developers.google.com/apps-script/reference/base/user"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getActiveUserLocale()",
+          "description": "Gets the language setting of the current user as a string—for example,enfor English.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getEffectiveUser()",
+          "description": "Gets information about the user under whose authority the script is running. If the script is a\nweb app set to \"execute as me\" (the developer), this returns the developer's user account. If\nthe script is running under aninstallable\ntrigger, this returns the account of the user who created the trigger. In most other\nscenarios, this returns the same account asgetActiveUser().",
+          "return_type": {
+            "name": "User",
+            "url": "https://developers.google.com/apps-script/reference/base/user"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getScriptTimeZone()",
+          "description": "Gets the time zone of the script. New scripts default to the owner's time zone, but the\nscript's time zone can be changed by clickingFile > Project propertiesin the script\neditor. Note that spreadsheets have a separate time zone, which can be changed by clickingFile > Spreadsheet settingsin Google Sheets. Spreadsheet time zones that differ from\nthe script time zone are a frequent source of scripting bugs.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTemporaryActiveUserKey()",
+          "description": "Gets a temporary key that is unique to the active user but does not reveal the user identity.\nThe temporary key rotates every 30 days and is unique to the script.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTimeZone()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUser()",
+          "description": "Deprecated.This function is deprecated and should not be used in new scripts.",
+          "return_type": {
+            "name": "User",
+            "url": "https://developers.google.com/apps-script/reference/base/user"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Ui",
+      "url": "https://developers.google.com/apps-script/reference/base/ui",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The message to display in the dialog box."
+            }
+          ],
+          "name": "alert(prompt)",
+          "description": "Opens a dialog box in the user's editor with the given message and an \"OK\" button. This method\nsuspends the server-side script while the dialog is open. The script resumes after the user\ndismisses the dialog, butJdbcconnections andLockServicelocks don't\npersist across the suspension. For more information, see theguide to dialogs and sidebars.",
+          "return_type": {
+            "name": "Button",
+            "url": "https://developers.google.com/apps-script/reference/base/button"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The message to display in the dialog box."
+            },
+            {
+              "name": "buttons",
+              "type": {
+                "name": "ButtonSet",
+                "url": "https://developers.google.com/apps-script/reference/base/button-set"
+              },
+              "description": "The button set to display in the dialog box."
+            }
+          ],
+          "name": "alert(prompt, buttons)",
+          "description": "Opens a dialog box in the user's editor with the given message and set of buttons. This method\nsuspends the server-side script while the dialog is open. The script resumes after the user\ndismisses the dialog, butJdbcconnections andLockServicelocks don't\npersist across the suspension. For more information, see theguide to dialogs and sidebars.",
+          "return_type": {
+            "name": "Button",
+            "url": "https://developers.google.com/apps-script/reference/base/button"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title to display above the dialog box."
+            },
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The message to display in the dialog box."
+            },
+            {
+              "name": "buttons",
+              "type": {
+                "name": "ButtonSet",
+                "url": "https://developers.google.com/apps-script/reference/base/button-set"
+              },
+              "description": "The button set to display in the dialog box."
+            }
+          ],
+          "name": "alert(title, prompt, buttons)",
+          "description": "Opens a dialog box in the user's editor with the given title, message, and set of buttons. This\nmethod suspends the server-side script while the dialog is open. The script resumes after the\nuser dismisses the dialog, butJdbcconnections andLockServicelocks don't\npersist across the suspension. For more information, see theguide to dialogs and sidebars.",
+          "return_type": {
+            "name": "Button",
+            "url": "https://developers.google.com/apps-script/reference/base/button"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "createAddonMenu()",
+          "description": "Creates a builder that can be used to insert a sub-menu into the editor's Extensions menu. The\nmenu isn't actually be updated untilMenu.addToUi()is called. If the script is running\nas an add-on, the sub-menu name matches the add-on's name in the web store; if the script isboundto the document directly, the sub-menu name\nmatches the script's name. For more information, see theguide to menus.",
+          "return_type": {
+            "name": "Menu",
+            "url": "https://developers.google.com/apps-script/reference/base/menu"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "caption",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The label for the menu, with all major words capitalized for a top-level menu,\n    or only the first word capitalized for a sub-menu."
+            }
+          ],
+          "name": "createMenu(caption)",
+          "description": "Creates a builder that can be used to add a menu to the editor's user interface. The menu isn't\nactually be added untilMenu.addToUi()is called. For more information, see theguide to menus. The label for a top-level menu should be\nin headline case (all major words capitalized), although the label for a sub-menu should be in\nsentence case (only the first word capitalized). If the script is published as anadd-on, thecaptionparameter is ignored and the\nmenu is added as a sub-menu of the Extensions menu, equivalent tocreateAddonMenu().",
+          "return_type": {
+            "name": "Menu",
+            "url": "https://developers.google.com/apps-script/reference/base/menu"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The message to display in the dialog box."
+            }
+          ],
+          "name": "prompt(prompt)",
+          "description": "Opens an input dialog box in the user's editor with the given message and an \"OK\" button. This\nmethod suspends the server-side script while the dialog is open. The script resumes after the\nuser dismisses the dialog, butJdbcconnections andLockServicelocks don't\npersist across the suspension. For more information, see theguide to dialogs and sidebars.",
+          "return_type": {
+            "name": "PromptResponse",
+            "url": "https://developers.google.com/apps-script/reference/base/prompt-response"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The message to display in the dialog box."
+            },
+            {
+              "name": "buttons",
+              "type": {
+                "name": "ButtonSet",
+                "url": "https://developers.google.com/apps-script/reference/base/button-set"
+              },
+              "description": "The button set to display in the dialog box."
+            }
+          ],
+          "name": "prompt(prompt, buttons)",
+          "description": "Opens an input dialog box in the user's editor with the given message and set of buttons. This\nmethod suspends the server-side script while the dialog is open. The script resumes after the\nuser dismisses the dialog, butJdbcconnections andLockServicelocks don't\npersist across the suspension. For more information, see theguide to dialogs and sidebars.",
+          "return_type": {
+            "name": "PromptResponse",
+            "url": "https://developers.google.com/apps-script/reference/base/prompt-response"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title to display above the dialog box."
+            },
+            {
+              "name": "prompt",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The message to display in the dialog box."
+            },
+            {
+              "name": "buttons",
+              "type": {
+                "name": "ButtonSet",
+                "url": "https://developers.google.com/apps-script/reference/base/button-set"
+              },
+              "description": "The button set to display in the dialog box."
+            }
+          ],
+          "name": "prompt(title, prompt, buttons)",
+          "description": "Opens an input dialog box in the user's editor with the given title, message, and set of\nbuttons. This method suspends the server-side script while the dialog is open. The script\nresumes after the user dismisses the dialog, butJdbcconnections andLockServicelocks don't persist across the\nsuspension. For more information, see theguide to\ndialogs and sidebars.",
+          "return_type": {
+            "name": "PromptResponse",
+            "url": "https://developers.google.com/apps-script/reference/base/prompt-response"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "userInterface",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "AnHtmlOutputrepresenting the interface to display."
+            },
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the dialog; overrides any title set by callingsetTitle()on\n    theuserInterfaceobject."
+            }
+          ],
+          "name": "showModalDialog(userInterface, title)",
+          "description": "Opens a modal dialog box in the user's editor with custom client-side content. This method doesnotsuspend the server-side script while the dialog is open. To communicate with the\nserver-side script, the client-side component must make asynchronous callbacks using thegoogle.scriptAPI forHtmlService. To close the dialog\nprogrammatically, callgoogle.script.host.close()on the client side of anHtmlServiceweb\napp. For more information, see theguide to dialogs and\nsidebars.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "userInterface",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "AnHtmlOutputrepresenting the interface to display."
+            },
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The title of the dialog; overrides any title set by callingsetTitle()on\n    theuserInterfaceobject."
+            }
+          ],
+          "name": "showModelessDialog(userInterface, title)",
+          "description": "Opens a modeless dialog box in the user's editor with custom client-side content. This method\ndoesnotsuspend the server-side script while the dialog is open. To communicate with\nthe server-side script, the client-side component must make asynchronous callbacks using thegoogle.scriptAPI forHtmlService. To close the dialog\nprogrammatically, callgoogle.script.host.close()on the client side of anHtmlServiceweb\napp. For more information, see theguide to dialogs and\nsidebars.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "userInterface",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "AnHtmlOutputrepresenting the interface to display."
+            }
+          ],
+          "name": "showSidebar(userInterface)",
+          "description": "Opens a sidebar in the user's editor with custom client-side content. This method doesnotsuspend the server-side script while the sidebar is open. To communicate with the\nserver-side script, the client-side component must make asynchronous callbacks using thegoogle.scriptAPI forHtmlService. To close the sidebar\nprogrammatically, callgoogle.script.host.close()on the client side of anHtmlServiceweb\napp. For more information, see theguide to dialogs and\nsidebars.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "userInterface",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "AnHtmlOutputrepresenting the interface to display."
+            }
+          ],
+          "name": "showDialog(userInterface)",
+          "description": "Deprecated.As of March 2014, this method is deprecated. The direct replacement isshowModelessDialog(userInterface, title), butshowModalDialog(userInterface, title)is a\n    better choice in almost all cases.",
+          "return_type": {
+            "name": "void",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class User",
+      "url": "https://developers.google.com/apps-script/reference/base/user",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getEmail()",
+          "description": "Gets the user's email address, if available. If security policies do not allow access to the\nuser's email address, this method returns a blank string. The circumstances in which the email\naddress is available vary: for example, the user's email address is not available in any\ncontext that allows a script to run without that user's authorization, like a simpleonOpen(e)oronEdit(e)trigger, a custom function in Google Sheets, or a web app\ndeployed to \"execute as me\" (that is, authorized by the developer instead of the user).\nHowever, these restrictions generally do not apply if the developer runs the script themselves\nor belongs to the same Google Workspace domain as the user.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUserLoginId()",
+          "description": "Deprecated.As of June 24, 2013, replaced bygetEmail().",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Weekday",
+      "url": "https://developers.google.com/apps-script/reference/base/weekday",
+      "description": "",
+      "methods": []
+    }
+  ]
+}

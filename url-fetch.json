@@ -1,0 +1,216 @@
+{
+  "service_name": "url-fetch",
+  "url": "https://developers.google.com/apps-script/reference/url-fetch",
+  "classes": [
+    {
+      "name": "Class HTTPResponse",
+      "url": "https://developers.google.com/apps-script/reference/url-fetch/http-response",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getAllHeaders()",
+          "description": "Returns an attribute/value map of headers for the HTTP response, with headers that have\nmultiple values returned as arrays.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type to convert to. For most blobs,'application/pdf'is\n    the only valid option. For images in BMP, GIF, JPEG, or PNG format, any of'image/bmp','image/gif','image/jpeg', or'image/png'are also\n    valid. For a Google Docs document,'text/markdown'is also valid."
+            }
+          ],
+          "name": "getAs(contentType)",
+          "description": "Return the data inside this object as a blob converted to the specified content type. This\nmethod adds the appropriate extension to the filename—for example, \"myfile.pdf\". However, it\nassumes that the part of the filename that follows the last period (if any) is an existing\nextension that should be replaced. Consequently, \"ShoppingList.12.25.2014\" becomes\n\"ShoppingList.12.25.pdf\".",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBlob()",
+          "description": "Return the data inside this object as a blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContent()",
+          "description": "Gets the raw binary content of an HTTP response.",
+          "return_type": {
+            "name": "Byte[]",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContentText()",
+          "description": "Gets the content of an HTTP response encoded as a string.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "charset",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "a string representing the charset to be used for encoding the HTTP response\n    content"
+            }
+          ],
+          "name": "getContentText(charset)",
+          "description": "Returns the content of an HTTP response encoded as a string of the given charset.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getHeaders()",
+          "description": "Returns an attribute/value map of headers for the HTTP response.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getResponseCode()",
+          "description": "Get the HTTP status code (200 for OK, etc.) of an HTTP response.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class UrlFetchApp",
+      "url": "https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The URL to fetch. The URL can have up to 2,082 characters."
+            }
+          ],
+          "name": "fetch(url)",
+          "description": "Makes a request to fetch a URL.",
+          "return_type": {
+            "name": "HTTPResponse",
+            "url": "https://developers.google.com/apps-script/reference/url-fetch/http-response"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The URL to fetch. The URL can have up to 2,082 characters."
+            },
+            {
+              "name": "params",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "The optional JavaScript object specifying advanced parameters as defined below."
+            }
+          ],
+          "name": "fetch(url, params)",
+          "description": "Makes a request to fetch a URL using optional advanced parameters.",
+          "return_type": {
+            "name": "HTTPResponse",
+            "url": "https://developers.google.com/apps-script/reference/url-fetch/http-response"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "requests",
+              "type": {
+                "name": "Object[]",
+                "url": null
+              },
+              "description": "An array of either URLs or JavaScript objects specifying requests as defined\n    below."
+            }
+          ],
+          "name": "fetchAll(requests)",
+          "description": "Makes multiple requests to fetch multiple URLs using optional advanced parameters.",
+          "return_type": {
+            "name": "HTTPResponse[]",
+            "url": "https://developers.google.com/apps-script/reference/url-fetch/http-response"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The URL to look up. The URL can have up to 2,082 characters."
+            }
+          ],
+          "name": "getRequest(url)",
+          "description": "Returns the request that is made if the operation was invoked.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "url",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The URL to look up. The URL can have up to 2,082 characters."
+            },
+            {
+              "name": "params",
+              "type": {
+                "name": "Object",
+                "url": null
+              },
+              "description": "An optional JavaScript object specifying advanced parameters as defined below."
+            }
+          ],
+          "name": "getRequest(url, params)",
+          "description": "Returns the request that is made if the operation were invoked.",
+          "return_type": {
+            "name": "Object",
+            "url": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "service_name": "html",
+  "url": "https://developers.google.com/apps-script/reference/html",
+  "classes": [
+    {
+      "name": "Class HtmlOutput",
+      "url": "https://developers.google.com/apps-script/reference/html/html-output",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The value of the meta tag's name attribute."
+            },
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The value of the meta tag's content attribute."
+            }
+          ],
+          "name": "addMetaTag(name, content)",
+          "description": "Adds a meta tag to the page. Meta tags included directly in an Apps Script HTML file are\nignored. Only the following meta tags are allowed:",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "addedContent",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The content to append."
+            }
+          ],
+          "name": "append(addedContent)",
+          "description": "Appends new content to the content of thisHtmlOutput. Use this only for content from a\ntrusted source, because it is not escaped.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "addedContent",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The content to append."
+            }
+          ],
+          "name": "appendUntrusted(addedContent)",
+          "description": "Appends new content to the content of thisHtmlOutput, using contextual escaping.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "asTemplate()",
+          "description": "Returns anHtmlTemplatebacked by thisHtmlOutput. This method can be used to\nbuild up a template incrementally. Future changes toHtmlOutputaffect the contents of\ntheHtmlTemplateas well.",
+          "return_type": {
+            "name": "HtmlTemplate",
+            "url": "https://developers.google.com/apps-script/reference/html/html-template"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "clear()",
+          "description": "Clears the current content.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "contentType",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The MIME type to convert to. For most blobs,'application/pdf'is\n    the only valid option. For images in BMP, GIF, JPEG, or PNG format, any of'image/bmp','image/gif','image/jpeg', or'image/png'are also\n    valid. For a Google Docs document,'text/markdown'is also valid."
+            }
+          ],
+          "name": "getAs(contentType)",
+          "description": "Return the data inside this object as a blob converted to the specified content type. This\nmethod adds the appropriate extension to the filename—for example, \"myfile.pdf\". However, it\nassumes that the part of the filename that follows the last period (if any) is an existing\nextension that should be replaced. Consequently, \"ShoppingList.12.25.2014\" becomes\n\"ShoppingList.12.25.pdf\".",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getBlob()",
+          "description": "Return the data inside this object as a blob.",
+          "return_type": {
+            "name": "Blob",
+            "url": "https://developers.google.com/apps-script/reference/base/blob.html"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContent()",
+          "description": "Gets the content of thisHtmlOutput.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getFaviconUrl()",
+          "description": "Gets the URL for a favicon link tag added to the page by callingsetFaviconUrl(iconUrl). Favicon link tags included directly in an Apps Script HTML file are\nignored.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getHeight()",
+          "description": "Gets the initial height of thecustom dialogin Google\nDocs, Sheets, or Forms. If theHtmlOutputis published as a web app instead, this\nmethod returnsnull. To resize a dialog that is already open, callgoogle.script.host.setHeight(height)in client-side code.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getMetaTags()",
+          "description": "Gets an array of objects that represent meta tags added to the page by callingaddMetaTag(name, content). Meta tags included directly in an Apps Script HTML file are\nignored.",
+          "return_type": {
+            "name": "HtmlOutputMetaTag[]",
+            "url": "https://developers.google.com/apps-script/reference/html/html-output-meta-tag"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTitle()",
+          "description": "Gets the title of the output page. Note that the <title> HTML element is ignored.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getWidth()",
+          "description": "Gets the initial width of thecustom dialogin Google\nDocs, Sheets, or Forms. If theHtmlOutputis published as a web app instead, this\nmethod returnsnull. To resize a dialog that is already open, callgoogle.script.host.setWidth(width)in client-side code.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "content",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The content to serve."
+            }
+          ],
+          "name": "setContent(content)",
+          "description": "Sets the content of thisHtmlOutput.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "iconUrl",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The URL of the favicon image, with the image extension indicating the image\n    type."
+            }
+          ],
+          "name": "setFaviconUrl(iconUrl)",
+          "description": "Adds a link tag for a favicon to the page. Favicon link tags included directly in an Apps\nScript HTML file are ignored.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "height",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The new height in pixels;nullresults in a default value."
+            }
+          ],
+          "name": "setHeight(height)",
+          "description": "Sets the initial height of thecustom dialogin Google\nDocs, Sheets, or Forms. If theHtmlOutputis published as a web app instead, this\nmethod has no effect. To resize a dialog that is already open, callgoogle.script.host.setHeight(height)in client-side code.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "mode",
+              "type": {
+                "name": "SandboxMode",
+                "url": "https://developers.google.com/apps-script/reference/html/sandbox-mode"
+              },
+              "description": "The sandbox mode to use."
+            }
+          ],
+          "name": "setSandboxMode(mode)",
+          "description": "This method now has no effect — previously it set thesandbox\nmodeused for client-side scripts. To protect users from being served malicious HTML or\nJavaScript, client-side code served from HTML service executes in a security sandbox that\nimposes restrictions on the code. Originally this method allowed script authors to choose\nbetween different versions of the sandbox, but now all scripts now useIFRAMEmode\nregardless of what sandbox mode is set. For more information, see theguide to restrictions in HTML service.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "title",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The new title."
+            }
+          ],
+          "name": "setTitle(title)",
+          "description": "Sets the title of the output page. For web apps, this is the title of the entire page, while\nforHtmlOutputshown in Google Sheets, this is the dialog title.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "width",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "The new width in pixels;nullresults in a default value."
+            }
+          ],
+          "name": "setWidth(width)",
+          "description": "Sets the initial width of acustom dialogin Google\nDocs, Sheets, or Forms. If theHtmlOutputis published as a web app instead, this\nmethod has no effect. To resize a dialog that is already open, callgoogle.script.host.setWidth(width)in client-side code.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "mode",
+              "type": {
+                "name": "XFrameOptionsMode",
+                "url": "https://developers.google.com/apps-script/reference/html/x-frame-options-mode"
+              },
+              "description": "The XFrame options mode to set."
+            }
+          ],
+          "name": "setXFrameOptionsMode(mode)",
+          "description": "Sets the state of the page'sX-Frame-Optionsheader, which controls clickjacking\nprevention.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class HtmlOutputMetaTag",
+      "url": "https://developers.google.com/apps-script/reference/html/html-output-meta-tag",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getContent()",
+          "description": "Gets the content of this meta tag.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of thisHtmlOutputMetaTag.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class HtmlService",
+      "url": "https://developers.google.com/apps-script/reference/html/html-service",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "createHtmlOutput()",
+          "description": "Creates a newHtmlOutputobject that can be returned from the script.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference/html/html-output"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "blob",
+              "type": {
+                "name": "BlobSource",
+                "url": "https://developers.google.com/apps-script/reference/base/blob-source.html"
+              },
+              "description": "the object to get HTML out of"
+            }
+          ],
+          "name": "createHtmlOutput(blob)",
+          "description": "Creates a newHtmlOutputobject from aBlobSourceresource.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference/html/html-output"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "html",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the content to serve"
+            }
+          ],
+          "name": "createHtmlOutput(html)",
+          "description": "Creates a newHtmlOutputobject that can be returned from the script.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference/html/html-output"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "filename",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the file to use"
+            }
+          ],
+          "name": "createHtmlOutputFromFile(filename)",
+          "description": "Creates a newHtmlOutputobject from a file in the code editor.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference/html/html-output"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "blob",
+              "type": {
+                "name": "BlobSource",
+                "url": "https://developers.google.com/apps-script/reference/base/blob-source.html"
+              },
+              "description": "The object to get HTML out of."
+            }
+          ],
+          "name": "createTemplate(blob)",
+          "description": "Creates a newHtmlTemplateobject from aBlobSourceresource.",
+          "return_type": {
+            "name": "HtmlTemplate",
+            "url": "https://developers.google.com/apps-script/reference/html/html-template"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "html",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the content of the template"
+            }
+          ],
+          "name": "createTemplate(html)",
+          "description": "Creates a newHtmlTemplateobject that can be returned from the script.",
+          "return_type": {
+            "name": "HtmlTemplate",
+            "url": "https://developers.google.com/apps-script/reference/html/html-template"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "filename",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the file to use"
+            }
+          ],
+          "name": "createTemplateFromFile(filename)",
+          "description": "Creates a newHtmlTemplateobject from a file in the code editor.",
+          "return_type": {
+            "name": "HtmlTemplate",
+            "url": "https://developers.google.com/apps-script/reference/html/html-template"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUserAgent()",
+          "description": "Gets the user-agent string for the current browser. Returnsnullfor most script\nexecutions if not used in a web app'sdoGet()ordoPost()function.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class HtmlTemplate",
+      "url": "https://developers.google.com/apps-script/reference/html/html-template",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "evaluate()",
+          "description": "Evaluates this template and returns anHtmlOutputobject. Any properties set on thisHtmlTemplateobject will be in scope when evaluating. To debug errors in a template,\nexamine the code using thegetCode()method.",
+          "return_type": {
+            "name": "HtmlOutput",
+            "url": "https://developers.google.com/apps-script/reference/html/html-output"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCode()",
+          "description": "Generates a string of JavaScript code, based on the template file, that can be evaluated. This\nmethod produces a string of JavaScript code based on the template file. Callingeval(<code>)will return a newHtmlOutputobject with the content of the\ntemplate after running all embedded server scripts. The generated code is intended to be\nhuman-readable, and so if you need to debug a template you can callLogger.log(<code>)to see what was produced.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCodeWithComments()",
+          "description": "Generates a string of JavaScript code that can be evaluated, with each line of the code\ncontaining the original line from the template as a comment. This method produces a string of\nJavaScript code based on the template file. Callingeval(<code>)will return\na newHtmlOutputobject with the content of the template after running all embedded\nserver scripts. The generated code is intended to be human-readable, and so if you need to\ndebug a template you can callLogger.log(<code>)to see what was produced.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getRawContent()",
+          "description": "Returns the unprocessed content of this template.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum SandboxMode",
+      "url": "https://developers.google.com/apps-script/reference/html/sandbox-mode",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum XFrameOptionsMode",
+      "url": "https://developers.google.com/apps-script/reference/html/x-frame-options-mode",
+      "description": "",
+      "methods": []
+    }
+  ]
+}

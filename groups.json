@@ -1,0 +1,206 @@
+{
+  "service_name": "groups",
+  "url": "https://developers.google.com/apps-script/reference/groups",
+  "classes": [
+    {
+      "name": "Class Group",
+      "url": "https://developers.google.com/apps-script/reference/groups/group",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getEmail()",
+          "description": "Gets this group's email address.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGroups()",
+          "description": "Retrieves the direct child groups of the group. Throws an exception if you do not have\npermission to view the group's member list.",
+          "return_type": {
+            "name": "Group[]",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A user's email address."
+            }
+          ],
+          "name": "getRole(email)",
+          "description": "Retrieves a user's role in the context of the group. A user who is a direct member of a group\nhas exactly one role within that group. Throws an exception if the user is not a member of the\ngroup or if you do not have permission to view the group's member list.",
+          "return_type": {
+            "name": "Role",
+            "url": "https://developers.google.com/apps-script/reference/groups/role"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "The user whose role to retrieve."
+            }
+          ],
+          "name": "getRole(user)",
+          "description": "Retrieves a user's role in the context of the group. A user who is a direct member of a group\nhas exactly one role within that group. Throws an exception if the user is not a member of the\ngroup or if you do not have permission to view the group's member list.",
+          "return_type": {
+            "name": "Role",
+            "url": "https://developers.google.com/apps-script/reference/groups/role"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "users",
+              "type": {
+                "name": "User[]",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "The users whose roles are requested."
+            }
+          ],
+          "name": "getRoles(users)",
+          "description": "Retrieves users' roles in the context of the group. A user who is a direct member of a group\nhas exactly one role within that group. Throws an exception if any user is not a member of the\ngroup or if you do not have permission to view the group's member list.",
+          "return_type": {
+            "name": "Role[]",
+            "url": "https://developers.google.com/apps-script/reference/groups/role"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getUsers()",
+          "description": "Gets the direct members and banned members of the group that have a known corresponding Google\naccount. Throws an exception if you don't have permission to view the group's member list or\nthe member emails.",
+          "return_type": {
+            "name": "User[]",
+            "url": "https://developers.google.com/apps-script/reference/base/user.html"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "group",
+              "type": {
+                "name": "Group",
+                "url": "https://developers.google.com/apps-script/reference"
+              },
+              "description": "The group whose membership to test."
+            }
+          ],
+          "name": "hasGroup(group)",
+          "description": "Tests if a group is a direct member of this group. The method does not returntrueif\nthe tested group is nested more than one level below this group. Throws an exception if you do\nnot have permission to view the group's member list.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A group's email address."
+            }
+          ],
+          "name": "hasGroup(email)",
+          "description": "Tests if a group is a direct member of this group. The method does not returntrueif\nthe tested group is nested more than one level below this group. Throws an exception if you do\nnot have permission to view the group's member list.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "A user's email address."
+            }
+          ],
+          "name": "hasUser(email)",
+          "description": "Tests if a user is a direct member of the group. Throws an exception if you do not have\npermission to view the group's member list.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "user",
+              "type": {
+                "name": "User",
+                "url": "https://developers.google.com/apps-script/reference/base/user.html"
+              },
+              "description": "The user whose membership to test."
+            }
+          ],
+          "name": "hasUser(user)",
+          "description": "Tests if a user is a direct member of the group. Throws an exception if you do not have\npermission to view the group's member list.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class GroupsApp",
+      "url": "https://developers.google.com/apps-script/reference/groups/groups-app",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "email",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The email address of the group to retrieve."
+            }
+          ],
+          "name": "getGroupByEmail(email)",
+          "description": "Retrieves the group having the specified email address. Throws an exception if the group does\nnot exist or if you do not have permission to see it.",
+          "return_type": {
+            "name": "Group",
+            "url": "https://developers.google.com/apps-script/reference/groups/group"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getGroups()",
+          "description": "Retrieves all the groups of which you are a direct member (or a pending member). This is an\nempty list if you are not in any groups. Throws an exception if the group does not exist or if\nyou do not have permission to see it.",
+          "return_type": {
+            "name": "Group[]",
+            "url": "https://developers.google.com/apps-script/reference/groups/group"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum Role",
+      "url": "https://developers.google.com/apps-script/reference/groups/role",
+      "description": "",
+      "methods": []
+    }
+  ]
+}

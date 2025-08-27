@@ -1,0 +1,462 @@
+{
+  "service_name": "conference-data",
+  "url": "https://developers.google.com/apps-script/reference/conference-data",
+  "classes": [
+    {
+      "name": "Class ConferenceData",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/conference-data",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "printJson()",
+          "description": "Prints the JSON representation of this object. This is for debugging only.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ConferenceDataBuilder",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/conference-data-builder",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "conferenceParameter",
+              "type": {
+                "name": "ConferenceParameter",
+                "url": "https://developers.google.com/apps-script/reference/conference-data/conference-parameter"
+              },
+              "description": "The parameter to add."
+            }
+          ],
+          "name": "addConferenceParameter(conferenceParameter)",
+          "description": "Adds aConferenceParameterto thisConferenceData. The maximum number of\nparameters perConferenceDatais 300.",
+          "return_type": {
+            "name": "ConferenceDataBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "entryPoint",
+              "type": {
+                "name": "EntryPoint",
+                "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point"
+              },
+              "description": "The entry point to add."
+            }
+          ],
+          "name": "addEntryPoint(entryPoint)",
+          "description": "Adds anEntryPointto thisConferenceData. The maximum number of entry points\nperConferenceDatais 300.",
+          "return_type": {
+            "name": "ConferenceDataBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "build()",
+          "description": "Builds and validates theConferenceData.",
+          "return_type": {
+            "name": "ConferenceData",
+            "url": "https://developers.google.com/apps-script/reference/conference-data/conference-data"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "conferenceId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID to set."
+            }
+          ],
+          "name": "setConferenceId(conferenceId)",
+          "description": "Sets the conference ID of thisConferenceData. The maximum length for this field is 512\ncharacters.",
+          "return_type": {
+            "name": "ConferenceDataBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "conferenceSolutionId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The ID matching the manifest."
+            }
+          ],
+          "name": "setConferenceSolutionId(conferenceSolutionId)",
+          "description": "Sets the conference solution ID defined in the addon's manifest. The value must be specified\nand populates conference's name and iconUrl values.",
+          "return_type": {
+            "name": "ConferenceDataBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "conferenceError",
+              "type": {
+                "name": "ConferenceError",
+                "url": "https://developers.google.com/apps-script/reference/conference-data/conference-error"
+              },
+              "description": "The error to set."
+            }
+          ],
+          "name": "setError(conferenceError)",
+          "description": "Sets theConferenceErrorof thisConferenceData, indicating that the conference\nwas not successfully created.",
+          "return_type": {
+            "name": "ConferenceDataBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "notes",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The additional notes to set."
+            }
+          ],
+          "name": "setNotes(notes)",
+          "description": "Sets the additional notes of thisConferenceData, such as instructions from the\nadministrator or legal notices. Can contain HTML. The maximum length for this field is 2048\ncharacters.",
+          "return_type": {
+            "name": "ConferenceDataBuilder",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ConferenceDataService",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/conference-data-service",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "newConferenceDataBuilder()",
+          "description": "Returns a new, emptyConferenceDataBuilder.",
+          "return_type": {
+            "name": "ConferenceDataBuilder",
+            "url": "https://developers.google.com/apps-script/reference/conference-data/conference-data-builder"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newConferenceError()",
+          "description": "Returns a new, emptyConferenceError.",
+          "return_type": {
+            "name": "ConferenceError",
+            "url": "https://developers.google.com/apps-script/reference/conference-data/conference-error"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newConferenceParameter()",
+          "description": "Returns a new, emptyConferenceParameter.",
+          "return_type": {
+            "name": "ConferenceParameter",
+            "url": "https://developers.google.com/apps-script/reference/conference-data/conference-parameter"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "newEntryPoint()",
+          "description": "Returns a new, emptyEntryPoint.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ConferenceError",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/conference-error",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "authenticationUrl",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The authentication URL to set."
+            }
+          ],
+          "name": "setAuthenticationUrl(authenticationUrl)",
+          "description": "If the error type isAUTHENTICATION, the add-on must\nprovide a URL calling back into the add-on to allow users to log in. The maximum length for\nthis field is 1800 characters.",
+          "return_type": {
+            "name": "ConferenceError",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "conferenceErrorType",
+              "type": {
+                "name": "ConferenceErrorType",
+                "url": "https://developers.google.com/apps-script/reference/conference-data/conference-error-type"
+              },
+              "description": "The type of error to set."
+            }
+          ],
+          "name": "setConferenceErrorType(conferenceErrorType)",
+          "description": "Sets the error type of thisConferenceError.",
+          "return_type": {
+            "name": "ConferenceError",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum ConferenceErrorType",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/conference-error-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class ConferenceParameter",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/conference-parameter",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The key to set."
+            }
+          ],
+          "name": "setKey(key)",
+          "description": "Sets the key of thisConferenceParameter. The maximum length for this field is 50\ncharacters. Required.",
+          "return_type": {
+            "name": "ConferenceParameter",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The value to set."
+            }
+          ],
+          "name": "setValue(value)",
+          "description": "Sets the value of thisConferenceParameter. The maximum length for this field is 1024\ncharacters. Required.",
+          "return_type": {
+            "name": "ConferenceParameter",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class EntryPoint",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "feature",
+              "type": {
+                "name": "EntryPointFeature",
+                "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point-feature"
+              },
+              "description": "The feature to set."
+            }
+          ],
+          "name": "addFeature(feature)",
+          "description": "Adds the feature of the entry point, such as being toll or toll-free.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "accessCode",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The access code to set."
+            }
+          ],
+          "name": "setAccessCode(accessCode)",
+          "description": "An access code for accessing the conference. Maximum length 128 characters. Optional.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "entryPointType",
+              "type": {
+                "name": "EntryPointType",
+                "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point-type"
+              },
+              "description": "The entry point type to set."
+            }
+          ],
+          "name": "setEntryPointType(entryPointType)",
+          "description": "Sets the type of this entry point. Required.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "meetingCode",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The meeting code to set."
+            }
+          ],
+          "name": "setMeetingCode(meetingCode)",
+          "description": "A meeting code for accessing the conference. Maximum length 128 characters. Optional.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "passcode",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The passcode to set."
+            }
+          ],
+          "name": "setPasscode(passcode)",
+          "description": "A passcode for accessing the conference. Maximum length 128 characters. Optional.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "password",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The password to set."
+            }
+          ],
+          "name": "setPassword(password)",
+          "description": "A password code for accessing the conference. Maximum length 128 characters. Optional.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "pin",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The PIN code to set."
+            }
+          ],
+          "name": "setPin(pin)",
+          "description": "A PIN code for accessing the conference. Maximum length 128 characters. Optional.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "regionCode",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The regionCode to set."
+            }
+          ],
+          "name": "setRegionCode(regionCode)",
+          "description": "The CLDR/ISO 3166 region code for the country associated with this entry point. Applicable only\nto phone entry point types. Optional.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "uri",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "The URI to set."
+            }
+          ],
+          "name": "setUri(uri)",
+          "description": "Sets the URI for joining the conference through this entry point. ForPHONEentry points, the prefixtel:is required. ForSIPentry points, the prefixsip:is required. ForVIDEOandMOREentry points, the prefixeshttp:orhttps:are required. Maximum length 1300 characters. Required.",
+          "return_type": {
+            "name": "EntryPoint",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum EntryPointFeature",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point-feature",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Enum EntryPointType",
+      "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point-type",
+      "description": "",
+      "methods": []
+    }
+  ]
+}

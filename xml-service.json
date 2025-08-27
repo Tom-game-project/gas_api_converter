@@ -1,0 +1,2086 @@
+{
+  "service_name": "xml-service",
+  "url": "https://developers.google.com/apps-script/reference/xml-service",
+  "classes": [
+    {
+      "name": "Class Attribute",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/attribute",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the local name of the attribute. If the attribute has a namespace prefix, usegetNamespace().getPrefix()to get the prefix.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getNamespace()",
+          "description": "Gets the namespace for the attribute.",
+          "return_type": {
+            "name": "Namespace",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the value of the attribute.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the local name to set"
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the local name of the attribute. To set a namespace prefix for the attribute, usesetNamespace(namespace)in conjunction withXmlService.getNamespace(prefix, uri).",
+          "return_type": {
+            "name": "Attribute",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace to set"
+            }
+          ],
+          "name": "setNamespace(namespace)",
+          "description": "Sets the namespace for the attribute. The namespace must have a prefix.",
+          "return_type": {
+            "name": "Attribute",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value to set"
+            }
+          ],
+          "name": "setValue(value)",
+          "description": "Sets the value of the attribute.",
+          "return_type": {
+            "name": "Attribute",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Cdata",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/cdata",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the text to append to the node"
+            }
+          ],
+          "name": "append(text)",
+          "description": "Appends the given text to any content that already exists in the node.",
+          "return_type": {
+            "name": "Text",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/text"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "detach()",
+          "description": "Detaches the node from its parentElementnode. If the node does not have a parent,\nthis method has no effect.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParentElement()",
+          "description": "Gets the node's parentElementnode. If the node does not have a parent, this method\nreturnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getText()",
+          "description": "Gets the text value of theTextnode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the text value of all nodes that are direct or indirect children of the node, in the order\nthey appear in the document.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the text value to set"
+            }
+          ],
+          "name": "setText(text)",
+          "description": "Sets the text value of theTextnode.",
+          "return_type": {
+            "name": "Text",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/text"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Comment",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/comment",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "detach()",
+          "description": "Detaches the node from its parentElementnode. If the node does not have a parent,\nthis method has no effect.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParentElement()",
+          "description": "Gets the node's parentElementnode. If the node does not have a parent, this method\nreturnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getText()",
+          "description": "Gets the text value of theCommentnode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the text value of all nodes that are direct or indirect children of the node, in the order\nthey appear in the document.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the text value to set"
+            }
+          ],
+          "name": "setText(text)",
+          "description": "Sets the text value of theCommentnode.",
+          "return_type": {
+            "name": "Comment",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Interface Content",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/content",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "asCdata()",
+          "description": "Casts the node as aCDATASectionnode for the purposes of autocomplete. If the\nnode'sContentTypeis not alreadyCDATA, this method returnsnull.",
+          "return_type": {
+            "name": "Cdata",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/cdata"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "asComment()",
+          "description": "Casts the node as aCommentnode for the purposes of autocomplete. If the node'sContentTypeis not alreadyCOMMENT, this method returnsnull.",
+          "return_type": {
+            "name": "Comment",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/comment"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "asDocType()",
+          "description": "Casts the node as aDocumentTypenode for the purposes of autocomplete. If\nthe node'sContentTypeis not alreadyDOCTYPE, this method returnsnull.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/doc-type"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "asElement()",
+          "description": "Casts the node as anElementnode for the purposes of autocomplete. If the node'sContentTypeis not alreadyELEMENT, this method returnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "asEntityRef()",
+          "description": "Casts the node as aEntityReferencenode for the purposes of autocomplete.\nIf the node'sContentTypeis not alreadyENTITYREF, this method returnsnull.",
+          "return_type": {
+            "name": "EntityRef",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/entity-ref"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "asProcessingInstruction()",
+          "description": "Casts the node as aProcessingInstructionnode for the purposes of autocomplete. If\nthe node'sContentTypeis not alreadyPROCESSINGINSTRUCTION, this method\nreturnsnull.",
+          "return_type": {
+            "name": "ProcessingInstruction",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/processing-instruction"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "asText()",
+          "description": "Casts the node as aTextnode for the purposes of autocomplete. If the node'sContentTypeis not alreadyTEXT, this method returnsnull.",
+          "return_type": {
+            "name": "Text",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/text"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "detach()",
+          "description": "Detaches the node from its parentElementnode. If the node does not have a parent,\nthis method has no effect.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParentElement()",
+          "description": "Gets the node's parentElementnode. If the node does not have a parent, this method\nreturnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getType()",
+          "description": "Gets the node's content type.",
+          "return_type": {
+            "name": "ContentType",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content-type"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the text value of all nodes that are direct or indirect children of the node, in the order\nthey appear in the document.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enum ContentType",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/content-type",
+      "description": "",
+      "methods": []
+    },
+    {
+      "name": "Class DocType",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/doc-type",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "detach()",
+          "description": "Detaches the node from its parentElementnode. If the node does not have a parent,\nthis method has no effect.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getElementName()",
+          "description": "Gets the name of the rootElementnode specified in theDocTypedeclaration.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getInternalSubset()",
+          "description": "Gets the internal subset data for theDocumentTypenode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParentElement()",
+          "description": "Gets the node's parentElementnode. If the node does not have a parent, this method\nreturnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPublicId()",
+          "description": "Gets the public ID of the external subset data for theDocumentTypenode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSystemId()",
+          "description": "Gets the system ID of the external subset data for theDocumentTypenode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the text value of all nodes that are direct or indirect children of the node, in the order\nthey appear in the document.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the rootElementnode to specify in theDocTypedeclaration"
+            }
+          ],
+          "name": "setElementName(name)",
+          "description": "Sets the name of the rootElementnode to specify in theDocTypedeclaration.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "data",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the internal subset data to set"
+            }
+          ],
+          "name": "setInternalSubset(data)",
+          "description": "Sets the internal subset data for theDocumentTypenode.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the public ID of the external subset data to set"
+            }
+          ],
+          "name": "setPublicId(id)",
+          "description": "Sets the public ID of the external subset data for theDocumentTypenode.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the system ID of the external subset data to set"
+            }
+          ],
+          "name": "setSystemId(id)",
+          "description": "Sets the system ID of the external subset data for theDocumentTypenode.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Document",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/document",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "content",
+              "type": {
+                "name": "Content",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+              },
+              "description": "the node to append"
+            }
+          ],
+          "name": "addContent(content)",
+          "description": "Appends the given node to the end of the document. Thecontentargument can be aContentobject or any node object that corresponds to a type listed inContentType. Note, however, that a document can only have one childElementnode, which is implicitly the rootElementnode.",
+          "return_type": {
+            "name": "Document",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "index",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index at which to insert the node among all nodes that are immediate children\n    of the document"
+            },
+            {
+              "name": "content",
+              "type": {
+                "name": "Content",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+              },
+              "description": "the node to insert"
+            }
+          ],
+          "name": "addContent(index, content)",
+          "description": "Inserts the given node at the given index among all nodes that are immediate children of the\ndocument. Thecontentargument can be aContentobject or any node object\nthat corresponds to a type listed inContentType. Note, however, that a document\ncan only have one childElementnode, which is implicitly the rootElementnode.",
+          "return_type": {
+            "name": "Document",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "cloneContent()",
+          "description": "Creates unattached copies of all nodes that are immediate children of the document.",
+          "return_type": {
+            "name": "Content[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "detachRootElement()",
+          "description": "Detaches and returns the document's rootElementnode. If the document does not have\na rootElementnode, this method returnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllContent()",
+          "description": "Gets all nodes that are immediate children of the document.",
+          "return_type": {
+            "name": "Content[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "index",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index for the node among all nodes that are immediate children of the\n    document"
+            }
+          ],
+          "name": "getContent(index)",
+          "description": "Gets the node at the given index among all nodes that are immediate children of the\ndocument. If there is no node at the given index, this method returnsnull.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContentSize()",
+          "description": "Gets the number of nodes that are immediate children of the document.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescendants()",
+          "description": "Gets all nodes that are direct or indirect children of the document, in the order they\nappear in the document.",
+          "return_type": {
+            "name": "Content[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDocType()",
+          "description": "Gets the document'sDocTypedeclaration. If the document does not have aDocumentTypenode, this method returnsnull.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/doc-type"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getRootElement()",
+          "description": "Gets the document's rootElementnode. If the document does not have a rootElementnode, this method returnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "hasRootElement()",
+          "description": "Determines whether the document has a rootElementnode.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "removeContent()",
+          "description": "Removes all nodes that are immediate children of the document.",
+          "return_type": {
+            "name": "Content[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "content",
+              "type": {
+                "name": "Content",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+              },
+              "description": "the node to remove"
+            }
+          ],
+          "name": "removeContent(content)",
+          "description": "Removes the given node, if the node is an immediate child of the document. Thecontentargument can be aContentobject or any node object that corresponds to a\ntype listed inContentType.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "index",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index for the node among all nodes that are immediate children of the\n    document"
+            }
+          ],
+          "name": "removeContent(index)",
+          "description": "Removes the node at the given index among all nodes that are immediate children of the\ndocument. If there is no node at the given index, this method returnsnull.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "docType",
+              "type": {
+                "name": "DocType",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/doc-type"
+              },
+              "description": "theDocumentTypeto set"
+            }
+          ],
+          "name": "setDocType(docType)",
+          "description": "Sets the document'sDocTypedeclaration. If the document already has a differentDocTypenode, this method overwrites the old node. This method throws an exception if\nthe document already contains the sameDocTypenode that is being set.",
+          "return_type": {
+            "name": "Document",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "element",
+              "type": {
+                "name": "Element",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+              },
+              "description": "the rootElementnode to set"
+            }
+          ],
+          "name": "setRootElement(element)",
+          "description": "Sets the document's rootElementnode. If the document already has a rootElementnode, this method overwrites the old node.",
+          "return_type": {
+            "name": "Document",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Element",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/element",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "content",
+              "type": {
+                "name": "Content",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+              },
+              "description": "the node to append"
+            }
+          ],
+          "name": "addContent(content)",
+          "description": "Appends the given node as the last child of theElementnode. Thecontentargument can be aElementobject or any node object that corresponds to a type\nlisted inContentType.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "index",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index at which to insert the node among all nodes that are immediate children\n    of theElementnode"
+            },
+            {
+              "name": "content",
+              "type": {
+                "name": "Content",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+              },
+              "description": "the node to insert"
+            }
+          ],
+          "name": "addContent(index, content)",
+          "description": "Inserts the given node at the given index among all nodes that are immediate children of theElementnode. Thecontentargument can be aElementobject or any\nnode object that corresponds to a type listed inContentType.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "cloneContent()",
+          "description": "Creates unattached copies of all nodes that are immediate children of the {@code Element} node.",
+          "return_type": {
+            "name": "Content[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "detach()",
+          "description": "Detaches the node from its parentElementnode. If the node does not have a parent,\nthis method has no effect.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAllContent()",
+          "description": "Gets all nodes that are immediate children of the {@code Element} node.",
+          "return_type": {
+            "name": "Content[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the attribute"
+            }
+          ],
+          "name": "getAttribute(name)",
+          "description": "Gets the attribute for thisElementnode with the given name and no namespace. If there\nis no such attribute, this method returnsnull.",
+          "return_type": {
+            "name": "Attribute",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/attribute"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the attribute"
+            },
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace of the attribute"
+            }
+          ],
+          "name": "getAttribute(name, namespace)",
+          "description": "Gets the attribute for thisElementnode with the given name and namespace. If there is\nno such node, this method returnsnull.",
+          "return_type": {
+            "name": "Attribute",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/attribute"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getAttributes()",
+          "description": "Gets all attributes for thisElementnode, in the order they appear in the document.",
+          "return_type": {
+            "name": "Attribute[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/attribute"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the childElementnode"
+            }
+          ],
+          "name": "getChild(name)",
+          "description": "Gets the firstElementnode with the given name and no namespace that is an immediate\nchild of thisElementnode. If there is no such node, this method returnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the childElementnode"
+            },
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace of the childElementnode"
+            }
+          ],
+          "name": "getChild(name, namespace)",
+          "description": "Gets the firstElementnode with the given name and namespace that is an immediate\nchild of thisElementnode. If there is no such node, this method returnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the child node"
+            }
+          ],
+          "name": "getChildText(name)",
+          "description": "Gets the text value of the node with the given name and no namespace, if the node is an\nimmediate child of theElementnode. If there is no such node, this method returnsnull.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the child node"
+            },
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace of the child node"
+            }
+          ],
+          "name": "getChildText(name, namespace)",
+          "description": "Gets the text value of the node with the given name and namespace, if the node is an immediate\nchild of theElementnode. If there is no such node, this method returnsnull.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getChildren()",
+          "description": "Gets allElementnodes that are immediate children of thisElementnode, in the\norder they appear in the document.",
+          "return_type": {
+            "name": "Element[]",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the childElementnodes"
+            }
+          ],
+          "name": "getChildren(name)",
+          "description": "Gets allElementnodes with the given name and no namespace that are immediate children\nof thisElementnode, in the order they appear in the document.",
+          "return_type": {
+            "name": "Element[]",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the childElementnodes"
+            },
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace of the childElementnodes"
+            }
+          ],
+          "name": "getChildren(name, namespace)",
+          "description": "Gets allElementnodes with the given name and namespace that are immediate children of\nthisElementnode, in the order they appear in the document.",
+          "return_type": {
+            "name": "Element[]",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "index",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index for the node among all nodes that are immediate children of the\n    {@code Element} node"
+            }
+          ],
+          "name": "getContent(index)",
+          "description": "Gets the node at the given index among all nodes that are immediate children of the\n{@code Element} node. If there is no node at the given index, this method returnsnull.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getContentSize()",
+          "description": "Gets the number of nodes that are immediate children of the {@code Element} node.",
+          "return_type": {
+            "name": "Integer",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDescendants()",
+          "description": "Gets all nodes that are direct or indirect children of the {@code Element} node, in the order they\nappear in the document.",
+          "return_type": {
+            "name": "Content[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getDocument()",
+          "description": "Gets the XML document that contains the {@code Element} node.",
+          "return_type": {
+            "name": "Document",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/document"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the local name of theElementnode. If the node has a namespace prefix, usegetQualifiedName()orgetNamespace().getPrefix()to\nget the prefix.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getNamespace()",
+          "description": "Gets the namespace for theElementnode.",
+          "return_type": {
+            "name": "Namespace",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prefix",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the prefix for the namespace"
+            }
+          ],
+          "name": "getNamespace(prefix)",
+          "description": "Gets the namespace with the given prefix for theElementnode.",
+          "return_type": {
+            "name": "Namespace",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParentElement()",
+          "description": "Gets the node's parentElementnode. If the node does not have a parent, this method\nreturnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getQualifiedName()",
+          "description": "Gets the local name and namespace prefix of theElementnode, in the form[namespacePrefix]:[localName]. If the node does not have a namespace prefix, usegetName().",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getText()",
+          "description": "Gets the text value of theElementnode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the text value of all nodes that are direct or indirect children of the node, in the order\nthey appear in the document.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "other",
+              "type": {
+                "name": "Element",
+                "url": "https://developers.google.com/apps-script/reference"
+              },
+              "description": "the otherElementnode"
+            }
+          ],
+          "name": "isAncestorOf(other)",
+          "description": "Determines whether thisElementnode is a direct or indirect parent of a givenElementnode.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "isRootElement()",
+          "description": "Determines whether theElementnode is the document's root node.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "attribute",
+              "type": {
+                "name": "Attribute",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/attribute"
+              },
+              "description": "the attribute"
+            }
+          ],
+          "name": "removeAttribute(attribute)",
+          "description": "Removes the given attribute for thisElementnode, if such an attribute exists.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "attributeName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the attribute"
+            }
+          ],
+          "name": "removeAttribute(attributeName)",
+          "description": "Removes the attribute for thisElementnode with the given name and no namespace, if\nsuch an attribute exists.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "attributeName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the attribute"
+            },
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace of the attribute"
+            }
+          ],
+          "name": "removeAttribute(attributeName, namespace)",
+          "description": "Removes the attribute for thisElementnode with the given name and namespace, if such\nan attribute exists.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "removeContent()",
+          "description": "Removes all nodes that are immediate children of the {@code Element} node.",
+          "return_type": {
+            "name": "Content[]",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "content",
+              "type": {
+                "name": "Content",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+              },
+              "description": "the node to remove"
+            }
+          ],
+          "name": "removeContent(content)",
+          "description": "Removes the given node, if the node is an immediate child of the {@code Element} node. Thecontentargument can be aElementobject or any node object that corresponds to a\ntype listed inContentType.",
+          "return_type": {
+            "name": "Boolean",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "index",
+              "type": {
+                "name": "Integer",
+                "url": null
+              },
+              "description": "the index for the node among all nodes that are immediate children of the\n    {@code Element} node"
+            }
+          ],
+          "name": "removeContent(index)",
+          "description": "Removes the node at the given index among all nodes that are immediate children of the\n{@code Element} node. If there is no node at the given index, this method returnsnull.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "attribute",
+              "type": {
+                "name": "Attribute",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/attribute"
+              },
+              "description": "the attribute to set"
+            }
+          ],
+          "name": "setAttribute(attribute)",
+          "description": "Sets the given attribute for thisElementnode.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the attribute to set"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value of the attribute to set"
+            }
+          ],
+          "name": "setAttribute(name, value)",
+          "description": "Sets the attribute for thisElementnode with the given name, value, and no namespace.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the attribute to set"
+            },
+            {
+              "name": "value",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value of the attribute to set"
+            },
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace of the attribute to set"
+            }
+          ],
+          "name": "setAttribute(name, value, namespace)",
+          "description": "Sets the attribute for thisElementnode with the given name, value, and namespace.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the local name to set"
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the local name of theElementnode. To set a namespace prefix for the node, usesetNamespace(namespace)in conjunction withXmlService.getNamespace(prefix, uri).",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace to set"
+            }
+          ],
+          "name": "setNamespace(namespace)",
+          "description": "Sets the namespace for theElementnode.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the text to set"
+            }
+          ],
+          "name": "setText(text)",
+          "description": "Sets the text value of theElementnode. If the node already contains a text value or\nany child nodes, this method overwrites the old content. To append or insert content instead,\nuseaddContent(content)oraddContent(index, content).",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class EntityRef",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/entity-ref",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "detach()",
+          "description": "Detaches the node from its parentElementnode. If the node does not have a parent,\nthis method has no effect.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getName()",
+          "description": "Gets the name of theEntityReferencenode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParentElement()",
+          "description": "Gets the node's parentElementnode. If the node does not have a parent, this method\nreturnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPublicId()",
+          "description": "Gets the public ID of theEntityReferencenode. If the node does not have a public ID,\nthis method returnsnull.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getSystemId()",
+          "description": "Gets the system ID of theEntityReferencenode. If the node does not have a system ID,\nthis method returnsnull.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the text value of all nodes that are direct or indirect children of the node, in the order\nthey appear in the document.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name to set"
+            }
+          ],
+          "name": "setName(name)",
+          "description": "Sets the name of theEntityReferencenode.",
+          "return_type": {
+            "name": "EntityRef",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the public ID to set"
+            }
+          ],
+          "name": "setPublicId(id)",
+          "description": "Sets the public ID of theEntityReferencenode.",
+          "return_type": {
+            "name": "EntityRef",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "id",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the system ID to set"
+            }
+          ],
+          "name": "setSystemId(id)",
+          "description": "Sets the system ID of theEntityReferencenode.",
+          "return_type": {
+            "name": "EntityRef",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Format",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/format",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "document",
+              "type": {
+                "name": "Document",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/document"
+              },
+              "description": "the document to format"
+            }
+          ],
+          "name": "format(document)",
+          "description": "Outputs the givenDocumentas a formatted string.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "element",
+              "type": {
+                "name": "Element",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+              },
+              "description": "the element to format"
+            }
+          ],
+          "name": "format(element)",
+          "description": "Outputs the givenElementnode as a formatted string.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "encoding",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the encoding to use"
+            }
+          ],
+          "name": "setEncoding(encoding)",
+          "description": "Sets the character encoding that the formatter should use. Theencodingargument must\nbe an accepted XML encoding likeISO-8859-1,US-ASCII,UTF-8, orUTF-16.",
+          "return_type": {
+            "name": "Format",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "indent",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the indent to use"
+            }
+          ],
+          "name": "setIndent(indent)",
+          "description": "Sets the string used to indent child nodes relative to their parents. Setting an indent other\nthannullwill cause the formatter to insert a line break after every node.",
+          "return_type": {
+            "name": "Format",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "separator",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the separator to use"
+            }
+          ],
+          "name": "setLineSeparator(separator)",
+          "description": "Sets the string to insert whenever the formatter would normally insert a line break. The three\npre-defined formatters have different conditions under which they insert a line break. The\ndefault line separator is\\r\\n.",
+          "return_type": {
+            "name": "Format",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "omitDeclaration",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueto omit the XML declaration;falseto include it"
+            }
+          ],
+          "name": "setOmitDeclaration(omitDeclaration)",
+          "description": "Sets whether the formatter should omit the XML declaration, such as<?xml version=\"1.0\"\nencoding=\"UTF-8\"?>.",
+          "return_type": {
+            "name": "Format",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "omitEncoding",
+              "type": {
+                "name": "Boolean",
+                "url": null
+              },
+              "description": "trueto omit the encoding in the XML declaration;falseto\n    include it"
+            }
+          ],
+          "name": "setOmitEncoding(omitEncoding)",
+          "description": "Sets whether the formatter should omit the encoding in the XML declaration, such as the\nencoding field in<?xml version=\"1.0\" encoding=\"UTF-8\"?>.",
+          "return_type": {
+            "name": "Format",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Namespace",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/namespace",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "getPrefix()",
+          "description": "Gets the prefix for the namespace.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getURI()",
+          "description": "Gets the URI for the namespace.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class ProcessingInstruction",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/processing-instruction",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [],
+          "name": "detach()",
+          "description": "Detaches the node from its parentElementnode. If the node does not have a parent,\nthis method has no effect.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getData()",
+          "description": "Gets the raw data for every instruction in theProcessingInstructionnode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParentElement()",
+          "description": "Gets the node's parentElementnode. If the node does not have a parent, this method\nreturnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getTarget()",
+          "description": "Gets the target for theProcessingInstructionnode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the text value of all nodes that are direct or indirect children of the node, in the order\nthey appear in the document.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class Text",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/text",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the text to append to the node"
+            }
+          ],
+          "name": "append(text)",
+          "description": "Appends the given text to any content that already exists in the node.",
+          "return_type": {
+            "name": "Text",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "detach()",
+          "description": "Detaches the node from its parentElementnode. If the node does not have a parent,\nthis method has no effect.",
+          "return_type": {
+            "name": "Content",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/content"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getParentElement()",
+          "description": "Gets the node's parentElementnode. If the node does not have a parent, this method\nreturnsnull.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getText()",
+          "description": "Gets the text value of theTextnode.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getValue()",
+          "description": "Gets the text value of all nodes that are direct or indirect children of the node, in the order\nthey appear in the document.",
+          "return_type": {
+            "name": "String",
+            "url": null
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the text value to set"
+            }
+          ],
+          "name": "setText(text)",
+          "description": "Sets the text value of theTextnode.",
+          "return_type": {
+            "name": "Text",
+            "url": "https://developers.google.com/apps-script/reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Class XmlService",
+      "url": "https://developers.google.com/apps-script/reference/xml-service/xml-service",
+      "description": "",
+      "methods": [
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value to set"
+            }
+          ],
+          "name": "createCdata(text)",
+          "description": "Creates an unattachedCDATASectionnode with the given value.",
+          "return_type": {
+            "name": "Cdata",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/cdata"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value to set"
+            }
+          ],
+          "name": "createComment(text)",
+          "description": "Creates an unattachedCommentnode with the given value.",
+          "return_type": {
+            "name": "Comment",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/comment"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "elementName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the rootElementnode to specify in theDocTypedeclaration"
+            }
+          ],
+          "name": "createDocType(elementName)",
+          "description": "Creates an unattachedDocumentTypenode for the rootElementnode\nwith the given name.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/doc-type"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "elementName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the rootElementnode to specify in theDocTypedeclaration"
+            },
+            {
+              "name": "systemId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the system ID of the external subset data to set"
+            }
+          ],
+          "name": "createDocType(elementName, systemId)",
+          "description": "Creates an unattachedDocumentTypenode for the rootElementnode\nwith the given name, and the given system ID for the external subset data.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/doc-type"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "elementName",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the name of the rootElementnode to specify in theDocTypedeclaration"
+            },
+            {
+              "name": "publicId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the public ID of the external subset data to set"
+            },
+            {
+              "name": "systemId",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the system ID of the external subset data to set"
+            }
+          ],
+          "name": "createDocType(elementName, publicId, systemId)",
+          "description": "Creates an unattachedDocumentTypenode for the rootElementnode\nwith the given name, and the given public ID and system ID for the external subset data.",
+          "return_type": {
+            "name": "DocType",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/doc-type"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "createDocument()",
+          "description": "Creates an empty XML document.",
+          "return_type": {
+            "name": "Document",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/document"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "rootElement",
+              "type": {
+                "name": "Element",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+              },
+              "description": "the rootElementnode to set"
+            }
+          ],
+          "name": "createDocument(rootElement)",
+          "description": "Creates an XML document with the given rootElementnode.",
+          "return_type": {
+            "name": "Document",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/document"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the local name to set"
+            }
+          ],
+          "name": "createElement(name)",
+          "description": "Creates an unattachedElementnode with the given local name and no namespace.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the local name to set"
+            },
+            {
+              "name": "namespace",
+              "type": {
+                "name": "Namespace",
+                "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+              },
+              "description": "the namespace to set"
+            }
+          ],
+          "name": "createElement(name, namespace)",
+          "description": "Creates an unattachedElementnode with the given local name and namespace.",
+          "return_type": {
+            "name": "Element",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/element"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "text",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the value to set"
+            }
+          ],
+          "name": "createText(text)",
+          "description": "Creates an unattachedTextnode with the given value.",
+          "return_type": {
+            "name": "Text",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/text"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getCompactFormat()",
+          "description": "Creates aFormatobject for outputting a compact XML document. The formatter\ndefaults toUTF-8encoding, no indentation, and no additional line breaks, but includes\nthe XML declaration and its encoding.",
+          "return_type": {
+            "name": "Format",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/format"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "uri",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the URI for the namespace"
+            }
+          ],
+          "name": "getNamespace(uri)",
+          "description": "Creates aNamespacewith the given URI.",
+          "return_type": {
+            "name": "Namespace",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "prefix",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the prefix for the namespace"
+            },
+            {
+              "name": "uri",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the URI for the namespace"
+            }
+          ],
+          "name": "getNamespace(prefix, uri)",
+          "description": "Creates aNamespacewith the given prefix and URI.",
+          "return_type": {
+            "name": "Namespace",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getNoNamespace()",
+          "description": "Creates aNamespacethat represents the absence of a real namespace.",
+          "return_type": {
+            "name": "Namespace",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getPrettyFormat()",
+          "description": "Creates aFormatobject for outputting a human-readable XML document. The formatter\ndefaults toUTF-8encoding, two-space indentation,\\r\\nline separators after\nevery node, and includes the XML declaration and its encoding.",
+          "return_type": {
+            "name": "Format",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/format"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getRawFormat()",
+          "description": "Creates aFormatobject for outputting a raw XML document. The formatter defaults toUTF-8encoding, no indentation and no line breaks other than those provided in the XML\ndocument itself, and includes the XML declaration and its encoding.",
+          "return_type": {
+            "name": "Format",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/format"
+          }
+        },
+        {
+          "parameters": [],
+          "name": "getXmlNamespace()",
+          "description": "Creates aNamespacewith the standardxmlprefix.",
+          "return_type": {
+            "name": "Namespace",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/namespace"
+          }
+        },
+        {
+          "parameters": [
+            {
+              "name": "xml",
+              "type": {
+                "name": "String",
+                "url": null
+              },
+              "description": "the XML to parse"
+            }
+          ],
+          "name": "parse(xml)",
+          "description": "Creates anDocumentfrom the given XML, without validating the XML.",
+          "return_type": {
+            "name": "Document",
+            "url": "https://developers.google.com/apps-script/reference/xml-service/document"
+          }
+        }
+      ]
+    }
+  ]
+}

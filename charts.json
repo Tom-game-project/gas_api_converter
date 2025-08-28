@@ -427,7 +427,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class BarChartBuilder",
@@ -845,7 +846,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Chart",
@@ -888,19 +890,48 @@
             "url": "https://developers.google.com/apps-script/reference/charts/chart-options"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ChartHiddenDimensionStrategy",
       "url": "https://developers.google.com/apps-script/reference/charts/chart-hidden-dimension-strategy",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "IGNORE_BOTH",
+          "description": "Default; charts skips any hidden columns and hidden rows."
+        },
+        {
+          "name": "IGNORE_ROWS",
+          "description": "Charts skips hidden rows only."
+        },
+        {
+          "name": "IGNORE_COLUMNS",
+          "description": "Charts skips hidden columns only."
+        },
+        {
+          "name": "SHOW_BOTH",
+          "description": "Charts does not skip hidden columns or hidden rows."
+        }
+      ]
     },
     {
       "name": "Enum ChartMergeStrategy",
       "url": "https://developers.google.com/apps-script/reference/charts/chart-merge-strategy",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "MERGE_COLUMNS",
+          "description": "Default. Charts merges the columns of multiple ranges."
+        },
+        {
+          "name": "MERGE_ROWS",
+          "description": "Charts merges the rows of multiple ranges."
+        }
+      ]
     },
     {
       "name": "Class ChartOptions",
@@ -943,13 +974,96 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ChartType",
       "url": "https://developers.google.com/apps-script/reference/charts/chart-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "TIMELINE",
+          "description": "Timeline chart."
+        },
+        {
+          "name": "AREA",
+          "description": "Area chart"
+        },
+        {
+          "name": "BAR",
+          "description": "Bar chart"
+        },
+        {
+          "name": "BUBBLE",
+          "description": "Bubble chart."
+        },
+        {
+          "name": "CANDLESTICK",
+          "description": "Candlestick chart."
+        },
+        {
+          "name": "COLUMN",
+          "description": "Column chart"
+        },
+        {
+          "name": "COMBO",
+          "description": "Combo chart"
+        },
+        {
+          "name": "GAUGE",
+          "description": "Gauge chart."
+        },
+        {
+          "name": "GEO",
+          "description": "Geo chart."
+        },
+        {
+          "name": "HISTOGRAM",
+          "description": "Histogram"
+        },
+        {
+          "name": "RADAR",
+          "description": "Radar chart."
+        },
+        {
+          "name": "LINE",
+          "description": "Line chart"
+        },
+        {
+          "name": "ORG",
+          "description": "Org chart."
+        },
+        {
+          "name": "PIE",
+          "description": "Pie chart"
+        },
+        {
+          "name": "SCATTER",
+          "description": "Scatter chart"
+        },
+        {
+          "name": "SPARKLINE",
+          "description": "Sparkline chart."
+        },
+        {
+          "name": "STEPPED_AREA",
+          "description": "Stepped area chart."
+        },
+        {
+          "name": "TABLE",
+          "description": "Table chart"
+        },
+        {
+          "name": "TREEMAP",
+          "description": "Treemap chart."
+        },
+        {
+          "name": "WATERFALL",
+          "description": "Waterfall chart."
+        }
+      ]
     },
     {
       "name": "Class Charts",
@@ -1046,7 +1160,8 @@
             "url": "https://developers.google.com/apps-script/reference/charts/text-style-builder"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ColumnChartBuilder",
@@ -1455,25 +1570,51 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ColumnType",
       "url": "https://developers.google.com/apps-script/reference/charts/column-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DATE",
+          "description": "Corresponds to date values."
+        },
+        {
+          "name": "NUMBER",
+          "description": "Corresponds to number values."
+        },
+        {
+          "name": "STRING",
+          "description": "Corresponds to string values."
+        }
+      ]
     },
     {
       "name": "Enum CurveStyle",
       "url": "https://developers.google.com/apps-script/reference/charts/curve-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NORMAL",
+          "description": "Straight lines without curve."
+        },
+        {
+          "name": "SMOOTH",
+          "description": "The angles of the line are smoothed."
+        }
+      ]
     },
     {
       "name": "Class DataTable",
       "url": "https://developers.google.com/apps-script/reference/charts/data-table",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Class DataTableBuilder",
@@ -1567,7 +1708,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Interface DataTableSource",
@@ -1583,13 +1725,15 @@
             "url": "https://developers.google.com/apps-script/reference/charts/data-table"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataViewDefinition",
       "url": "https://developers.google.com/apps-script/reference/charts/data-view-definition",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Class DataViewDefinitionBuilder",
@@ -1623,7 +1767,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class LineChartBuilder",
@@ -2059,21 +2204,26 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum MatchType",
       "url": "https://developers.google.com/apps-script/reference/charts/match-type",
       "description": "",
-      "methods": [
+      "methods": [],
+      "enum_members": [
         {
-          "parameters": [],
-          "name": "getName()",
-          "description": "Returns the name of the match type to be used in the options JSON.",
-          "return_type": {
-            "name": "String",
-            "url": null
-          }
+          "name": "EXACT",
+          "description": "Match exact values only"
+        },
+        {
+          "name": "PREFIX",
+          "description": "Match prefixes starting from the beginning of the value"
+        },
+        {
+          "name": "ANY",
+          "description": "Match any substring"
         }
       ]
     },
@@ -2172,19 +2322,48 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Orientation",
       "url": "https://developers.google.com/apps-script/reference/charts/orientation",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "HORIZONTAL",
+          "description": "Horizontal orientation."
+        },
+        {
+          "name": "VERTICAL",
+          "description": "Vertical orientation."
+        }
+      ]
     },
     {
       "name": "Enum PickerValuesLayout",
       "url": "https://developers.google.com/apps-script/reference/charts/picker-values-layout",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "ASIDE",
+          "description": "Selected values display in a single text line next to the value picker widget."
+        },
+        {
+          "name": "BELOW",
+          "description": "Selected values display in a single text line below the widget."
+        },
+        {
+          "name": "BELOW_WRAPPING",
+          "description": "Similar to below, but entries that cannot fit in the picker wrap to a new line."
+        },
+        {
+          "name": "BELOW_STACKED",
+          "description": "Selected values display in a column below the widget."
+        }
+      ]
     },
     {
       "name": "Class PieChartBuilder",
@@ -2450,19 +2629,60 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PointStyle",
       "url": "https://developers.google.com/apps-script/reference/charts/point-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NONE",
+          "description": "Do not display line points."
+        },
+        {
+          "name": "TINY",
+          "description": "Use tiny line points."
+        },
+        {
+          "name": "MEDIUM",
+          "description": "Use medium sized line points."
+        },
+        {
+          "name": "LARGE",
+          "description": "Use large sized line points."
+        },
+        {
+          "name": "HUGE",
+          "description": "Use largest sized line points."
+        }
+      ]
     },
     {
       "name": "Enum Position",
       "url": "https://developers.google.com/apps-script/reference/charts/position",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "TOP",
+          "description": "Above the chart."
+        },
+        {
+          "name": "RIGHT",
+          "description": "To the right of the chart."
+        },
+        {
+          "name": "BOTTOM",
+          "description": "Below the chart."
+        },
+        {
+          "name": "NONE",
+          "description": "No legend is displayed."
+        }
+      ]
     },
     {
       "name": "Class ScatterChartBuilder",
@@ -2906,7 +3126,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class StringFilterBuilder",
@@ -2967,7 +3188,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TableChartBuilder",
@@ -3295,7 +3517,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextStyle",
@@ -3329,7 +3552,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextStyleBuilder",
@@ -3399,7 +3623,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

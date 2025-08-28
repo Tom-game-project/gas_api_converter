@@ -16,7 +16,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ConferenceDataBuilder",
@@ -140,7 +141,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ConferenceDataService",
@@ -183,7 +185,8 @@
             "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ConferenceError",
@@ -226,13 +229,40 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ConferenceErrorType",
       "url": "https://developers.google.com/apps-script/reference/conference-data/conference-error-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "AUTHENTICATION",
+          "description": "An authentication error during conference data generation."
+        },
+        {
+          "name": "CONFERENCE_SOLUTION_FORBIDDEN",
+          "description": "The user is not allowed to use the selected conference solution (but might be allowed to use\nother solutions offered by the add-on)."
+        },
+        {
+          "name": "PERMANENT",
+          "description": "A permanent error during conference data generation."
+        },
+        {
+          "name": "PERMISSION_DENIED",
+          "description": "The user isn't allowed to perform an action in the third-party conferencing system."
+        },
+        {
+          "name": "TEMPORARY",
+          "description": "A temporary error during conference data generation."
+        },
+        {
+          "name": "UNKNOWN",
+          "description": "An unknown error during conference data generation."
+        }
+      ]
     },
     {
       "name": "Class ConferenceParameter",
@@ -275,7 +305,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EntryPoint",
@@ -444,19 +475,52 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum EntryPointFeature",
       "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point-feature",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNKNOWN_FEATURE",
+          "description": "Do not use. Here only as a default value for compatibility reasons."
+        },
+        {
+          "name": "TOLL",
+          "description": "Applies to PHONE entry point only. A call to a toll number is charged to the calling party. A\nnumber can't be toll and toll-free at the same time."
+        },
+        {
+          "name": "TOLL_FREE",
+          "description": "Applies to PHONE entry point only. For the calling party, a call to a toll-free number is free\nof charge. A number can't be toll and toll-free at the same time."
+        }
+      ]
     },
     {
       "name": "Enum EntryPointType",
       "url": "https://developers.google.com/apps-script/reference/conference-data/entry-point-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "VIDEO",
+          "description": "A video entry point for a conference. A conference can have zero or oneVIDEOentry\npoints."
+        },
+        {
+          "name": "PHONE",
+          "description": "A phone entry point for a conference. A conference can have zero or morePHONEentry\npoints."
+        },
+        {
+          "name": "MORE",
+          "description": "A link to more information about entry points into a conference. A conference can have zero or\noneMOREentry points. A conference with only aMOREentry point is not valid."
+        },
+        {
+          "name": "SIP",
+          "description": "A SIP entry point for a conference. A conference can have zero or oneSIPentry points."
+        }
+      ]
     }
   ]
 }

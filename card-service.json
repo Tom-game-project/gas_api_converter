@@ -151,7 +151,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ActionResponse",
@@ -167,7 +168,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ActionResponseBuilder",
@@ -255,7 +257,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ActionStatus",
@@ -298,7 +301,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Attachment",
@@ -377,7 +381,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class AuthorizationAction",
@@ -402,7 +407,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class AuthorizationException",
@@ -481,7 +487,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class BorderStyle",
@@ -542,13 +549,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum BorderType",
       "url": "https://developers.google.com/apps-script/reference/card-service/border-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NO_BORDER",
+          "description": "No border style."
+        },
+        {
+          "name": "STROKE",
+          "description": "Stroke border style."
+        }
+      ]
     },
     {
       "name": "Class Button",
@@ -671,7 +689,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ButtonSet",
@@ -696,7 +715,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CalendarEventActionResponse",
@@ -712,7 +732,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CalendarEventActionResponseBuilder",
@@ -782,7 +803,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Card",
@@ -798,7 +820,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CardAction",
@@ -921,7 +944,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CardBuilder",
@@ -1063,7 +1087,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CardHeader",
@@ -1160,7 +1185,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CardSection",
@@ -1257,7 +1283,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CardService",
@@ -1840,7 +1867,8 @@
             "url": "https://developers.google.com/apps-script/reference/card-service/validation"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CardWithId",
@@ -1883,7 +1911,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Carousel",
@@ -1908,7 +1937,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CarouselCard",
@@ -1951,7 +1981,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ChatActionResponse",
@@ -2030,7 +2061,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ChatClientDataSource",
@@ -2055,7 +2087,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ChatResponse",
@@ -2071,7 +2104,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ChatResponseBuilder",
@@ -2141,7 +2175,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ChatSpaceDataSource",
@@ -2166,7 +2201,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Chip",
@@ -2343,7 +2379,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ChipList",
@@ -2386,13 +2423,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ChipListLayout",
       "url": "https://developers.google.com/apps-script/reference/card-service/chip-list-layout",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "WRAPPED",
+          "description": "The chip list wraps to the next line if there isn't enough horizontal space. Default."
+        },
+        {
+          "name": "HORIZONTAL_SCROLLABLE",
+          "description": "The chips scroll horizontally if they don't fit in the available space."
+        }
+      ]
     },
     {
       "name": "Class CollapseControl",
@@ -2453,7 +2501,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Column",
@@ -2532,7 +2581,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Columns",
@@ -2575,13 +2625,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum CommonDataSource",
       "url": "https://developers.google.com/apps-script/reference/card-service/common-data-source",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNKNOWN",
+          "description": "Default value. Don't use."
+        },
+        {
+          "name": "USER",
+          "description": "Google Workspace users."
+        }
+      ]
     },
     {
       "name": "Class ComposeActionResponse",
@@ -2597,7 +2658,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ComposeActionResponseBuilder",
@@ -2631,19 +2693,44 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ComposedEmailType",
       "url": "https://developers.google.com/apps-script/reference/card-service/composed-email-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "REPLY_AS_DRAFT",
+          "description": "A draft that is a reply to another message. Default."
+        },
+        {
+          "name": "STANDALONE_DRAFT",
+          "description": "A draft that is a standalone message."
+        }
+      ]
     },
     {
       "name": "Enum ContentType",
       "url": "https://developers.google.com/apps-script/reference/card-service/content-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "TEXT",
+          "description": "Indicates that the generated content is plain text. Default."
+        },
+        {
+          "name": "MUTABLE_HTML",
+          "description": "Indicates that the generated content is formatted as HTML. The content can be edited after it\nis generated."
+        },
+        {
+          "name": "IMMUTABLE_HTML",
+          "description": "Indicates that the generated content is formatted as HTML, but this content cannot be edited\nafter it is generated."
+        }
+      ]
     },
     {
       "name": "Class DatePicker",
@@ -2740,7 +2827,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DateTimePicker",
@@ -2855,7 +2943,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DecoratedText",
@@ -3104,7 +3193,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Dialog",
@@ -3129,7 +3219,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DialogAction",
@@ -3172,19 +3263,31 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum DisplayStyle",
       "url": "https://developers.google.com/apps-script/reference/card-service/display-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "PEEK",
+          "description": "Show the card header at the bottom of add-on content over existing content."
+        },
+        {
+          "name": "REPLACE",
+          "description": "Show the card by replacing existing content."
+        }
+      ]
     },
     {
       "name": "Class Divider",
       "url": "https://developers.google.com/apps-script/reference/card-service/divider",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Class DriveItemsSelectedActionResponse",
@@ -3200,7 +3303,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DriveItemsSelectedActionResponseBuilder",
@@ -3234,7 +3338,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EditorFileScopeActionResponse",
@@ -3250,7 +3355,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EditorFileScopeActionResponseBuilder",
@@ -3275,7 +3381,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class FixedFooter",
@@ -3318,7 +3425,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Grid",
@@ -3495,7 +3603,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GridItem",
@@ -3610,25 +3719,60 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum GridItemLayout",
       "url": "https://developers.google.com/apps-script/reference/card-service/grid-item-layout",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "TEXT_BELOW",
+          "description": "The title and subtitle are shown below the grid item's image."
+        },
+        {
+          "name": "TEXT_ABOVE",
+          "description": "The title and subtitle are shown above the grid item's image."
+        }
+      ]
     },
     {
       "name": "Enum HorizontalAlignment",
       "url": "https://developers.google.com/apps-script/reference/card-service/horizontal-alignment",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "START",
+          "description": "Align the widget to the start of the sentence side."
+        },
+        {
+          "name": "CENTER",
+          "description": "Align the widget to the center."
+        },
+        {
+          "name": "END",
+          "description": "Align the widget to the end of the sentence side."
+        }
+      ]
     },
     {
       "name": "Enum HorizontalSizeStyle",
       "url": "https://developers.google.com/apps-script/reference/card-service/horizontal-size-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "FILL_AVAILABLE_SPACE",
+          "description": "Sizes theWidgetto fill the available horizontal space of aColumn. If the\nother column has more space, the widget can fill the space beyond the space of its own column.\nDefault."
+        },
+        {
+          "name": "FILL_MINIMUM_SPACE",
+          "description": "Resizes theWidgetto fill the least amount of horizontal space in aColumn.\nThe minimum space is based on the size of the widget. If the widget is smaller than the space\nof the column, it doesn't expand to fill the space."
+        }
+      ]
     },
     {
       "name": "Class HostAppDataSource",
@@ -3653,13 +3797,140 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Icon",
       "url": "https://developers.google.com/apps-script/reference/card-service/icon",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NONE",
+          "description": "No icon. Default."
+        },
+        {
+          "name": "AIRPLANE",
+          "description": ""
+        },
+        {
+          "name": "BOOKMARK",
+          "description": ""
+        },
+        {
+          "name": "BUS",
+          "description": ""
+        },
+        {
+          "name": "CAR",
+          "description": ""
+        },
+        {
+          "name": "CLOCK",
+          "description": ""
+        },
+        {
+          "name": "CONFIRMATION_NUMBER_ICON",
+          "description": ""
+        },
+        {
+          "name": "DOLLAR",
+          "description": ""
+        },
+        {
+          "name": "DESCRIPTION",
+          "description": ""
+        },
+        {
+          "name": "EMAIL",
+          "description": ""
+        },
+        {
+          "name": "EVENT_PERFORMER",
+          "description": ""
+        },
+        {
+          "name": "EVENT_SEAT",
+          "description": ""
+        },
+        {
+          "name": "FLIGHT_ARRIVAL",
+          "description": ""
+        },
+        {
+          "name": "FLIGHT_DEPARTURE",
+          "description": ""
+        },
+        {
+          "name": "HOTEL",
+          "description": ""
+        },
+        {
+          "name": "HOTEL_ROOM_TYPE",
+          "description": ""
+        },
+        {
+          "name": "INVITE",
+          "description": ""
+        },
+        {
+          "name": "MAP_PIN",
+          "description": ""
+        },
+        {
+          "name": "MEMBERSHIP",
+          "description": ""
+        },
+        {
+          "name": "MULTIPLE_PEOPLE",
+          "description": ""
+        },
+        {
+          "name": "OFFER",
+          "description": ""
+        },
+        {
+          "name": "PERSON",
+          "description": ""
+        },
+        {
+          "name": "PHONE",
+          "description": ""
+        },
+        {
+          "name": "RESTAURANT_ICON",
+          "description": ""
+        },
+        {
+          "name": "SHOPPING_CART",
+          "description": ""
+        },
+        {
+          "name": "STAR",
+          "description": ""
+        },
+        {
+          "name": "STORE",
+          "description": ""
+        },
+        {
+          "name": "TICKET",
+          "description": ""
+        },
+        {
+          "name": "TRAIN",
+          "description": ""
+        },
+        {
+          "name": "VIDEO_CAMERA",
+          "description": ""
+        },
+        {
+          "name": "VIDEO_PLAY",
+          "description": ""
+        }
+      ]
     },
     {
       "name": "Class IconImage",
@@ -3756,7 +4027,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Image",
@@ -3897,7 +4169,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ImageButton",
@@ -4110,13 +4383,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ImageButtonStyle",
       "url": "https://developers.google.com/apps-script/reference/card-service/image-button-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "BORDERLESS",
+          "description": "Image button with no border. Default."
+        },
+        {
+          "name": "OUTLINED",
+          "description": "Image button with clear background."
+        },
+        {
+          "name": "FILLED",
+          "description": "Image button with colored background."
+        },
+        {
+          "name": "FILLED_TONAL",
+          "description": "Image button with an alternative middle ground between filled and outlined buttons."
+        }
+      ]
     },
     {
       "name": "Class ImageComponent",
@@ -4195,7 +4487,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ImageCropStyle",
@@ -4238,31 +4531,88 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ImageCropType",
       "url": "https://developers.google.com/apps-script/reference/card-service/image-crop-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "SQUARE",
+          "description": "Square shape crop style."
+        },
+        {
+          "name": "CIRCLE",
+          "description": "Circle shape crop style."
+        },
+        {
+          "name": "RECTANGLE_CUSTOM",
+          "description": "Rectangle shape crop style with custom ratio."
+        },
+        {
+          "name": "RECTANGLE_4_3",
+          "description": "Rectangle shape crop style with 4:3 ratio."
+        }
+      ]
     },
     {
       "name": "Enum ImageStyle",
       "url": "https://developers.google.com/apps-script/reference/card-service/image-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "SQUARE",
+          "description": "No cropping. Default."
+        },
+        {
+          "name": "CIRCLE",
+          "description": "Crop to a circle shape."
+        }
+      ]
     },
     {
       "name": "Enum InputType",
       "url": "https://developers.google.com/apps-script/reference/card-service/input-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "TEXT",
+          "description": "Accept regular text."
+        },
+        {
+          "name": "INTEGER",
+          "description": "Accept an integer."
+        },
+        {
+          "name": "FLOAT",
+          "description": "Accept a floating-point number."
+        },
+        {
+          "name": "EMAIL",
+          "description": "Accept an email address."
+        }
+      ]
     },
     {
       "name": "Enum Interaction",
       "url": "https://developers.google.com/apps-script/reference/card-service/interaction",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "INTERACTION_UNSPECIFIED",
+          "description": "Default value. Theactionexecutes as normal."
+        },
+        {
+          "name": "OPEN_DIALOG",
+          "description": "Opens a dialog, a card-based interface that Chat apps use to interact with users."
+        }
+      ]
     },
     {
       "name": "Class KeyValue",
@@ -4529,7 +4879,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class LinkPreview",
@@ -4599,13 +4950,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum LoadIndicator",
       "url": "https://developers.google.com/apps-script/reference/card-service/load-indicator",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "SPINNER",
+          "description": "Use a spinner indicator. Default."
+        },
+        {
+          "name": "NONE",
+          "description": "Do not use an indicator."
+        }
+      ]
     },
     {
       "name": "Class MaterialIcon",
@@ -4684,7 +5046,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Navigation",
@@ -4772,7 +5135,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Notification",
@@ -4797,19 +5161,40 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum OnClose",
       "url": "https://developers.google.com/apps-script/reference/card-service/on-close",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NOTHING",
+          "description": "Do nothing on close. Default."
+        },
+        {
+          "name": "RELOAD",
+          "description": "Reloads the add-on on when the window closes.IfOpenAs.OVERLAYis also set, then the main card is blocked until the overlay\nwindow is closed and the add-on has finished reloading."
+        }
+      ]
     },
     {
       "name": "Enum OpenAs",
       "url": "https://developers.google.com/apps-script/reference/card-service/open-as",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "FULL_SIZE",
+          "description": "Open in a full window or tab. Default."
+        },
+        {
+          "name": "OVERLAY",
+          "description": "Open as an overlay such as a pop-up."
+        }
+      ]
     },
     {
       "name": "Class OpenLink",
@@ -4870,7 +5255,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class OverflowMenu",
@@ -4895,7 +5281,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class OverflowMenuItem",
@@ -5054,7 +5441,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PlatformDataSource",
@@ -5097,13 +5485,44 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ResponseType",
       "url": "https://developers.google.com/apps-script/reference/card-service/response-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "TYPE_UNSPECIFIED",
+          "description": "Default type that's handled asNEW_MESSAGE."
+        },
+        {
+          "name": "NEW_MESSAGE",
+          "description": "Post as a new message in the topic."
+        },
+        {
+          "name": "UPDATE_MESSAGE",
+          "description": "Update the Chat app's message. This is only permitted on aCARD_CLICKEDevent where\nthe message sender type isBOT."
+        },
+        {
+          "name": "UPDATE_USER_MESSAGE_CARDS",
+          "description": "Update the cards on a user's message. This is only permitted as a response to aMESSAGEevent with a matched URL, or aCARD_CLICKEDevent where the message sender\ntype isHUMAN. Text is ignored."
+        },
+        {
+          "name": "REQUEST_CONFIG",
+          "description": "Privately ask the user for additional authentication or configuration."
+        },
+        {
+          "name": "DIALOG",
+          "description": "Presents a dialog."
+        },
+        {
+          "name": "UPDATE_WIDGET",
+          "description": "Widget text autocomplete options query."
+        }
+      ]
     },
     {
       "name": "Class SelectionInput",
@@ -5338,19 +5757,112 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SelectionInputType",
       "url": "https://developers.google.com/apps-script/reference/card-service/selection-input-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CHECK_BOX",
+          "description": "Checkbox input style. Default."
+        },
+        {
+          "name": "RADIO_BUTTON",
+          "description": "Radio button input style. At most one item in the group can be selected."
+        },
+        {
+          "name": "DROPDOWN",
+          "description": "Dropdown menu selection input style."
+        },
+        {
+          "name": "SWITCH",
+          "description": "A set of switches. Users can turn on one or more switches."
+        },
+        {
+          "name": "MULTI_SELECT",
+          "description": "A multiselect menu for static or dynamic data."
+        }
+      ]
     },
     {
       "name": "Enum Status",
       "url": "https://developers.google.com/apps-script/reference/card-service/status",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "OK",
+          "description": "HTTP Mapping: 200 OK"
+        },
+        {
+          "name": "CANCELLED",
+          "description": "HTTP Mapping: 499 Client Closed Request"
+        },
+        {
+          "name": "UNKNOWN",
+          "description": "Unknown error. HTTP Mapping: 500 Internal Server Error"
+        },
+        {
+          "name": "INVALID_ARGUMENT",
+          "description": "The client specified an invalid argument. HTTP Mapping: 400 Bad Request"
+        },
+        {
+          "name": "DEADLINE_EXCEEDED",
+          "description": "HTTP Mapping: 504 Gateway Timeout"
+        },
+        {
+          "name": "NOT_FOUND",
+          "description": "HTTP Mapping: 404 Not Found"
+        },
+        {
+          "name": "ALREADY_EXISTS",
+          "description": "The entity that a client attempted to create already exists. HTTP Mapping: 409 Conflict"
+        },
+        {
+          "name": "PERMISSION_DENIED",
+          "description": "HTTP Mapping: 403 Forbidden"
+        },
+        {
+          "name": "UNAUTHENTICATED",
+          "description": "HTTP Mapping: 401 Unauthorized"
+        },
+        {
+          "name": "RESOURCE_EXHAUSTED",
+          "description": "HTTP Mapping: 429 Too Many Requests"
+        },
+        {
+          "name": "FAILED_PRECONDITION",
+          "description": "The operation was rejected because the system is not in a state required for the operation's\nexecution. HTTP Mapping: 400 Bad Request"
+        },
+        {
+          "name": "ABORTED",
+          "description": "The operation was aborted, typically due to a concurrency issue such as a sequencer check\nfailure or transaction abort. HTTP Mapping: 409 Conflict"
+        },
+        {
+          "name": "OUT_OF_RANGE",
+          "description": "The operation was attempted past the valid range. HTTP Mapping: 400 Bad Request"
+        },
+        {
+          "name": "UNIMPLEMENTED",
+          "description": "HTTP Mapping: 501 Not Implemented"
+        },
+        {
+          "name": "INTERNAL",
+          "description": "Internal errors. This means that some invariants expected by the underlying system have been\nbroken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server\nError"
+        },
+        {
+          "name": "UNAVAILABLE",
+          "description": "HTTP Mapping: 503 Service Unavailable"
+        },
+        {
+          "name": "DATA_LOSS",
+          "description": "Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error."
+        }
+      ]
     },
     {
       "name": "Class Suggestions",
@@ -5393,7 +5905,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SuggestionsResponse",
@@ -5409,7 +5922,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SuggestionsResponseBuilder",
@@ -5443,7 +5957,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Switch",
@@ -5540,13 +6055,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SwitchControlType",
       "url": "https://developers.google.com/apps-script/reference/card-service/switch-control-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "SWITCH",
+          "description": "Toggle-styled control for a switch widget. Default."
+        },
+        {
+          "name": "CHECK_BOX",
+          "description": "Checkbox-styled control for a switch widget."
+        }
+      ]
     },
     {
       "name": "Class TextButton",
@@ -5813,13 +6339,36 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum TextButtonStyle",
       "url": "https://developers.google.com/apps-script/reference/card-service/text-button-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "OUTLINED",
+          "description": "Normal text button with clear background. Default."
+        },
+        {
+          "name": "TEXT",
+          "description": "DO NOT USE. Deprecated version of OUTLINED. Do not remove the field until it is confirmed not\nbeing used by any apps."
+        },
+        {
+          "name": "FILLED",
+          "description": "Text button with colored background."
+        },
+        {
+          "name": "FILLED_TONAL",
+          "description": "Normal text button with an alternative middle ground between filled and outlined buttons."
+        },
+        {
+          "name": "BORDERLESS",
+          "description": "Normal text button with no border."
+        }
+      ]
     },
     {
       "name": "Class TextInput",
@@ -5988,7 +6537,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextParagraph",
@@ -6031,7 +6581,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TimePicker",
@@ -6128,7 +6679,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UniversalActionResponse",
@@ -6144,7 +6696,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UniversalActionResponseBuilder",
@@ -6196,7 +6749,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UpdateDraftActionResponse",
@@ -6212,7 +6766,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UpdateDraftActionResponseBuilder",
@@ -6318,7 +6873,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UpdateDraftBccRecipientsAction",
@@ -6343,7 +6899,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UpdateDraftBodyAction",
@@ -6394,13 +6951,28 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum UpdateDraftBodyType",
       "url": "https://developers.google.com/apps-script/reference/card-service/update-draft-body-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "IN_PLACE_INSERT",
+          "description": "Default. Update actions insert content at the current cursor position, replacing any selected\ncontent."
+        },
+        {
+          "name": "INSERT_AT_START",
+          "description": "Update actions insert content at the start of message body."
+        },
+        {
+          "name": "INSERT_AT_END",
+          "description": "Update actions insert content at the end of the message body. If an email signature is present,\nin Gmail on the web, the update action inserts after the user's signature. In the Gmail mobile\napp, the update action inserts before the user's signature."
+        }
+      ]
     },
     {
       "name": "Class UpdateDraftCcRecipientsAction",
@@ -6425,7 +6997,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UpdateDraftSubjectAction",
@@ -6450,7 +7023,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UpdateDraftToRecipientsAction",
@@ -6475,7 +7049,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UpdatedWidget",
@@ -6532,7 +7107,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Validation",
@@ -6575,25 +7151,51 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum VerticalAlignment",
       "url": "https://developers.google.com/apps-script/reference/card-service/vertical-alignment",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CENTER",
+          "description": "Vertically places the content at the center of the container. Default."
+        },
+        {
+          "name": "TOP",
+          "description": "Vertically places the content at the top of the container."
+        },
+        {
+          "name": "BOTTOM",
+          "description": "Vertically places the content at the bottom of the container."
+        }
+      ]
     },
     {
       "name": "Class Widget",
       "url": "https://developers.google.com/apps-script/reference/card-service/widget",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Enum WrapStyle",
       "url": "https://developers.google.com/apps-script/reference/card-service/wrap-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NOWRAP",
+          "description": "No wrapping. Default."
+        },
+        {
+          "name": "WRAP",
+          "description": "Wraps the content for any widgets in a column."
+        }
+      ]
     }
   ]
 }

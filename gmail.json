@@ -1195,7 +1195,8 @@
             "url": "https://developers.google.com/apps-script/reference/gmail/gmail-thread"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GmailAttachment",
@@ -1426,7 +1427,8 @@
             "url": "https://developers.google.com/apps-script/reference/base/blob.html"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GmailDraft",
@@ -1554,7 +1556,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GmailLabel",
@@ -1704,7 +1707,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GmailMessage",
@@ -2201,7 +2205,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GmailThread",
@@ -2636,7 +2641,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

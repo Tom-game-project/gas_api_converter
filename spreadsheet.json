@@ -6,7 +6,17 @@
       "name": "Enum AutoFillSeries",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/auto-fill-series",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DEFAULT_SERIES",
+          "description": "Default. Auto-filling with this setting results in the empty cells in the expanded range being\nfilled with increments of the existing values."
+        },
+        {
+          "name": "ALTERNATE_SERIES",
+          "description": "Auto-filling with this setting results in the empty cells in the expanded range being filled\nwith copies of the existing values."
+        }
+      ]
     },
     {
       "name": "Class Banding",
@@ -499,13 +509,64 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum BandingTheme",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/banding-theme",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "LIGHT_GREY",
+          "description": "A light grey banding theme."
+        },
+        {
+          "name": "CYAN",
+          "description": "A cyan banding theme."
+        },
+        {
+          "name": "GREEN",
+          "description": "A green banding theme."
+        },
+        {
+          "name": "YELLOW",
+          "description": "A yellow banding theme."
+        },
+        {
+          "name": "ORANGE",
+          "description": "An orange banding theme."
+        },
+        {
+          "name": "BLUE",
+          "description": "A blue banding theme."
+        },
+        {
+          "name": "TEAL",
+          "description": "A teal banding theme."
+        },
+        {
+          "name": "GREY",
+          "description": "A grey banding theme."
+        },
+        {
+          "name": "BROWN",
+          "description": "A brown banding theme."
+        },
+        {
+          "name": "LIGHT_GREEN",
+          "description": "A light green banding theme."
+        },
+        {
+          "name": "INDIGO",
+          "description": "An indigo banding theme."
+        },
+        {
+          "name": "PINK",
+          "description": "A pink banding theme."
+        }
+      ]
     },
     {
       "name": "Class BigQueryDataSourceSpec",
@@ -584,7 +645,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-source-type"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class BigQueryDataSourceSpecBuilder",
@@ -815,7 +877,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class BooleanCondition",
@@ -912,19 +975,144 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum BooleanCriteria",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/boolean-criteria",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CELL_EMPTY",
+          "description": "The criteria is met when a cell is empty."
+        },
+        {
+          "name": "CELL_NOT_EMPTY",
+          "description": "The criteria is met when a cell is not empty."
+        },
+        {
+          "name": "DATE_AFTER",
+          "description": "The criteria is met when a date is after the given value."
+        },
+        {
+          "name": "DATE_BEFORE",
+          "description": "The criteria is met when a date is before the given value."
+        },
+        {
+          "name": "DATE_EQUAL_TO",
+          "description": "The criteria is met when a date is equal to the given value."
+        },
+        {
+          "name": "DATE_NOT_EQUAL_TO",
+          "description": "The criteria is met when a date is not equal to the given value."
+        },
+        {
+          "name": "DATE_AFTER_RELATIVE",
+          "description": "The criteria is met when a date is after the relative date value."
+        },
+        {
+          "name": "DATE_BEFORE_RELATIVE",
+          "description": "The criteria is met when a date is before the relative date value."
+        },
+        {
+          "name": "DATE_EQUAL_TO_RELATIVE",
+          "description": "The criteria is met when a date is equal to the relative date value."
+        },
+        {
+          "name": "NUMBER_BETWEEN",
+          "description": "The criteria is met when a number that is between the given values."
+        },
+        {
+          "name": "NUMBER_EQUAL_TO",
+          "description": "The criteria is met when a number that is equal to the given value."
+        },
+        {
+          "name": "NUMBER_GREATER_THAN",
+          "description": "The criteria is met when a number that is greater than the given value."
+        },
+        {
+          "name": "NUMBER_GREATER_THAN_OR_EQUAL_TO",
+          "description": "The criteria is met when a number that is greater than or equal to the given value."
+        },
+        {
+          "name": "NUMBER_LESS_THAN",
+          "description": "The criteria is met when a number that is less than the given value."
+        },
+        {
+          "name": "NUMBER_LESS_THAN_OR_EQUAL_TO",
+          "description": "The criteria is met when a number that is less than or equal to the given value."
+        },
+        {
+          "name": "NUMBER_NOT_BETWEEN",
+          "description": "The criteria is met when a number that is not between the given values."
+        },
+        {
+          "name": "NUMBER_NOT_EQUAL_TO",
+          "description": "The criteria is met when a number that is not equal to the given value."
+        },
+        {
+          "name": "TEXT_CONTAINS",
+          "description": "The criteria is met when the input contains the given value."
+        },
+        {
+          "name": "TEXT_DOES_NOT_CONTAIN",
+          "description": "The criteria is met when the input does not contain the given value."
+        },
+        {
+          "name": "TEXT_EQUAL_TO",
+          "description": "The criteria is met when the input is equal to the given value."
+        },
+        {
+          "name": "TEXT_NOT_EQUAL_TO",
+          "description": "The criteria is met when the input is not equal to the given value."
+        },
+        {
+          "name": "TEXT_STARTS_WITH",
+          "description": "The criteria is met when the input begins with the given value."
+        },
+        {
+          "name": "TEXT_ENDS_WITH",
+          "description": "The criteria is met when the input ends with the given value."
+        },
+        {
+          "name": "CUSTOM_FORMULA",
+          "description": "The criteria is met when the input makes the given formula evaluate totrue."
+        }
+      ]
     },
     {
       "name": "Enum BorderStyle",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/border-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DOTTED",
+          "description": "Dotted line borders."
+        },
+        {
+          "name": "DASHED",
+          "description": "Dashed line borders."
+        },
+        {
+          "name": "SOLID",
+          "description": "Thin solid line borders."
+        },
+        {
+          "name": "SOLID_MEDIUM",
+          "description": "Medium solid line borders."
+        },
+        {
+          "name": "SOLID_THICK",
+          "description": "Thick solid line borders."
+        },
+        {
+          "name": "DOUBLE",
+          "description": "Two solid line borders."
+        }
+      ]
     },
     {
       "name": "Class CellImage",
@@ -976,7 +1164,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CellImageBuilder",
@@ -1091,7 +1280,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Color",
@@ -1125,7 +1315,8 @@
             "url": "https://developers.google.com/apps-script/reference/base/color-type.html"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ColorBuilder",
@@ -1204,7 +1395,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ConditionalFormatRule",
@@ -1247,7 +1439,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/range"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ConditionalFormatRuleBuilder",
@@ -2157,7 +2350,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ContainerInfo",
@@ -2200,25 +2394,144 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum CopyPasteType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/copy-paste-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "PASTE_NORMAL",
+          "description": "Paste values, formulas, formats and merges."
+        },
+        {
+          "name": "PASTE_NO_BORDERS",
+          "description": "Paste values, formulas, formats and merges but without borders."
+        },
+        {
+          "name": "PASTE_FORMAT",
+          "description": "Paste the format only."
+        },
+        {
+          "name": "PASTE_FORMULA",
+          "description": "Paste the formulas only."
+        },
+        {
+          "name": "PASTE_DATA_VALIDATION",
+          "description": "Paste the data validation only."
+        },
+        {
+          "name": "PASTE_VALUES",
+          "description": "Paste the values ONLY without formats, formulas or merges."
+        },
+        {
+          "name": "PASTE_CONDITIONAL_FORMATTING",
+          "description": "Paste the color rules only."
+        },
+        {
+          "name": "PASTE_COLUMN_WIDTHS",
+          "description": "Paste the column widths only."
+        }
+      ]
     },
     {
       "name": "Enum DataExecutionErrorCode",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-execution-error-code",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DATA_EXECUTION_ERROR_CODE_UNSUPPORTED",
+          "description": "A data execution error code that is not supported in Apps Script."
+        },
+        {
+          "name": "NONE",
+          "description": "The data execution has no error."
+        },
+        {
+          "name": "TIME_OUT",
+          "description": "The data execution timed out. Please update the data sourcespecification."
+        },
+        {
+          "name": "TOO_MANY_ROWS",
+          "description": "The data execution returns more rows than the limit. Please update the data sourcespecification."
+        },
+        {
+          "name": "TOO_MANY_COLUMNS",
+          "description": "The data execution returns more columns than the limit. Please update the data sourcespecification."
+        },
+        {
+          "name": "TOO_MANY_CELLS",
+          "description": "The data execution returns more cells than the limit. Please update the data sourcespecification."
+        },
+        {
+          "name": "ENGINE",
+          "description": "Data execution engine error. UseDataExecutionStatus.getErrorMessage()for details."
+        },
+        {
+          "name": "PARAMETER_INVALID",
+          "description": "Invalid data execution parameter. The source cell must exist and contain only a number or text.\nPlease update the data sourcespecification."
+        },
+        {
+          "name": "UNSUPPORTED_DATA_TYPE",
+          "description": "The data execution returns unsupported data type. Please update the data sourcespecification.For BigQuery,ARRAYorSTRUCTtype is not supported."
+        },
+        {
+          "name": "DUPLICATE_COLUMN_NAMES",
+          "description": "The data execution returns duplicate column names. Please update the data sourcespecification."
+        },
+        {
+          "name": "INTERRUPTED",
+          "description": "The data execution is interrupted. Please refresh later."
+        },
+        {
+          "name": "OTHER",
+          "description": "Other errors."
+        },
+        {
+          "name": "TOO_MANY_CHARS_PER_CELL",
+          "description": "The data execution returns values that exceed the maximum characters allowed in a single cell.\nPlease update the data sourcespecification."
+        },
+        {
+          "name": "DATA_NOT_FOUND",
+          "description": "The database referenced by the data source is not found. Please update the data sourcespecification."
+        },
+        {
+          "name": "PERMISSION_DENIED",
+          "description": "The user does not have access to the database referenced by the data source. Please update the\ndata sourcespecificationor contact the owner of the billing\nproject to request access."
+        }
+      ]
     },
     {
       "name": "Enum DataExecutionState",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-execution-state",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DATA_EXECUTION_STATE_UNSUPPORTED",
+          "description": "A data execution state is not supported in Apps Script."
+        },
+        {
+          "name": "RUNNING",
+          "description": "The data execution has started and is running."
+        },
+        {
+          "name": "SUCCESS",
+          "description": "The data execution is completed and successful."
+        },
+        {
+          "name": "ERROR",
+          "description": "The data execution is completed and has errors."
+        },
+        {
+          "name": "NOT_STARTED",
+          "description": "The data execution has not started."
+        }
+      ]
     },
     {
       "name": "Class DataExecutionStatus",
@@ -2279,7 +2592,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSource",
@@ -2464,7 +2778,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceChart",
@@ -2534,7 +2849,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-execution-status"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceColumn",
@@ -2631,7 +2947,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceFormula",
@@ -2746,7 +3063,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-execution-status"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceParameter",
@@ -2780,13 +3098,24 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-source-parameter-type"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum DataSourceParameterType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-source-parameter-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DATA_SOURCE_PARAMETER_TYPE_UNSUPPORTED",
+          "description": "A data source parameter type that is not supported in Apps Script."
+        },
+        {
+          "name": "CELL",
+          "description": "The data source parameter is valued based on a cell."
+        }
+      ]
     },
     {
       "name": "Class DataSourcePivotTable",
@@ -2971,7 +3300,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-execution-status"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceRefreshSchedule",
@@ -3014,7 +3344,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceRefreshScheduleFrequency",
@@ -3057,13 +3388,24 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum DataSourceRefreshScope",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-source-refresh-scope",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DATA_SOURCE_REFRESH_SCOPE_UNSUPPORTED",
+          "description": "The data source refresh scope is unsupported."
+        },
+        {
+          "name": "ALL_DATA_SOURCES",
+          "description": "The refresh applies to all data sources in the spreadsheet."
+        }
+      ]
     },
     {
       "name": "Class DataSourceSheet",
@@ -3432,7 +3774,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-execution-status"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceSheetFilter",
@@ -3493,7 +3836,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceSpec",
@@ -3545,7 +3889,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-source-type"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceSpecBuilder",
@@ -3659,7 +4004,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceTable",
@@ -3924,7 +4270,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-execution-status"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceTableColumn",
@@ -3949,7 +4296,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataSourceTableFilter",
@@ -4010,13 +4358,28 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum DataSourceType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-source-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DATA_SOURCE_TYPE_UNSUPPORTED",
+          "description": "A data source type that is not supported in Apps Script."
+        },
+        {
+          "name": "BIGQUERY",
+          "description": "A BigQuery data source."
+        },
+        {
+          "name": "LOOKER",
+          "description": "A Looker data source."
+        }
+      ]
     },
     {
       "name": "Class DataValidation",
@@ -4068,7 +4431,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataValidationBuilder",
@@ -4733,13 +5097,128 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum DataValidationCriteria",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-validation-criteria",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DATE_AFTER",
+          "description": "Requires a date that is after the given value."
+        },
+        {
+          "name": "DATE_BEFORE",
+          "description": "Requires a date that is before the given value."
+        },
+        {
+          "name": "DATE_BETWEEN",
+          "description": "Requires a date that is between the given values."
+        },
+        {
+          "name": "DATE_EQUAL_TO",
+          "description": "Requires a date that is equal to the given value."
+        },
+        {
+          "name": "DATE_IS_VALID_DATE",
+          "description": "Requires a date."
+        },
+        {
+          "name": "DATE_NOT_BETWEEN",
+          "description": "Requires a date that is not between the given values."
+        },
+        {
+          "name": "DATE_ON_OR_AFTER",
+          "description": "Require a date that is on or after the given value."
+        },
+        {
+          "name": "DATE_ON_OR_BEFORE",
+          "description": "Requires a date that is on or before the given value."
+        },
+        {
+          "name": "NUMBER_BETWEEN",
+          "description": "Requires a number that is between the given values."
+        },
+        {
+          "name": "NUMBER_EQUAL_TO",
+          "description": "Requires a number that is equal to the given value."
+        },
+        {
+          "name": "NUMBER_GREATER_THAN",
+          "description": "Require a number that is greater than the given value."
+        },
+        {
+          "name": "NUMBER_GREATER_THAN_OR_EQUAL_TO",
+          "description": "Requires a number that is greater than or equal to the given value."
+        },
+        {
+          "name": "NUMBER_LESS_THAN",
+          "description": "Requires a number that is less than the given value."
+        },
+        {
+          "name": "NUMBER_LESS_THAN_OR_EQUAL_TO",
+          "description": "Requires a number that is less than or equal to the given value."
+        },
+        {
+          "name": "NUMBER_NOT_BETWEEN",
+          "description": "Requires a number that is not between the given values."
+        },
+        {
+          "name": "NUMBER_NOT_EQUAL_TO",
+          "description": "Requires a number that is not equal to the given value."
+        },
+        {
+          "name": "TEXT_CONTAINS",
+          "description": "Requires that the input contains the given value."
+        },
+        {
+          "name": "TEXT_DOES_NOT_CONTAIN",
+          "description": "Requires that the input does not contain the given value."
+        },
+        {
+          "name": "TEXT_EQUAL_TO",
+          "description": "Requires that the input is equal to the given value."
+        },
+        {
+          "name": "TEXT_IS_VALID_EMAIL",
+          "description": "Requires that the input is in the form of an email address."
+        },
+        {
+          "name": "TEXT_IS_VALID_URL",
+          "description": "Requires that the input is in the form of a URL."
+        },
+        {
+          "name": "VALUE_IN_LIST",
+          "description": "Requires that the input is equal to one of the given values."
+        },
+        {
+          "name": "VALUE_IN_RANGE",
+          "description": "Requires that the input is equal to a value in the given range."
+        },
+        {
+          "name": "CUSTOM_FORMULA",
+          "description": "Requires that the input makes the given formula evaluate totrue."
+        },
+        {
+          "name": "CHECKBOX",
+          "description": "Requires that the input is a custom value or a boolean; rendered as a checkbox."
+        },
+        {
+          "name": "DATE_AFTER_RELATIVE",
+          "description": "Requires a date that is after the relative date value."
+        },
+        {
+          "name": "DATE_BEFORE_RELATIVE",
+          "description": "Requires a date that is before the relative date value."
+        },
+        {
+          "name": "DATE_EQUAL_TO_RELATIVE",
+          "description": "Requires a date that is equal to the relative date value."
+        }
+      ]
     },
     {
       "name": "Class DateTimeGroupingRule",
@@ -4755,13 +5234,80 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/date-time-grouping-rule-type"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum DateTimeGroupingRuleType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/date-time-grouping-rule-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A date-time grouping rule type that is not supported."
+        },
+        {
+          "name": "SECOND",
+          "description": "Group date-time by second, from 0 to 59."
+        },
+        {
+          "name": "MINUTE",
+          "description": "Group date-time by minute, from 0 to 59."
+        },
+        {
+          "name": "HOUR",
+          "description": "Group date-time by hour using a 24-hour system, from 0 to 23."
+        },
+        {
+          "name": "HOUR_MINUTE",
+          "description": "Group date-time by hour and minute using a 24-hour system, for example19:45."
+        },
+        {
+          "name": "HOUR_MINUTE_AMPM",
+          "description": "Group date-time by hour and minute using a 12-hour system, for example7:45 PM."
+        },
+        {
+          "name": "DAY_OF_WEEK",
+          "description": "Group date-time by day of week, for exampleSunday."
+        },
+        {
+          "name": "DAY_OF_YEAR",
+          "description": "Group date-time by day of year, from 1 to 366."
+        },
+        {
+          "name": "DAY_OF_MONTH",
+          "description": "Group date-time by day of month, from 1 to 31."
+        },
+        {
+          "name": "DAY_MONTH",
+          "description": "Group date-time by day and month, for example22-Nov."
+        },
+        {
+          "name": "MONTH",
+          "description": "Group date-time by month, for exampleNov."
+        },
+        {
+          "name": "QUARTER",
+          "description": "Group date-time by quarter, for example Q1 (which represents Jan-Mar)."
+        },
+        {
+          "name": "YEAR",
+          "description": "Group date-time by year, for example 2008."
+        },
+        {
+          "name": "YEAR_MONTH",
+          "description": "Group date-time by year and month, for example2008-Nov."
+        },
+        {
+          "name": "YEAR_QUARTER",
+          "description": "Group date-time by year and quarter, for example2008 Q4."
+        },
+        {
+          "name": "YEAR_MONTH_DAY",
+          "description": "Group date-time by year, month, and day, for example2008-11-22."
+        }
+      ]
     },
     {
       "name": "Class DeveloperMetadata",
@@ -4939,7 +5485,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DeveloperMetadataFinder",
@@ -5054,7 +5601,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DeveloperMetadataLocation",
@@ -5106,31 +5654,88 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum DeveloperMetadataLocationType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/developer-metadata-location-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "SPREADSHEET",
+          "description": "The location type for developer metadata associated with the top-level spreadsheet."
+        },
+        {
+          "name": "SHEET",
+          "description": "The location type for developer metadata associated with a whole sheet."
+        },
+        {
+          "name": "ROW",
+          "description": "The location type for developer metadata associated with a row."
+        },
+        {
+          "name": "COLUMN",
+          "description": "The location type for developer metadata associated with a column."
+        }
+      ]
     },
     {
       "name": "Enum DeveloperMetadataVisibility",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/developer-metadata-visibility",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DOCUMENT",
+          "description": "Document-visible metadata is accessible from any developer project with access to the document."
+        },
+        {
+          "name": "PROJECT",
+          "description": "Project-visible metadata is only visible to and accessible by the developer project that\ncreated the metadata. Do not use project-visible developer metadata as a security mechanism or\nto store secrets. It can be exposed to users with view access to the document."
+        }
+      ]
     },
     {
       "name": "Enum Dimension",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/dimension",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "COLUMNS",
+          "description": "The column (vertical) dimension."
+        },
+        {
+          "name": "ROWS",
+          "description": "The row (horizontal) dimension."
+        }
+      ]
     },
     {
       "name": "Enum Direction",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/direction",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UP",
+          "description": "The direction of decreasing row indices."
+        },
+        {
+          "name": "DOWN",
+          "description": "The direction of increasing row indices."
+        },
+        {
+          "name": "PREVIOUS",
+          "description": "The direction of decreasing column indices."
+        },
+        {
+          "name": "NEXT",
+          "description": "The direction of increasing column indices."
+        }
+      ]
     },
     {
       "name": "Class Drawing",
@@ -5314,7 +5919,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedAreaChartBuilder",
@@ -5928,7 +6534,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedBarChartBuilder",
@@ -6533,7 +7140,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedChart",
@@ -6657,7 +7265,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/embedded-chart-builder"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedChartBuilder",
@@ -6984,7 +7593,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedColumnChartBuilder",
@@ -7580,7 +8190,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedComboChartBuilder",
@@ -8176,7 +8787,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedHistogramChartBuilder",
@@ -8772,7 +9384,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedLineChartBuilder",
@@ -9395,7 +10008,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedPieChartBuilder",
@@ -9848,7 +10462,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/embedded-chart-builder"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedScatterChartBuilder",
@@ -10479,7 +11094,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmbeddedTableChartBuilder",
@@ -10994,7 +11610,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Filter",
@@ -11107,7 +11724,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class FilterCriteria",
@@ -11177,7 +11795,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class FilterCriteriaBuilder",
@@ -11892,13 +12511,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum FrequencyType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/frequency-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "FREQUENCY_TYPE_UNSUPPORTED",
+          "description": "The frequency type is unsupported."
+        },
+        {
+          "name": "DAILY",
+          "description": "Refresh daily."
+        },
+        {
+          "name": "WEEKLY",
+          "description": "Refresh weekly, on given days of the week."
+        },
+        {
+          "name": "MONTHLY",
+          "description": "Refresh monthly, on given days of the month."
+        }
+      ]
     },
     {
       "name": "Class GradientCondition",
@@ -12013,7 +12651,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Group",
@@ -12083,19 +12722,52 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum GroupControlTogglePosition",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/group-control-toggle-position",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "BEFORE",
+          "description": "The position where the control toggle is before the group (at lower indices)."
+        },
+        {
+          "name": "AFTER",
+          "description": "The position where the control toggle is after the group (at higher indices)."
+        }
+      ]
     },
     {
       "name": "Enum InterpolationType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/interpolation-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NUMBER",
+          "description": "Use the number as as specific interpolation point for a gradient condition."
+        },
+        {
+          "name": "PERCENT",
+          "description": "Use the number as a percentage interpolation point for a gradient condition."
+        },
+        {
+          "name": "PERCENTILE",
+          "description": "Use the number as a percentile interpolation point for a gradient condition."
+        },
+        {
+          "name": "MIN",
+          "description": "Infer the minimum number as a specific interpolation point for a gradient condition."
+        },
+        {
+          "name": "MAX",
+          "description": "Infer the maximum number as a specific interpolation point for a gradient condition."
+        }
+      ]
     },
     {
       "name": "Class LookerDataSourceSpec",
@@ -12156,7 +12828,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/data-source-type"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class LookerDataSourceSpecBuilder",
@@ -12333,7 +13006,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class NamedRange",
@@ -12403,7 +13077,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class OverGridImage",
@@ -12716,7 +13391,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PageProtection",
@@ -12795,7 +13471,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PivotFilter",
@@ -12865,7 +13542,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PivotGroup",
@@ -13228,7 +13906,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PivotGroupLimit",
@@ -13280,7 +13959,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PivotTable",
@@ -13500,13 +14180,72 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PivotTableSummarizeFunction",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/pivot-table-summarize-function",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CUSTOM",
+          "description": "A custom function, this value is only valid for calculated fields."
+        },
+        {
+          "name": "SUM",
+          "description": "TheSUMfunction"
+        },
+        {
+          "name": "COUNTA",
+          "description": "TheCOUNTAfunction"
+        },
+        {
+          "name": "COUNT",
+          "description": "TheCOUNTfunction"
+        },
+        {
+          "name": "COUNTUNIQUE",
+          "description": "TheCOUNTUNIQUEfunction"
+        },
+        {
+          "name": "AVERAGE",
+          "description": "TheAVERAGEfunction"
+        },
+        {
+          "name": "MAX",
+          "description": "TheMAXfunction"
+        },
+        {
+          "name": "MIN",
+          "description": "TheMINfunction"
+        },
+        {
+          "name": "MEDIAN",
+          "description": "TheMEDIANfunction"
+        },
+        {
+          "name": "PRODUCT",
+          "description": "ThePRODUCTfunction"
+        },
+        {
+          "name": "STDEV",
+          "description": "TheSTDEVfunction"
+        },
+        {
+          "name": "STDEVP",
+          "description": "TheSTDEVPfunction"
+        },
+        {
+          "name": "VAR",
+          "description": "TheVARfunction"
+        },
+        {
+          "name": "VARP",
+          "description": "TheVARPfunction"
+        }
+      ]
     },
     {
       "name": "Class PivotValue",
@@ -13648,13 +14387,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PivotValueDisplayType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/pivot-value-display-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DEFAULT",
+          "description": "Default. Displays pivot values as the actual value and not as a function of another value."
+        },
+        {
+          "name": "PERCENT_OF_ROW_TOTAL",
+          "description": "Displays pivot values as a percent of the total for that row."
+        },
+        {
+          "name": "PERCENT_OF_COLUMN_TOTAL",
+          "description": "Displays pivot values as a percent of the total for that column."
+        },
+        {
+          "name": "PERCENT_OF_GRAND_TOTAL",
+          "description": "Displays pivot values as a percent of the grand total."
+        }
+      ]
     },
     {
       "name": "Class Protection",
@@ -14030,13 +14788,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ProtectionType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/protection-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "RANGE",
+          "description": "Protection for a range."
+        },
+        {
+          "name": "SHEET",
+          "description": "Protection for a sheet."
+        }
+      ]
     },
     {
       "name": "Class Range",
@@ -17044,7 +17813,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class RangeList",
@@ -17756,19 +18526,60 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum RecalculationInterval",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/recalculation-interval",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "ON_CHANGE",
+          "description": "Recalculate only when values are changed."
+        },
+        {
+          "name": "MINUTE",
+          "description": "Recalculate when values are changed, and every minute."
+        },
+        {
+          "name": "HOUR",
+          "description": "Recalculate when values are changed, and every hour."
+        }
+      ]
     },
     {
       "name": "Enum RelativeDate",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/relative-date",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "TODAY",
+          "description": "Dates compared against the current date."
+        },
+        {
+          "name": "TOMORROW",
+          "description": "Dates compared against the date after the current date."
+        },
+        {
+          "name": "YESTERDAY",
+          "description": "Dates compared against the date before the current date."
+        },
+        {
+          "name": "PAST_WEEK",
+          "description": "Dates that fall within the past week period."
+        },
+        {
+          "name": "PAST_MONTH",
+          "description": "Dates that fall within the past month period."
+        },
+        {
+          "name": "PAST_YEAR",
+          "description": "Dates that fall within the past year period."
+        }
+      ]
     },
     {
       "name": "Class RichTextValue",
@@ -17890,7 +18701,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/text-style"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class RichTextValueBuilder",
@@ -18028,7 +18840,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Selection",
@@ -18089,7 +18902,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/range"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Sheet",
@@ -20702,13 +21516,28 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SheetType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/sheet-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "GRID",
+          "description": "A sheet containing a grid. This is the default type."
+        },
+        {
+          "name": "OBJECT",
+          "description": "A sheet containing a single embedded object such as anEmbeddedChart."
+        },
+        {
+          "name": "DATASOURCE",
+          "description": "A sheet containing aDataSource."
+        }
+      ]
     },
     {
       "name": "Class Slicer",
@@ -21008,13 +21837,24 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SortOrder",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/sort-order",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "ASCENDING",
+          "description": "Ascending sort order."
+        },
+        {
+          "name": "DESCENDING",
+          "description": "Descending sort order."
+        }
+      ]
     },
     {
       "name": "Class SortSpec",
@@ -21075,7 +21915,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Spreadsheet",
@@ -23606,7 +24447,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SpreadsheetApp",
@@ -24015,7 +24857,8 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/range"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SpreadsheetTheme",
@@ -24144,13 +24987,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum TextDirection",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/text-direction",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "LEFT_TO_RIGHT",
+          "description": "Left-to-right text direction."
+        },
+        {
+          "name": "RIGHT_TO_LEFT",
+          "description": "Right-to-left text direction."
+        }
+      ]
     },
     {
       "name": "Class TextFinder",
@@ -24337,7 +25191,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextRotation",
@@ -24362,7 +25217,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextStyle",
@@ -24450,7 +25306,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextStyleBuilder",
@@ -24610,13 +25467,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum TextToColumnsDelimiter",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/text-to-columns-delimiter",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "COMMA",
+          "description": "\",\"delimiter."
+        },
+        {
+          "name": "SEMICOLON",
+          "description": "\";\"delimiter."
+        },
+        {
+          "name": "PERIOD",
+          "description": "\".\"delimiter."
+        },
+        {
+          "name": "SPACE",
+          "description": "\" \"delimiter."
+        }
+      ]
     },
     {
       "name": "Class ThemeColor",
@@ -24641,25 +25517,88 @@
             "url": "https://developers.google.com/apps-script/reference/spreadsheet/theme-color-type"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ThemeColorType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/theme-color-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "Represents a theme color that is not supported."
+        },
+        {
+          "name": "TEXT",
+          "description": "Represents the text color."
+        },
+        {
+          "name": "BACKGROUND",
+          "description": "Represents the color to use for chart's background."
+        },
+        {
+          "name": "ACCENT1",
+          "description": "Represents the first accent color."
+        },
+        {
+          "name": "ACCENT2",
+          "description": "Represents the second accent color."
+        },
+        {
+          "name": "ACCENT3",
+          "description": "Represents the third accent color."
+        },
+        {
+          "name": "ACCENT4",
+          "description": "Represents the fourth accent color."
+        },
+        {
+          "name": "ACCENT5",
+          "description": "Represents the fifth accent color."
+        },
+        {
+          "name": "ACCENT6",
+          "description": "Represents the sixth accent color."
+        },
+        {
+          "name": "HYPERLINK",
+          "description": "Represents the color to use for hyperlinks."
+        }
+      ]
     },
     {
       "name": "Enum ValueType",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/value-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "IMAGE",
+          "description": "The value type when the cell contains an image."
+        }
+      ]
     },
     {
       "name": "Enum WrapStrategy",
       "url": "https://developers.google.com/apps-script/reference/spreadsheet/wrap-strategy",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "WRAP",
+          "description": "Wrap lines that are longer than the cell width onto a new line. Single words that are longer\nthan a line are wrapped at the character level."
+        },
+        {
+          "name": "OVERFLOW",
+          "description": "Overflow lines into the next cell, so long as that cell is empty. If the next cell over is\nnon-empty, this behaves the same asCLIP."
+        },
+        {
+          "name": "CLIP",
+          "description": "Clip lines that are longer than the cell width."
+        }
+      ]
     }
   ]
 }

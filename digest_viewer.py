@@ -23,20 +23,26 @@ def display_digest(file_path):
         if class_info.get('description'):
             print(f"  Description: {class_info.get('description')}")
 
-        for method in class_info.get("methods", []):
-            params_list = []
-            for param in method.get("parameters", []):
-                param_type = param.get('type', {}).get('name', 'any')
-                params_list.append(f"{param.get('name', '?')}: {param_type}")
-            
-            params_str = ", ".join(params_list)
-            
-            return_type = method.get('return_type', {}).get('name', 'void')
+        # メソッド情報を表示
+        if class_info.get("methods"):
+            for method in class_info.get("methods", []):
+                params_list = []
+                for param in method.get("parameters", []):
+                    param_type = param.get('type', {}).get('name', 'any')
+                    params_list.append(f"{param.get('name', '?')}: {param_type}")
+                
+                params_str = ", ".join(params_list)
+                return_type = method.get('return_type', {}).get('name', 'void')
+                method_name = method.get('name', '').split('(')[0]
 
-            # メソッド名から()や引数部分を削除して整形
-            method_name = method.get('name', '').split('(')[0]
+                print(f"  - {method_name}({params_str}) -> {return_type}")
 
-            print(f"  - {method_name}({params_str}) -> {return_type}")
+        # Enumメンバー情報を表示
+        if class_info.get("enum_members"):
+            print("  Enum Members:")
+            for member in class_info.get("enum_members", []):
+                print(f"    - {member.get('name', '?')}: {member.get('description', '')}")
+
         print("\n") # クラスごとに改行
 
 if __name__ == "__main__":

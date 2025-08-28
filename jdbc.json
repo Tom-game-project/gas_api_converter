@@ -271,7 +271,8 @@
             "url": "https://developers.google.com/apps-script/reference/jdbc/jdbc-timestamp"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcArray",
@@ -375,7 +376,8 @@
             "url": "https://developers.google.com/apps-script/reference/jdbc/jdbc-result-set"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcBlob",
@@ -659,7 +661,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcCallableStatement",
@@ -4109,7 +4112,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcClob",
@@ -4393,7 +4397,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcConnection",
@@ -5120,7 +5125,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcDatabaseMetaData",
@@ -7421,7 +7427,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcDate",
@@ -7572,7 +7579,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcParameterMetaData",
@@ -7732,7 +7740,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcPreparedStatement",
@@ -9217,7 +9226,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcRef",
@@ -9260,7 +9270,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcResultSet",
@@ -11895,7 +11906,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcResultSetMetaData",
@@ -12271,7 +12283,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcRowId",
@@ -12287,7 +12300,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcSavepoint",
@@ -12312,7 +12326,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcSQLXML",
@@ -12355,7 +12370,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcStatement",
@@ -12941,7 +12957,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcStruct",
@@ -12966,7 +12983,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcTime",
@@ -13117,7 +13135,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class JdbcTimestamp",
@@ -13376,7 +13395,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

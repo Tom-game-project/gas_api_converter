@@ -160,7 +160,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GroupsApp",
@@ -194,13 +195,40 @@
             "url": "https://developers.google.com/apps-script/reference/groups/group"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Role",
       "url": "https://developers.google.com/apps-script/reference/groups/role",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "OWNER",
+          "description": "The owner of a group."
+        },
+        {
+          "name": "MANAGER",
+          "description": "The manager of a group."
+        },
+        {
+          "name": "MEMBER",
+          "description": "A user who is a member of this group but is neither an owner nor a manager."
+        },
+        {
+          "name": "INVITED",
+          "description": "A user who has been invited to join a group by an owner or manager of the group but who has not\nyet accepted the invitation."
+        },
+        {
+          "name": "PENDING",
+          "description": "A user who has requested to join a group but who has not yet been approved by an owner or\nmanager."
+        },
+        {
+          "name": "BANNED",
+          "description": "A user who has been banned from a group and cannot attempt to join it."
+        }
+      ]
     }
   ]
 }

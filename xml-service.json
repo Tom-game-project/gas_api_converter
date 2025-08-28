@@ -88,7 +88,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Cdata",
@@ -167,7 +168,8 @@
             "url": "https://developers.google.com/apps-script/reference/xml-service/text"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Comment",
@@ -228,7 +230,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Interface Content",
@@ -334,13 +337,44 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ContentType",
       "url": "https://developers.google.com/apps-script/reference/xml-service/content-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CDATA",
+          "description": "An XMLCDATASectionnode."
+        },
+        {
+          "name": "COMMENT",
+          "description": "An XMLCommentnode."
+        },
+        {
+          "name": "DOCTYPE",
+          "description": "An XMLDocumentTypenode."
+        },
+        {
+          "name": "ELEMENT",
+          "description": "An XMLElementnode."
+        },
+        {
+          "name": "ENTITYREF",
+          "description": "An XMLEntityReferencenode."
+        },
+        {
+          "name": "PROCESSINGINSTRUCTION",
+          "description": "An XMLProcessingInstructionnode."
+        },
+        {
+          "name": "TEXT",
+          "description": "An XMLTextnode."
+        }
+      ]
     },
     {
       "name": "Class DocType",
@@ -482,7 +516,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Document",
@@ -704,7 +739,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Element",
@@ -1359,7 +1395,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EntityRef",
@@ -1474,7 +1511,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Format",
@@ -1607,7 +1645,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Namespace",
@@ -1632,7 +1671,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ProcessingInstruction",
@@ -1684,7 +1724,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Text",
@@ -1763,7 +1804,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class XmlService",
@@ -2080,7 +2122,8 @@
             "url": "https://developers.google.com/apps-script/reference/xml-service/document"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

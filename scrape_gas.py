@@ -91,12 +91,28 @@ def parse_class_page(class_url):
         "url": class_url,
         "description": description,
         "methods": [],
+        "enum_members": []
     }
 
-    method_docs = soup.select("div.function.doc[id]")
-    for doc_div in method_docs:
-        method_details = parse_method_doc(doc_div)
-        class_info["methods"].append(method_details)
+    # Enum型の場合、メンバーを抽出
+    if class_name.startswith("Enum"):
+        enum_table = soup.select_one("table.members.property")
+        if enum_table:
+            for row in enum_table.find_all("tr")[1:]:
+                cols = row.find_all("td")
+                if len(cols) == 3:
+                    member_name = cols[0].get_text(strip=True)
+                    member_desc = cols[2].get_text(strip=True)
+                    class_info["enum_members"].append({
+                        "name": member_name,
+                        "description": member_desc
+                    })
+    else:
+        # Enumでない場合のみメソッドを抽出
+        method_docs = soup.select("div.function.doc[id]")
+        for doc_div in method_docs:
+            method_details = parse_method_doc(doc_div)
+            class_info["methods"].append(method_details)
 
     return class_info
 
@@ -124,7 +140,6 @@ def scrape_gas_docs():
         print("ERROR: No service URLs found. Exiting.")
         return
 
-    # すべてのサービスを巡回
     for service_url in sorted(list(service_main_urls)):
         service_name = service_url.strip("/").split("/")[-1]
         print(f"\n--- Scraping service: {service_name} ---")
@@ -152,7 +167,6 @@ def scrape_gas_docs():
             if class_info:
                 service_data["classes"].append(class_info)
 
-        # サービスごとにJSONファイルとして保存
         output_filename = f"{service_name}.json"
         with open(output_filename, "w", encoding="utf-8") as f:
             json.dump(service_data, f, ensure_ascii=False, indent=2)

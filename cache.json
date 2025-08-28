@@ -183,7 +183,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CacheService",
@@ -217,7 +218,8 @@
             "url": "https://developers.google.com/apps-script/reference/cache/cache"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

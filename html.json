@@ -294,7 +294,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class HtmlOutputMetaTag",
@@ -319,7 +320,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class HtmlService",
@@ -452,7 +454,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class HtmlTemplate",
@@ -495,19 +498,44 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SandboxMode",
       "url": "https://developers.google.com/apps-script/reference/html/sandbox-mode",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "EMULATED",
+          "description": "A legacy sandbox mode that emulates ECMAScript 5 strict mode using only the features available\nin ECMAScript 3. This mode was the default prior to February 2014.EMULATEDwassunset as of December 10,\n2015. All scripts attempting useEMULATEDwill now useIFRAMEinstead."
+        },
+        {
+          "name": "IFRAME",
+          "description": "A sandbox mode that uses iframe sandboxing instead of the Caja sandbox technology used by theEMULATEDandNATIVEmodes. This mode is the default for new scripts as of\nNovember 12, 2015 and for all scripts as of July 6, 2016.This mode imposes many fewer restrictions than the other sandbox modes and runs fastest, but\ndoes not work at all in certain older browsers, including Internet Explorer 9."
+        },
+        {
+          "name": "NATIVE",
+          "description": "A sandbox mode that is built on top of ECMAScript 5 strict mode. A sandbox mode built on top of\nECMAScript 5 strict mode. This mode wassunset as\nof July 6, 2016. All scripts now useIFRAMEmode."
+        }
+      ]
     },
     {
       "name": "Enum XFrameOptionsMode",
       "url": "https://developers.google.com/apps-script/reference/html/x-frame-options-mode",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "ALLOWALL",
+          "description": "NoX-Frame-Optionsheader will be set. This will let any site iframe the page, so the\ndeveloper should implement their own protection against clickjacking."
+        },
+        {
+          "name": "DEFAULT",
+          "description": "Sets the default value for theX-Frame-Optionsheader, which preserves normal security\nassumptions. If a script does not set anX-Frame-Optionsmode, Apps Script uses this\nmode as the default."
+        }
+      ]
     }
   ]
 }

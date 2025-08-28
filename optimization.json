@@ -33,7 +33,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class LinearOptimizationEngine",
@@ -355,7 +356,8 @@
             "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-solution"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class LinearOptimizationService",
@@ -371,7 +373,8 @@
             "url": "https://developers.google.com/apps-script/reference/optimization/linear-optimization-engine"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class LinearOptimizationSolution",
@@ -423,19 +426,60 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Status",
       "url": "https://developers.google.com/apps-script/reference/optimization/status",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "OPTIMAL",
+          "description": "Status when an optimal solution has been found."
+        },
+        {
+          "name": "FEASIBLE",
+          "description": "Status when a feasible (not necessarily optimal) solution has been found."
+        },
+        {
+          "name": "INFEASIBLE",
+          "description": "Status when the current model is unfeasible (has no solution)."
+        },
+        {
+          "name": "UNBOUNDED",
+          "description": "Status when the current model is unbound."
+        },
+        {
+          "name": "ABNORMAL",
+          "description": "Status when it failed to find a solution for unexpected reasons."
+        },
+        {
+          "name": "MODEL_INVALID",
+          "description": "Status when the model is invalid."
+        },
+        {
+          "name": "NOT_SOLVED",
+          "description": "Status whenLinearOptimizationEngine.solve()has not been called yet."
+        }
+      ]
     },
     {
       "name": "Enum VariableType",
       "url": "https://developers.google.com/apps-script/reference/optimization/variable-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "INTEGER",
+          "description": "Type of variable that can only take integer values."
+        },
+        {
+          "name": "CONTINUOUS",
+          "description": "Type of variable that can take any real value."
+        }
+      ]
     }
   ]
 }

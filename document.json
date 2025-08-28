@@ -6,7 +6,161 @@
       "name": "Enum Attribute",
       "url": "https://developers.google.com/apps-script/reference/document/attribute",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "BACKGROUND_COLOR",
+          "description": "The background color of an element (Paragraph, Table, etc) or document."
+        },
+        {
+          "name": "BOLD",
+          "description": "The font weight setting, for rich text."
+        },
+        {
+          "name": "BORDER_COLOR",
+          "description": "The border color, for table elements."
+        },
+        {
+          "name": "BORDER_WIDTH",
+          "description": "The border width in points, for table elements."
+        },
+        {
+          "name": "CODE",
+          "description": "The code contents, for equation elements."
+        },
+        {
+          "name": "FONT_FAMILY",
+          "description": "The font family setting, for rich text."
+        },
+        {
+          "name": "FONT_SIZE",
+          "description": "The font size setting in points, for rich text."
+        },
+        {
+          "name": "FOREGROUND_COLOR",
+          "description": "The foreground color setting, for rich text."
+        },
+        {
+          "name": "HEADING",
+          "description": "The heading type, for paragraph elements (for example,DocumentApp.ParagraphHeading.HEADING1)."
+        },
+        {
+          "name": "HEIGHT",
+          "description": "The height setting, for image elements."
+        },
+        {
+          "name": "HORIZONTAL_ALIGNMENT",
+          "description": "The horizontal alignment, for paragraph elements (for example,DocumentApp.HorizontalAlignment.CENTER)."
+        },
+        {
+          "name": "INDENT_END",
+          "description": "The end indentation setting in points, for paragraph elements."
+        },
+        {
+          "name": "INDENT_FIRST_LINE",
+          "description": "The first line indentation setting in points, for paragraph elements."
+        },
+        {
+          "name": "INDENT_START",
+          "description": "The start indentation setting in points, for paragraph elements."
+        },
+        {
+          "name": "ITALIC",
+          "description": "The font style setting, for rich text."
+        },
+        {
+          "name": "GLYPH_TYPE",
+          "description": "The glyph type, for list item elements."
+        },
+        {
+          "name": "LEFT_TO_RIGHT",
+          "description": "The text direction setting, for rich text."
+        },
+        {
+          "name": "LINE_SPACING",
+          "description": "The line spacing setting as a multiplier, for paragraph elements."
+        },
+        {
+          "name": "LINK_URL",
+          "description": "The link URL, for rich text. The default link style (foreground color, underline) is\nautomatically applied."
+        },
+        {
+          "name": "LIST_ID",
+          "description": "The ID of the encompassing list, for list item elements."
+        },
+        {
+          "name": "MARGIN_BOTTOM",
+          "description": "The bottom margin setting in points, for paragraph elements."
+        },
+        {
+          "name": "MARGIN_LEFT",
+          "description": "The left margin setting in points, for paragraph elements."
+        },
+        {
+          "name": "MARGIN_RIGHT",
+          "description": "The right margin setting in points, for paragraph elements."
+        },
+        {
+          "name": "MARGIN_TOP",
+          "description": "The top margin setting in points, for paragraph elements."
+        },
+        {
+          "name": "NESTING_LEVEL",
+          "description": "The item nesting level, for list item elements."
+        },
+        {
+          "name": "MINIMUM_HEIGHT",
+          "description": "The minimum height setting in points, for table row elements."
+        },
+        {
+          "name": "PADDING_BOTTOM",
+          "description": "The bottom padding setting in points, for table cell elements."
+        },
+        {
+          "name": "PADDING_LEFT",
+          "description": "The left padding setting in points, for table cell elements."
+        },
+        {
+          "name": "PADDING_RIGHT",
+          "description": "The right padding setting in points, for table cell elements."
+        },
+        {
+          "name": "PADDING_TOP",
+          "description": "The top padding setting in points, for table cell elements."
+        },
+        {
+          "name": "PAGE_HEIGHT",
+          "description": "The page height setting in points, for documents."
+        },
+        {
+          "name": "PAGE_WIDTH",
+          "description": "The page width setting in points, for documents."
+        },
+        {
+          "name": "SPACING_AFTER",
+          "description": "The bottom spacing setting in points, for paragraph elements."
+        },
+        {
+          "name": "SPACING_BEFORE",
+          "description": "The top spacing setting in points, for paragraph elements."
+        },
+        {
+          "name": "STRIKETHROUGH",
+          "description": "The strike-through setting, for rich text."
+        },
+        {
+          "name": "UNDERLINE",
+          "description": "The underline setting, for rich text."
+        },
+        {
+          "name": "VERTICAL_ALIGNMENT",
+          "description": "The vertical alignment setting, for table cell elements."
+        },
+        {
+          "name": "WIDTH",
+          "description": "The width setting, for table cell and image elements."
+        }
+      ]
     },
     {
       "name": "Class Body",
@@ -1098,7 +1252,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Bookmark",
@@ -1132,7 +1287,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ContainerElement",
@@ -1577,7 +1733,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Date",
@@ -1710,7 +1867,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Document",
@@ -2345,7 +2503,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DocumentApp",
@@ -2424,7 +2583,8 @@
             "url": "https://developers.google.com/apps-script/reference/document/document"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DocumentTab",
@@ -2636,7 +2796,8 @@
             "url": "https://developers.google.com/apps-script/reference/document/range-builder"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Interface Element",
@@ -2949,13 +3110,116 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ElementType",
       "url": "https://developers.google.com/apps-script/reference/document/element-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "BODY_SECTION",
+          "description": "The type corresponding to theBodyelement."
+        },
+        {
+          "name": "COMMENT_SECTION",
+          "description": "The type corresponding to theCommentSectionelement."
+        },
+        {
+          "name": "DATE",
+          "description": "The type corresponding to theDateelement."
+        },
+        {
+          "name": "EQUATION",
+          "description": "The type corresponding to theEquationelement."
+        },
+        {
+          "name": "EQUATION_FUNCTION",
+          "description": "The type corresponding to theEquationFunctionelement."
+        },
+        {
+          "name": "EQUATION_FUNCTION_ARGUMENT_SEPARATOR",
+          "description": "The type corresponding to theEquationFunctionArgumentSeparatorelement."
+        },
+        {
+          "name": "EQUATION_SYMBOL",
+          "description": "The type corresponding to theEquationSymbolelement."
+        },
+        {
+          "name": "RICH_LINK",
+          "description": "The type corresponding to theRichLinkelement."
+        },
+        {
+          "name": "FOOTER_SECTION",
+          "description": "The type corresponding to theFooterSectionelement."
+        },
+        {
+          "name": "FOOTNOTE",
+          "description": "The type corresponding to theFootnoteelement."
+        },
+        {
+          "name": "FOOTNOTE_SECTION",
+          "description": "The type corresponding to theFootnoteSectionelement."
+        },
+        {
+          "name": "HEADER_SECTION",
+          "description": "The type corresponding to theHeaderSectionelement."
+        },
+        {
+          "name": "HORIZONTAL_RULE",
+          "description": "The type corresponding to theHorizontalRuleelement."
+        },
+        {
+          "name": "INLINE_DRAWING",
+          "description": "The type corresponding to theInlineDrawingelement."
+        },
+        {
+          "name": "INLINE_IMAGE",
+          "description": "The type corresponding to theInlineImageelement."
+        },
+        {
+          "name": "LIST_ITEM",
+          "description": "The type corresponding to theListItemelement."
+        },
+        {
+          "name": "PAGE_BREAK",
+          "description": "The type corresponding to thePageBreakelement."
+        },
+        {
+          "name": "PARAGRAPH",
+          "description": "The type corresponding to theParagraphelement."
+        },
+        {
+          "name": "PERSON",
+          "description": "The type corresponding to thePersonelement."
+        },
+        {
+          "name": "TABLE",
+          "description": "The type corresponding to theTableelement."
+        },
+        {
+          "name": "TABLE_CELL",
+          "description": "The type corresponding to theTableCellelement."
+        },
+        {
+          "name": "TABLE_OF_CONTENTS",
+          "description": "The type corresponding to theTableOfContentselement."
+        },
+        {
+          "name": "TABLE_ROW",
+          "description": "The type corresponding to theTableRowelement."
+        },
+        {
+          "name": "TEXT",
+          "description": "The type corresponding to theTextelement."
+        },
+        {
+          "name": "UNSUPPORTED",
+          "description": "The type corresponding toUnsupportedElement. Unsupported elements\nrepresent document portions that do not support scripting."
+        }
+      ]
     },
     {
       "name": "Class Equation",
@@ -3301,7 +3565,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EquationFunction",
@@ -3656,7 +3921,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EquationFunctionArgumentSeparator",
@@ -3762,7 +4028,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EquationSymbol",
@@ -3877,13 +4144,144 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum FontFamily",
       "url": "https://developers.google.com/apps-script/reference/document/font-family",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "AMARANTH",
+          "description": "The Amaranth font family."
+        },
+        {
+          "name": "ARIAL",
+          "description": "The Arial font family."
+        },
+        {
+          "name": "ARIAL_BLACK",
+          "description": "The Arial Black font family."
+        },
+        {
+          "name": "ARIAL_NARROW",
+          "description": "The Arial Narrow font family."
+        },
+        {
+          "name": "ARVO",
+          "description": "The Arvo font family."
+        },
+        {
+          "name": "CALIBRI",
+          "description": "The Calibri font family."
+        },
+        {
+          "name": "CAMBRIA",
+          "description": "The Cambria font family."
+        },
+        {
+          "name": "COMIC_SANS_MS",
+          "description": "The Comic Sans MS font family."
+        },
+        {
+          "name": "CONSOLAS",
+          "description": "The Consolas font family."
+        },
+        {
+          "name": "CORSIVA",
+          "description": "The Corsiva font family."
+        },
+        {
+          "name": "COURIER_NEW",
+          "description": "The Courier New font family."
+        },
+        {
+          "name": "DANCING_SCRIPT",
+          "description": "The Dancing Script font family."
+        },
+        {
+          "name": "DROID_SANS",
+          "description": "The Droid Sans font family."
+        },
+        {
+          "name": "DROID_SERIF",
+          "description": "The Droid Serif font family."
+        },
+        {
+          "name": "GARAMOND",
+          "description": "The Garamond font family."
+        },
+        {
+          "name": "GEORGIA",
+          "description": "The Georgia font family."
+        },
+        {
+          "name": "GLORIA_HALLELUJAH",
+          "description": "The Gloria Hallelujah font family."
+        },
+        {
+          "name": "GREAT_VIBES",
+          "description": "The Great Vibes font family."
+        },
+        {
+          "name": "LOBSTER",
+          "description": "The Lobster font family."
+        },
+        {
+          "name": "MERRIWEATHER",
+          "description": "The Merriweather font family."
+        },
+        {
+          "name": "PACIFICO",
+          "description": "The Pacifico font family."
+        },
+        {
+          "name": "PHILOSOPHER",
+          "description": "The Philosopher font family."
+        },
+        {
+          "name": "POIRET_ONE",
+          "description": "The Poiret One font family"
+        },
+        {
+          "name": "QUATTROCENTO",
+          "description": "The Quattrocento font family."
+        },
+        {
+          "name": "ROBOTO",
+          "description": "The Roboto font family"
+        },
+        {
+          "name": "SHADOWS_INTO_LIGHT",
+          "description": "The Shadows Into Light font family."
+        },
+        {
+          "name": "SYNCOPATE",
+          "description": "The Syncopate font family."
+        },
+        {
+          "name": "TAHOMA",
+          "description": "The Tahoma font family."
+        },
+        {
+          "name": "TIMES_NEW_ROMAN",
+          "description": "The Times New Roman font family."
+        },
+        {
+          "name": "TREBUCHET_MS",
+          "description": "The Trebuchet MS font family."
+        },
+        {
+          "name": "UBUNTU",
+          "description": "The Ubuntu font family."
+        },
+        {
+          "name": "VERDANA",
+          "description": "The Verdana font family."
+        }
+      ]
     },
     {
       "name": "Class FooterSection",
@@ -4707,7 +5105,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Footnote",
@@ -4813,7 +5212,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class FootnoteSection",
@@ -5292,13 +5692,48 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum GlyphType",
       "url": "https://developers.google.com/apps-script/reference/document/glyph-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "BULLET",
+          "description": "The default bullet, circular and filled."
+        },
+        {
+          "name": "HOLLOW_BULLET",
+          "description": "A hollow bullet."
+        },
+        {
+          "name": "SQUARE_BULLET",
+          "description": "A square bullet."
+        },
+        {
+          "name": "NUMBER",
+          "description": "A number based bullet."
+        },
+        {
+          "name": "LATIN_UPPER",
+          "description": "A latin, uppercase bullet."
+        },
+        {
+          "name": "LATIN_LOWER",
+          "description": "A latin, lowercase bullet."
+        },
+        {
+          "name": "ROMAN_UPPER",
+          "description": "A roman numeral, uppercase bullet."
+        },
+        {
+          "name": "ROMAN_LOWER",
+          "description": "A roman numeral, lowercase bullet."
+        }
+      ]
     },
     {
       "name": "Class HeaderSection",
@@ -6122,13 +6557,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum HorizontalAlignment",
       "url": "https://developers.google.com/apps-script/reference/document/horizontal-alignment",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "LEFT",
+          "description": "The left-alignment option."
+        },
+        {
+          "name": "CENTER",
+          "description": "The center-alignment option."
+        },
+        {
+          "name": "RIGHT",
+          "description": "The right-alignment option."
+        },
+        {
+          "name": "JUSTIFY",
+          "description": "The justify-alignment option."
+        }
+      ]
     },
     {
       "name": "Class HorizontalRule",
@@ -6225,7 +6679,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class InlineDrawing",
@@ -6385,7 +6840,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class InlineImage",
@@ -6653,7 +7109,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ListItem",
@@ -7696,7 +8153,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class NamedRange",
@@ -7739,7 +8197,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PageBreak",
@@ -7836,7 +8295,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Paragraph",
@@ -8798,13 +9258,52 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ParagraphHeading",
       "url": "https://developers.google.com/apps-script/reference/document/paragraph-heading",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NORMAL",
+          "description": "The heading option for normal text."
+        },
+        {
+          "name": "HEADING1",
+          "description": "The highest heading option."
+        },
+        {
+          "name": "HEADING2",
+          "description": "The second heading option."
+        },
+        {
+          "name": "HEADING3",
+          "description": "The third heading option"
+        },
+        {
+          "name": "HEADING4",
+          "description": "The fourth heading option."
+        },
+        {
+          "name": "HEADING5",
+          "description": "The fifth heading option."
+        },
+        {
+          "name": "HEADING6",
+          "description": "The lowest heading option."
+        },
+        {
+          "name": "TITLE",
+          "description": "The title heading option."
+        },
+        {
+          "name": "SUBTITLE",
+          "description": "The subtitle heading option."
+        }
+      ]
     },
     {
       "name": "Class Person",
@@ -8928,7 +9427,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Position",
@@ -9016,7 +9516,8 @@
             "url": "https://developers.google.com/apps-script/reference/document/text"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PositionedImage",
@@ -9203,13 +9704,36 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PositionedLayout",
       "url": "https://developers.google.com/apps-script/reference/document/positioned-layout",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "ABOVE_TEXT",
+          "description": "The image is positioned above the text."
+        },
+        {
+          "name": "BREAK_BOTH",
+          "description": "The image breaks the text on the left and right."
+        },
+        {
+          "name": "BREAK_LEFT",
+          "description": "The image breaks the text on the left."
+        },
+        {
+          "name": "BREAK_RIGHT",
+          "description": "The image breaks the text on the right."
+        },
+        {
+          "name": "WRAP_TEXT",
+          "description": "The image is wrapped by text."
+        }
+      ]
     },
     {
       "name": "Class Range",
@@ -9234,7 +9758,8 @@
             "url": "https://developers.google.com/apps-script/reference/document/range-element"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class RangeBuilder",
@@ -9406,7 +9931,8 @@
             "url": "https://developers.google.com/apps-script/reference/document/range-element"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class RangeElement",
@@ -9449,7 +9975,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class RichLink",
@@ -9582,7 +10109,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Tab",
@@ -9643,13 +10171,20 @@
             "url": "https://developers.google.com/apps-script/reference/document/tab-type"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum TabType",
       "url": "https://developers.google.com/apps-script/reference/document/tab-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DOCUMENT_TAB",
+          "description": "The type corresponding toDocumentTab."
+        }
+      ]
     },
     {
       "name": "Class Table",
@@ -10244,7 +10779,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TableCell",
@@ -11257,7 +11793,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TableOfContents",
@@ -11594,7 +12131,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TableRow",
@@ -12154,7 +12692,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Text",
@@ -13287,13 +13826,28 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum TextAlignment",
       "url": "https://developers.google.com/apps-script/reference/document/text-alignment",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NORMAL",
+          "description": "The normal text alignment."
+        },
+        {
+          "name": "SUPERSCRIPT",
+          "description": "The superscript text alignment."
+        },
+        {
+          "name": "SUBSCRIPT",
+          "description": "The subscript text alignment."
+        }
+      ]
     },
     {
       "name": "Class UnsupportedElement",
@@ -13399,13 +13953,28 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum VerticalAlignment",
       "url": "https://developers.google.com/apps-script/reference/document/vertical-alignment",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "BOTTOM",
+          "description": "The bottom-alignment option."
+        },
+        {
+          "name": "CENTER",
+          "description": "The center-alignment option."
+        },
+        {
+          "name": "TOP",
+          "description": "The top-alignment option."
+        }
+      ]
     }
   ]
 }

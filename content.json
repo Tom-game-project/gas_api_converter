@@ -34,13 +34,40 @@
             "url": "https://developers.google.com/apps-script/reference/content/text-output"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum MimeType",
       "url": "https://developers.google.com/apps-script/reference/content/mime-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CSV",
+          "description": "CSV Mime Type"
+        },
+        {
+          "name": "ICAL",
+          "description": "ICAL Mime Type"
+        },
+        {
+          "name": "JAVASCRIPT",
+          "description": "JAVASCRIPT Mime Type"
+        },
+        {
+          "name": "JSON",
+          "description": "JSON Mime Type"
+        },
+        {
+          "name": "TEXT",
+          "description": "TEXT Mime Type"
+        },
+        {
+          "name": "VCARD",
+          "description": "VCARD Mime Type"
+        }
+      ]
     },
     {
       "name": "Class TextOutput",
@@ -155,7 +182,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

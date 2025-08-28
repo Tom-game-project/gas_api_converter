@@ -61,7 +61,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class LockService",
@@ -95,7 +96,8 @@
             "url": "https://developers.google.com/apps-script/reference/lock/lock"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

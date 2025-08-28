@@ -70,7 +70,8 @@
             "url": "https://developers.google.com/apps-script/reference/slides/affine-transform-builder"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class AffineTransformBuilder",
@@ -194,19 +195,80 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum AlignmentPosition",
       "url": "https://developers.google.com/apps-script/reference/slides/alignment-position",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CENTER",
+          "description": "Align to the center."
+        },
+        {
+          "name": "HORIZONTAL_CENTER",
+          "description": "Align to the horizontal center."
+        },
+        {
+          "name": "VERTICAL_CENTER",
+          "description": "Align to the vertical center."
+        }
+      ]
     },
     {
       "name": "Enum ArrowStyle",
       "url": "https://developers.google.com/apps-script/reference/slides/arrow-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "An arrow style that is not supported."
+        },
+        {
+          "name": "NONE",
+          "description": "No arrow."
+        },
+        {
+          "name": "STEALTH_ARROW",
+          "description": "Arrow with notched back. Corresponds to ECMA-376 ST_LineEndType value 'stealth'."
+        },
+        {
+          "name": "FILL_ARROW",
+          "description": "Filled arrow. Corresponds to ECMA-376 ST_LineEndType value 'triangle'."
+        },
+        {
+          "name": "FILL_CIRCLE",
+          "description": "Filled circle. Corresponds to ECMA-376 ST_LineEndType value 'oval'."
+        },
+        {
+          "name": "FILL_SQUARE",
+          "description": "Filled square."
+        },
+        {
+          "name": "FILL_DIAMOND",
+          "description": "Filled diamond. Corresponds to ECMA-376 ST_LineEndType value 'diamond'."
+        },
+        {
+          "name": "OPEN_ARROW",
+          "description": "Hollow arrow."
+        },
+        {
+          "name": "OPEN_CIRCLE",
+          "description": "Hollow circle."
+        },
+        {
+          "name": "OPEN_SQUARE",
+          "description": "Hollow square."
+        },
+        {
+          "name": "OPEN_DIAMOND",
+          "description": "Hollow diamond."
+        }
+      ]
     },
     {
       "name": "Class AutoText",
@@ -240,13 +302,24 @@
             "url": "https://developers.google.com/apps-script/reference/slides/text-range"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum AutoTextType",
       "url": "https://developers.google.com/apps-script/reference/slides/auto-text-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "An auto text type that is not supported."
+        },
+        {
+          "name": "SLIDE_NUMBER",
+          "description": "A slide number."
+        }
+      ]
     },
     {
       "name": "Class Autofit",
@@ -289,13 +362,32 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum AutofitType",
       "url": "https://developers.google.com/apps-script/reference/slides/autofit-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "An autofit type that is not supported."
+        },
+        {
+          "name": "NONE",
+          "description": "Autofit isn't applied."
+        },
+        {
+          "name": "TEXT_AUTOFIT",
+          "description": "Shrinks the text on overflow."
+        },
+        {
+          "name": "SHAPE_AUTOFIT",
+          "description": "Resizes the shape to fit the text."
+        }
+      ]
     },
     {
       "name": "Class Border",
@@ -383,13 +475,28 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum CellMergeState",
       "url": "https://developers.google.com/apps-script/reference/slides/cell-merge-state",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NORMAL",
+          "description": "The cell is not merged."
+        },
+        {
+          "name": "HEAD",
+          "description": "The cell is merged and it is the head (i.e. upper left) cell within the merged set of cells.As an example, assume the following table.-------------------\n|(0,0)|(0,1)|(0,2)|\n-------------------If the first two cells are merged to form the following table, cell (0,0) is the head cell and\n(0,1) is a merged cell.-------------------\n|(0,0)      |(0,2)|\n-------------------"
+        },
+        {
+          "name": "MERGED",
+          "description": "The cell is merged but is not the head (i.e. upper left) cell.As an example, assume the following table.-------------------\n|(0,0)|(0,1)|(0,2)|\n-------------------If the first two cells are merged to form the following table, cell (0,0) is the head cell and\n(0,1) is a merged cell.-------------------\n|(0,0)      |(0,2)|\n-------------------"
+        }
+      ]
     },
     {
       "name": "Class Color",
@@ -423,7 +530,8 @@
             "url": "https://developers.google.com/apps-script/reference/base/color-type.html"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ColorScheme",
@@ -551,7 +659,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ConnectionSite",
@@ -576,19 +685,68 @@
             "url": "https://developers.google.com/apps-script/reference/slides/page-element"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ContentAlignment",
       "url": "https://developers.google.com/apps-script/reference/slides/content-alignment",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A content alignment that is not supported."
+        },
+        {
+          "name": "TOP",
+          "description": "Aligns the content to the top of the content holder. Corresponds to ECMA-376\nST_TextAnchoringType 't'."
+        },
+        {
+          "name": "MIDDLE",
+          "description": "Aligns the content to the middle of the content holder. Corresponds to ECMA-376\nST_TextAnchoringType 'ctr'."
+        },
+        {
+          "name": "BOTTOM",
+          "description": "Aligns the content to the bottom of the content holder. Corresponds to ECMA-376\nST_TextAnchoringType 'b'."
+        }
+      ]
     },
     {
       "name": "Enum DashStyle",
       "url": "https://developers.google.com/apps-script/reference/slides/dash-style",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A dash style that is not supported."
+        },
+        {
+          "name": "SOLID",
+          "description": "Solid line. Corresponds to ECMA-376 ST_PresetLineDashVal value 'solid'. This is the default\ndash style."
+        },
+        {
+          "name": "DOT",
+          "description": "Dotted line. Corresponds to ECMA-376 ST_PresetLineDashVal value 'dot'."
+        },
+        {
+          "name": "DASH",
+          "description": "Dashed line. Corresponds to ECMA-376 ST_PresetLineDashVal value 'dash'."
+        },
+        {
+          "name": "DASH_DOT",
+          "description": "Alternating dashes and dots. Corresponds to ECMA-376 ST_PresetLineDashVal value 'dashDot'."
+        },
+        {
+          "name": "LONG_DASH",
+          "description": "Line with large dashes. Corresponds to ECMA-376 ST_PresetLineDashVal value 'lgDash'."
+        },
+        {
+          "name": "LONG_DASH_DOT",
+          "description": "Alternating large dashes and dots. Corresponds to ECMA-376 ST_PresetLineDashVal value\n'lgDashDot'."
+        }
+      ]
     },
     {
       "name": "Class Fill",
@@ -839,13 +997,28 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum FillType",
       "url": "https://developers.google.com/apps-script/reference/slides/fill-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A fill type that is not supported."
+        },
+        {
+          "name": "NONE",
+          "description": "No fill, so the background is transparent."
+        },
+        {
+          "name": "SOLID",
+          "description": "A solid color fill."
+        }
+      ]
     },
     {
       "name": "Class Group",
@@ -1302,7 +1475,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Image",
@@ -2000,7 +2174,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Layout",
@@ -3115,7 +3290,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Line",
@@ -3975,13 +4151,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum LineCategory",
       "url": "https://developers.google.com/apps-script/reference/slides/line-category",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A line category that is not supported."
+        },
+        {
+          "name": "STRAIGHT",
+          "description": "Straight connectors, including straight connector 1."
+        },
+        {
+          "name": "BENT",
+          "description": "Bent connectors, including bent connector 2 to 5."
+        },
+        {
+          "name": "CURVED",
+          "description": "Curved connectors, including curved connector 2 to 5."
+        }
+      ]
     },
     {
       "name": "Class LineFill",
@@ -4214,19 +4409,80 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum LineFillType",
       "url": "https://developers.google.com/apps-script/reference/slides/line-fill-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A line fill type that is not supported."
+        },
+        {
+          "name": "NONE",
+          "description": "No fill, so the line or outline is transparent."
+        },
+        {
+          "name": "SOLID",
+          "description": "A solid color fill."
+        }
+      ]
     },
     {
       "name": "Enum LineType",
       "url": "https://developers.google.com/apps-script/reference/slides/line-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A line type that is not supported."
+        },
+        {
+          "name": "STRAIGHT_CONNECTOR_1",
+          "description": "Straight connector 1 form. Corresponds to ECMA-376 ST_ShapeType 'straightConnector1'."
+        },
+        {
+          "name": "BENT_CONNECTOR_2",
+          "description": "Bent connector 2 form. Corresponds to ECMA-376 ST_ShapeType 'bentConnector2'."
+        },
+        {
+          "name": "BENT_CONNECTOR_3",
+          "description": "Bent connector 3 form. Corresponds to ECMA-376 ST_ShapeType 'bentConnector3'."
+        },
+        {
+          "name": "BENT_CONNECTOR_4",
+          "description": "Bent connector 4 form. Corresponds to ECMA-376 ST_ShapeType 'bentConnector4'."
+        },
+        {
+          "name": "BENT_CONNECTOR_5",
+          "description": "Bent connector 5 form. Corresponds to ECMA-376 ST_ShapeType 'bentConnector5'."
+        },
+        {
+          "name": "CURVED_CONNECTOR_2",
+          "description": "Curved connector 2 form. Corresponds to ECMA-376 ST_ShapeType 'curvedConnector2'."
+        },
+        {
+          "name": "CURVED_CONNECTOR_3",
+          "description": "Curved connector 3 form. Corresponds to ECMA-376 ST_ShapeType 'curvedConnector3'."
+        },
+        {
+          "name": "CURVED_CONNECTOR_4",
+          "description": "Curved connector 4 form. Corresponds to ECMA-376 ST_ShapeType 'curvedConnector4'."
+        },
+        {
+          "name": "CURVED_CONNECTOR_5",
+          "description": "Curved connector 5 form. Corresponds to ECMA-376 ST_ShapeType 'curvedConnector5'."
+        },
+        {
+          "name": "STRAIGHT_LINE",
+          "description": "Straight line. Corresponds to ECMA-376 ST_ShapeType 'line'. This line type is not a connector."
+        }
+      ]
     },
     {
       "name": "Class Link",
@@ -4287,13 +4543,36 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum LinkType",
       "url": "https://developers.google.com/apps-script/reference/slides/link-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A link type that is not supported."
+        },
+        {
+          "name": "URL",
+          "description": "A link to an external web page."
+        },
+        {
+          "name": "SLIDE_POSITION",
+          "description": "A link to a specific slide in this presentation, addressed by its position."
+        },
+        {
+          "name": "SLIDE_ID",
+          "description": "A link to a specific slide in this presentation, addressed by its ID."
+        },
+        {
+          "name": "SLIDE_INDEX",
+          "description": "A link to a specific slide in this presentation, addressed by its zero-based index."
+        }
+      ]
     },
     {
       "name": "Class List",
@@ -4318,13 +4597,76 @@
             "url": "https://developers.google.com/apps-script/reference/slides/paragraph"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ListPreset",
       "url": "https://developers.google.com/apps-script/reference/slides/list-preset",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DISC_CIRCLE_SQUARE",
+          "description": "A list with a `DISC`, `CIRCLE` and `SQUARE` glyphs for the first 3 list nesting levels."
+        },
+        {
+          "name": "DIAMONDX_ARROW3D_SQUARE",
+          "description": "A list with a `DIAMONDX`, `ARROW3D` and `SQUARE` glyphs for the first 3 list nesting levels."
+        },
+        {
+          "name": "CHECKBOX",
+          "description": "A list with `CHECKBOX` glyphs for all list nesting levels."
+        },
+        {
+          "name": "ARROW_DIAMOND_DISC",
+          "description": "A list with a `ARROW`, `DIAMOND` and `DISC` glyphs for the first 3 list nesting levels."
+        },
+        {
+          "name": "STAR_CIRCLE_SQUARE",
+          "description": "A list with a `STAR`, `CIRCLE` and `SQUARE` glyphs for the first 3 list nesting levels."
+        },
+        {
+          "name": "ARROW3D_CIRCLE_SQUARE",
+          "description": "A list with a `ARROW3D`, `CIRCLE` and `SQUARE` glyphs for the first 3 list nesting levels."
+        },
+        {
+          "name": "LEFTTRIANGLE_DIAMOND_DISC",
+          "description": "A list with a `LEFTTRIANGLE`, `DIAMOND` and `DISC` glyphs for the first 3 list nesting levels."
+        },
+        {
+          "name": "DIAMONDX_HOLLOWDIAMOND_SQUARE",
+          "description": "A list with a `DIAMONDX`, `HOLLOWDIAMOND` and `SQUARE` glyphs for the first 3 list nesting\nlevels."
+        },
+        {
+          "name": "DIAMOND_CIRCLE_SQUARE",
+          "description": "A list with a `DIAMOND`, `CIRCLE` and `SQUARE` glyphs for the first 3 list nesting levels."
+        },
+        {
+          "name": "DIGIT_ALPHA_ROMAN",
+          "description": "A list with `DIGIT`, `ALPHA` and `ROMAN` glyphs for the first 3 list nesting levels, followed\nby periods."
+        },
+        {
+          "name": "DIGIT_ALPHA_ROMAN_PARENS",
+          "description": "A list with `DIGIT`, `ALPHA` and `ROMAN` glyphs for the first 3 list nesting levels, followed\nby parenthesis."
+        },
+        {
+          "name": "DIGIT_NESTED",
+          "description": "A list with `DIGIT` glyphs separated by periods, where each nesting level uses the previous\nnesting level's glyph as a prefix. For example: '1.', '1.1.', '2.', '2.2.'."
+        },
+        {
+          "name": "UPPERALPHA_ALPHA_ROMAN",
+          "description": "A list with `UPPERALPHA`, `ALPHA` and `ROMAN` glyphs for the first 3 list nesting levels,\nfollowed by periods."
+        },
+        {
+          "name": "UPPERROMAN_UPPERALPHA_DIGIT",
+          "description": "A list with `UPPERROMAN`, `UPPERALPHA` and `DIGIT` glyphs for the first 3 list nesting levels,\nfollowed by periods."
+        },
+        {
+          "name": "ZERODIGIT_ALPHA_ROMAN",
+          "description": "A list with `ZERODIGIT`, `ALPHA` and `ROMAN` glyphs for the first 3 list nesting levels,\nfollowed by periods."
+        }
+      ]
     },
     {
       "name": "Class ListStyle",
@@ -4394,7 +4736,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Master",
@@ -5500,7 +5843,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class NotesMaster",
@@ -5668,7 +6012,8 @@
             "url": "https://developers.google.com/apps-script/reference/slides/word-art"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class NotesPage",
@@ -5905,7 +6250,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Page",
@@ -7029,7 +7375,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PageBackground",
@@ -7325,13 +7672,32 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PageBackgroundType",
       "url": "https://developers.google.com/apps-script/reference/slides/page-background-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A page background type that is not supported."
+        },
+        {
+          "name": "NONE",
+          "description": "No fill, so the background is rendered white."
+        },
+        {
+          "name": "SOLID",
+          "description": "A solid color fill."
+        },
+        {
+          "name": "PICTURE",
+          "description": "A picture that is stretched to fill the page."
+        }
+      ]
     },
     {
       "name": "Class PageElement",
@@ -7851,7 +8217,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PageElementRange",
@@ -7867,13 +8234,56 @@
             "url": "https://developers.google.com/apps-script/reference/slides/page-element"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PageElementType",
       "url": "https://developers.google.com/apps-script/reference/slides/page-element-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "Represents a page element that is not supported and cannot be further classified."
+        },
+        {
+          "name": "SHAPE",
+          "description": "Represents a generic shape that does not have a more specific classification."
+        },
+        {
+          "name": "IMAGE",
+          "description": "Represents an image."
+        },
+        {
+          "name": "VIDEO",
+          "description": "Represents a video."
+        },
+        {
+          "name": "TABLE",
+          "description": "Represents a table."
+        },
+        {
+          "name": "GROUP",
+          "description": "Represents a collection of page elements joined as a single unit."
+        },
+        {
+          "name": "LINE",
+          "description": "Represents a line."
+        },
+        {
+          "name": "WORD_ART",
+          "description": "Represents word art."
+        },
+        {
+          "name": "SHEETS_CHART",
+          "description": "Represents a linked chart embedded from Google Sheets."
+        },
+        {
+          "name": "SPEAKER_SPOTLIGHT",
+          "description": "Represents a speaker spotlight."
+        }
+      ]
     },
     {
       "name": "Class PageRange",
@@ -7889,13 +8299,32 @@
             "url": "https://developers.google.com/apps-script/reference/slides/page"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PageType",
       "url": "https://developers.google.com/apps-script/reference/slides/page-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A page type that is not supported."
+        },
+        {
+          "name": "SLIDE",
+          "description": "A slide page."
+        },
+        {
+          "name": "LAYOUT",
+          "description": "A layout page."
+        },
+        {
+          "name": "MASTER",
+          "description": "A master page."
+        }
+      ]
     },
     {
       "name": "Class Paragraph",
@@ -7920,13 +8349,36 @@
             "url": "https://developers.google.com/apps-script/reference/slides/text-range"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ParagraphAlignment",
       "url": "https://developers.google.com/apps-script/reference/slides/paragraph-alignment",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A paragraph alignment that is not supported."
+        },
+        {
+          "name": "START",
+          "description": "The paragraph is aligned to the start of the line. Left-aligned for left-to-right text,\nright-aligned otherwise."
+        },
+        {
+          "name": "CENTER",
+          "description": "The paragraph is centered."
+        },
+        {
+          "name": "END",
+          "description": "The paragraph is aligned to the end of the line. Right-aligned for left-to-right text,\nleft-aligned otherwise."
+        },
+        {
+          "name": "JUSTIFIED",
+          "description": "The paragraph is justified."
+        }
+      ]
     },
     {
       "name": "Class ParagraphStyle",
@@ -8176,7 +8628,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PictureFill",
@@ -8228,13 +8681,88 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PlaceholderType",
       "url": "https://developers.google.com/apps-script/reference/slides/placeholder-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A placeholder type that is not supported."
+        },
+        {
+          "name": "NONE",
+          "description": "Not a Placeholder."
+        },
+        {
+          "name": "BODY",
+          "description": "Body text."
+        },
+        {
+          "name": "CHART",
+          "description": "Chart or graph."
+        },
+        {
+          "name": "CLIP_ART",
+          "description": "Clip art image."
+        },
+        {
+          "name": "CENTERED_TITLE",
+          "description": "Title centered."
+        },
+        {
+          "name": "DIAGRAM",
+          "description": "Diagram."
+        },
+        {
+          "name": "DATE_AND_TIME",
+          "description": "Date and time."
+        },
+        {
+          "name": "FOOTER",
+          "description": "Footer text."
+        },
+        {
+          "name": "HEADER",
+          "description": "Header text."
+        },
+        {
+          "name": "MEDIA",
+          "description": "Multimedia."
+        },
+        {
+          "name": "OBJECT",
+          "description": "Any content type."
+        },
+        {
+          "name": "PICTURE",
+          "description": "Picture."
+        },
+        {
+          "name": "SLIDE_NUMBER",
+          "description": "Number of a slide."
+        },
+        {
+          "name": "SUBTITLE",
+          "description": "Subtitle."
+        },
+        {
+          "name": "TABLE",
+          "description": "Table."
+        },
+        {
+          "name": "TITLE",
+          "description": "Slide title."
+        },
+        {
+          "name": "SLIDE_IMAGE",
+          "description": "Slide image."
+        }
+      ]
     },
     {
       "name": "Class Point",
@@ -8259,13 +8787,64 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PredefinedLayout",
       "url": "https://developers.google.com/apps-script/reference/slides/predefined-layout",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A layout that is not supported."
+        },
+        {
+          "name": "BLANK",
+          "description": "Blank layout, with no placeholders."
+        },
+        {
+          "name": "CAPTION_ONLY",
+          "description": "Layout with a caption at the bottom."
+        },
+        {
+          "name": "TITLE",
+          "description": "Layout with a title and a subtitle."
+        },
+        {
+          "name": "TITLE_AND_BODY",
+          "description": "Layout with a title and body."
+        },
+        {
+          "name": "TITLE_AND_TWO_COLUMNS",
+          "description": "Layout with a title and two columns."
+        },
+        {
+          "name": "TITLE_ONLY",
+          "description": "Layout with only a title."
+        },
+        {
+          "name": "SECTION_HEADER",
+          "description": "Layout with a section title."
+        },
+        {
+          "name": "SECTION_TITLE_AND_DESCRIPTION",
+          "description": "Layout with a title and subtitle on one side and description on the other."
+        },
+        {
+          "name": "ONE_COLUMN_TEXT",
+          "description": "Layout with one title and one body, arranged in a single column."
+        },
+        {
+          "name": "MAIN_POINT",
+          "description": "Layout with a main point."
+        },
+        {
+          "name": "BIG_NUMBER",
+          "description": "Layout with a big number heading."
+        }
+      ]
     },
     {
       "name": "Class Presentation",
@@ -8920,7 +9499,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Selection",
@@ -8981,13 +9561,44 @@
             "url": "https://developers.google.com/apps-script/reference/slides/text-range"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SelectionType",
       "url": "https://developers.google.com/apps-script/reference/slides/selection-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A selection type that is not supported."
+        },
+        {
+          "name": "NONE",
+          "description": "No selection."
+        },
+        {
+          "name": "TEXT",
+          "description": "Text selection."
+        },
+        {
+          "name": "TABLE_CELL",
+          "description": "Table cell selection."
+        },
+        {
+          "name": "PAGE",
+          "description": "Page selection in the thumbnail flimstrip."
+        },
+        {
+          "name": "PAGE_ELEMENT",
+          "description": "Page element selection."
+        },
+        {
+          "name": "CURRENT_PAGE",
+          "description": "Current page selection."
+        }
+      ]
     },
     {
       "name": "Class Shape",
@@ -9739,13 +10350,588 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ShapeType",
       "url": "https://developers.google.com/apps-script/reference/slides/shape-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A shape type that is not supported."
+        },
+        {
+          "name": "TEXT_BOX",
+          "description": "Text box shape."
+        },
+        {
+          "name": "RECTANGLE",
+          "description": "Rectangle shape. Corresponds to ECMA-376 ST_ShapeType 'rect'."
+        },
+        {
+          "name": "ROUND_RECTANGLE",
+          "description": "Round corner rectangle shape. Corresponds to ECMA-376 ST_ShapeType 'roundRect'."
+        },
+        {
+          "name": "ELLIPSE",
+          "description": "Ellipse shape. Corresponds to ECMA-376 ST_ShapeType 'ellipse'."
+        },
+        {
+          "name": "ARC",
+          "description": "Curved arc shape. Corresponds to ECMA-376 ST_ShapeType 'arc'."
+        },
+        {
+          "name": "BENT_ARROW",
+          "description": "Bent arrow shape. Corresponds to ECMA-376 ST_ShapeType 'bentArrow'."
+        },
+        {
+          "name": "BENT_UP_ARROW",
+          "description": "Bent up arrow shape. Corresponds to ECMA-376 ST_ShapeType 'bentUpArrow'."
+        },
+        {
+          "name": "BEVEL",
+          "description": "Bevel shape. Corresponds to ECMA-376 ST_ShapeType 'bevel'."
+        },
+        {
+          "name": "BLOCK_ARC",
+          "description": "Block arc shape. Corresponds to ECMA-376 ST_ShapeType 'blockArc'."
+        },
+        {
+          "name": "BRACE_PAIR",
+          "description": "Brace pair shape. Corresponds to ECMA-376 ST_ShapeType 'bracePair'."
+        },
+        {
+          "name": "BRACKET_PAIR",
+          "description": "Bracket pair shape. Corresponds to ECMA-376 ST_ShapeType 'bracketPair'."
+        },
+        {
+          "name": "CAN",
+          "description": "Can shape. Corresponds to ECMA-376 ST_ShapeType 'can'."
+        },
+        {
+          "name": "CHEVRON",
+          "description": "Chevron shape. Corresponds to ECMA-376 ST_ShapeType 'chevron'."
+        },
+        {
+          "name": "CHORD",
+          "description": "Chord shape. Corresponds to ECMA-376 ST_ShapeType 'chord'."
+        },
+        {
+          "name": "CLOUD",
+          "description": "Cloud shape. Corresponds to ECMA-376 ST_ShapeType 'cloud'."
+        },
+        {
+          "name": "CORNER",
+          "description": "Corner shape. Corresponds to ECMA-376 ST_ShapeType 'corner'."
+        },
+        {
+          "name": "CUBE",
+          "description": "Cube shape. Corresponds to ECMA-376 ST_ShapeType 'cube'."
+        },
+        {
+          "name": "CURVED_DOWN_ARROW",
+          "description": "Curved down arrow shape. Corresponds to ECMA-376 ST_ShapeType 'curvedDownArrow'."
+        },
+        {
+          "name": "CURVED_LEFT_ARROW",
+          "description": "Curved left arrow shape. Corresponds to ECMA-376 ST_ShapeType 'curvedLeftArrow'."
+        },
+        {
+          "name": "CURVED_RIGHT_ARROW",
+          "description": "Curved right arrow shape. Corresponds to ECMA-376 ST_ShapeType 'curvedRightArrow'."
+        },
+        {
+          "name": "CURVED_UP_ARROW",
+          "description": "Curved up arrow shape. Corresponds to ECMA-376 ST_ShapeType 'curvedUpArrow'."
+        },
+        {
+          "name": "DECAGON",
+          "description": "Decagon shape. Corresponds to ECMA-376 ST_ShapeType 'decagon'."
+        },
+        {
+          "name": "DIAGONAL_STRIPE",
+          "description": "Diagonal stripe shape. Corresponds to ECMA-376 ST_ShapeType 'diagStripe'."
+        },
+        {
+          "name": "DIAMOND",
+          "description": "Diamond shape. Corresponds to ECMA-376 ST_ShapeType 'diamond'."
+        },
+        {
+          "name": "DODECAGON",
+          "description": "Dodecagon shape. Corresponds to ECMA-376 ST_ShapeType 'dodecagon'."
+        },
+        {
+          "name": "DONUT",
+          "description": "Donut shape. Corresponds to ECMA-376 ST_ShapeType 'donut'."
+        },
+        {
+          "name": "DOUBLE_WAVE",
+          "description": "Double wave shape. Corresponds to ECMA-376 ST_ShapeType 'doubleWave'."
+        },
+        {
+          "name": "DOWN_ARROW",
+          "description": "Down arrow shape. Corresponds to ECMA-376 ST_ShapeType 'downArrow'."
+        },
+        {
+          "name": "DOWN_ARROW_CALLOUT",
+          "description": "Callout down arrow shape. Corresponds to ECMA-376 ST_ShapeType 'downArrowCallout'."
+        },
+        {
+          "name": "FOLDED_CORNER",
+          "description": "Folded corner shape. Corresponds to ECMA-376 ST_ShapeType 'foldedCorner'."
+        },
+        {
+          "name": "FRAME",
+          "description": "Frame shape. Corresponds to ECMA-376 ST_ShapeType 'frame'."
+        },
+        {
+          "name": "HALF_FRAME",
+          "description": "Half frame shape. Corresponds to ECMA-376 ST_ShapeType 'halfFrame'."
+        },
+        {
+          "name": "HEART",
+          "description": "Heart shape. Corresponds to ECMA-376 ST_ShapeType 'heart'."
+        },
+        {
+          "name": "HEPTAGON",
+          "description": "Heptagon shape. Corresponds to ECMA-376 ST_ShapeType 'heptagon'."
+        },
+        {
+          "name": "HEXAGON",
+          "description": "Hexagon shape. Corresponds to ECMA-376 ST_ShapeType 'hexagon'."
+        },
+        {
+          "name": "HOME_PLATE",
+          "description": "Home plate shape. Corresponds to ECMA-376 ST_ShapeType 'homePlate'."
+        },
+        {
+          "name": "HORIZONTAL_SCROLL",
+          "description": "Horizontal scroll shape. Corresponds to ECMA-376 ST_ShapeType 'horizontalScroll'."
+        },
+        {
+          "name": "IRREGULAR_SEAL_1",
+          "description": "Irregular seal 1 shape. Corresponds to ECMA-376 ST_ShapeType 'irregularSeal1'."
+        },
+        {
+          "name": "IRREGULAR_SEAL_2",
+          "description": "Irregular seal 2 shape. Corresponds to ECMA-376 ST_ShapeType 'irregularSeal2'."
+        },
+        {
+          "name": "LEFT_ARROW",
+          "description": "Left arrow shape. Corresponds to ECMA-376 ST_ShapeType 'leftArrow'."
+        },
+        {
+          "name": "LEFT_ARROW_CALLOUT",
+          "description": "Callout left arrow shape. Corresponds to ECMA-376 ST_ShapeType 'leftArrowCallout'."
+        },
+        {
+          "name": "LEFT_BRACE",
+          "description": "Left brace shape. Corresponds to ECMA-376 ST_ShapeType 'leftBrace'."
+        },
+        {
+          "name": "LEFT_BRACKET",
+          "description": "Left bracket shape. Corresponds to ECMA-376 ST_ShapeType 'leftBracket'."
+        },
+        {
+          "name": "LEFT_RIGHT_ARROW",
+          "description": "Left right arrow shape. Corresponds to ECMA-376 ST_ShapeType 'leftRightArrow'."
+        },
+        {
+          "name": "LEFT_RIGHT_ARROW_CALLOUT",
+          "description": "Callout left right arrow shape. Corresponds to ECMA-376 ST_ShapeType 'leftRightArrowCallout'."
+        },
+        {
+          "name": "LEFT_RIGHT_UP_ARROW",
+          "description": "Left right up arrow shape. Corresponds to ECMA-376 ST_ShapeType 'leftRightUpArrow'."
+        },
+        {
+          "name": "LEFT_UP_ARROW",
+          "description": "Left up arrow shape. Corresponds to ECMA-376 ST_ShapeType 'leftUpArrow'."
+        },
+        {
+          "name": "LIGHTNING_BOLT",
+          "description": "Lightning bolt shape. Corresponds to ECMA-376 ST_ShapeType 'lightningBolt'."
+        },
+        {
+          "name": "MATH_DIVIDE",
+          "description": "Divide math shape. Corresponds to ECMA-376 ST_ShapeType 'mathDivide'."
+        },
+        {
+          "name": "MATH_EQUAL",
+          "description": "Equal math shape. Corresponds to ECMA-376 ST_ShapeType 'mathEqual'."
+        },
+        {
+          "name": "MATH_MINUS",
+          "description": "Minus math shape. Corresponds to ECMA-376 ST_ShapeType 'mathMinus'."
+        },
+        {
+          "name": "MATH_MULTIPLY",
+          "description": "Multiply math shape. Corresponds to ECMA-376 ST_ShapeType 'mathMultiply'."
+        },
+        {
+          "name": "MATH_NOT_EQUAL",
+          "description": "Not equal math shape. Corresponds to ECMA-376 ST_ShapeType 'mathNotEqual'."
+        },
+        {
+          "name": "MATH_PLUS",
+          "description": "Plus math shape. Corresponds to ECMA-376 ST_ShapeType 'mathPlus'."
+        },
+        {
+          "name": "MOON",
+          "description": "Moon shape. Corresponds to ECMA-376 ST_ShapeType 'moon'."
+        },
+        {
+          "name": "NO_SMOKING",
+          "description": "No smoking shape. Corresponds to ECMA-376 ST_ShapeType 'noSmoking'."
+        },
+        {
+          "name": "NOTCHED_RIGHT_ARROW",
+          "description": "Notched right arrow shape. Corresponds to ECMA-376 ST_ShapeType 'notchedRightArrow'."
+        },
+        {
+          "name": "OCTAGON",
+          "description": "Octagon shape. Corresponds to ECMA-376 ST_ShapeType 'octagon'."
+        },
+        {
+          "name": "PARALLELOGRAM",
+          "description": "Parallelogram shape. Corresponds to ECMA-376 ST_ShapeType 'parallelogram'."
+        },
+        {
+          "name": "PENTAGON",
+          "description": "Pentagon shape. Corresponds to ECMA-376 ST_ShapeType 'pentagon'."
+        },
+        {
+          "name": "PIE",
+          "description": "Pie shape. Corresponds to ECMA-376 ST_ShapeType 'pie'."
+        },
+        {
+          "name": "PLAQUE",
+          "description": "Plaque shape. Corresponds to ECMA-376 ST_ShapeType 'plaque'."
+        },
+        {
+          "name": "PLUS",
+          "description": "Plus shape. Corresponds to ECMA-376 ST_ShapeType 'plus'."
+        },
+        {
+          "name": "QUAD_ARROW",
+          "description": "Quad-arrow shape. Corresponds to ECMA-376 ST_ShapeType 'quadArrow'."
+        },
+        {
+          "name": "QUAD_ARROW_CALLOUT",
+          "description": "Callout quad-arrow shape. Corresponds to ECMA-376 ST_ShapeType 'quadArrowCallout'."
+        },
+        {
+          "name": "RIBBON",
+          "description": "Ribbon shape. Corresponds to ECMA-376 ST_ShapeType 'ribbon'."
+        },
+        {
+          "name": "RIBBON_2",
+          "description": "Ribbon 2 shape. Corresponds to ECMA-376 ST_ShapeType 'ribbon2'."
+        },
+        {
+          "name": "RIGHT_ARROW",
+          "description": "Right arrow shape. Corresponds to ECMA-376 ST_ShapeType 'rightArrow'."
+        },
+        {
+          "name": "RIGHT_ARROW_CALLOUT",
+          "description": "Callout right arrow shape. Corresponds to ECMA-376 ST_ShapeType 'rightArrowCallout'."
+        },
+        {
+          "name": "RIGHT_BRACE",
+          "description": "Right brace shape. Corresponds to ECMA-376 ST_ShapeType 'rightBrace'."
+        },
+        {
+          "name": "RIGHT_BRACKET",
+          "description": "Right bracket shape. Corresponds to ECMA-376 ST_ShapeType 'rightBracket'."
+        },
+        {
+          "name": "ROUND_1_RECTANGLE",
+          "description": "One round corner rectangle shape. Corresponds to ECMA-376 ST_ShapeType 'round1Rect'."
+        },
+        {
+          "name": "ROUND_2_DIAGONAL_RECTANGLE",
+          "description": "Two diagonal round corner rectangle shape. Corresponds to ECMA-376 ST_ShapeType\n'round2DiagRect'."
+        },
+        {
+          "name": "ROUND_2_SAME_RECTANGLE",
+          "description": "Two same-side round corner rectangle shape. Corresponds to ECMA-376 ST_ShapeType\n'round2SameRect'."
+        },
+        {
+          "name": "RIGHT_TRIANGLE",
+          "description": "Right triangle shape. Corresponds to ECMA-376 ST_ShapeType 'rtTriangle'."
+        },
+        {
+          "name": "SMILEY_FACE",
+          "description": "Smiley face shape. Corresponds to ECMA-376 ST_ShapeType 'smileyFace'."
+        },
+        {
+          "name": "SNIP_1_RECTANGLE",
+          "description": "One snip corner rectangle shape. Corresponds to ECMA-376 ST_ShapeType 'snip1Rect'."
+        },
+        {
+          "name": "SNIP_2_DIAGONAL_RECTANGLE",
+          "description": "Two diagonal snip corner rectangle shape. Corresponds to ECMA-376 ST_ShapeType 'snip2DiagRect'."
+        },
+        {
+          "name": "SNIP_2_SAME_RECTANGLE",
+          "description": "Two same-side snip corner rectangle shape. Corresponds to ECMA-376 ST_ShapeType\n'snip2SameRect'."
+        },
+        {
+          "name": "SNIP_ROUND_RECTANGLE",
+          "description": "One snip one round corner rectangle shape. Corresponds to ECMA-376 ST_ShapeType\n'snipRoundRect'."
+        },
+        {
+          "name": "STAR_10",
+          "description": "Ten pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star10'."
+        },
+        {
+          "name": "STAR_12",
+          "description": "Twelve pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star12'."
+        },
+        {
+          "name": "STAR_16",
+          "description": "Sixteen pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star16'."
+        },
+        {
+          "name": "STAR_24",
+          "description": "Twenty four pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star24'."
+        },
+        {
+          "name": "STAR_32",
+          "description": "Thirty two pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star32'."
+        },
+        {
+          "name": "STAR_4",
+          "description": "Four pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star4'."
+        },
+        {
+          "name": "STAR_5",
+          "description": "Five pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star5'."
+        },
+        {
+          "name": "STAR_6",
+          "description": "Six pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star6'."
+        },
+        {
+          "name": "STAR_7",
+          "description": "Seven pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star7'."
+        },
+        {
+          "name": "STAR_8",
+          "description": "Eight pointed star shape. Corresponds to ECMA-376 ST_ShapeType 'star8'."
+        },
+        {
+          "name": "STRIPED_RIGHT_ARROW",
+          "description": "Striped right arrow shape. Corresponds to ECMA-376 ST_ShapeType 'stripedRightArrow'."
+        },
+        {
+          "name": "SUN",
+          "description": "Sun shape. Corresponds to ECMA-376 ST_ShapeType 'sun'."
+        },
+        {
+          "name": "TRAPEZOID",
+          "description": "Trapezoid shape. Corresponds to ECMA-376 ST_ShapeType 'trapezoid'."
+        },
+        {
+          "name": "TRIANGLE",
+          "description": "Triangle shape. Corresponds to ECMA-376 ST_ShapeType 'triangle'."
+        },
+        {
+          "name": "UP_ARROW",
+          "description": "Up arrow shape. Corresponds to ECMA-376 ST_ShapeType 'upArrow'."
+        },
+        {
+          "name": "UP_ARROW_CALLOUT",
+          "description": "Callout up arrow shape. Corresponds to ECMA-376 ST_ShapeType 'upArrowCallout'."
+        },
+        {
+          "name": "UP_DOWN_ARROW",
+          "description": "Up down arrow shape. Corresponds to ECMA-376 ST_ShapeType 'upDownArrow'."
+        },
+        {
+          "name": "UTURN_ARROW",
+          "description": "U-turn arrow shape. Corresponds to ECMA-376 ST_ShapeType 'uturnArrow'."
+        },
+        {
+          "name": "VERTICAL_SCROLL",
+          "description": "Vertical scroll shape. Corresponds to ECMA-376 ST_ShapeType 'verticalScroll'."
+        },
+        {
+          "name": "WAVE",
+          "description": "Wave shape. Corresponds to ECMA-376 ST_ShapeType 'wave'."
+        },
+        {
+          "name": "WEDGE_ELLIPSE_CALLOUT",
+          "description": "Callout wedge ellipse shape. Corresponds to ECMA-376 ST_ShapeType 'wedgeEllipseCallout'."
+        },
+        {
+          "name": "WEDGE_RECTANGLE_CALLOUT",
+          "description": "Callout wedge rectangle shape. Corresponds to ECMA-376 ST_ShapeType 'wedgeRectCallout'."
+        },
+        {
+          "name": "WEDGE_ROUND_RECTANGLE_CALLOUT",
+          "description": "Callout wedge round rectangle shape. Corresponds to ECMA-376 ST_ShapeType\n'wedgeRoundRectCallout'."
+        },
+        {
+          "name": "FLOW_CHART_ALTERNATE_PROCESS",
+          "description": "Alternate process flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartAlternateProcess'."
+        },
+        {
+          "name": "FLOW_CHART_COLLATE",
+          "description": "Collate flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartCollate'."
+        },
+        {
+          "name": "FLOW_CHART_CONNECTOR",
+          "description": "Connector flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartConnector'."
+        },
+        {
+          "name": "FLOW_CHART_DECISION",
+          "description": "Decision flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartDecision'."
+        },
+        {
+          "name": "FLOW_CHART_DELAY",
+          "description": "Delay flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartDelay'."
+        },
+        {
+          "name": "FLOW_CHART_DISPLAY",
+          "description": "Display flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartDisplay'."
+        },
+        {
+          "name": "FLOW_CHART_DOCUMENT",
+          "description": "Document flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartDocument'."
+        },
+        {
+          "name": "FLOW_CHART_EXTRACT",
+          "description": "Extract flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartExtract'."
+        },
+        {
+          "name": "FLOW_CHART_INPUT_OUTPUT",
+          "description": "Input output flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartInputOutput'."
+        },
+        {
+          "name": "FLOW_CHART_INTERNAL_STORAGE",
+          "description": "Internal storage flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartInternalStorage'."
+        },
+        {
+          "name": "FLOW_CHART_MAGNETIC_DISK",
+          "description": "Magnetic disk flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartMagneticDisk'."
+        },
+        {
+          "name": "FLOW_CHART_MAGNETIC_DRUM",
+          "description": "Magnetic drum flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartMagneticDrum'."
+        },
+        {
+          "name": "FLOW_CHART_MAGNETIC_TAPE",
+          "description": "Magnetic tape flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartMagneticTape'."
+        },
+        {
+          "name": "FLOW_CHART_MANUAL_INPUT",
+          "description": "Manual input flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartManualInput'."
+        },
+        {
+          "name": "FLOW_CHART_MANUAL_OPERATION",
+          "description": "Manual operation flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartManualOperation'."
+        },
+        {
+          "name": "FLOW_CHART_MERGE",
+          "description": "Merge flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartMerge'."
+        },
+        {
+          "name": "FLOW_CHART_MULTIDOCUMENT",
+          "description": "Multi-document flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartMultidocument'."
+        },
+        {
+          "name": "FLOW_CHART_OFFLINE_STORAGE",
+          "description": "Offline storage flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartOfflineStorage'."
+        },
+        {
+          "name": "FLOW_CHART_OFFPAGE_CONNECTOR",
+          "description": "Off-page connector flow shape. Corresponds to ECMA-376 ST_ShapeType\n'flowChartOffpageConnector'."
+        },
+        {
+          "name": "FLOW_CHART_ONLINE_STORAGE",
+          "description": "Online storage flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartOnlineStorage'."
+        },
+        {
+          "name": "FLOW_CHART_OR",
+          "description": "Or flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartOr'."
+        },
+        {
+          "name": "FLOW_CHART_PREDEFINED_PROCESS",
+          "description": "Predefined process flow shape. Corresponds to ECMA-376 ST_ShapeType\n'flowChartPredefinedProcess'."
+        },
+        {
+          "name": "FLOW_CHART_PREPARATION",
+          "description": "Preparation flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartPreparation'."
+        },
+        {
+          "name": "FLOW_CHART_PROCESS",
+          "description": "Process flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartProcess'."
+        },
+        {
+          "name": "FLOW_CHART_PUNCHED_CARD",
+          "description": "Punched card flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartPunchedCard'."
+        },
+        {
+          "name": "FLOW_CHART_PUNCHED_TAPE",
+          "description": "Punched tape flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartPunchedTape'."
+        },
+        {
+          "name": "FLOW_CHART_SORT",
+          "description": "Sort flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartSort'."
+        },
+        {
+          "name": "FLOW_CHART_SUMMING_JUNCTION",
+          "description": "Summing junction flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartSummingJunction'."
+        },
+        {
+          "name": "FLOW_CHART_TERMINATOR",
+          "description": "Terminator flow shape. Corresponds to ECMA-376 ST_ShapeType 'flowChartTerminator'."
+        },
+        {
+          "name": "ARROW_EAST",
+          "description": "East arrow shape."
+        },
+        {
+          "name": "ARROW_NORTH_EAST",
+          "description": "Northeast arrow shape."
+        },
+        {
+          "name": "ARROW_NORTH",
+          "description": "North arrow shape."
+        },
+        {
+          "name": "SPEECH",
+          "description": "Speech shape."
+        },
+        {
+          "name": "STARBURST",
+          "description": "Star burst shape."
+        },
+        {
+          "name": "TEARDROP",
+          "description": "Teardrop shape. Corresponds to ECMA-376 ST_ShapeType 'teardrop'."
+        },
+        {
+          "name": "ELLIPSE_RIBBON",
+          "description": "Ellipse ribbon shape. Corresponds to ECMA-376 ST_ShapeType 'ellipseRibbon'."
+        },
+        {
+          "name": "ELLIPSE_RIBBON_2",
+          "description": "Ellipse ribbon 2 shape. Corresponds to ECMA-376 ST_ShapeType 'ellipseRibbon2'."
+        },
+        {
+          "name": "CLOUD_CALLOUT",
+          "description": "Callout cloud shape. Corresponds to ECMA-376 ST_ShapeType 'cloudCallout'."
+        },
+        {
+          "name": "CUSTOM",
+          "description": "Custom shape."
+        }
+      ]
     },
     {
       "name": "Class SheetsChart",
@@ -10319,13 +11505,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SheetsChartEmbedType",
       "url": "https://developers.google.com/apps-script/reference/slides/sheets-chart-embed-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "Represents a chart that is not supported and cannot be further classified."
+        },
+        {
+          "name": "IMAGE",
+          "description": "Indicates that the chart is embedded as an image."
+        }
+      ]
     },
     {
       "name": "Class Slide",
@@ -11539,19 +12736,52 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SlideLinkingMode",
       "url": "https://developers.google.com/apps-script/reference/slides/slide-linking-mode",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A slide linking mode that isn't supported."
+        },
+        {
+          "name": "LINKED",
+          "description": "Indicates that slides are linked."
+        },
+        {
+          "name": "NOT_LINKED",
+          "description": "Indicates that slides aren't linked."
+        }
+      ]
     },
     {
       "name": "Enum SlidePosition",
       "url": "https://developers.google.com/apps-script/reference/slides/slide-position",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NEXT_SLIDE",
+          "description": "The next slide."
+        },
+        {
+          "name": "PREVIOUS_SLIDE",
+          "description": "The previous slide."
+        },
+        {
+          "name": "FIRST_SLIDE",
+          "description": "The first slide in the presentation."
+        },
+        {
+          "name": "LAST_SLIDE",
+          "description": "The last slide in the presentation."
+        }
+      ]
     },
     {
       "name": "Class SlidesApp",
@@ -11639,7 +12869,8 @@
             "url": "https://developers.google.com/apps-script/reference/slides/presentation"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SolidFill",
@@ -11664,13 +12895,28 @@
             "url": "https://developers.google.com/apps-script/reference/slides/color"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum SpacingMode",
       "url": "https://developers.google.com/apps-script/reference/slides/spacing-mode",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A spacing mode that is not supported."
+        },
+        {
+          "name": "NEVER_COLLAPSE",
+          "description": "Paragraph spacing is always rendered."
+        },
+        {
+          "name": "COLLAPSE_LISTS",
+          "description": "Paragraph spacing is skipped between list elements."
+        }
+      ]
     },
     {
       "name": "Class SpeakerSpotlight",
@@ -12127,7 +13373,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Table",
@@ -12700,7 +13947,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TableCell",
@@ -12833,7 +14081,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TableCellRange",
@@ -12849,7 +14098,8 @@
             "url": "https://developers.google.com/apps-script/reference/slides/table-cell"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TableColumn",
@@ -12919,7 +14169,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TableRow",
@@ -12989,19 +14240,52 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum TextBaselineOffset",
       "url": "https://developers.google.com/apps-script/reference/slides/text-baseline-offset",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "An text baseline offset that is not supported."
+        },
+        {
+          "name": "NONE",
+          "description": "The text is not vertically offset."
+        },
+        {
+          "name": "SUPERSCRIPT",
+          "description": "The text is vertically offset upwards."
+        },
+        {
+          "name": "SUBSCRIPT",
+          "description": "The text is vertically offset downwards."
+        }
+      ]
     },
     {
       "name": "Enum TextDirection",
       "url": "https://developers.google.com/apps-script/reference/slides/text-direction",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A text direction that is not supported."
+        },
+        {
+          "name": "LEFT_TO_RIGHT",
+          "description": "The text goes from left to right."
+        },
+        {
+          "name": "RIGHT_TO_LEFT",
+          "description": "The text goes from right to left."
+        }
+      ]
     },
     {
       "name": "Class TextRange",
@@ -13518,7 +14802,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextStyle",
@@ -14087,7 +15372,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ThemeColor",
@@ -14112,13 +15398,68 @@
             "url": "https://developers.google.com/apps-script/reference/slides/theme-color-type"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ThemeColorType",
       "url": "https://developers.google.com/apps-script/reference/slides/theme-color-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "Represents a theme color that is not supported."
+        },
+        {
+          "name": "DARK1",
+          "description": "Represents the first dark color."
+        },
+        {
+          "name": "LIGHT1",
+          "description": "Represents the first light color."
+        },
+        {
+          "name": "DARK2",
+          "description": "Represents the second dark color."
+        },
+        {
+          "name": "LIGHT2",
+          "description": "Represents the second light color."
+        },
+        {
+          "name": "ACCENT1",
+          "description": "Represents the first accent color."
+        },
+        {
+          "name": "ACCENT2",
+          "description": "Represents the second accent color."
+        },
+        {
+          "name": "ACCENT3",
+          "description": "Represents the third accent color."
+        },
+        {
+          "name": "ACCENT4",
+          "description": "Represents the fourth accent color."
+        },
+        {
+          "name": "ACCENT5",
+          "description": "Represents the fifth accent color."
+        },
+        {
+          "name": "ACCENT6",
+          "description": "Represents the sixth accent color."
+        },
+        {
+          "name": "HYPERLINK",
+          "description": "Represents the color to use for hyperlinks."
+        },
+        {
+          "name": "FOLLOWED_HYPERLINK",
+          "description": "Represents the color to use for visited hyperlinks."
+        }
+      ]
     },
     {
       "name": "Class Video",
@@ -14602,13 +15943,24 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum VideoSourceType",
       "url": "https://developers.google.com/apps-script/reference/slides/video-source-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A video source type that is not supported."
+        },
+        {
+          "name": "YOUTUBE",
+          "description": "YouTube video."
+        }
+      ]
     },
     {
       "name": "Class WordArt",
@@ -15146,7 +16498,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

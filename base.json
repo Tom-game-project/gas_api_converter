@@ -213,7 +213,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Interface BlobSource",
@@ -247,7 +248,8 @@
             "url": "https://developers.google.com/apps-script/reference/base/blob"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Browser",
@@ -410,25 +412,80 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Button",
       "url": "https://developers.google.com/apps-script/reference/base/button",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CLOSE",
+          "description": "The standard close button displayed in every dialog's title bar. This button is not explicitly\nadded to a dialog, and it cannot be removed."
+        },
+        {
+          "name": "OK",
+          "description": "An \"OK\" button, indicating that an operation should proceed."
+        },
+        {
+          "name": "CANCEL",
+          "description": "A \"Cancel\" button, indicating that an operation should not proceed."
+        },
+        {
+          "name": "YES",
+          "description": "A \"Yes\" button, indicating a positive response to a question."
+        },
+        {
+          "name": "NO",
+          "description": "A \"No\" button, indicating a negative response to a question."
+        }
+      ]
     },
     {
       "name": "Enum ButtonSet",
       "url": "https://developers.google.com/apps-script/reference/base/button-set",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "OK",
+          "description": "A single \"OK\" button, indicating an informational message that can only be dismissed."
+        },
+        {
+          "name": "OK_CANCEL",
+          "description": "An \"OK\" button and a \"Cancel\" button, allowing the user to either proceed with or halt an\noperation."
+        },
+        {
+          "name": "YES_NO",
+          "description": "A \"Yes\" button and a \"No\" button, allowing the user to answer a yes/no question."
+        },
+        {
+          "name": "YES_NO_CANCEL",
+          "description": "A \"Yes\" button, a \"No\" button, and a \"Cancel\" button, allowing the user to either answer a\nyes/no question or halt an operation."
+        }
+      ]
     },
     {
       "name": "Enum ColorType",
       "url": "https://developers.google.com/apps-script/reference/base/color-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "UNSUPPORTED",
+          "description": "A color type that is not supported."
+        },
+        {
+          "name": "RGB",
+          "description": "A color defined by red, green, blue color channels."
+        },
+        {
+          "name": "THEME",
+          "description": "A color that refers to an entry in the theme's color scheme."
+        }
+      ]
     },
     {
       "name": "Class console",
@@ -611,7 +668,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Logger",
@@ -680,7 +738,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Menu",
@@ -749,19 +808,200 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum MimeType",
       "url": "https://developers.google.com/apps-script/reference/base/mime-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "GOOGLE_APPS_SCRIPT",
+          "description": "Representation of MIME type for a Google Apps Script project."
+        },
+        {
+          "name": "GOOGLE_DRAWINGS",
+          "description": "Representation of MIME type for a Google Drawings file."
+        },
+        {
+          "name": "GOOGLE_DOCS",
+          "description": "Representation of MIME type for a Google Docs file."
+        },
+        {
+          "name": "GOOGLE_FORMS",
+          "description": "Representation of MIME type for a Google Forms file."
+        },
+        {
+          "name": "GOOGLE_SHEETS",
+          "description": "Representation of MIME type for a Google Sheets file."
+        },
+        {
+          "name": "GOOGLE_SITES",
+          "description": "Representation of MIME type for a Google Sites file."
+        },
+        {
+          "name": "GOOGLE_SLIDES",
+          "description": "Representation of MIME type for a Google Slides file."
+        },
+        {
+          "name": "FOLDER",
+          "description": "Representation of MIME type for a Google Drive folder."
+        },
+        {
+          "name": "SHORTCUT",
+          "description": "Representation of MIME type for a Google Drive shortcut."
+        },
+        {
+          "name": "BMP",
+          "description": "Representation of MIME type for a BMP image file (typically .bmp)."
+        },
+        {
+          "name": "GIF",
+          "description": "Representation of MIME type for a GIF image file (typically .gif)."
+        },
+        {
+          "name": "JPEG",
+          "description": "Representation of MIME type for a JPEG image file (typically .jpg)."
+        },
+        {
+          "name": "PNG",
+          "description": "Representation of MIME type for a PNG image file (typically .png)."
+        },
+        {
+          "name": "SVG",
+          "description": "Representation of MIME type for an SVG image file (typically .svg)."
+        },
+        {
+          "name": "PDF",
+          "description": "Representation of MIME type for a PDF file (typically .pdf)."
+        },
+        {
+          "name": "CSS",
+          "description": "Representation of MIME type for a CSS text file (typically .css)."
+        },
+        {
+          "name": "CSV",
+          "description": "Representation of MIME type for a CSV text file (typically .csv)."
+        },
+        {
+          "name": "HTML",
+          "description": "Representation of MIME type for an HTML text file (typically .html)."
+        },
+        {
+          "name": "JAVASCRIPT",
+          "description": "Representation of MIME type for a JavaScript text file (typically .js)."
+        },
+        {
+          "name": "PLAIN_TEXT",
+          "description": "Representation of MIME type for a plain text file (typically .txt)."
+        },
+        {
+          "name": "RTF",
+          "description": "Representation of MIME type for a rich text file (typically .rtf)."
+        },
+        {
+          "name": "OPENDOCUMENT_GRAPHICS",
+          "description": "Representation of MIME type for an OpenDocument graphics file (typically .odg)."
+        },
+        {
+          "name": "OPENDOCUMENT_PRESENTATION",
+          "description": "Representation of MIME type for an OpenDocument presentation file (typically .odp)."
+        },
+        {
+          "name": "OPENDOCUMENT_SPREADSHEET",
+          "description": "Representation of MIME type for an OpenDocument spreadsheet file (typically .ods)."
+        },
+        {
+          "name": "OPENDOCUMENT_TEXT",
+          "description": "Representation of MIME type for an OpenDocument word-processing file (typically .odt)."
+        },
+        {
+          "name": "MICROSOFT_EXCEL",
+          "description": "Representation of MIME type for a Microsoft Excel spreadsheet file (typically .xlsx)."
+        },
+        {
+          "name": "MICROSOFT_EXCEL_LEGACY",
+          "description": "Representation of MIME type for a Microsoft Excel legacy file (typically .xls)."
+        },
+        {
+          "name": "MICROSOFT_POWERPOINT",
+          "description": "Representation of MIME type for a Microsoft PowerPoint presentation file (typically .pptx)."
+        },
+        {
+          "name": "MICROSOFT_POWERPOINT_LEGACY",
+          "description": "Representation of MIME type for a Microsoft PowerPoint legacy file (typically .ppt)."
+        },
+        {
+          "name": "MICROSOFT_WORD",
+          "description": "Representation of MIME type for a Microsoft Word document file (typically .docx)."
+        },
+        {
+          "name": "MICROSOFT_WORD_LEGACY",
+          "description": "Representation of MIME type for a Microsoft Word legacy file (typically .doc)."
+        },
+        {
+          "name": "ZIP",
+          "description": "Representation of MIME type for a ZIP archive file (typically .zip)."
+        }
+      ]
     },
     {
       "name": "Enum Month",
       "url": "https://developers.google.com/apps-script/reference/base/month",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "JANUARY",
+          "description": "January (month 1)."
+        },
+        {
+          "name": "FEBRUARY",
+          "description": "February (month 2)."
+        },
+        {
+          "name": "MARCH",
+          "description": "March (month 3)."
+        },
+        {
+          "name": "APRIL",
+          "description": "April (month 4)."
+        },
+        {
+          "name": "MAY",
+          "description": "May (month 5)."
+        },
+        {
+          "name": "JUNE",
+          "description": "June (month 6)."
+        },
+        {
+          "name": "JULY",
+          "description": "July (month 7)."
+        },
+        {
+          "name": "AUGUST",
+          "description": "August (month 8)."
+        },
+        {
+          "name": "SEPTEMBER",
+          "description": "September (month 9)."
+        },
+        {
+          "name": "OCTOBER",
+          "description": "October (month 10)."
+        },
+        {
+          "name": "NOVEMBER",
+          "description": "November (month 11)."
+        },
+        {
+          "name": "DECEMBER",
+          "description": "December (month 12)."
+        }
+      ]
     },
     {
       "name": "Class PromptResponse",
@@ -786,7 +1026,8 @@
             "url": "https://developers.google.com/apps-script/reference/base/button"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class RgbColor",
@@ -838,7 +1079,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Session",
@@ -908,7 +1150,8 @@
             "url": "https://developers.google.com/apps-script/reference/base/user"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Ui",
@@ -1186,7 +1429,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class User",
@@ -1211,13 +1455,44 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Weekday",
       "url": "https://developers.google.com/apps-script/reference/base/weekday",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "SUNDAY",
+          "description": "Sunday."
+        },
+        {
+          "name": "MONDAY",
+          "description": "Monday."
+        },
+        {
+          "name": "TUESDAY",
+          "description": "Tuesday."
+        },
+        {
+          "name": "WEDNESDAY",
+          "description": "Wednesday."
+        },
+        {
+          "name": "THURSDAY",
+          "description": "Thursday."
+        },
+        {
+          "name": "FRIDAY",
+          "description": "Friday."
+        },
+        {
+          "name": "SATURDAY",
+          "description": "Saturday."
+        }
+      ]
     }
   ]
 }

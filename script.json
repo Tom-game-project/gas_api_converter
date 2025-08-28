@@ -6,7 +6,25 @@
       "name": "Enum AuthMode",
       "url": "https://developers.google.com/apps-script/reference/script/auth-mode",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NONE",
+          "description": "A mode that does not allow access to any services that require authorization. This mode occurs\nwhen an add-on executes anonOpen(e)simple trigger, and the user has installed an\nadd-on in a different document but the add-on has not been used in the current document."
+        },
+        {
+          "name": "CUSTOM_FUNCTION",
+          "description": "A mode that allows access to a limited subset of services for use in custom spreadsheet\nfunctions. Some of these services — including read-only access to Spreadsheet service —\nnormally require authorization, but are permitted without authorization when used in a custom\nfunction. Because custom functions do not include an event parameter, this value is never\nreturned; it is documented only to demonstrate that custom functions run in their own\nauthorization mode."
+        },
+        {
+          "name": "LIMITED",
+          "description": "A mode that allows access to a limited subset of services. This mode occurs when an add-on or a\nscriptboundto a document executes anonOpen(e)oronEdit(e)simple trigger, except in the case described forNONE."
+        },
+        {
+          "name": "FULL",
+          "description": "A mode that allows access to all services that require authorization. This mode occurs when an\nadd-on or a script executes as the result of any trigger other than the cases described forLIMITEDorNONE."
+        }
+      ]
     },
     {
       "name": "Class AuthorizationInfo",
@@ -40,13 +58,24 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum AuthorizationStatus",
       "url": "https://developers.google.com/apps-script/reference/script/authorization-status",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "REQUIRED",
+          "description": "The user needs to authorize this script to use one or more services. In most cases, the script\nprompts the user for authorization the next time it runs; however, if the script is published\nas anadd-onthat usesinstallable triggers, the trigger runs the\nscript without prompting for authorization but throws an exception if the script attempts to\ncall the unauthorized service."
+        },
+        {
+          "name": "NOT_REQUIRED",
+          "description": "The user has granted this script all the authorization it currently requires."
+        }
+      ]
     },
     {
       "name": "Class CalendarTriggerBuilder",
@@ -71,7 +100,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ClockTriggerBuilder",
@@ -319,7 +349,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DocumentTriggerBuilder",
@@ -344,13 +375,40 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum EventType",
       "url": "https://developers.google.com/apps-script/reference/script/event-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CLOCK",
+          "description": "The trigger fires once the time-driven event reaches a specific time."
+        },
+        {
+          "name": "ON_OPEN",
+          "description": "The trigger fires once the user opens the Google Docs, Sheets, or Forms file."
+        },
+        {
+          "name": "ON_EDIT",
+          "description": "The trigger fires once the user edits the Google Sheets file (for example, by entering a new\nvalue into a cell, which counts as an edit instead of a change)."
+        },
+        {
+          "name": "ON_FORM_SUBMIT",
+          "description": "The trigger fires once the user responds to a Google Form. This trigger is available either in\nthe Google Form itself or in the Google Sheets file that the form sends its responses to."
+        },
+        {
+          "name": "ON_CHANGE",
+          "description": "The trigger fires once the user changes the Google Sheets file (for example, by adding a row,\nwhich counts as a change instead of an edit)."
+        },
+        {
+          "name": "ON_EVENT_UPDATED",
+          "description": "The trigger fires once an event gets created, updated, or deleted on the specified Google\nCalendar."
+        }
+      ]
     },
     {
       "name": "Class FormTriggerBuilder",
@@ -384,13 +442,28 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum InstallationSource",
       "url": "https://developers.google.com/apps-script/reference/script/installation-source",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "APPS_MARKETPLACE_DOMAIN_ADD_ON",
+          "description": "Add-on was installed by the administrator for the user's domain."
+        },
+        {
+          "name": "NONE",
+          "description": "Script is not running as an add-on."
+        },
+        {
+          "name": "WEB_STORE_ADD_ON",
+          "description": "Add-on was installed by the user from the Chrome Web Store."
+        }
+      ]
     },
     {
       "name": "Class ScriptApp",
@@ -665,7 +738,8 @@
             "url": "https://developers.google.com/apps-script/reference/script/trigger"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Service",
@@ -699,7 +773,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SpreadsheetTriggerBuilder",
@@ -751,7 +826,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class StateTokenBuilder",
@@ -829,7 +905,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Trigger",
@@ -881,7 +958,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TriggerBuilder",
@@ -1023,13 +1101,36 @@
             "url": "https://developers.google.com/apps-script/reference/script/clock-trigger-builder"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum TriggerSource",
       "url": "https://developers.google.com/apps-script/reference/script/trigger-source",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "SPREADSHEETS",
+          "description": "Google Sheets causes the trigger to fire."
+        },
+        {
+          "name": "CLOCK",
+          "description": "A time-driven event causes the trigger to fire."
+        },
+        {
+          "name": "FORMS",
+          "description": "Google Forms causes the trigger to fire."
+        },
+        {
+          "name": "DOCUMENTS",
+          "description": "Google Docs causes the trigger to fire."
+        },
+        {
+          "name": "CALENDAR",
+          "description": "Google Calendar causes the trigger to fire."
+        }
+      ]
     }
   ]
 }

@@ -83,7 +83,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

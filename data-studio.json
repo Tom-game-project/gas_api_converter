@@ -6,13 +6,73 @@
       "name": "Enum AggregationType",
       "url": "https://developers.google.com/apps-script/reference/data-studio/aggregation-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "AVG",
+          "description": "Average."
+        },
+        {
+          "name": "COUNT",
+          "description": "Count."
+        },
+        {
+          "name": "COUNT_DISTINCT",
+          "description": "Count Distinct."
+        },
+        {
+          "name": "MAX",
+          "description": "Max."
+        },
+        {
+          "name": "MIN",
+          "description": "Min."
+        },
+        {
+          "name": "SUM",
+          "description": "Sum."
+        },
+        {
+          "name": "AUTO",
+          "description": "Auto. Use Auto for calculated fields which reference an aggregated field."
+        }
+      ]
     },
     {
       "name": "Enum AuthType",
       "url": "https://developers.google.com/apps-script/reference/data-studio/auth-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "NONE",
+          "description": "No authorization needed."
+        },
+        {
+          "name": "OAUTH2",
+          "description": "OAuth2 authorization needed."
+        },
+        {
+          "name": "USER_PASS",
+          "description": "Username and password credentials needed."
+        },
+        {
+          "name": "PATH_USER_PASS",
+          "description": "Username, path, and password needed."
+        },
+        {
+          "name": "PATH_KEY",
+          "description": "Path and key needed."
+        },
+        {
+          "name": "KEY",
+          "description": "API Key or Token needed."
+        },
+        {
+          "name": "USER_TOKEN",
+          "description": "Username and token needed."
+        }
+      ]
     },
     {
       "name": "Class BigQueryConfig",
@@ -143,13 +203,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum BigQueryParameterType",
       "url": "https://developers.google.com/apps-script/reference/data-studio/big-query-parameter-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "STRING",
+          "description": "String."
+        },
+        {
+          "name": "INT64",
+          "description": "64-bit integer."
+        },
+        {
+          "name": "BOOL",
+          "description": "Boolean."
+        },
+        {
+          "name": "FLOAT64",
+          "description": "64-bit floating point number."
+        }
+      ]
     },
     {
       "name": "Class Checkbox",
@@ -246,7 +325,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CommunityConnector",
@@ -334,7 +414,8 @@
             "url": "https://developers.google.com/apps-script/reference/data-studio/user-error"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Config",
@@ -458,7 +539,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DataStudioApp",
@@ -474,7 +556,8 @@
             "url": "https://developers.google.com/apps-script/reference/data-studio/community-connector"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DebugError",
@@ -517,7 +600,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Field",
@@ -794,13 +878,424 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum FieldType",
       "url": "https://developers.google.com/apps-script/reference/data-studio/field-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "YEAR",
+          "description": "Year in the format of YYYY such as 2017."
+        },
+        {
+          "name": "YEAR_QUARTER",
+          "description": "Year and quarter in the format of YYYYQ such as 20171."
+        },
+        {
+          "name": "YEAR_MONTH",
+          "description": "Year and month in the format of YYYYMM such as 201703."
+        },
+        {
+          "name": "YEAR_WEEK",
+          "description": "Year and week in the format of YYYYww such as 201707."
+        },
+        {
+          "name": "YEAR_MONTH_DAY",
+          "description": "Year, month, and day in the format of YYYYMMDD such as 20170317."
+        },
+        {
+          "name": "YEAR_MONTH_DAY_HOUR",
+          "description": "Year, month, day, and hour in the format of YYYYMMDDHH such as 2017031703."
+        },
+        {
+          "name": "YEAR_MONTH_DAY_MINUTE",
+          "description": "Year, month, day, hour, and minute in the format of YYYYMMDDHHmm such as 201703170230."
+        },
+        {
+          "name": "YEAR_MONTH_DAY_SECOND",
+          "description": "Year, month, day, hour, minute, and second in the format of YYYYMMDDHHmmss such as\n20170317023017."
+        },
+        {
+          "name": "QUARTER",
+          "description": "Quarter in the format of 1, 2, 3, or 4)."
+        },
+        {
+          "name": "MONTH",
+          "description": "Month in the format of MM such as 03."
+        },
+        {
+          "name": "WEEK",
+          "description": "Week in the format of ww such as 07."
+        },
+        {
+          "name": "MONTH_DAY",
+          "description": "Month and day in the format of MMDD such as 0317."
+        },
+        {
+          "name": "DAY_OF_WEEK",
+          "description": "A number in the range of [0,6] with 0 representing Sunday."
+        },
+        {
+          "name": "DAY",
+          "description": "Day in the format of DD such as 17."
+        },
+        {
+          "name": "HOUR",
+          "description": "Hour in the format of HH such as 13."
+        },
+        {
+          "name": "MINUTE",
+          "description": "Minute in the format of mm such as 12."
+        },
+        {
+          "name": "DURATION",
+          "description": "A duration of time in seconds."
+        },
+        {
+          "name": "COUNTRY",
+          "description": "A country such as United States."
+        },
+        {
+          "name": "COUNTRY_CODE",
+          "description": "A country code such as US."
+        },
+        {
+          "name": "CONTINENT",
+          "description": "A continent such as Americas."
+        },
+        {
+          "name": "CONTINENT_CODE",
+          "description": "A continent code such as 019."
+        },
+        {
+          "name": "SUB_CONTINENT",
+          "description": "A sub-continent such as North America."
+        },
+        {
+          "name": "SUB_CONTINENT_CODE",
+          "description": "A sub-continent code such as 003."
+        },
+        {
+          "name": "REGION",
+          "description": "A region such as California."
+        },
+        {
+          "name": "REGION_CODE",
+          "description": "A region code such as CA."
+        },
+        {
+          "name": "CITY",
+          "description": "A city such as Mountain View."
+        },
+        {
+          "name": "CITY_CODE",
+          "description": "A city code such as 1014044."
+        },
+        {
+          "name": "METRO",
+          "description": "A metro such as San Francisco-Oakland-San Jose CA."
+        },
+        {
+          "name": "METRO_CODE",
+          "description": "A metro code such as 200807."
+        },
+        {
+          "name": "LATITUDE_LONGITUDE",
+          "description": "A latitude longitude pair such as 51.5074, -0.1278."
+        },
+        {
+          "name": "NUMBER",
+          "description": "A decimal number."
+        },
+        {
+          "name": "PERCENT",
+          "description": "Decimal percentage (can be over 1.0). For example, 137% is represented as 1.37."
+        },
+        {
+          "name": "TEXT",
+          "description": "Free-form text."
+        },
+        {
+          "name": "BOOLEAN",
+          "description": "Atrueorfalseboolean value."
+        },
+        {
+          "name": "URL",
+          "description": "A URL as text such as https://google.com."
+        },
+        {
+          "name": "HYPERLINK",
+          "description": "A hyperlink. Only use this for calculated fields with theHYPERLINKfunction."
+        },
+        {
+          "name": "IMAGE",
+          "description": "An image. Only use this for calculated fields with theIMAGEfunction."
+        },
+        {
+          "name": "IMAGE_LINK",
+          "description": "An image link. Only use this for calculated fields with theHYPERLINKfunction\nwhile usingIMAGEfor the link label."
+        },
+        {
+          "name": "CURRENCY_AED",
+          "description": "Currency from AED."
+        },
+        {
+          "name": "CURRENCY_ALL",
+          "description": "Currency from ALL."
+        },
+        {
+          "name": "CURRENCY_ARS",
+          "description": "Currency from ARS."
+        },
+        {
+          "name": "CURRENCY_AUD",
+          "description": "Currency from AUD."
+        },
+        {
+          "name": "CURRENCY_BDT",
+          "description": "Currency from BDT."
+        },
+        {
+          "name": "CURRENCY_BGN",
+          "description": "Currency from BGN."
+        },
+        {
+          "name": "CURRENCY_BOB",
+          "description": "Currency from BOB."
+        },
+        {
+          "name": "CURRENCY_BRL",
+          "description": "Currency from BRL."
+        },
+        {
+          "name": "CURRENCY_CAD",
+          "description": "Currency from CAD."
+        },
+        {
+          "name": "CURRENCY_CDF",
+          "description": "Currency from CDF."
+        },
+        {
+          "name": "CURRENCY_CHF",
+          "description": "Currency from CHF."
+        },
+        {
+          "name": "CURRENCY_CLP",
+          "description": "Currency from CLP."
+        },
+        {
+          "name": "CURRENCY_CNY",
+          "description": "Currency from CNY."
+        },
+        {
+          "name": "CURRENCY_COP",
+          "description": "Currency from COP."
+        },
+        {
+          "name": "CURRENCY_CRC",
+          "description": "Currency from CRC."
+        },
+        {
+          "name": "CURRENCY_CZK",
+          "description": "Currency from CZK."
+        },
+        {
+          "name": "CURRENCY_DKK",
+          "description": "Currency from DKK."
+        },
+        {
+          "name": "CURRENCY_DOP",
+          "description": "Currency from DOP."
+        },
+        {
+          "name": "CURRENCY_EGP",
+          "description": "Currency from EGP."
+        },
+        {
+          "name": "CURRENCY_ETB",
+          "description": "Currency from ETB."
+        },
+        {
+          "name": "CURRENCY_EUR",
+          "description": "Currency from EUR."
+        },
+        {
+          "name": "CURRENCY_GBP",
+          "description": "Currency from GBP."
+        },
+        {
+          "name": "CURRENCY_HKD",
+          "description": "Currency from HKD."
+        },
+        {
+          "name": "CURRENCY_HRK",
+          "description": "Currency from HRK."
+        },
+        {
+          "name": "CURRENCY_HUF",
+          "description": "Currency from HUF."
+        },
+        {
+          "name": "CURRENCY_IDR",
+          "description": "Currency from IDR."
+        },
+        {
+          "name": "CURRENCY_ILS",
+          "description": "Currency from ILS."
+        },
+        {
+          "name": "CURRENCY_INR",
+          "description": "Currency from INR."
+        },
+        {
+          "name": "CURRENCY_IRR",
+          "description": "Currency from IRR."
+        },
+        {
+          "name": "CURRENCY_ISK",
+          "description": "Currency from ISK."
+        },
+        {
+          "name": "CURRENCY_JMD",
+          "description": "Currency from JMD."
+        },
+        {
+          "name": "CURRENCY_JPY",
+          "description": "Currency from JPY."
+        },
+        {
+          "name": "CURRENCY_KRW",
+          "description": "Currency from KRW."
+        },
+        {
+          "name": "CURRENCY_LKR",
+          "description": "Currency from LKR."
+        },
+        {
+          "name": "CURRENCY_LTL",
+          "description": "Currency from LTL."
+        },
+        {
+          "name": "CURRENCY_MNT",
+          "description": "Currency from MNT."
+        },
+        {
+          "name": "CURRENCY_MVR",
+          "description": "Currency from MVR."
+        },
+        {
+          "name": "CURRENCY_MXN",
+          "description": "Currency from MXN."
+        },
+        {
+          "name": "CURRENCY_MYR",
+          "description": "Currency from MYR."
+        },
+        {
+          "name": "CURRENCY_NGN",
+          "description": "Currency from NGN."
+        },
+        {
+          "name": "CURRENCY_NOK",
+          "description": "Currency from NOK."
+        },
+        {
+          "name": "CURRENCY_NZD",
+          "description": "Currency from NZD."
+        },
+        {
+          "name": "CURRENCY_PAB",
+          "description": "Currency from PAB."
+        },
+        {
+          "name": "CURRENCY_PEN",
+          "description": "Currency from PEN."
+        },
+        {
+          "name": "CURRENCY_PHP",
+          "description": "Currency from PHP."
+        },
+        {
+          "name": "CURRENCY_PKR",
+          "description": "Currency from PKR."
+        },
+        {
+          "name": "CURRENCY_PLN",
+          "description": "Currency from PLN."
+        },
+        {
+          "name": "CURRENCY_RON",
+          "description": "Currency from RON."
+        },
+        {
+          "name": "CURRENCY_RSD",
+          "description": "Currency from RSD."
+        },
+        {
+          "name": "CURRENCY_RUB",
+          "description": "Currency from RUB."
+        },
+        {
+          "name": "CURRENCY_SAR",
+          "description": "Currency from SAR."
+        },
+        {
+          "name": "CURRENCY_SEK",
+          "description": "Currency from SEK."
+        },
+        {
+          "name": "CURRENCY_SGD",
+          "description": "Currency from SGD."
+        },
+        {
+          "name": "CURRENCY_THB",
+          "description": "Currency from THB."
+        },
+        {
+          "name": "CURRENCY_TRY",
+          "description": "Currency from TRY."
+        },
+        {
+          "name": "CURRENCY_TWD",
+          "description": "Currency from TWD."
+        },
+        {
+          "name": "CURRENCY_TZS",
+          "description": "Currency from TZS."
+        },
+        {
+          "name": "CURRENCY_UAH",
+          "description": "Currency from UAH."
+        },
+        {
+          "name": "CURRENCY_USD",
+          "description": "Currency from USD."
+        },
+        {
+          "name": "CURRENCY_UYU",
+          "description": "Currency from UYU."
+        },
+        {
+          "name": "CURRENCY_VEF",
+          "description": "Currency from VEF."
+        },
+        {
+          "name": "CURRENCY_VND",
+          "description": "Currency from VND."
+        },
+        {
+          "name": "CURRENCY_YER",
+          "description": "Currency from YER."
+        },
+        {
+          "name": "CURRENCY_ZAR",
+          "description": "Currency from ZAR."
+        }
+      ]
     },
     {
       "name": "Class Fields",
@@ -933,7 +1428,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GetAuthTypeResponse",
@@ -994,7 +1490,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GetDataResponse",
@@ -1082,7 +1579,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GetSchemaResponse",
@@ -1125,7 +1623,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Info",
@@ -1168,7 +1667,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class OptionBuilder",
@@ -1211,7 +1711,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SelectMultiple",
@@ -1326,7 +1827,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SelectSingle",
@@ -1441,7 +1943,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SetCredentialsResponse",
@@ -1484,7 +1987,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextArea",
@@ -1599,7 +2103,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextInput",
@@ -1714,7 +2219,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UserError",
@@ -1775,7 +2281,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

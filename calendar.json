@@ -752,7 +752,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CalendarApp",
@@ -1682,7 +1683,8 @@
             "url": "https://developers.google.com/apps-script/reference/calendar/calendar"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CalendarEvent",
@@ -2442,7 +2444,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CalendarEventSeries",
@@ -3129,19 +3132,152 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Color",
       "url": "https://developers.google.com/apps-script/reference/calendar/color",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "BLUE",
+          "description": "Blue (#2952A3)."
+        },
+        {
+          "name": "BROWN",
+          "description": "Brown (#8D6F47)."
+        },
+        {
+          "name": "CHARCOAL",
+          "description": "Charcoal (#4E5D6C)."
+        },
+        {
+          "name": "CHESTNUT",
+          "description": "Chestnut (#865A5A)."
+        },
+        {
+          "name": "GRAY",
+          "description": "Gray (#5A6986)."
+        },
+        {
+          "name": "GREEN",
+          "description": "Green (#0D7813)."
+        },
+        {
+          "name": "INDIGO",
+          "description": "Indigo (#5229A3)."
+        },
+        {
+          "name": "LIME",
+          "description": "Lime (#528800)."
+        },
+        {
+          "name": "MUSTARD",
+          "description": "Mustard (#88880E)."
+        },
+        {
+          "name": "OLIVE",
+          "description": "Olive (#6E6E41)."
+        },
+        {
+          "name": "ORANGE",
+          "description": "Orange (#BE6D00)."
+        },
+        {
+          "name": "PINK",
+          "description": "Pink (#B1365F)."
+        },
+        {
+          "name": "PLUM",
+          "description": "Plum (#705770)."
+        },
+        {
+          "name": "PURPLE",
+          "description": "Purple (#7A367A)."
+        },
+        {
+          "name": "RED",
+          "description": "Red (#A32929)."
+        },
+        {
+          "name": "RED_ORANGE",
+          "description": "Red-Orange (#B1440E)."
+        },
+        {
+          "name": "SEA_BLUE",
+          "description": "Sea Blue (#29527A)."
+        },
+        {
+          "name": "SLATE",
+          "description": "Slate (#4A716C)."
+        },
+        {
+          "name": "TEAL",
+          "description": "Teal (#28754E)."
+        },
+        {
+          "name": "TURQOISE",
+          "description": "Turquoise (#1B887A)."
+        },
+        {
+          "name": "YELLOW",
+          "description": "Yellow (#AB8B00)."
+        }
+      ]
     },
     {
       "name": "Enum EventColor",
       "url": "https://developers.google.com/apps-script/reference/calendar/event-color",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "PALE_BLUE",
+          "description": "Pale Blue (\"1\"), referred to as \"Peacock\" in th Calendar UI."
+        },
+        {
+          "name": "PALE_GREEN",
+          "description": "Pale Green (\"2\"), referred to as \"Sage\" in th Calendar UI."
+        },
+        {
+          "name": "MAUVE",
+          "description": "Mauve (\"3\"),, referred to as \"Grape\" in th Calendar UI."
+        },
+        {
+          "name": "PALE_RED",
+          "description": "Pale Red (\"4\"), referred to as \"Flamingo\" in th Calendar UI."
+        },
+        {
+          "name": "YELLOW",
+          "description": "Yellow (\"5\"), referred to as \"Banana\" in th Calendar UI."
+        },
+        {
+          "name": "ORANGE",
+          "description": "Orange (\"6\"), referred to as \"Tangerine\" in th Calendar UI."
+        },
+        {
+          "name": "CYAN",
+          "description": "Cyan (\"7\"), referred to as \"Lavender\" in th Calendar UI."
+        },
+        {
+          "name": "GRAY",
+          "description": "Gray (\"8\"), referred to as \"Graphite\" in th Calendar UI."
+        },
+        {
+          "name": "BLUE",
+          "description": "Blue (\"9\"), referred to as \"Blueberry\" in th Calendar UI."
+        },
+        {
+          "name": "GREEN",
+          "description": "Green (\"10\"), referred to as \"Basil\" in th Calendar UI."
+        },
+        {
+          "name": "RED",
+          "description": "Red (\"11\"), referred to as \"Tomato\" in th Calendar UI."
+        }
+      ]
     },
     {
       "name": "Class EventGuest",
@@ -3193,7 +3329,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EventRecurrence",
@@ -3326,25 +3463,84 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum EventTransparency",
       "url": "https://developers.google.com/apps-script/reference/calendar/event-transparency",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "OPAQUE",
+          "description": "The event does block time on the calendar. This is equivalent to setting \"Show me as\" to \"Busy\"\nin the Calendar UI."
+        },
+        {
+          "name": "TRANSPARENT",
+          "description": "The event does not block time on the calendar. This is equivalent to setting \"Show me as\" to\n\"Available\" in the Calendar UI."
+        }
+      ]
     },
     {
       "name": "Enum EventType",
       "url": "https://developers.google.com/apps-script/reference/calendar/event-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "DEFAULT",
+          "description": "The event is a regular event."
+        },
+        {
+          "name": "BIRTHDAY",
+          "description": "The event is a special all-day event with an annual recurrence."
+        },
+        {
+          "name": "FOCUS_TIME",
+          "description": "The event is a focus-time event."
+        },
+        {
+          "name": "FROM_GMAIL",
+          "description": "The event is an event from Gmail."
+        },
+        {
+          "name": "OUT_OF_OFFICE",
+          "description": "The event is an out-of-office event."
+        },
+        {
+          "name": "WORKING_LOCATION",
+          "description": "The event is a working location event."
+        }
+      ]
     },
     {
       "name": "Enum GuestStatus",
       "url": "https://developers.google.com/apps-script/reference/calendar/guest-status",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "INVITED",
+          "description": "The guest has been invited, but has not indicated whether they are attending."
+        },
+        {
+          "name": "MAYBE",
+          "description": "The guest has indicated they might attend."
+        },
+        {
+          "name": "NO",
+          "description": "The guest has indicated they are not attending."
+        },
+        {
+          "name": "OWNER",
+          "description": "The guest is the owner of the event."
+        },
+        {
+          "name": "YES",
+          "description": "The guest has indicated they are attending."
+        }
+      ]
     },
     {
       "name": "Class RecurrenceRule",
@@ -3729,13 +3925,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Visibility",
       "url": "https://developers.google.com/apps-script/reference/calendar/visibility",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CONFIDENTIAL",
+          "description": "The event is private. This value is provided for compatibility reasons."
+        },
+        {
+          "name": "DEFAULT",
+          "description": "Uses the default visibility for events on the calendar."
+        },
+        {
+          "name": "PRIVATE",
+          "description": "The event is private and only event attendees may view event details."
+        },
+        {
+          "name": "PUBLIC",
+          "description": "The event is public and event details are visible to all readers of the calendar."
+        }
+      ]
     }
   ]
 }

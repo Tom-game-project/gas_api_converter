@@ -140,7 +140,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PropertiesService",
@@ -174,7 +175,8 @@
             "url": "https://developers.google.com/apps-script/reference/properties/properties"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ScriptProperties",
@@ -314,7 +316,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class UserProperties",
@@ -454,7 +457,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

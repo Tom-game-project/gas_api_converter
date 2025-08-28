@@ -6,7 +6,21 @@
       "name": "Enum Alignment",
       "url": "https://developers.google.com/apps-script/reference/forms/alignment",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "LEFT",
+          "description": "Align the image to the left side of the form."
+        },
+        {
+          "name": "CENTER",
+          "description": "Align the image to the center of the form."
+        },
+        {
+          "name": "RIGHT",
+          "description": "Align the image to the right side of the form."
+        }
+      ]
     },
     {
       "name": "Class CheckboxGridItem",
@@ -229,13 +243,15 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CheckboxGridValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/checkbox-grid-validation",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Class CheckboxGridValidationBuilder",
@@ -251,7 +267,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CheckboxItem",
@@ -617,13 +634,15 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CheckboxValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/checkbox-validation",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Class CheckboxValidationBuilder",
@@ -684,7 +703,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Choice",
@@ -727,7 +747,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DateItem",
@@ -950,7 +971,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DateTimeItem",
@@ -1173,13 +1195,20 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum DestinationType",
       "url": "https://developers.google.com/apps-script/reference/forms/destination-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "SPREADSHEET",
+          "description": "A Google Sheets spreadsheet as a destination for form responses."
+        }
+      ]
     },
     {
       "name": "Class DurationItem",
@@ -1391,13 +1420,28 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum FeedbackType",
       "url": "https://developers.google.com/apps-script/reference/forms/feedback-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CORRECT",
+          "description": "Feedback that is automatically displayed to respondents for a question answered correctly.\nCorrect feedback can only be attached to a question type that supports autograding (e.g. radio,\ncheckbox, select)"
+        },
+        {
+          "name": "INCORRECT",
+          "description": "Feedback that is automatically displayed to respondents for a question answered incorrectly.\nIncorrect feedback can only be attached to a question type that supports autograding (e.g.\nradio, checkbox, select)"
+        },
+        {
+          "name": "GENERAL",
+          "description": "Feedback that is automatically displayed to respondents when they submit their response.\nGeneral feedback can only be attached to question types that do not support auto-grading, but\nare gradeable (ie everything but grid)"
+        }
+      ]
     },
     {
       "name": "Class Form",
@@ -2508,7 +2552,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class FormApp",
@@ -2667,7 +2712,8 @@
             "url": "https://developers.google.com/apps-script/reference/forms/form"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class FormResponse",
@@ -2818,7 +2864,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GridItem",
@@ -3041,13 +3088,15 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class GridValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/grid-validation",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Class GridValidationBuilder",
@@ -3063,7 +3112,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ImageItem",
@@ -3241,7 +3291,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Interface Item",
@@ -3491,7 +3542,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ItemResponse",
@@ -3570,13 +3622,92 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ItemType",
       "url": "https://developers.google.com/apps-script/reference/forms/item-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CHECKBOX",
+          "description": "A question item that allows the respondent to select one or more checkboxes, as well as an\noptional \"other\" field."
+        },
+        {
+          "name": "CHECKBOX_GRID",
+          "description": "A question item, presented as a grid of columns and rows, that allows the respondent to select\nmultiple choices per row from a sequence of checkboxes."
+        },
+        {
+          "name": "DATE",
+          "description": "A question item that allows the respondent to indicate a date."
+        },
+        {
+          "name": "DATETIME",
+          "description": "A question item that allows the respondent to indicate a date and time."
+        },
+        {
+          "name": "DURATION",
+          "description": "A question item that allows the respondent to indicate a length of time."
+        },
+        {
+          "name": "GRID",
+          "description": "A question item, presented as a grid of columns and rows, that allows the respondent to select\none choice per row from a sequence of radio buttons."
+        },
+        {
+          "name": "IMAGE",
+          "description": "A layout item that displays an image."
+        },
+        {
+          "name": "LIST",
+          "description": "A question item that allows the respondent to select one choice from a drop-down list."
+        },
+        {
+          "name": "MULTIPLE_CHOICE",
+          "description": "A question item that allows the respondent to select one choice from a list of radio buttons or\nan optional \"other\" field."
+        },
+        {
+          "name": "PAGE_BREAK",
+          "description": "A layout item that marks the start of a page."
+        },
+        {
+          "name": "PARAGRAPH_TEXT",
+          "description": "A question item that allows the respondent to enter a block of text."
+        },
+        {
+          "name": "RATING",
+          "description": "A question item that allows the respondent to give a rating."
+        },
+        {
+          "name": "SCALE",
+          "description": "A question item that allows the respondent to choose one option from a numbered sequence of\nradio buttons."
+        },
+        {
+          "name": "SECTION_HEADER",
+          "description": "A layout item that visually indicates the start of a section."
+        },
+        {
+          "name": "TEXT",
+          "description": "A question item that allows the respondent to enter a single line of text."
+        },
+        {
+          "name": "TIME",
+          "description": "A question item that allows the respondent to indicate a time of day."
+        },
+        {
+          "name": "VIDEO",
+          "description": "A layout item that displays a YouTube video."
+        },
+        {
+          "name": "FILE_UPLOAD",
+          "description": "A question item that lets the respondent upload a file."
+        },
+        {
+          "name": "UNSUPPORTED",
+          "description": "An item that is currently not supported through APIs."
+        }
+      ]
     },
     {
       "name": "Class ListItem",
@@ -3940,7 +4071,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class MultipleChoiceItem",
@@ -4331,7 +4463,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PageBreakItem",
@@ -4482,13 +4615,32 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum PageNavigationType",
       "url": "https://developers.google.com/apps-script/reference/forms/page-navigation-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CONTINUE",
+          "description": "Continue to the next page of the form after completing the current page."
+        },
+        {
+          "name": "GO_TO_PAGE",
+          "description": "Jump to a specified page of the form after completing the current page."
+        },
+        {
+          "name": "RESTART",
+          "description": "Restart the form from the beginning, without clearing answers entered so far, after completing\nthe current page."
+        },
+        {
+          "name": "SUBMIT",
+          "description": "Submit the form response after completing the current page."
+        }
+      ]
     },
     {
       "name": "Class ParagraphTextItem",
@@ -4711,13 +4863,15 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ParagraphTextValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/paragraph-text-validation",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Class ParagraphTextValidationBuilder",
@@ -4832,7 +4986,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class QuizFeedback",
@@ -4857,7 +5012,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class QuizFeedbackBuilder",
@@ -4944,13 +5100,28 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum RatingIconType",
       "url": "https://developers.google.com/apps-script/reference/forms/rating-icon-type",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "STAR",
+          "description": "A star icon."
+        },
+        {
+          "name": "HEART",
+          "description": "A heart icon."
+        },
+        {
+          "name": "THUMB_UP",
+          "description": "A thumb up icon."
+        }
+      ]
     },
     {
       "name": "Class RatingItem",
@@ -5200,7 +5371,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ScaleItem",
@@ -5484,7 +5656,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class SectionHeaderItem",
@@ -5581,7 +5754,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextItem",
@@ -5804,13 +5978,15 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TextValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/text-validation",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": []
     },
     {
       "name": "Class TextValidationBuilder",
@@ -6121,7 +6297,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class TimeItem",
@@ -6325,7 +6502,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class VideoItem",
@@ -6494,7 +6672,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

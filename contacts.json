@@ -106,7 +106,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CompanyField",
@@ -194,7 +195,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Contact",
@@ -1315,7 +1317,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ContactGroup",
@@ -1448,7 +1451,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class ContactsApp",
@@ -2322,7 +2326,8 @@
             "url": "https://developers.google.com/apps-script/reference/contacts/contact"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class CustomField",
@@ -2410,7 +2415,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class DateField",
@@ -2558,7 +2564,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class EmailField",
@@ -2691,25 +2698,260 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum ExtendedField",
       "url": "https://developers.google.com/apps-script/reference/contacts/extended-field",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "HOBBY",
+          "description": "the contact's hobby"
+        },
+        {
+          "name": "MILEAGE",
+          "description": "the contact's mileage"
+        },
+        {
+          "name": "LANGUAGE",
+          "description": "the contact's language"
+        },
+        {
+          "name": "GENDER",
+          "description": "the contact's gender"
+        },
+        {
+          "name": "BILLING_INFORMATION",
+          "description": "the contact's billing information"
+        },
+        {
+          "name": "DIRECTORY_SERVER",
+          "description": "the contact's directory server"
+        },
+        {
+          "name": "SENSITIVITY",
+          "description": "the contact's sensitivity"
+        },
+        {
+          "name": "PRIORITY",
+          "description": "the contact's priority"
+        },
+        {
+          "name": "HOME",
+          "description": "the contact's home information"
+        },
+        {
+          "name": "WORK",
+          "description": "the contact's work information"
+        },
+        {
+          "name": "USER",
+          "description": "the contact's user information"
+        },
+        {
+          "name": "OTHER",
+          "description": "the contact's other information"
+        }
+      ]
     },
     {
       "name": "Enum Field",
       "url": "https://developers.google.com/apps-script/reference/contacts/field",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "FULL_NAME",
+          "description": "the contact's full name"
+        },
+        {
+          "name": "GIVEN_NAME",
+          "description": "the contact's given (first) name"
+        },
+        {
+          "name": "MIDDLE_NAME",
+          "description": "the contact's middle name"
+        },
+        {
+          "name": "FAMILY_NAME",
+          "description": "the contact's family (last) name"
+        },
+        {
+          "name": "MAIDEN_NAME",
+          "description": "the contact's maiden name"
+        },
+        {
+          "name": "NICKNAME",
+          "description": "the contact's nickname"
+        },
+        {
+          "name": "SHORT_NAME",
+          "description": "the contact's short name"
+        },
+        {
+          "name": "INITIALS",
+          "description": "the contact's initials"
+        },
+        {
+          "name": "PREFIX",
+          "description": "the prefix for the contact's name"
+        },
+        {
+          "name": "SUFFIX",
+          "description": "the suffix for the contact's name"
+        },
+        {
+          "name": "HOME_EMAIL",
+          "description": "the contact's home email address"
+        },
+        {
+          "name": "WORK_EMAIL",
+          "description": "the contact's work email address"
+        },
+        {
+          "name": "BIRTHDAY",
+          "description": "the contact's birthday"
+        },
+        {
+          "name": "ANNIVERSARY",
+          "description": "the contact's anniversary"
+        },
+        {
+          "name": "HOME_ADDRESS",
+          "description": "the contact's home address"
+        },
+        {
+          "name": "WORK_ADDRESS",
+          "description": "the contact's work address"
+        },
+        {
+          "name": "ASSISTANT_PHONE",
+          "description": "the contact's assistant's phone number"
+        },
+        {
+          "name": "CALLBACK_PHONE",
+          "description": "the contact's callback phone number"
+        },
+        {
+          "name": "MAIN_PHONE",
+          "description": "the contact's main phone number"
+        },
+        {
+          "name": "PAGER",
+          "description": "the contact's pager number"
+        },
+        {
+          "name": "HOME_FAX",
+          "description": "the contact's home fax number"
+        },
+        {
+          "name": "WORK_FAX",
+          "description": "the contact's work fax number"
+        },
+        {
+          "name": "HOME_PHONE",
+          "description": "the contact's home phone number"
+        },
+        {
+          "name": "WORK_PHONE",
+          "description": "the contact's work phone number"
+        },
+        {
+          "name": "MOBILE_PHONE",
+          "description": "the contact's mobile phone number"
+        },
+        {
+          "name": "GOOGLE_VOICE",
+          "description": "the contact's Google Voice number"
+        },
+        {
+          "name": "NOTES",
+          "description": "notes about the contact"
+        },
+        {
+          "name": "GOOGLE_TALK",
+          "description": "the contact's Google Talk identifier"
+        },
+        {
+          "name": "AIM",
+          "description": "the contact's AIM identifier"
+        },
+        {
+          "name": "YAHOO",
+          "description": "the contact's Yahoo instant messaging identifier"
+        },
+        {
+          "name": "SKYPE",
+          "description": "the contact's Skype identifier"
+        },
+        {
+          "name": "QQ",
+          "description": "the contact's QQ identifer"
+        },
+        {
+          "name": "MSN",
+          "description": "the contact's MSN identifier"
+        },
+        {
+          "name": "ICQ",
+          "description": "the contact's ICQ identifier"
+        },
+        {
+          "name": "JABBER",
+          "description": "the contact's Jabber identifier"
+        },
+        {
+          "name": "BLOG",
+          "description": "the contact's blog URL"
+        },
+        {
+          "name": "FTP",
+          "description": "the contact's FTP URL"
+        },
+        {
+          "name": "PROFILE",
+          "description": "the contact's profile URL"
+        },
+        {
+          "name": "HOME_PAGE",
+          "description": "the contact's home page URL"
+        },
+        {
+          "name": "WORK_WEBSITE",
+          "description": "the contact's work website URL"
+        },
+        {
+          "name": "HOME_WEBSITE",
+          "description": "the contact's home website URL"
+        },
+        {
+          "name": "JOB_TITLE",
+          "description": "the contact's job title"
+        },
+        {
+          "name": "COMPANY",
+          "description": "the contact's company"
+        }
+      ]
     },
     {
       "name": "Enum Gender",
       "url": "https://developers.google.com/apps-script/reference/contacts/gender",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "MALE",
+          "description": "male gender"
+        },
+        {
+          "name": "FEMALE",
+          "description": "female gender"
+        }
+      ]
     },
     {
       "name": "Class IMField",
@@ -2815,7 +3057,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class PhoneField",
@@ -2921,19 +3164,52 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Priority",
       "url": "https://developers.google.com/apps-script/reference/contacts/priority",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "HIGH",
+          "description": "high priority"
+        },
+        {
+          "name": "LOW",
+          "description": "low priority"
+        },
+        {
+          "name": "NORMAL",
+          "description": "normal priority"
+        }
+      ]
     },
     {
       "name": "Enum Sensitivity",
       "url": "https://developers.google.com/apps-script/reference/contacts/sensitivity",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "CONFIDENTIAL",
+          "description": "confidential sensitivity"
+        },
+        {
+          "name": "NORMAL",
+          "description": "normal sensitivity"
+        },
+        {
+          "name": "PERSONAL",
+          "description": "personal sensitivity"
+        },
+        {
+          "name": "PRIVATE",
+          "description": "private sensitivity"
+        }
+      ]
     },
     {
       "name": "Class UrlField",
@@ -3039,7 +3315,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

@@ -6,25 +6,93 @@
       "name": "Enum Charset",
       "url": "https://developers.google.com/apps-script/reference/utilities/charset",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "US_ASCII",
+          "description": ""
+        },
+        {
+          "name": "UTF_8",
+          "description": ""
+        }
+      ]
     },
     {
       "name": "Enum DigestAlgorithm",
       "url": "https://developers.google.com/apps-script/reference/utilities/digest-algorithm",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "MD2",
+          "description": "MD2 algorithm"
+        },
+        {
+          "name": "MD5",
+          "description": "MD5 algorithm"
+        },
+        {
+          "name": "SHA_1",
+          "description": "SHA-1 algorithm"
+        },
+        {
+          "name": "SHA_256",
+          "description": "SHA-256 algorithm"
+        },
+        {
+          "name": "SHA_384",
+          "description": "SHA-384 algorithm"
+        },
+        {
+          "name": "SHA_512",
+          "description": "SHA-512 algorithm"
+        }
+      ]
     },
     {
       "name": "Enum MacAlgorithm",
       "url": "https://developers.google.com/apps-script/reference/utilities/mac-algorithm",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "HMAC_MD5",
+          "description": ""
+        },
+        {
+          "name": "HMAC_SHA_1",
+          "description": ""
+        },
+        {
+          "name": "HMAC_SHA_256",
+          "description": ""
+        },
+        {
+          "name": "HMAC_SHA_384",
+          "description": ""
+        },
+        {
+          "name": "HMAC_SHA_512",
+          "description": ""
+        }
+      ]
     },
     {
       "name": "Enum RsaAlgorithm",
       "url": "https://developers.google.com/apps-script/reference/utilities/rsa-algorithm",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "RSA_SHA_1",
+          "description": ""
+        },
+        {
+          "name": "RSA_SHA_256",
+          "description": ""
+        }
+      ]
     },
     {
       "name": "Class Utilities",
@@ -1202,7 +1270,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

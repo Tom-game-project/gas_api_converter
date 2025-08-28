@@ -6,7 +6,29 @@
       "name": "Enum Access",
       "url": "https://developers.google.com/apps-script/reference/drive/access",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "ANYONE",
+          "description": "Anyone on the Internet can find and access. No sign-in required.Domain administrators can prohibit this setting for users of a Google Workspace domain. If\nthe setting is disabled, passing this value toFile.setSharing(accessType, permissionType)throws an exception."
+        },
+        {
+          "name": "ANYONE_WITH_LINK",
+          "description": "Anyone who has the link can access. No sign-in required.Domain administrators can prohibit this setting for users of a Google Workspace domain. If\nthe setting is disabled, passing this value toFile.setSharing(accessType, permissionType)throws an exception."
+        },
+        {
+          "name": "DOMAIN",
+          "description": "People in your domain can find and access. Sign-in required.This setting is available only for users of a Google Workspace domain. For other types of\nGoogle accounts, passing this value toFile.setSharing(accessType, permissionType)throws\nan exception."
+        },
+        {
+          "name": "DOMAIN_WITH_LINK",
+          "description": "People in your domain who have the link can access. Sign-in required.This setting is available only for users of a Google Workspace domain. For other types of\nGoogle accounts, passing this value toFile.setSharing(accessType, permissionType)throws\nan exception."
+        },
+        {
+          "name": "PRIVATE",
+          "description": "Only people explicitly granted permission can access. Sign-in required."
+        }
+      ]
     },
     {
       "name": "Class DriveApp",
@@ -520,7 +542,8 @@
             "url": "https://developers.google.com/apps-script/reference/drive/folder"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class File",
@@ -1398,7 +1421,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class FileIterator",
@@ -1432,7 +1456,8 @@
             "url": "https://developers.google.com/apps-script/reference/drive/file"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class Folder",
@@ -2370,7 +2395,8 @@
             "url": "https://developers.google.com/apps-script/reference"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Class FolderIterator",
@@ -2404,13 +2430,44 @@
             "url": "https://developers.google.com/apps-script/reference/drive/folder"
           }
         }
-      ]
+      ],
+      "enum_members": []
     },
     {
       "name": "Enum Permission",
       "url": "https://developers.google.com/apps-script/reference/drive/permission",
       "description": "",
-      "methods": []
+      "methods": [],
+      "enum_members": [
+        {
+          "name": "VIEW",
+          "description": "Users who can access the file or folder are able only to view it or copy it. Passing this value\ntoFile.setSharing(accessType, permissionType)throws an exception if the type of file\ndoes not support it."
+        },
+        {
+          "name": "EDIT",
+          "description": "Users who can access the file or folder are able to edit it. UnlessFile.setShareableByEditors(shareable)is set tofalse, users can also change the sharing\nsettings. Passing this value toFile.setSharing(accessType, permissionType)throws an\nexception if the type of file does not support it."
+        },
+        {
+          "name": "COMMENT",
+          "description": "Users who can access the file or folder are able only to view it, copy it, or comment on it.\nPassing this value toFile.setSharing(accessType, permissionType)throws an exception if\nthe type of file does not support it."
+        },
+        {
+          "name": "OWNER",
+          "description": "The user owns the file or folder. This value can be returned, but passing it toFile.setSharing(accessType, permissionType)throws an exception."
+        },
+        {
+          "name": "ORGANIZER",
+          "description": "Users who can organize files and folders within a shared drive. This value can be returned, but\npassing it toFile.setSharing(accessType, permissionType)throws an exception."
+        },
+        {
+          "name": "FILE_ORGANIZER",
+          "description": "Users who can edit, trash, and move content within a shared drive. This value can be returned,\nbut passing it toFile.setSharing(accessType, permissionType)throws an exception."
+        },
+        {
+          "name": "NONE",
+          "description": "The user does not have any permissions for the file or folder. This value can be returned, but\npassing it toFile.setSharing(accessType, permissionType)throws an exception unless it\nis set in combination withAccess.ANYONE."
+        }
+      ]
     },
     {
       "name": "Class User",
@@ -2462,7 +2519,8 @@
             "url": null
           }
         }
-      ]
+      ],
+      "enum_members": []
     }
   ]
 }

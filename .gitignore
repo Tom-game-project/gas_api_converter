@@ -1,2 +1,14 @@
 memo.md
+note.md
 
+
+
+# Added by cargo
+
+/target
+
+
+
+# vim 
+*.swp
+*.swo

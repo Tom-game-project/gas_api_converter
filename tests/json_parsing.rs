@@ -1,4 +1,6 @@
-use gas_api_json::{read_service_definition, parameters_string};
+use gas_api_json::{
+    convert_wit_type_string, parameters_string, read_service_definition, wit_gen_func_def, Js2WitConvertErr, JsTypeString
+};
 use std::path::Path;
 
 #[test]
@@ -49,4 +51,61 @@ fn test_parse_base_json01()
     {
         println!("Some Error occured!");
     }
+}
+
+#[test]
+fn test_wit_gen_func_def()
+{
+    let file_path = Path::new("api-def/base.json");
+    let result = read_service_definition(file_path);
+
+    if let Ok(api_service) = result 
+    {
+        for i in api_service.classes {
+            println!("class name \"{}\"", i.name);
+            for j in i.methods {
+                println!("{}", wit_gen_func_def(j));
+            }
+            println!("===");
+        }
+
+    }
+    else
+    {
+        println!("Some Error occured!");
+    }
+}
+
+#[test]
+fn test_convert_wit_type_string()
+{
+    let a = "Blob[][]";
+
+    match convert_wit_type_string(
+        JsTypeString(a.to_string())
+    ){
+        Ok(b) => {
+            println!("Primitive クラス: {}", b.0);
+        }
+        Err(e) => {
+            if let Js2WitConvertErr::NotPrimitiveType(d) = e{
+
+                println!("Gas 独自のクラス: {}", d.0);
+            }
+            else
+            {
+                println!("Syntax Error Occured");
+            }
+        }
+    }
+    //if let Ok(b) = convert_wit_type_string(
+    //    JsTypeString(a.to_string())
+    //)
+    //{
+    //    println!("wit: {}", b.0);
+    //}
+    //else 
+    //{
+    //    println!("Error Occured");
+    //}
 }

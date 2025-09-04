@@ -5,7 +5,7 @@ mod wit;
 mod json_struct;
 use json_struct::*;
 pub use wit::{
-    parameters_string,
+    wit_parameters_string,
     wit_gen_func_def,
     convert_wit_type_string,
     JsTypeString,

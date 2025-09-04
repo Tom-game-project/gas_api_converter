@@ -8,6 +8,8 @@ pub struct WitTypeString(pub String);
 
 pub enum Js2WitConvertErr{
     NotPrimitiveType(WitTypeString), // このエラーは条件付きで正常に復帰可能
+    ParameterStringErr,
+    ReturnStringErr,
     SyntaxErr,
 } // Jsの型からWitの変換中に起きるエラーのキャッチ
 
@@ -25,15 +27,9 @@ fn wit_dress_list(a: JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
     if a.0.ends_with("[]")
     {
         let b = &a.0[0..a.0.len() - 2];
-
-        match convert_wit_type_string(JsTypeString(b.to_string())) {
-            Ok(wit_type) => {
-                return Ok(WitTypeString(format!("list<{}>", wit_type.0)))
-            }
-            Err(e) => {
-                return Err(e);
-            }
-        }
+        let wit_type = 
+            convert_wit_type_string(JsTypeString(b.to_string()))?;
+        Ok(WitTypeString(format!("list<{}>", wit_type.0)))
     }
     else
     {
@@ -49,7 +45,8 @@ pub fn convert_wit_type_string(js_type_string: JsTypeString) -> Result<WitTypeSt
         "String" => return Ok(WitTypeString("string".to_string())),
         "Boolean" => return Ok(WitTypeString("boolean".to_string())),
         "Byte" =>  return Ok(WitTypeString("u8".to_string())),
-        "Number" => return Ok(WitTypeString("s64".to_string())),
+        "Number" => return Ok(WitTypeString("f64".to_string())),
+        "Integer" => return Ok(WitTypeString("s64".to_string())),
         _ => {
             //wit_dress_list(js_type_string.clone())
         }
@@ -59,41 +56,91 @@ pub fn convert_wit_type_string(js_type_string: JsTypeString) -> Result<WitTypeSt
     if is_ascii_alnum_or_underscore(&js_type_string.0)
     {
         return Err(Js2WitConvertErr::NotPrimitiveType(WitTypeString(
-            js_type_string.0.to_case(Case::Kebab)
+            js_type_string.0
+                .to_case(Case::Kebab)
         )));
     }
 
     wit_dress_list(js_type_string.clone())
 }
 
-pub fn parameters_string(parameter_list: Vec<Parameter>) -> String
+fn wit_type_notprimitive_err_as_correct_proc(name:JsTypeString, type_name:JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
+{
+    let a = 
+        convert_wit_type_string(type_name);
+    if let Ok(b) = a
+    {
+        Ok(WitTypeString(
+            format!("{}: {}", 
+                name.0, 
+                b.0
+            )
+        ))
+    }
+    else if let Err(Js2WitConvertErr::NotPrimitiveType(b)) = a
+    {
+        Ok(WitTypeString(
+            format!("{}: {}", 
+                name.0, 
+                b.0
+            )
+        ))
+    }
+    else 
+    {
+        return Err(Js2WitConvertErr::ParameterStringErr);
+    }
+}
+
+/// witの関数宣言の引数部分を作成する
+pub fn wit_parameters_string(parameter_list: Vec<Parameter>) -> Result<WitTypeString, Js2WitConvertErr>
 {
     let mut rlist:Vec<String> = vec![];
-    for i in parameter_list {
+    for i in parameter_list 
+    {
         rlist.push(
-            format!("{}: {}", i.name, i.param_type.name)
+            wit_type_notprimitive_err_as_correct_proc(
+                JsTypeString(i.name), // 引数の名前
+                JsTypeString(i.param_type.name) // タイプの名前
+            )?.0
         );
     }
-    rlist.join(", ")
+    Ok(WitTypeString(rlist.join(", ")))
 }
-
 
 /// witの関数宣言部分の生成
-pub fn wit_gen_func_def(method: Method) -> String 
-// jsonのmethodnameの記述が`()`で終了することを保証してもらう必要がある
+pub fn wit_gen_func_def(method: Method) -> Result<WitTypeString, Js2WitConvertErr>
+// jsonのmethodnameの記述が`(...)`で終了することを保証してもらう必要がある
 {
-    format!("   {}: {}",
-        extract_method_name(&method.name)
-            .expect("Error: not end with `()`")
-            .to_case(Case::Kebab),
-        format!("func ({}) -> {}", 
-        parameters_string(method.parameters),
-        method.return_type.name))
+    let wit_parameters = wit_parameters_string(method.parameters)?;
+
+    let wit_return = 
+        convert_wit_type_string(JsTypeString(method.return_type.name));
+    let c = if let Ok(b) = wit_return
+    {
+        Ok(WitTypeString(b.0))
+    }
+    else if let Err(Js2WitConvertErr::NotPrimitiveType(b)) = wit_return
+    {
+        Ok(WitTypeString(b.0))
+    }
+    else 
+    {
+        Err(Js2WitConvertErr::ReturnStringErr)
+    }?;
+
+    Ok(
+        WitTypeString(
+            format!("{}: {}",
+                extract_method_name(&method.name)
+                    .expect("Error: not end with `()`")
+                    .to_case(Case::Kebab),
+                format!("func ({}) -> {}", 
+                    wit_parameters.0,
+                    c.0
+                )
+            )
+        )
+    )
 }
 
-/// ある関数が依存する型(interface)を返す
-///
-pub fn dep_interface()
-{
-    //
-}

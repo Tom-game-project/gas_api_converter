@@ -1,5 +1,10 @@
 use gas_api_json::{
-    convert_wit_type_string, parameters_string, read_service_definition, wit_gen_func_def, Js2WitConvertErr, JsTypeString
+    convert_wit_type_string, 
+    wit_parameters_string, 
+    wit_gen_func_def,
+    read_service_definition, 
+    Js2WitConvertErr, 
+    JsTypeString
 };
 use std::path::Path;
 
@@ -28,30 +33,31 @@ fn test_parse_base_json00() {
     assert!(first_method.parameters.is_empty(), "copyBlob should have no parameters");
 }
 
-#[test]
-fn test_parse_base_json01()
-{
-    let file_path = Path::new("api-def/base.json");
-    let result = read_service_definition(file_path);
-
-    if let Ok(api_service) = result {
-        for i in api_service.classes {
-            println!("class name \"{}\"", i.name);
-            for j in i.methods {
-                println!("    method {}: {}",
-                    j.name,
-                    format!("func ({}) -> {}", 
-                        parameters_string(j.parameters),
-                        j.return_type.name));
-            }
-            println!("===");
-        }
-    } 
-    else
-    {
-        println!("Some Error occured!");
-    }
-}
+//#[test]
+//fn test_parse_base_json01()
+//{
+//    let file_path = Path::new("api-def/base.json");
+//    let result = read_service_definition(file_path);
+//
+//    if let Ok(api_service) = result {
+//        for i in api_service.classes {
+//            println!("class name \"{}\"", i.name);
+//            for j in i.methods {
+//                //let wit_parameter = wit_parameters_string(j.parameters);
+//                println!("    method {}: {}",
+//                    j.name,
+//                    format!("func ({}) -> {}", 
+//                        
+//                        j.return_type.name));
+//            }
+//            println!("===");
+//        }
+//    } 
+//    else
+//    {
+//        println!("Some Error occured!");
+//    }
+//}
 
 #[test]
 fn test_wit_gen_func_def()
@@ -64,11 +70,29 @@ fn test_wit_gen_func_def()
         for i in api_service.classes {
             println!("class name \"{}\"", i.name);
             for j in i.methods {
-                println!("{}", wit_gen_func_def(j));
+                let a = wit_gen_func_def(j);
+
+                match a{
+                    Ok(b) => {
+                        println!("Primitive クラス: {}", b.0);
+                    }
+                    Err(Js2WitConvertErr::NotPrimitiveType(d)) => {
+                        println!("Gas 独自のクラス: {}", d.0);
+                    }
+                    Err(Js2WitConvertErr::SyntaxErr) => {
+                        println!("Syntax Error!");
+                    }
+                    Err(Js2WitConvertErr::ParameterStringErr) => {
+                        println!("could not interpret parameter string");
+                    }
+                    Err(Js2WitConvertErr::ReturnStringErr) => {
+                        println!("could not interpret return string");
+                    }
+                }
             }
             println!("===");
         }
-
+    
     }
     else
     {
@@ -87,25 +111,18 @@ fn test_convert_wit_type_string()
         Ok(b) => {
             println!("Primitive クラス: {}", b.0);
         }
-        Err(e) => {
-            if let Js2WitConvertErr::NotPrimitiveType(d) = e{
-
-                println!("Gas 独自のクラス: {}", d.0);
-            }
-            else
-            {
-                println!("Syntax Error Occured");
-            }
+        Err(Js2WitConvertErr::NotPrimitiveType(d)) => {
+            println!("Gas 独自のクラス: {}", d.0);
+        }
+        Err(Js2WitConvertErr::SyntaxErr) => {
+            println!("Syntax Error!");
+        }
+        Err(Js2WitConvertErr::ParameterStringErr) => {
+            println!("could not interpret parameter string");
+        }
+        Err(Js2WitConvertErr::ReturnStringErr) => {
+            println!("could not interpret return string");
         }
     }
-    //if let Ok(b) = convert_wit_type_string(
-    //    JsTypeString(a.to_string())
-    //)
-    //{
-    //    println!("wit: {}", b.0);
-    //}
-    //else 
-    //{
-    //    println!("Error Occured");
-    //}
 }
+

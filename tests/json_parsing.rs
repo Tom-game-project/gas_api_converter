@@ -7,6 +7,7 @@ use gas_api_json::{
     JsTypeString
 };
 use std::path::Path;
+use owo_colors::OwoColorize;
 
 #[test]
 fn test_parse_base_json00() {
@@ -33,36 +34,11 @@ fn test_parse_base_json00() {
     assert!(first_method.parameters.is_empty(), "copyBlob should have no parameters");
 }
 
-//#[test]
-//fn test_parse_base_json01()
-//{
-//    let file_path = Path::new("api-def/base.json");
-//    let result = read_service_definition(file_path);
-//
-//    if let Ok(api_service) = result {
-//        for i in api_service.classes {
-//            println!("class name \"{}\"", i.name);
-//            for j in i.methods {
-//                //let wit_parameter = wit_parameters_string(j.parameters);
-//                println!("    method {}: {}",
-//                    j.name,
-//                    format!("func ({}) -> {}", 
-//                        
-//                        j.return_type.name));
-//            }
-//            println!("===");
-//        }
-//    } 
-//    else
-//    {
-//        println!("Some Error occured!");
-//    }
-//}
-
 #[test]
 fn test_wit_gen_func_def()
 {
-    let file_path = Path::new("api-def/base.json");
+    //let file_path = Path::new("api-def/base.json");
+    let file_path = Path::new("api-def/drive.json");
     let result = read_service_definition(file_path);
 
     if let Ok(api_service) = result 
@@ -74,19 +50,21 @@ fn test_wit_gen_func_def()
 
                 match a{
                     Ok(b) => {
-                        println!("Primitive クラス: {}", b.0);
+                        println!("Primitive クラス: {}", b.0.green());
                     }
-                    Err(Js2WitConvertErr::NotPrimitiveType(d)) => {
-                        println!("Gas 独自のクラス: {}", d.0);
+                    Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) => {
+                        println!("Primitiveでない: {}", wit_type_string.0.purple());
+
+                        println!("次の型の定義の確認が必要です {:?}", unknown_fields);
                     }
                     Err(Js2WitConvertErr::SyntaxErr) => {
                         println!("Syntax Error!");
                     }
                     Err(Js2WitConvertErr::ParameterStringErr) => {
-                        println!("could not interpret parameter string");
+                        println!("{}", "could not interpret parameter string".red());
                     }
                     Err(Js2WitConvertErr::ReturnStringErr) => {
-                        println!("could not interpret return string");
+                        println!("{}", "could not interpret return string".red());
                     }
                 }
             }
@@ -111,8 +89,8 @@ fn test_convert_wit_type_string()
         Ok(b) => {
             println!("Primitive クラス: {}", b.0);
         }
-        Err(Js2WitConvertErr::NotPrimitiveType(d)) => {
-            println!("Gas 独自のクラス: {}", d.0);
+        Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) => {
+            println!("Gas 独自のクラス: {}", wit_type_string.0);
         }
         Err(Js2WitConvertErr::SyntaxErr) => {
             println!("Syntax Error!");

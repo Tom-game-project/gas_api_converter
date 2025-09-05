@@ -2,12 +2,15 @@
 use crate::json_struct::{Method, Parameter};
 use convert_case::{Case, Casing};
 
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct JsTypeString(pub String);
 pub struct WitTypeString(pub String);
 
 pub enum Js2WitConvertErr{
-    NotPrimitiveType(WitTypeString), // このエラーは条件付きで正常に復帰可能
+    NotPrimitiveType{
+        wit_type_string: WitTypeString, 
+        unknown_fields:Vec<JsTypeString>
+    }, // このエラーは条件付きで正常に復帰可能
     ParameterStringErr,
     ReturnStringErr,
     SyntaxErr,
@@ -28,12 +31,30 @@ fn wit_dress_list(a: JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
     {
         let b = &a.0[0..a.0.len() - 2];
         let wit_type = 
-            convert_wit_type_string(JsTypeString(b.to_string()))?;
-        Ok(WitTypeString(format!("list<{}>", wit_type.0)))
+            convert_wit_type_string(JsTypeString(b.to_string()));
+
+        if let Ok(wit_type_inner) = wit_type
+        {
+            Ok(WitTypeString(format!("list<{}>", wit_type_inner.0)))
+        }
+        else if let Err(Js2WitConvertErr::NotPrimitiveType {
+            wit_type_string,
+            unknown_fields }) = wit_type
+        {
+
+            Err(Js2WitConvertErr::NotPrimitiveType {
+                wit_type_string: WitTypeString(format!("list<{}>", wit_type_string.0)), 
+                unknown_fields: unknown_fields
+            }
+            )
+        }
+        else 
+        {
+            Err(Js2WitConvertErr::SyntaxErr)
+        }
     }
     else
     {
-        //convert_wit_type_string(a) // ここで再帰するとoverflowを起こす
         Err(Js2WitConvertErr::SyntaxErr)
     }
 }
@@ -47,6 +68,8 @@ pub fn convert_wit_type_string(js_type_string: JsTypeString) -> Result<WitTypeSt
         "Byte" =>  return Ok(WitTypeString("u8".to_string())),
         "Number" => return Ok(WitTypeString("f64".to_string())),
         "Integer" => return Ok(WitTypeString("s64".to_string())),
+        "void" => return Ok(WitTypeString("void".to_string())), // 特別
+        "Object" => return Ok(WitTypeString("object".to_string())), // 少し考える必要がある部分
         _ => {
             //wit_dress_list(js_type_string.clone())
         }
@@ -55,10 +78,14 @@ pub fn convert_wit_type_string(js_type_string: JsTypeString) -> Result<WitTypeSt
     // primitive typeでない型,GAS API独自のクラスなど
     if is_ascii_alnum_or_underscore(&js_type_string.0)
     {
-        return Err(Js2WitConvertErr::NotPrimitiveType(WitTypeString(
-            js_type_string.0
-                .to_case(Case::Kebab)
-        )));
+        return Err(Js2WitConvertErr::NotPrimitiveType{
+                wit_type_string: WitTypeString(
+                    js_type_string.0
+                        .to_case(Case::Kebab)
+                ),
+                unknown_fields: vec![js_type_string]
+            }
+        );
     }
 
     wit_dress_list(js_type_string.clone())
@@ -77,14 +104,18 @@ fn wit_type_notprimitive_err_as_correct_proc(name:JsTypeString, type_name:JsType
             )
         ))
     }
-    else if let Err(Js2WitConvertErr::NotPrimitiveType(b)) = a
+    else if let Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string: b, unknown_fields: v}) = a
     {
-        Ok(WitTypeString(
-            format!("{}: {}", 
-                name.0, 
-                b.0
-            )
-        ))
+        Err(Js2WitConvertErr::NotPrimitiveType{
+                wit_type_string: WitTypeString(
+                    format!("{}: {}", 
+                        name.0, 
+                        b.0
+                    )
+                ),
+                unknown_fields: v
+            }
+        )
     }
     else 
     {
@@ -96,51 +127,120 @@ fn wit_type_notprimitive_err_as_correct_proc(name:JsTypeString, type_name:JsType
 pub fn wit_parameters_string(parameter_list: Vec<Parameter>) -> Result<WitTypeString, Js2WitConvertErr>
 {
     let mut rlist:Vec<String> = vec![];
+    let mut unknown_fields_gather = vec![];
     for i in parameter_list 
     {
-        rlist.push(
+        let arg_type = 
             wit_type_notprimitive_err_as_correct_proc(
                 JsTypeString(i.name), // 引数の名前
                 JsTypeString(i.param_type.name) // タイプの名前
-            )?.0
-        );
+            );
+
+        if let Ok(b) = arg_type{
+            rlist.push(b.0);
+        }
+        else if let Err(Js2WitConvertErr::NotPrimitiveType {
+            wit_type_string:b,
+            unknown_fields:v }) = arg_type
+        {
+            rlist.push(b.0);
+            unknown_fields_gather = [unknown_fields_gather, v].concat();
+        }
+        else if let Err(e) = arg_type {
+            return Err(e);
+        }
     }
-    Ok(WitTypeString(rlist.join(", ")))
+
+    let r_text = WitTypeString(rlist.join(", "));
+    if unknown_fields_gather.is_empty()
+    {
+        Ok(r_text)
+    }
+    else 
+    {
+        Err(Js2WitConvertErr::NotPrimitiveType { 
+            wit_type_string: r_text,
+            unknown_fields: unknown_fields_gather 
+        })
+    }
 }
 
 /// witの関数宣言部分の生成
 pub fn wit_gen_func_def(method: Method) -> Result<WitTypeString, Js2WitConvertErr>
 // jsonのmethodnameの記述が`(...)`で終了することを保証してもらう必要がある
 {
-    let wit_parameters = wit_parameters_string(method.parameters)?;
+    let mut unknown_fields_gather = vec![];
+
+    let wit_parameters = 
+        wit_parameters_string(method.parameters);
 
     let wit_return = 
         convert_wit_type_string(JsTypeString(method.return_type.name));
-    let c = if let Ok(b) = wit_return
-    {
-        Ok(WitTypeString(b.0))
+
+    let wit_parameters = if let Ok(b) = wit_parameters {
+        b
     }
-    else if let Err(Js2WitConvertErr::NotPrimitiveType(b)) = wit_return
+    else if let Err(Js2WitConvertErr::NotPrimitiveType {
+        wit_type_string, 
+        unknown_fields }
+    ) = wit_parameters {
+        unknown_fields_gather = [unknown_fields_gather, unknown_fields].concat();
+        wit_type_string
+    }
+    else {
+        return Err(Js2WitConvertErr::ParameterStringErr);
+    };
+
+    let wit_return = if let Ok(b) = wit_return
     {
-        Ok(WitTypeString(b.0))
+        b
+    }
+    else if let Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) = wit_return
+    {
+        unknown_fields_gather = [unknown_fields_gather, unknown_fields].concat();
+        wit_type_string
     }
     else 
     {
-        Err(Js2WitConvertErr::ReturnStringErr)
-    }?;
+        return Err(Js2WitConvertErr::ReturnStringErr);
+    };
 
-    Ok(
-        WitTypeString(
-            format!("{}: {}",
+    let func_name = 
                 extract_method_name(&method.name)
                     .expect("Error: not end with `()`")
-                    .to_case(Case::Kebab),
-                format!("func ({}) -> {}", 
-                    wit_parameters.0,
-                    c.0
+                    .to_case(Case::Kebab);
+    let func_type = 
+                if wit_return.0 == "void" {
+                    format!("func ({})",
+                        wit_parameters.0,
+                    )
+                }else{
+                    format!("func ({}) -> {}", 
+                        wit_parameters.0,
+                        wit_return.0
+                    )
+                };
+    let r_text = 
+            WitTypeString(
+                format!("{}: {}",
+                    func_name,
+                    func_type
                 )
-            )
+            );
+
+    if unknown_fields_gather.is_empty(){
+        Ok(
+            r_text
         )
-    )
+    }
+    else
+    {
+        Err(
+            Js2WitConvertErr::NotPrimitiveType {
+                wit_type_string: r_text,
+                unknown_fields: unknown_fields_gather 
+            }
+        )
+    }
 }
 

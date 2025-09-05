@@ -1,4 +1,3 @@
-
 use crate::json_struct::{Method, Parameter};
 use convert_case::{Case, Casing};
 

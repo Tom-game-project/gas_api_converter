@@ -4,8 +4,10 @@ use gas_api_json::{
     wit_gen_func_def,
     read_service_definition, 
     Js2WitConvertErr, 
-    JsTypeString
+    JsTypeString,
+    read_all_service_definition
 };
+
 use std::path::Path;
 use owo_colors::OwoColorize;
 
@@ -104,3 +106,14 @@ fn test_convert_wit_type_string()
     }
 }
 
+#[test]
+fn interpret_all_service()
+{
+    let path = "./api-def"; // 対象のディレクトリ
+
+    let a = read_all_service_definition(path).unwrap();
+
+    for i in a {
+        println!("service_name {}", i.service_name);
+    }
+}

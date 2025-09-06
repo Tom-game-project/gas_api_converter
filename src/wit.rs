@@ -40,7 +40,6 @@ fn wit_dress_list(a: JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
             wit_type_string,
             unknown_fields }) = wit_type
         {
-
             Err(Js2WitConvertErr::NotPrimitiveType {
                 wit_type_string: WitTypeString(format!("list<{}>", wit_type_string.0)), 
                 unknown_fields: unknown_fields
@@ -90,7 +89,7 @@ pub fn convert_wit_type_string(js_type_string: JsTypeString) -> Result<WitTypeSt
     wit_dress_list(js_type_string.clone())
 }
 
-fn wit_type_notprimitive_err_as_correct_proc(name:JsTypeString, type_name:JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
+fn wit_convert_arg_type_pair(name:JsTypeString, type_name:JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
 {
     let a = 
         convert_wit_type_string(type_name);
@@ -103,16 +102,16 @@ fn wit_type_notprimitive_err_as_correct_proc(name:JsTypeString, type_name:JsType
             )
         ))
     }
-    else if let Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string: b, unknown_fields: v}) = a
+    else if let Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) = a
     {
         Err(Js2WitConvertErr::NotPrimitiveType{
                 wit_type_string: WitTypeString(
                     format!("{}: {}", 
                         name.0, 
-                        b.0
+                        wit_type_string.0
                     )
                 ),
-                unknown_fields: v
+                unknown_fields
             }
         )
     }
@@ -127,10 +126,11 @@ pub fn wit_parameters_string(parameter_list: Vec<Parameter>) -> Result<WitTypeSt
 {
     let mut rlist:Vec<String> = vec![];
     let mut unknown_fields_gather = vec![];
+
     for i in parameter_list 
     {
         let arg_type = 
-            wit_type_notprimitive_err_as_correct_proc(
+            wit_convert_arg_type_pair(
                 JsTypeString(i.name), // 引数の名前
                 JsTypeString(i.param_type.name) // タイプの名前
             );
@@ -176,13 +176,13 @@ pub fn wit_gen_func_def(method: Method) -> Result<WitTypeString, Js2WitConvertEr
     let wit_return = 
         convert_wit_type_string(JsTypeString(method.return_type.name));
 
+    // ======================================== TODO:同じような内容のため後で修正
     let wit_parameters = if let Ok(b) = wit_parameters {
         b
     }
     else if let Err(Js2WitConvertErr::NotPrimitiveType {
         wit_type_string, 
-        unknown_fields }
-    ) = wit_parameters {
+        unknown_fields }) = wit_parameters {
         unknown_fields_gather = [unknown_fields_gather, unknown_fields].concat();
         wit_type_string
     }
@@ -190,11 +190,14 @@ pub fn wit_gen_func_def(method: Method) -> Result<WitTypeString, Js2WitConvertEr
         return Err(Js2WitConvertErr::ParameterStringErr);
     };
 
+    // ========================================
     let wit_return = if let Ok(b) = wit_return
     {
         b
     }
-    else if let Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) = wit_return
+    else if let Err(Js2WitConvertErr::NotPrimitiveType{
+        wit_type_string, 
+        unknown_fields}) = wit_return
     {
         unknown_fields_gather = [unknown_fields_gather, unknown_fields].concat();
         wit_type_string
@@ -227,7 +230,8 @@ pub fn wit_gen_func_def(method: Method) -> Result<WitTypeString, Js2WitConvertEr
                 )
             );
 
-    if unknown_fields_gather.is_empty(){
+    if unknown_fields_gather.is_empty()
+    {
         Ok(
             r_text
         )

@@ -1,5 +1,5 @@
 use gas_api_json::{
-    is_in_same_service, is_self_type, is_in_somewhere_service, read_service_definition, JsTypeString, read_all_service_definition
+    find_type_define_location, is_in_same_service, is_in_somewhere_service, is_self_type, read_all_service_definition, read_service_definition, JsTypeString
 };
 
 use std::path::Path;
@@ -37,3 +37,21 @@ fn test_wit_resolver_is_in_somewhere_service()
     assert_eq!(is_in_same_service(&result, &js_type_string), true);
 }
 
+#[test]
+fn test_find_type_define_location()
+{
+    let path = "./api-def"; // 対象のディレクトリ
+
+    let service_list = read_all_service_definition(path).unwrap();
+
+    let target = "File";
+    if let Some (a) = find_type_define_location(
+        &service_list,
+        &JsTypeString(target.to_string())
+    ) {
+        println!("{:?}", a);
+    }
+    else {
+        println!("{} not such type found" , target);
+    }
+}

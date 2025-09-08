@@ -1,5 +1,4 @@
-use crate::{
-    json_struct::{ApiService, Class}, 
+use crate::{ json_struct::{ApiService, Class}, 
     wit::JsTypeString
 };
 
@@ -9,6 +8,8 @@ pub struct TypeDefineLocation{
     pub class: JsTypeString
 }
 
+/// 型が定義されている場所を探し返す関数を追加
+/// 
 pub fn find_type_define_location(
     self_service_set: &[ApiService],
     js_type: &JsTypeString
@@ -18,18 +19,20 @@ pub fn find_type_define_location(
         .iter()
         .find_map(
         |i| 
-        i.classes.iter().find_map(
-            |j| 
-            if is_self_type(j, js_type) {
-                Some(
-                    TypeDefineLocation {
-                        service: JsTypeString(i.service_name.clone()),
-                        class: JsTypeString(j.name.clone())
-                    }
-                )
-            } else {
-                None
-            }
+        i.classes
+            .iter()
+            .find_map(
+                |j| 
+                if is_self_type(j, js_type) {
+                    Some(
+                        TypeDefineLocation {
+                            service: JsTypeString(i.service_name.clone()),
+                            class: JsTypeString(j.name.clone())
+                        }
+                    )
+                } else {
+                    None
+                }
         )
     )
 }

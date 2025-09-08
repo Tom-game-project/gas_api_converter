@@ -4,7 +4,7 @@ use std::path::Path;
 mod wit;
 mod json_struct;
 mod wit_resolver;
-use json_struct::*;
+pub use json_struct::*;
 pub use wit::{
     wit_parameters_string,
     wit_gen_func_def,

@@ -37,50 +37,6 @@ fn test_parse_base_json00() {
 }
 
 #[test]
-fn test_wit_gen_func_def()
-{
-    //let file_path = Path::new("api-def/base.json");
-    let file_path = Path::new("api-def/drive.json");
-    let result = read_service_definition(file_path);
-
-    if let Ok(api_service) = result 
-    {
-        for i in api_service.classes {
-            println!("class name \"{}\"", i.name);
-            for j in i.methods {
-                let a = wit_gen_func_def(j);
-
-                match a{
-                    Ok(b) => {
-                        println!("Primitive クラス: {}", b.0.green());
-                    }
-                    Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) => {
-                        println!("Primitiveでない: {}", wit_type_string.0.purple());
-
-                        println!("次の型の定義の確認が必要です {:?}", unknown_fields);
-                    }
-                    Err(Js2WitConvertErr::SyntaxErr) => {
-                        println!("Syntax Error!");
-                    }
-                    Err(Js2WitConvertErr::ParameterStringErr) => {
-                        println!("{}", "could not interpret parameter string".red());
-                    }
-                    Err(Js2WitConvertErr::ReturnStringErr) => {
-                        println!("{}", "could not interpret return string".red());
-                    }
-                }
-            }
-            println!("===");
-        }
-    
-    }
-    else
-    {
-        println!("Some Error occured!");
-    }
-}
-
-#[test]
 fn test_convert_wit_type_string()
 {
     let a = "Blob[][]";

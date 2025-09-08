@@ -1,7 +1,7 @@
-use crate::json_struct::{Method, Parameter};
+use crate::json_struct::{ApiService, Method, Parameter};
 use convert_case::{Case, Casing};
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Eq, PartialEq, Hash)]
 pub struct JsTypeString(pub String);
 pub struct WitTypeString(pub String);
 
@@ -122,7 +122,7 @@ fn wit_convert_arg_type_pair(name:JsTypeString, type_name:JsTypeString) -> Resul
 }
 
 /// witの関数宣言の引数部分を作成する
-pub fn wit_parameters_string(parameter_list: Vec<Parameter>) -> Result<WitTypeString, Js2WitConvertErr>
+pub fn wit_parameters_string(parameter_list: &Vec<Parameter>) -> Result<WitTypeString, Js2WitConvertErr>
 {
     let mut rlist:Vec<String> = vec![];
     let mut unknown_fields_gather = vec![];
@@ -131,8 +131,8 @@ pub fn wit_parameters_string(parameter_list: Vec<Parameter>) -> Result<WitTypeSt
     {
         let arg_type = 
             wit_convert_arg_type_pair(
-                JsTypeString(i.name), // 引数の名前
-                JsTypeString(i.param_type.name) // タイプの名前
+                JsTypeString(i.name.clone()), // 引数の名前
+                JsTypeString(i.param_type.name.clone()) // タイプの名前
             );
 
         if let Ok(b) = arg_type{
@@ -165,16 +165,16 @@ pub fn wit_parameters_string(parameter_list: Vec<Parameter>) -> Result<WitTypeSt
 }
 
 /// witの関数宣言部分の生成
-pub fn wit_gen_func_def(method: Method) -> Result<WitTypeString, Js2WitConvertErr>
+pub fn wit_gen_func_def(method: &Method) -> Result<WitTypeString, Js2WitConvertErr>
 // jsonのmethodnameの記述が`(...)`で終了することを保証してもらう必要がある
 {
     let mut unknown_fields_gather = vec![];
 
     let wit_parameters = 
-        wit_parameters_string(method.parameters);
+        wit_parameters_string(&method.parameters);
 
     let wit_return = 
-        convert_wit_type_string(JsTypeString(method.return_type.name));
+        convert_wit_type_string(JsTypeString(method.return_type.name.clone()));
 
     // ======================================== TODO:同じような内容のため後で修正
     let wit_parameters = if let Ok(b) = wit_parameters {
@@ -232,9 +232,7 @@ pub fn wit_gen_func_def(method: Method) -> Result<WitTypeString, Js2WitConvertEr
 
     if unknown_fields_gather.is_empty()
     {
-        Ok(
-            r_text
-        )
+        Ok(r_text)
     }
     else
     {
@@ -247,3 +245,123 @@ pub fn wit_gen_func_def(method: Method) -> Result<WitTypeString, Js2WitConvertEr
     }
 }
 
+
+/// ここから下は、Witファイルを構成するためのプログラム
+///
+
+struct WitDefFile
+{
+    package_name: WitTypeString,
+    deps_uses: Vec<WitUseSection>, // use ...; サービスを超えて必要になるinterfaceのimport
+    
+    defined_interfaces: Vec<WitInterface>,
+    world_section: WitWorldSection,
+}
+
+/// - Enumの場合
+/// interfaceの内部に定義される
+/// ```wit
+/// interface enum_name {
+///     enum enum_name{
+///     
+///     }
+/// }
+/// ```
+/// - Classの場合
+/// リソースになるうるか否かで区別される
+///
+/// - リソースとして扱わない場合　
+/// ```wit
+/// interface class_name{
+///    ... methods ...
+/// }
+/// ```
+/// - リソースとして扱う場合
+/// ```wit
+/// interface class_name {
+///     resource {
+///         ... methods ...
+///     }
+/// }
+/// ```
+/// - Interfaceの場合(TODO)
+/// Classと同様に処理される
+enum WitInterface 
+{
+    WitInterfaceConst(WitInterfaceConst),
+    WitInterfaceResource(WitInterfaceResource),
+    WitInterfaceEnum(WitInterfaceEnum)
+}
+
+// 自分自身が自分を含めた他のクラスのメソッドの返り値とならないような型
+struct WitInterfaceConst
+{
+    name: WitTypeString,
+    deps_uses: Vec<WitUseSection>,
+    func_defines:Vec<WitTypeString>,
+}
+
+// 自分自身が自分を含めた他のクラスのメソッドの返り値となるような型
+struct WitInterfaceResource
+{
+    name: WitTypeString,
+    deps_uses: Vec<WitUseSection>,
+    func_defines:Vec<WitTypeString>,
+}
+
+struct WitInterfaceEnum
+{
+    name: WitTypeString,
+    enum_members: Vec<WitTypeString>,
+}
+
+/// Use文のためのセクション
+/// witファイル先頭で使う場合(BeyondService)
+/// と、ファイルの中のinterfaceを超えて型を利用する場合(BetondInterface)
+/// で使い分ける
+enum WitUseSection
+{
+    BeyondService(WitUseSectionBeyondService),
+    BetondInterface(WitUseSectionBetondInterface),
+}
+
+struct WitUseSectionBeyondService{
+    service:WitTypeString,
+    interface: WitTypeString,
+}
+
+struct WitUseSectionBetondInterface{
+    interface: WitTypeString,
+    inners: Vec<WitTypeString>,
+}
+
+
+struct WitWorldSection
+{
+    imports: Vec<WitTypeString>,
+    exports: Vec<WitTypeString>,
+}
+
+
+
+fn wit_gen_package_name(prefix: &str, target_service:&ApiService, wit_version: Option<&WitTypeString>) -> WitTypeString
+{
+    WitTypeString(
+        format!("package {}:{}{}",
+            prefix,
+            target_service.service_name, 
+            if let Some(version) = wit_version{format!("@{}", version.0)} else {"".to_string()}
+        )
+    )
+}
+
+impl WitDefFile {
+    fn constructor(all_service:&[ApiService], target_service: &ApiService)
+    {
+        let package_name = wit_gen_package_name(
+            "gas",
+            target_service, 
+            Some(&WitTypeString("0.1.0-alpha".to_string())));
+        
+    }
+}

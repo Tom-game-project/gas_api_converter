@@ -50,14 +50,8 @@ fn test_convert_wit_type_string()
         Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) => {
             println!("Gas 独自のクラス: {}", wit_type_string.0);
         }
-        Err(Js2WitConvertErr::SyntaxErr) => {
-            println!("Syntax Error!");
-        }
-        Err(Js2WitConvertErr::ParameterStringErr) => {
-            println!("could not interpret parameter string");
-        }
-        Err(Js2WitConvertErr::ReturnStringErr) => {
-            println!("could not interpret return string");
+        _ => {
+            println!("{}", "Something Wrong!".red());
         }
     }
 }

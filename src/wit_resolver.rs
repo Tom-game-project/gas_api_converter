@@ -3,7 +3,8 @@ use crate::{ json_struct::{ApiService, Class},
 };
 
 #[derive(Debug)]
-pub struct TypeDefineLocation{
+pub struct TypeDefineLocation
+{
     pub service: JsTypeString,
     pub class: JsTypeString
 }
@@ -37,24 +38,42 @@ pub fn find_type_define_location(
     )
 }
 
+/// 決まったフォーマットで書かれているinterface相当のデータ構造の名前を取得
+pub fn get_interface_name_from_js_type(js_type: &JsTypeString) -> Option<(&str, &str)>
+{
+    if js_type.0.starts_with("Class")
+    {
+        let sliced = &js_type.0[6..];
+        Some(("Class", sliced))
+    }
+    else if js_type.0.starts_with("Enum")
+    {
+        let sliced = &js_type.0[5..];
+        Some(("Enum", sliced))
+    }
+    else if js_type.0.starts_with("Interface")
+    {
+        let sliced = &js_type.0[10..];
+        Some(("Interface", sliced))
+    }
+    else 
+    {
+        None
+    }
+}
+
 pub fn is_self_type(self_class: &Class, js_type: &JsTypeString) -> bool
 {
-    if self_class.name.starts_with("Class")
+    if let Some((_, sliced)) = get_interface_name_from_js_type(
+        &JsTypeString(
+            self_class.name.clone()
+        )
+    )
     {
-        let sliced = &self_class.name[6..];
         sliced == js_type.0
     }
-    else if self_class.name.starts_with("Enum")
+    else 
     {
-        let sliced = &self_class.name[5..];
-        sliced == js_type.0
-    }
-    else if self_class.name.starts_with("Interface")
-    {
-        let sliced = &self_class.name[10..];
-        sliced == js_type.0
-    }
-    else {
         false
     }
 }
@@ -78,4 +97,13 @@ pub fn is_in_somewhere_service(
         |service| is_in_same_service(service, js_type)
     )
 }
+
+// リソースは、自分自身を含めた他のクラスのメソッドのどれかに、
+// 自分自身のタイプを引数にとったり、戻り値をとったりするメソッドを一つでも見つけられる
+//
+// その上で、すでに返り値となっているようなクラスは以下のようなアクセスが可能。
+//
+// ```
+// use interface.{resource, ...};
+// ```
 

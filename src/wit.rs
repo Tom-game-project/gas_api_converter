@@ -1,4 +1,4 @@
-use crate::json_struct::{ApiService, Method, Parameter};
+use crate::{get_interface_name_from_js_type, json_struct::{ApiService, Method, Parameter}};
 use convert_case::{Case, Casing};
 
 #[derive(Clone, Debug, Eq, PartialEq, Hash)]
@@ -13,6 +13,7 @@ pub enum Js2WitConvertErr{
     ParameterStringErr,
     ReturnStringErr,
     SyntaxErr,
+    WrongFormatErr,
 } // Jsの型からWitの変換中に起きるエラーのキャッチ
 
 fn is_ascii_alnum_or_underscore(s: &str) -> bool {
@@ -245,6 +246,25 @@ pub fn wit_gen_func_def(method: &Method) -> Result<WitTypeString, Js2WitConvertE
     }
 }
 
+/// interface及びresourceの名前を生成する関数
+///
+/// `JsTypeString("Class Blob")`のような文字列を受け入れる
+///
+pub fn wit_gen_interface_name(js_type_name: &JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
+{
+    if let Some((_, sliced)) = get_interface_name_from_js_type(js_type_name)
+    {
+        Ok(
+            WitTypeString(
+                sliced.to_case(Case::Kebab)
+            )
+        )
+    }
+    else 
+    {
+        Err(Js2WitConvertErr::WrongFormatErr)
+    }
+}
 
 /// ここから下は、Witファイルを構成するためのプログラム
 ///
@@ -342,9 +362,7 @@ struct WitWorldSection
     exports: Vec<WitTypeString>,
 }
 
-
-
-fn wit_gen_package_name(prefix: &str, target_service:&ApiService, wit_version: Option<&WitTypeString>) -> WitTypeString
+pub fn wit_gen_package_name(prefix: &str, target_service:&ApiService, wit_version: Option<&WitTypeString>) -> WitTypeString
 {
     WitTypeString(
         format!("package {}:{}{}",
@@ -355,6 +373,37 @@ fn wit_gen_package_name(prefix: &str, target_service:&ApiService, wit_version: O
     )
 }
 
+pub fn wit_gen_service_use(prefix: &str, target_service:&JsTypeString, target_interface: &JsTypeString, wit_version: Option<&WitTypeString>) -> Result<WitTypeString, Js2WitConvertErr>
+{
+    let a = wit_gen_interface_name(
+        target_interface
+    )?;
+
+    Ok(
+        WitTypeString(
+            format!("use {}:{}/{}{}",
+                prefix,
+                target_service.0, 
+                a.0,
+                if let Some(version) = wit_version{format!("@{}", version.0)} else {"".to_string()}
+            )
+        )
+    )
+}
+
+pub fn wit_gen_interface_use(target_resource: &JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
+
+{
+    let a = wit_gen_interface_name(
+        target_resource
+    )?;
+
+    Ok(WitTypeString(
+        format!("use {}.{{{}}}", a.0, a.0)
+    ))
+}
+
+/*
 impl WitDefFile {
     fn constructor(all_service:&[ApiService], target_service: &ApiService)
     {
@@ -365,3 +414,6 @@ impl WitDefFile {
         
     }
 }
+*/
+
+

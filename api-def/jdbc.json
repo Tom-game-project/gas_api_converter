@@ -272,7 +272,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcArray",
@@ -377,7 +378,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcBlob",
@@ -662,7 +664,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcCallableStatement",
@@ -4113,7 +4116,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcClob",
@@ -4398,7 +4402,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcConnection",
@@ -5126,7 +5131,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcDatabaseMetaData",
@@ -7428,7 +7434,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcDate",
@@ -7580,7 +7587,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcParameterMetaData",
@@ -7741,7 +7749,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcPreparedStatement",
@@ -9227,7 +9236,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcRef",
@@ -9271,7 +9281,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcResultSet",
@@ -11907,7 +11918,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcResultSetMetaData",
@@ -12284,7 +12296,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcRowId",
@@ -12301,7 +12314,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcSavepoint",
@@ -12327,7 +12341,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcSQLXML",
@@ -12371,7 +12386,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcStatement",
@@ -12958,7 +12974,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcStruct",
@@ -12984,7 +13001,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcTime",
@@ -13136,7 +13154,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class JdbcTimestamp",
@@ -13396,7 +13415,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     }
   ]
 }

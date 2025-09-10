@@ -71,7 +71,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class AffineTransformBuilder",
@@ -196,7 +197,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum AlignmentPosition",
@@ -216,7 +218,8 @@
           "name": "VERTICAL_CENTER",
           "description": "Align to the vertical center."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum ArrowStyle",
@@ -268,7 +271,8 @@
           "name": "OPEN_DIAMOND",
           "description": "Hollow diamond."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class AutoText",
@@ -303,7 +307,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum AutoTextType",
@@ -319,7 +324,8 @@
           "name": "SLIDE_NUMBER",
           "description": "A slide number."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Autofit",
@@ -363,7 +369,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum AutofitType",
@@ -387,7 +394,8 @@
           "name": "SHAPE_AUTOFIT",
           "description": "Resizes the shape to fit the text."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Border",
@@ -476,7 +484,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum CellMergeState",
@@ -496,7 +505,8 @@
           "name": "MERGED",
           "description": "The cell is merged but is not the head (i.e. upper left) cell.As an example, assume the following table.-------------------\n|(0,0)|(0,1)|(0,2)|\n-------------------If the first two cells are merged to form the following table, cell (0,0) is the head cell and\n(0,1) is a merged cell.-------------------\n|(0,0)      |(0,2)|\n-------------------"
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Color",
@@ -531,7 +541,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ColorScheme",
@@ -660,7 +671,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ConnectionSite",
@@ -686,7 +698,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ContentAlignment",
@@ -710,7 +723,8 @@
           "name": "BOTTOM",
           "description": "Aligns the content to the bottom of the content holder. Corresponds to ECMA-376\nST_TextAnchoringType 'b'."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum DashStyle",
@@ -746,7 +760,8 @@
           "name": "LONG_DASH_DOT",
           "description": "Alternating large dashes and dots. Corresponds to ECMA-376 ST_PresetLineDashVal value\n'lgDashDot'."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Fill",
@@ -998,7 +1013,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum FillType",
@@ -1018,7 +1034,8 @@
           "name": "SOLID",
           "description": "A solid color fill."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Group",
@@ -1476,7 +1493,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Image",
@@ -2175,7 +2193,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Layout",
@@ -3291,7 +3310,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Line",
@@ -4152,7 +4172,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum LineCategory",
@@ -4176,7 +4197,8 @@
           "name": "CURVED",
           "description": "Curved connectors, including curved connector 2 to 5."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class LineFill",
@@ -4410,7 +4432,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum LineFillType",
@@ -4430,7 +4453,8 @@
           "name": "SOLID",
           "description": "A solid color fill."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum LineType",
@@ -4482,7 +4506,8 @@
           "name": "STRAIGHT_LINE",
           "description": "Straight line. Corresponds to ECMA-376 ST_ShapeType 'line'. This line type is not a connector."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Link",
@@ -4544,7 +4569,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum LinkType",
@@ -4572,7 +4598,8 @@
           "name": "SLIDE_INDEX",
           "description": "A link to a specific slide in this presentation, addressed by its zero-based index."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class List",
@@ -4598,7 +4625,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ListPreset",
@@ -4666,7 +4694,8 @@
           "name": "ZERODIGIT_ALPHA_ROMAN",
           "description": "A list with `ZERODIGIT`, `ALPHA` and `ROMAN` glyphs for the first 3 list nesting levels,\nfollowed by periods."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ListStyle",
@@ -4737,7 +4766,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Master",
@@ -5844,7 +5874,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class NotesMaster",
@@ -6013,7 +6044,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class NotesPage",
@@ -6251,7 +6283,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Page",
@@ -7376,7 +7409,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PageBackground",
@@ -7673,7 +7707,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PageBackgroundType",
@@ -7697,7 +7732,8 @@
           "name": "PICTURE",
           "description": "A picture that is stretched to fill the page."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class PageElement",
@@ -8218,7 +8254,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PageElementRange",
@@ -8235,7 +8272,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PageElementType",
@@ -8283,7 +8321,8 @@
           "name": "SPEAKER_SPOTLIGHT",
           "description": "Represents a speaker spotlight."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class PageRange",
@@ -8300,7 +8339,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PageType",
@@ -8324,7 +8364,8 @@
           "name": "MASTER",
           "description": "A master page."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Paragraph",
@@ -8350,7 +8391,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ParagraphAlignment",
@@ -8378,7 +8420,8 @@
           "name": "JUSTIFIED",
           "description": "The paragraph is justified."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ParagraphStyle",
@@ -8629,7 +8672,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PictureFill",
@@ -8682,7 +8726,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PlaceholderType",
@@ -8762,7 +8807,8 @@
           "name": "SLIDE_IMAGE",
           "description": "Slide image."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Point",
@@ -8788,7 +8834,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PredefinedLayout",
@@ -8844,7 +8891,8 @@
           "name": "BIG_NUMBER",
           "description": "Layout with a big number heading."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Presentation",
@@ -9500,7 +9548,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Selection",
@@ -9562,7 +9611,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SelectionType",
@@ -9598,7 +9648,8 @@
           "name": "CURRENT_PAGE",
           "description": "Current page selection."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Shape",
@@ -10351,7 +10402,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ShapeType",
@@ -10931,7 +10983,8 @@
           "name": "CUSTOM",
           "description": "Custom shape."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class SheetsChart",
@@ -11506,7 +11559,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SheetsChartEmbedType",
@@ -11522,7 +11576,8 @@
           "name": "IMAGE",
           "description": "Indicates that the chart is embedded as an image."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Slide",
@@ -12737,7 +12792,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SlideLinkingMode",
@@ -12757,7 +12813,8 @@
           "name": "NOT_LINKED",
           "description": "Indicates that slides aren't linked."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum SlidePosition",
@@ -12781,7 +12838,8 @@
           "name": "LAST_SLIDE",
           "description": "The last slide in the presentation."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class SlidesApp",
@@ -12870,7 +12928,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class SolidFill",
@@ -12896,7 +12955,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SpacingMode",
@@ -12916,7 +12976,8 @@
           "name": "COLLAPSE_LISTS",
           "description": "Paragraph spacing is skipped between list elements."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class SpeakerSpotlight",
@@ -13374,7 +13435,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Table",
@@ -13948,7 +14010,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TableCell",
@@ -14082,7 +14145,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TableCellRange",
@@ -14099,7 +14163,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TableColumn",
@@ -14170,7 +14235,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TableRow",
@@ -14241,7 +14307,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum TextBaselineOffset",
@@ -14265,7 +14332,8 @@
           "name": "SUBSCRIPT",
           "description": "The text is vertically offset downwards."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum TextDirection",
@@ -14285,7 +14353,8 @@
           "name": "RIGHT_TO_LEFT",
           "description": "The text goes from right to left."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class TextRange",
@@ -14803,7 +14872,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TextStyle",
@@ -15373,7 +15443,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ThemeColor",
@@ -15399,7 +15470,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ThemeColorType",
@@ -15459,7 +15531,8 @@
           "name": "FOLLOWED_HYPERLINK",
           "description": "Represents the color to use for visited hyperlinks."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Video",
@@ -15944,7 +16017,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum VideoSourceType",
@@ -15960,7 +16034,8 @@
           "name": "YOUTUBE",
           "description": "YouTube video."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class WordArt",
@@ -16499,7 +16574,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     }
   ]
 }

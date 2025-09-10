@@ -152,7 +152,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ActionResponse",
@@ -169,7 +170,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ActionResponseBuilder",
@@ -258,7 +260,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ActionStatus",
@@ -302,7 +305,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Attachment",
@@ -382,7 +386,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class AuthorizationAction",
@@ -408,7 +413,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class AuthorizationException",
@@ -488,7 +494,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class BorderStyle",
@@ -550,7 +557,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum BorderType",
@@ -566,7 +574,8 @@
           "name": "STROKE",
           "description": "Stroke border style."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Button",
@@ -690,7 +699,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ButtonSet",
@@ -716,7 +726,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CalendarEventActionResponse",
@@ -733,7 +744,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CalendarEventActionResponseBuilder",
@@ -804,7 +816,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Card",
@@ -821,7 +834,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CardAction",
@@ -945,7 +959,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CardBuilder",
@@ -1088,7 +1103,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CardHeader",
@@ -1186,7 +1202,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CardSection",
@@ -1284,7 +1301,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CardService",
@@ -1868,7 +1886,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CardWithId",
@@ -1912,7 +1931,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Carousel",
@@ -1938,7 +1958,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CarouselCard",
@@ -1982,7 +2003,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ChatActionResponse",
@@ -2062,7 +2084,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ChatClientDataSource",
@@ -2088,7 +2111,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ChatResponse",
@@ -2105,7 +2129,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ChatResponseBuilder",
@@ -2176,7 +2201,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ChatSpaceDataSource",
@@ -2202,7 +2228,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Chip",
@@ -2380,7 +2407,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ChipList",
@@ -2424,7 +2452,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ChipListLayout",
@@ -2440,7 +2469,8 @@
           "name": "HORIZONTAL_SCROLLABLE",
           "description": "The chips scroll horizontally if they don't fit in the available space."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class CollapseControl",
@@ -2502,7 +2532,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Column",
@@ -2582,7 +2613,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Columns",
@@ -2626,7 +2658,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum CommonDataSource",
@@ -2642,7 +2675,8 @@
           "name": "USER",
           "description": "Google Workspace users."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ComposeActionResponse",
@@ -2659,7 +2693,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ComposeActionResponseBuilder",
@@ -2694,7 +2729,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ComposedEmailType",
@@ -2710,7 +2746,8 @@
           "name": "STANDALONE_DRAFT",
           "description": "A draft that is a standalone message."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum ContentType",
@@ -2730,7 +2767,8 @@
           "name": "IMMUTABLE_HTML",
           "description": "Indicates that the generated content is formatted as HTML, but this content cannot be edited\nafter it is generated."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DatePicker",
@@ -2828,7 +2866,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DateTimePicker",
@@ -2944,7 +2983,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DecoratedText",
@@ -3194,7 +3234,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Dialog",
@@ -3220,7 +3261,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DialogAction",
@@ -3264,7 +3306,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum DisplayStyle",
@@ -3280,14 +3323,16 @@
           "name": "REPLACE",
           "description": "Show the card by replacing existing content."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Divider",
       "url": "https://developers.google.com/apps-script/reference/card-service/divider",
       "description": "",
       "methods": [],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DriveItemsSelectedActionResponse",
@@ -3304,7 +3349,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DriveItemsSelectedActionResponseBuilder",
@@ -3339,7 +3385,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EditorFileScopeActionResponse",
@@ -3356,7 +3403,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EditorFileScopeActionResponseBuilder",
@@ -3382,7 +3430,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class FixedFooter",
@@ -3426,7 +3475,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Grid",
@@ -3604,7 +3654,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class GridItem",
@@ -3720,7 +3771,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum GridItemLayout",
@@ -3736,7 +3788,8 @@
           "name": "TEXT_ABOVE",
           "description": "The title and subtitle are shown above the grid item's image."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum HorizontalAlignment",
@@ -3756,7 +3809,8 @@
           "name": "END",
           "description": "Align the widget to the end of the sentence side."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum HorizontalSizeStyle",
@@ -3772,7 +3826,8 @@
           "name": "FILL_MINIMUM_SPACE",
           "description": "Resizes theWidgetto fill the least amount of horizontal space in aColumn.\nThe minimum space is based on the size of the widget. If the widget is smaller than the space\nof the column, it doesn't expand to fill the space."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class HostAppDataSource",
@@ -3798,7 +3853,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum Icon",
@@ -3930,7 +3986,8 @@
           "name": "VIDEO_PLAY",
           "description": ""
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class IconImage",
@@ -4028,7 +4085,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Image",
@@ -4170,7 +4228,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ImageButton",
@@ -4384,7 +4443,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ImageButtonStyle",
@@ -4408,7 +4468,8 @@
           "name": "FILLED_TONAL",
           "description": "Image button with an alternative middle ground between filled and outlined buttons."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ImageComponent",
@@ -4488,7 +4549,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ImageCropStyle",
@@ -4532,7 +4594,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ImageCropType",
@@ -4556,7 +4619,8 @@
           "name": "RECTANGLE_4_3",
           "description": "Rectangle shape crop style with 4:3 ratio."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum ImageStyle",
@@ -4572,7 +4636,8 @@
           "name": "CIRCLE",
           "description": "Crop to a circle shape."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum InputType",
@@ -4596,7 +4661,8 @@
           "name": "EMAIL",
           "description": "Accept an email address."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum Interaction",
@@ -4612,7 +4678,8 @@
           "name": "OPEN_DIALOG",
           "description": "Opens a dialog, a card-based interface that Chat apps use to interact with users."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class KeyValue",
@@ -4880,7 +4947,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class LinkPreview",
@@ -4951,7 +5019,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum LoadIndicator",
@@ -4967,7 +5036,8 @@
           "name": "NONE",
           "description": "Do not use an indicator."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class MaterialIcon",
@@ -5047,7 +5117,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Navigation",
@@ -5136,7 +5207,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Notification",
@@ -5162,7 +5234,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum OnClose",
@@ -5178,7 +5251,8 @@
           "name": "RELOAD",
           "description": "Reloads the add-on on when the window closes.IfOpenAs.OVERLAYis also set, then the main card is blocked until the overlay\nwindow is closed and the add-on has finished reloading."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum OpenAs",
@@ -5194,7 +5268,8 @@
           "name": "OVERLAY",
           "description": "Open as an overlay such as a pop-up."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class OpenLink",
@@ -5256,7 +5331,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class OverflowMenu",
@@ -5282,7 +5358,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class OverflowMenuItem",
@@ -5442,7 +5519,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PlatformDataSource",
@@ -5486,7 +5564,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ResponseType",
@@ -5522,7 +5601,8 @@
           "name": "UPDATE_WIDGET",
           "description": "Widget text autocomplete options query."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class SelectionInput",
@@ -5758,7 +5838,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SelectionInputType",
@@ -5786,7 +5867,8 @@
           "name": "MULTI_SELECT",
           "description": "A multiselect menu for static or dynamic data."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum Status",
@@ -5862,7 +5944,8 @@
           "name": "DATA_LOSS",
           "description": "Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Suggestions",
@@ -5906,7 +5989,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class SuggestionsResponse",
@@ -5923,7 +6007,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class SuggestionsResponseBuilder",
@@ -5958,7 +6043,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Switch",
@@ -6056,7 +6142,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SwitchControlType",
@@ -6072,7 +6159,8 @@
           "name": "CHECK_BOX",
           "description": "Checkbox-styled control for a switch widget."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class TextButton",
@@ -6340,7 +6428,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum TextButtonStyle",
@@ -6368,7 +6457,8 @@
           "name": "BORDERLESS",
           "description": "Normal text button with no border."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class TextInput",
@@ -6538,7 +6628,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TextParagraph",
@@ -6582,7 +6673,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TimePicker",
@@ -6680,7 +6772,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UniversalActionResponse",
@@ -6697,7 +6790,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UniversalActionResponseBuilder",
@@ -6750,7 +6844,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UpdateDraftActionResponse",
@@ -6767,7 +6862,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UpdateDraftActionResponseBuilder",
@@ -6874,7 +6970,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UpdateDraftBccRecipientsAction",
@@ -6900,7 +6997,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UpdateDraftBodyAction",
@@ -6952,7 +7050,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum UpdateDraftBodyType",
@@ -6972,7 +7071,8 @@
           "name": "INSERT_AT_END",
           "description": "Update actions insert content at the end of the message body. If an email signature is present,\nin Gmail on the web, the update action inserts after the user's signature. In the Gmail mobile\napp, the update action inserts before the user's signature."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class UpdateDraftCcRecipientsAction",
@@ -6998,7 +7098,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UpdateDraftSubjectAction",
@@ -7024,7 +7125,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UpdateDraftToRecipientsAction",
@@ -7050,7 +7152,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UpdatedWidget",
@@ -7108,7 +7211,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Validation",
@@ -7152,7 +7256,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum VerticalAlignment",
@@ -7172,14 +7277,16 @@
           "name": "BOTTOM",
           "description": "Vertically places the content at the bottom of the container."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Widget",
       "url": "https://developers.google.com/apps-script/reference/card-service/widget",
       "description": "",
       "methods": [],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum WrapStyle",
@@ -7195,7 +7302,8 @@
           "name": "WRAP",
           "description": "Wraps the content for any widgets in a column."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

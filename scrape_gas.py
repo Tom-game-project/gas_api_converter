@@ -74,14 +74,17 @@ def parse_method_doc(doc_div):
     return method_info
 
 def parse_class_page(class_url):
-    """クラスのページを解析し、メソッドやプロパティの情報を抽出する"""
+    """クラスのページを解析し、メソッドやプロパティ、継承情報を抽出する"""
     print(f"  Scraping class: {class_url}")
     soup = get_soup(class_url)
     if not soup:
         return None
 
     class_name_tag = soup.find("h1", class_="devsite-page-title")
-    class_name = class_name_tag.find(string=True, recursive=False).strip()
+    class_name = ""
+    if class_name_tag:
+        # Extract text only from the main tag, ignoring child tags like spans
+        class_name = class_name_tag.find(string=True, recursive=False).strip()
 
     description_tag = soup.select_one("div[itemprop='articleBody'] > .type.doc > p")
     description = description_tag.get_text(strip=True) if description_tag else ""
@@ -91,8 +94,19 @@ def parse_class_page(class_url):
         "url": class_url,
         "description": description,
         "methods": [],
-        "enum_members": []
+        "enum_members": [],
+        "implementing_classes": [] # インターフェースを実装するクラスのリスト
     }
+
+    # "Implemented by:" (インターフェースの場合) - ユーザー提供のロジックを使用
+    if "Interface" in class_name:
+        class_table = soup.find("table", class_="member type")
+        if class_table:
+            class_names = []
+            # `<a>` タグを持つ `<code>` タグを探す
+            for link in class_table.select('td > code > a'):
+                class_names.append(link.get_text(strip=True))
+            class_info["implementing_classes"] = class_names
 
     # Enum型の場合、メンバーを抽出
     if class_name.startswith("Enum"):
@@ -167,7 +181,7 @@ def scrape_gas_docs():
             if class_info:
                 service_data["classes"].append(class_info)
 
-        output_filename = f"{service_name}.json"
+        output_filename = f"api-def2/{service_name}.json"
         with open(output_filename, "w", encoding="utf-8") as f:
             json.dump(service_data, f, ensure_ascii=False, indent=2)
         print(f"Service '{service_name}' data saved to {output_filename}")

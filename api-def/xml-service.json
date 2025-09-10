@@ -89,7 +89,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Cdata",
@@ -169,7 +170,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Comment",
@@ -231,7 +233,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Interface Content",
@@ -338,7 +341,16 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": [
+        "Cdata",
+        "Comment",
+        "DocType",
+        "Element",
+        "EntityRef",
+        "ProcessingInstruction",
+        "Text"
+      ]
     },
     {
       "name": "Enum ContentType",
@@ -374,7 +386,8 @@
           "name": "TEXT",
           "description": "An XMLTextnode."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DocType",
@@ -517,7 +530,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Document",
@@ -740,7 +754,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Element",
@@ -1396,7 +1411,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EntityRef",
@@ -1512,7 +1528,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Format",
@@ -1646,7 +1663,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Namespace",
@@ -1672,7 +1690,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ProcessingInstruction",
@@ -1725,7 +1744,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Text",
@@ -1805,7 +1825,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class XmlService",
@@ -2123,7 +2144,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     }
   ]
 }

@@ -98,7 +98,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class UrlFetchApp",
@@ -212,7 +213,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     }
   ]
 }

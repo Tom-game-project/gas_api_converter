@@ -34,7 +34,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class LinearOptimizationEngine",
@@ -357,7 +358,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class LinearOptimizationService",
@@ -374,7 +376,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class LinearOptimizationSolution",
@@ -427,7 +430,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum Status",
@@ -463,7 +467,8 @@
           "name": "NOT_SOLVED",
           "description": "Status whenLinearOptimizationEngine.solve()has not been called yet."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum VariableType",
@@ -479,7 +484,8 @@
           "name": "CONTINUOUS",
           "description": "Type of variable that can take any real value."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

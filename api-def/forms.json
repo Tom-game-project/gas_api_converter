@@ -20,7 +20,8 @@
           "name": "RIGHT",
           "description": "Align the image to the right side of the form."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class CheckboxGridItem",
@@ -244,14 +245,16 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CheckboxGridValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/checkbox-grid-validation",
       "description": "",
       "methods": [],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CheckboxGridValidationBuilder",
@@ -268,7 +271,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CheckboxItem",
@@ -635,14 +639,16 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CheckboxValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/checkbox-validation",
       "description": "",
       "methods": [],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CheckboxValidationBuilder",
@@ -704,7 +710,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Choice",
@@ -748,7 +755,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DateItem",
@@ -972,7 +980,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DateTimeItem",
@@ -1196,7 +1205,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum DestinationType",
@@ -1208,7 +1218,8 @@
           "name": "SPREADSHEET",
           "description": "A Google Sheets spreadsheet as a destination for form responses."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DurationItem",
@@ -1421,7 +1432,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum FeedbackType",
@@ -1441,7 +1453,8 @@
           "name": "GENERAL",
           "description": "Feedback that is automatically displayed to respondents when they submit their response.\nGeneral feedback can only be attached to question types that do not support auto-grading, but\nare gradeable (ie everything but grid)"
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Form",
@@ -2553,7 +2566,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class FormApp",
@@ -2713,7 +2727,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class FormResponse",
@@ -2865,7 +2880,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class GridItem",
@@ -3089,14 +3105,16 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class GridValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/grid-validation",
       "description": "",
       "methods": [],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class GridValidationBuilder",
@@ -3113,7 +3131,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ImageItem",
@@ -3292,7 +3311,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Interface Item",
@@ -3543,7 +3563,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ItemResponse",
@@ -3623,7 +3644,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ItemType",
@@ -3707,7 +3729,8 @@
           "name": "UNSUPPORTED",
           "description": "An item that is currently not supported through APIs."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ListItem",
@@ -4072,7 +4095,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class MultipleChoiceItem",
@@ -4464,7 +4488,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PageBreakItem",
@@ -4616,7 +4641,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PageNavigationType",
@@ -4640,7 +4666,8 @@
           "name": "SUBMIT",
           "description": "Submit the form response after completing the current page."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ParagraphTextItem",
@@ -4864,14 +4891,16 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ParagraphTextValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/paragraph-text-validation",
       "description": "",
       "methods": [],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ParagraphTextValidationBuilder",
@@ -4987,7 +5016,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class QuizFeedback",
@@ -5013,7 +5043,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class QuizFeedbackBuilder",
@@ -5101,7 +5132,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum RatingIconType",
@@ -5121,7 +5153,8 @@
           "name": "THUMB_UP",
           "description": "A thumb up icon."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class RatingItem",
@@ -5372,7 +5405,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ScaleItem",
@@ -5657,7 +5691,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class SectionHeaderItem",
@@ -5755,7 +5790,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TextItem",
@@ -5979,14 +6015,16 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TextValidation",
       "url": "https://developers.google.com/apps-script/reference/forms/text-validation",
       "description": "",
       "methods": [],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TextValidationBuilder",
@@ -6298,7 +6336,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TimeItem",
@@ -6503,7 +6542,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class VideoItem",
@@ -6673,7 +6713,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     }
   ]
 }

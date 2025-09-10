@@ -16,7 +16,8 @@
           "name": "ALTERNATE_SERIES",
           "description": "Auto-filling with this setting results in the empty cells in the expanded range being filled\nwith copies of the existing values."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Banding",
@@ -510,7 +511,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum BandingTheme",
@@ -566,7 +568,8 @@
           "name": "PINK",
           "description": "A pink banding theme."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class BigQueryDataSourceSpec",
@@ -646,7 +649,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class BigQueryDataSourceSpecBuilder",
@@ -878,7 +882,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class BooleanCondition",
@@ -976,7 +981,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum BooleanCriteria",
@@ -1080,7 +1086,8 @@
           "name": "CUSTOM_FORMULA",
           "description": "The criteria is met when the input makes the given formula evaluate totrue."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum BorderStyle",
@@ -1112,7 +1119,8 @@
           "name": "DOUBLE",
           "description": "Two solid line borders."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class CellImage",
@@ -1165,7 +1173,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CellImageBuilder",
@@ -1281,7 +1290,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Color",
@@ -1316,7 +1326,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ColorBuilder",
@@ -1396,7 +1407,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ConditionalFormatRule",
@@ -1440,7 +1452,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ConditionalFormatRuleBuilder",
@@ -2351,7 +2364,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ContainerInfo",
@@ -2395,7 +2409,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum CopyPasteType",
@@ -2435,7 +2450,8 @@
           "name": "PASTE_COLUMN_WIDTHS",
           "description": "Paste the column widths only."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum DataExecutionErrorCode",
@@ -2503,7 +2519,8 @@
           "name": "PERMISSION_DENIED",
           "description": "The user does not have access to the database referenced by the data source. Please update the\ndata sourcespecificationor contact the owner of the billing\nproject to request access."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum DataExecutionState",
@@ -2531,7 +2548,8 @@
           "name": "NOT_STARTED",
           "description": "The data execution has not started."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DataExecutionStatus",
@@ -2593,7 +2611,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSource",
@@ -2779,7 +2798,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceChart",
@@ -2850,7 +2870,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceColumn",
@@ -2948,7 +2969,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceFormula",
@@ -3064,7 +3086,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceParameter",
@@ -3099,7 +3122,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum DataSourceParameterType",
@@ -3115,7 +3139,8 @@
           "name": "CELL",
           "description": "The data source parameter is valued based on a cell."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourcePivotTable",
@@ -3301,7 +3326,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceRefreshSchedule",
@@ -3345,7 +3371,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceRefreshScheduleFrequency",
@@ -3389,7 +3416,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum DataSourceRefreshScope",
@@ -3405,7 +3433,8 @@
           "name": "ALL_DATA_SOURCES",
           "description": "The refresh applies to all data sources in the spreadsheet."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceSheet",
@@ -3775,7 +3804,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceSheetFilter",
@@ -3837,7 +3867,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceSpec",
@@ -3890,7 +3921,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceSpecBuilder",
@@ -4005,7 +4037,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceTable",
@@ -4271,7 +4304,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceTableColumn",
@@ -4297,7 +4331,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataSourceTableFilter",
@@ -4359,7 +4394,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum DataSourceType",
@@ -4379,7 +4415,8 @@
           "name": "LOOKER",
           "description": "A Looker data source."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DataValidation",
@@ -4432,7 +4469,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DataValidationBuilder",
@@ -5098,7 +5136,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum DataValidationCriteria",
@@ -5218,7 +5257,8 @@
           "name": "DATE_EQUAL_TO_RELATIVE",
           "description": "Requires a date that is equal to the relative date value."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DateTimeGroupingRule",
@@ -5235,7 +5275,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum DateTimeGroupingRuleType",
@@ -5307,7 +5348,8 @@
           "name": "YEAR_MONTH_DAY",
           "description": "Group date-time by year, month, and day, for example2008-11-22."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class DeveloperMetadata",
@@ -5486,7 +5528,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DeveloperMetadataFinder",
@@ -5602,7 +5645,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DeveloperMetadataLocation",
@@ -5655,7 +5699,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum DeveloperMetadataLocationType",
@@ -5679,7 +5724,8 @@
           "name": "COLUMN",
           "description": "The location type for developer metadata associated with a column."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum DeveloperMetadataVisibility",
@@ -5695,7 +5741,8 @@
           "name": "PROJECT",
           "description": "Project-visible metadata is only visible to and accessible by the developer project that\ncreated the metadata. Do not use project-visible developer metadata as a security mechanism or\nto store secrets. It can be exposed to users with view access to the document."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum Dimension",
@@ -5711,7 +5758,8 @@
           "name": "ROWS",
           "description": "The row (horizontal) dimension."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum Direction",
@@ -5735,7 +5783,8 @@
           "name": "NEXT",
           "description": "The direction of increasing column indices."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Drawing",
@@ -5920,7 +5969,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedAreaChartBuilder",
@@ -6535,7 +6585,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedBarChartBuilder",
@@ -7141,7 +7192,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedChart",
@@ -7266,7 +7318,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedChartBuilder",
@@ -7594,7 +7647,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedColumnChartBuilder",
@@ -8191,7 +8245,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedComboChartBuilder",
@@ -8788,7 +8843,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedHistogramChartBuilder",
@@ -9385,7 +9441,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedLineChartBuilder",
@@ -10009,7 +10066,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedPieChartBuilder",
@@ -10463,7 +10521,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedScatterChartBuilder",
@@ -11095,7 +11154,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EmbeddedTableChartBuilder",
@@ -11611,7 +11671,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Filter",
@@ -11725,7 +11786,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class FilterCriteria",
@@ -11796,7 +11858,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class FilterCriteriaBuilder",
@@ -12512,7 +12575,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum FrequencyType",
@@ -12536,7 +12600,8 @@
           "name": "MONTHLY",
           "description": "Refresh monthly, on given days of the month."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class GradientCondition",
@@ -12652,7 +12717,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Group",
@@ -12723,7 +12789,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum GroupControlTogglePosition",
@@ -12739,7 +12806,8 @@
           "name": "AFTER",
           "description": "The position where the control toggle is after the group (at higher indices)."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum InterpolationType",
@@ -12767,7 +12835,8 @@
           "name": "MAX",
           "description": "Infer the maximum number as a specific interpolation point for a gradient condition."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class LookerDataSourceSpec",
@@ -12829,7 +12898,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class LookerDataSourceSpecBuilder",
@@ -13007,7 +13077,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class NamedRange",
@@ -13078,7 +13149,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class OverGridImage",
@@ -13392,7 +13464,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PageProtection",
@@ -13472,7 +13545,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PivotFilter",
@@ -13543,7 +13617,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PivotGroup",
@@ -13907,7 +13982,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PivotGroupLimit",
@@ -13960,7 +14036,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PivotTable",
@@ -14181,7 +14258,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PivotTableSummarizeFunction",
@@ -14245,7 +14323,8 @@
           "name": "VARP",
           "description": "TheVARPfunction"
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class PivotValue",
@@ -14388,7 +14467,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PivotValueDisplayType",
@@ -14412,7 +14492,8 @@
           "name": "PERCENT_OF_GRAND_TOTAL",
           "description": "Displays pivot values as a percent of the grand total."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Protection",
@@ -14789,7 +14870,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ProtectionType",
@@ -14805,7 +14887,8 @@
           "name": "SHEET",
           "description": "Protection for a sheet."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Range",
@@ -17814,7 +17897,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class RangeList",
@@ -18527,7 +18611,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum RecalculationInterval",
@@ -18547,7 +18632,8 @@
           "name": "HOUR",
           "description": "Recalculate when values are changed, and every hour."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum RelativeDate",
@@ -18579,7 +18665,8 @@
           "name": "PAST_YEAR",
           "description": "Dates that fall within the past year period."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class RichTextValue",
@@ -18702,7 +18789,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class RichTextValueBuilder",
@@ -18841,7 +18929,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Selection",
@@ -18903,7 +18992,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Sheet",
@@ -21517,7 +21607,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SheetType",
@@ -21537,7 +21628,8 @@
           "name": "DATASOURCE",
           "description": "A sheet containing aDataSource."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Slicer",
@@ -21838,7 +21930,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SortOrder",
@@ -21854,7 +21947,8 @@
           "name": "DESCENDING",
           "description": "Descending sort order."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class SortSpec",
@@ -21916,7 +22010,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Spreadsheet",
@@ -24448,7 +24543,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class SpreadsheetApp",
@@ -24858,7 +24954,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class SpreadsheetTheme",
@@ -24988,7 +25085,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum TextDirection",
@@ -25004,7 +25102,8 @@
           "name": "RIGHT_TO_LEFT",
           "description": "Right-to-left text direction."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class TextFinder",
@@ -25192,7 +25291,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TextRotation",
@@ -25218,7 +25318,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TextStyle",
@@ -25307,7 +25408,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TextStyleBuilder",
@@ -25468,7 +25570,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum TextToColumnsDelimiter",
@@ -25492,7 +25595,8 @@
           "name": "SPACE",
           "description": "\" \"delimiter."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ThemeColor",
@@ -25518,7 +25622,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ThemeColorType",
@@ -25566,7 +25671,8 @@
           "name": "HYPERLINK",
           "description": "Represents the color to use for hyperlinks."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum ValueType",
@@ -25578,7 +25684,8 @@
           "name": "IMAGE",
           "description": "The value type when the cell contains an image."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum WrapStrategy",
@@ -25598,7 +25705,8 @@
           "name": "CLIP",
           "description": "Clip lines that are longer than the cell width."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

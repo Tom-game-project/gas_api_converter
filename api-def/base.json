@@ -214,7 +214,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Interface BlobSource",
@@ -249,7 +250,28 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": [
+        "Blob",
+        "Chart",
+        "Document",
+        "Tab",
+        "EmbeddedChart",
+        "File",
+        "GmailAttachment",
+        "HTTPResponse",
+        "HtmlOutput",
+        "Image",
+        "PageElement",
+        "InlineImage",
+        "JdbcBlob",
+        "JdbcClob",
+        "PictureFill",
+        "PositionedImage",
+        "Paragraph",
+        "Spreadsheet",
+        "StaticMap"
+      ]
     },
     {
       "name": "Class Browser",
@@ -413,7 +435,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum Button",
@@ -441,7 +464,8 @@
           "name": "NO",
           "description": "A \"No\" button, indicating a negative response to a question."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum ButtonSet",
@@ -465,7 +489,8 @@
           "name": "YES_NO_CANCEL",
           "description": "A \"Yes\" button, a \"No\" button, and a \"Cancel\" button, allowing the user to either answer a\nyes/no question or halt an operation."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum ColorType",
@@ -485,7 +510,8 @@
           "name": "THEME",
           "description": "A color that refers to an entry in the theme's color scheme."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class console",
@@ -669,7 +695,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Logger",
@@ -739,7 +766,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Menu",
@@ -809,7 +837,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum MimeType",
@@ -945,7 +974,8 @@
           "name": "ZIP",
           "description": "Representation of MIME type for a ZIP archive file (typically .zip)."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum Month",
@@ -1001,7 +1031,8 @@
           "name": "DECEMBER",
           "description": "December (month 12)."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class PromptResponse",
@@ -1027,7 +1058,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class RgbColor",
@@ -1080,7 +1112,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Session",
@@ -1151,7 +1184,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Ui",
@@ -1430,7 +1464,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class User",
@@ -1456,7 +1491,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum Weekday",
@@ -1492,7 +1528,8 @@
           "name": "SATURDAY",
           "description": "Saturday."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

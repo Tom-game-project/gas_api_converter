@@ -17,7 +17,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ConferenceDataBuilder",
@@ -142,7 +143,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ConferenceDataService",
@@ -186,7 +188,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ConferenceError",
@@ -230,7 +233,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ConferenceErrorType",
@@ -262,7 +266,8 @@
           "name": "UNKNOWN",
           "description": "An unknown error during conference data generation."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ConferenceParameter",
@@ -306,7 +311,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EntryPoint",
@@ -476,7 +482,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum EntryPointFeature",
@@ -496,7 +503,8 @@
           "name": "TOLL_FREE",
           "description": "Applies to PHONE entry point only. For the calling party, a call to a toll-free number is free\nof charge. A number can't be toll and toll-free at the same time."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum EntryPointType",
@@ -520,7 +528,8 @@
           "name": "SIP",
           "description": "A SIP entry point for a conference. A conference can have zero or oneSIPentry points."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

@@ -160,7 +160,8 @@
           "name": "WIDTH",
           "description": "The width setting, for table cell and image elements."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Body",
@@ -1253,7 +1254,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Bookmark",
@@ -1288,7 +1290,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ContainerElement",
@@ -1734,7 +1737,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Date",
@@ -1868,7 +1872,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Document",
@@ -2504,7 +2509,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DocumentApp",
@@ -2584,7 +2590,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DocumentTab",
@@ -2797,7 +2804,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Interface Element",
@@ -3111,7 +3119,37 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": [
+        "Body",
+        "ContainerElement",
+        "Date",
+        "Equation",
+        "EquationFunction",
+        "Equation",
+        "EquationFunctionArgumentSeparator",
+        "Equation",
+        "EquationSymbol",
+        "Equation",
+        "FooterSection",
+        "Footnote",
+        "FootnoteSection",
+        "HeaderSection",
+        "HorizontalRule",
+        "InlineDrawing",
+        "InlineImage",
+        "ListItem",
+        "PageBreak",
+        "Paragraph",
+        "Person",
+        "RichLink",
+        "Table",
+        "TableCell",
+        "TableOfContents",
+        "TableRow",
+        "Text",
+        "UnsupportedElement"
+      ]
     },
     {
       "name": "Enum ElementType",
@@ -3219,7 +3257,8 @@
           "name": "UNSUPPORTED",
           "description": "The type corresponding toUnsupportedElement. Unsupported elements\nrepresent document portions that do not support scripting."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Equation",
@@ -3566,7 +3605,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EquationFunction",
@@ -3922,7 +3962,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EquationFunctionArgumentSeparator",
@@ -4029,7 +4070,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EquationSymbol",
@@ -4145,7 +4187,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum FontFamily",
@@ -4281,7 +4324,8 @@
           "name": "VERDANA",
           "description": "The Verdana font family."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class FooterSection",
@@ -5106,7 +5150,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Footnote",
@@ -5213,7 +5258,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class FootnoteSection",
@@ -5693,7 +5739,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum GlyphType",
@@ -5733,7 +5780,8 @@
           "name": "ROMAN_LOWER",
           "description": "A roman numeral, lowercase bullet."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class HeaderSection",
@@ -6558,7 +6606,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum HorizontalAlignment",
@@ -6582,7 +6631,8 @@
           "name": "JUSTIFY",
           "description": "The justify-alignment option."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class HorizontalRule",
@@ -6680,7 +6730,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class InlineDrawing",
@@ -6841,7 +6892,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class InlineImage",
@@ -7110,7 +7162,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ListItem",
@@ -8154,7 +8207,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class NamedRange",
@@ -8198,7 +8252,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PageBreak",
@@ -8296,7 +8351,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Paragraph",
@@ -9259,7 +9315,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum ParagraphHeading",
@@ -9303,7 +9360,8 @@
           "name": "SUBTITLE",
           "description": "The subtitle heading option."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Person",
@@ -9428,7 +9486,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Position",
@@ -9517,7 +9576,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class PositionedImage",
@@ -9705,7 +9765,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum PositionedLayout",
@@ -9733,7 +9794,8 @@
           "name": "WRAP_TEXT",
           "description": "The image is wrapped by text."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Range",
@@ -9759,7 +9821,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class RangeBuilder",
@@ -9932,7 +9995,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class RangeElement",
@@ -9976,7 +10040,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class RichLink",
@@ -10110,7 +10175,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Tab",
@@ -10172,7 +10238,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum TabType",
@@ -10184,7 +10251,8 @@
           "name": "DOCUMENT_TAB",
           "description": "The type corresponding toDocumentTab."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Table",
@@ -10780,7 +10848,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TableCell",
@@ -11794,7 +11863,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TableOfContents",
@@ -12132,7 +12202,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TableRow",
@@ -12693,7 +12764,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Text",
@@ -13827,7 +13899,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum TextAlignment",
@@ -13847,7 +13920,8 @@
           "name": "SUBSCRIPT",
           "description": "The subscript text alignment."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class UnsupportedElement",
@@ -13954,7 +14028,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum VerticalAlignment",
@@ -13974,7 +14049,8 @@
           "name": "TOP",
           "description": "The top-alignment option."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

@@ -753,7 +753,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CalendarApp",
@@ -1684,7 +1685,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CalendarEvent",
@@ -2445,7 +2447,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class CalendarEventSeries",
@@ -3133,7 +3136,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum Color",
@@ -3225,7 +3229,8 @@
           "name": "YELLOW",
           "description": "Yellow (#AB8B00)."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum EventColor",
@@ -3277,7 +3282,8 @@
           "name": "RED",
           "description": "Red (\"11\"), referred to as \"Tomato\" in th Calendar UI."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class EventGuest",
@@ -3330,7 +3336,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class EventRecurrence",
@@ -3464,7 +3471,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum EventTransparency",
@@ -3480,7 +3488,8 @@
           "name": "TRANSPARENT",
           "description": "The event does not block time on the calendar. This is equivalent to setting \"Show me as\" to\n\"Available\" in the Calendar UI."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum EventType",
@@ -3512,7 +3521,8 @@
           "name": "WORKING_LOCATION",
           "description": "The event is a working location event."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum GuestStatus",
@@ -3540,7 +3550,8 @@
           "name": "YES",
           "description": "The guest has indicated they are attending."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class RecurrenceRule",
@@ -3926,7 +3937,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum Visibility",
@@ -3950,7 +3962,8 @@
           "name": "PUBLIC",
           "description": "The event is public and event details are visible to all readers of the calendar."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

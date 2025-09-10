@@ -161,7 +161,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class GroupsApp",
@@ -196,7 +197,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum Role",
@@ -228,7 +230,8 @@
           "name": "BANNED",
           "description": "A user who has been banned from a group and cannot attempt to join it."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

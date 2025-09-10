@@ -24,7 +24,8 @@
           "name": "FULL",
           "description": "A mode that allows access to all services that require authorization. This mode occurs when an\nadd-on or a script executes as the result of any trigger other than the cases described forLIMITEDorNONE."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class AuthorizationInfo",
@@ -59,7 +60,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum AuthorizationStatus",
@@ -75,7 +77,8 @@
           "name": "NOT_REQUIRED",
           "description": "The user has granted this script all the authorization it currently requires."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class CalendarTriggerBuilder",
@@ -101,7 +104,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class ClockTriggerBuilder",
@@ -350,7 +354,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class DocumentTriggerBuilder",
@@ -376,7 +381,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum EventType",
@@ -408,7 +414,8 @@
           "name": "ON_EVENT_UPDATED",
           "description": "The trigger fires once an event gets created, updated, or deleted on the specified Google\nCalendar."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class FormTriggerBuilder",
@@ -443,7 +450,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum InstallationSource",
@@ -463,7 +471,8 @@
           "name": "WEB_STORE_ADD_ON",
           "description": "Add-on was installed by the user from the Chrome Web Store."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class ScriptApp",
@@ -739,7 +748,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Service",
@@ -774,7 +784,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class SpreadsheetTriggerBuilder",
@@ -827,7 +838,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class StateTokenBuilder",
@@ -906,7 +918,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class Trigger",
@@ -959,7 +972,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class TriggerBuilder",
@@ -1102,7 +1116,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum TriggerSource",
@@ -1130,7 +1145,8 @@
           "name": "CALENDAR",
           "description": "Google Calendar causes the trigger to fire."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

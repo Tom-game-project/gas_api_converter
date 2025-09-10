@@ -295,7 +295,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class HtmlOutputMetaTag",
@@ -321,7 +322,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class HtmlService",
@@ -455,7 +457,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Class HtmlTemplate",
@@ -499,7 +502,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     },
     {
       "name": "Enum SandboxMode",
@@ -519,7 +523,8 @@
           "name": "NATIVE",
           "description": "A sandbox mode that is built on top of ECMAScript 5 strict mode. A sandbox mode built on top of\nECMAScript 5 strict mode. This mode wassunset as\nof July 6, 2016. All scripts now useIFRAMEmode."
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum XFrameOptionsMode",
@@ -535,7 +540,8 @@
           "name": "DEFAULT",
           "description": "Sets the default value for theX-Frame-Optionsheader, which preserves normal security\nassumptions. If a script does not set anX-Frame-Optionsmode, Apps Script uses this\nmode as the default."
         }
-      ]
+      ],
+      "implementing_classes": []
     }
   ]
 }

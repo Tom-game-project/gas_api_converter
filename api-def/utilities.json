@@ -16,7 +16,8 @@
           "name": "UTF_8",
           "description": ""
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum DigestAlgorithm",
@@ -48,7 +49,8 @@
           "name": "SHA_512",
           "description": "SHA-512 algorithm"
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum MacAlgorithm",
@@ -76,7 +78,8 @@
           "name": "HMAC_SHA_512",
           "description": ""
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Enum RsaAlgorithm",
@@ -92,7 +95,8 @@
           "name": "RSA_SHA_256",
           "description": ""
         }
-      ]
+      ],
+      "implementing_classes": []
     },
     {
       "name": "Class Utilities",
@@ -1271,7 +1275,8 @@
           }
         }
       ],
-      "enum_members": []
+      "enum_members": [],
+      "implementing_classes": []
     }
   ]
 }

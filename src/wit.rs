@@ -1,4 +1,4 @@
-use crate::{get_interface_name_from_js_type, json_struct::{ApiService, Method, Parameter}};
+use crate::{get_interface_name_from_js_type, json_struct::{ApiService, Method, Parameter}, Type, TypeTrait};
 use convert_case::{Case, Casing};
 
 #[derive(Clone, Debug, Eq, PartialEq, Hash)]
@@ -25,13 +25,53 @@ fn extract_method_name(signature: &str) -> Option<&str> {
 }
 
 /// 残された可能性がリストの場合のみこの関数を呼び出す
-fn wit_dress_list(a: JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
+
+fn wit_convert_arg_type_pair2(parameter: &Parameter) -> Result<WitTypeString, Js2WitConvertErr>
 {
-    if a.0.ends_with("[]")
+    let a = 
+        convert_wit_type_string2(&parameter.param_type);
+    if let Ok(b) = a
     {
-        let b = &a.0[0..a.0.len() - 2];
+        Ok(WitTypeString(
+            format!("{}: {}", 
+                parameter.name, 
+                b.0
+            )
+        ))
+    }
+    else if let Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) = a
+    {
+        Err(Js2WitConvertErr::NotPrimitiveType{
+                wit_type_string: WitTypeString(
+                    format!("{}: {}", 
+                        parameter.name, 
+                        wit_type_string.0
+                    )
+                ),
+                unknown_fields
+            }
+        )
+    }
+    else 
+    {
+        return Err(Js2WitConvertErr::ParameterStringErr);
+    }
+}
+
+
+//fn wit_convert_arg_type_pair2() -> Result<WitTypeString, Js2WitConvertErr>
+//{
+//
+//}
+
+fn wit_dress_list2<T>(arg: &T) -> Result<WitTypeString, Js2WitConvertErr>
+where T:TypeTrait
+{
+    if arg.get_name().ends_with("[]")
+    {
+        let b = &arg.get_name()[0..arg.get_name().len() - 2];
         let wit_type = 
-            convert_wit_type_string(JsTypeString(b.to_string()));
+            convert_wit_type_string2(&Type { name: b.to_string(), url: arg.get_url().clone() });
 
         if let Ok(wit_type_inner) = wit_type
         {
@@ -56,74 +96,48 @@ fn wit_dress_list(a: JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
     {
         Err(Js2WitConvertErr::SyntaxErr)
     }
+
 }
 
-pub fn convert_wit_type_string(js_type_string: JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
+/// 引数をjsonの型にした版
+pub fn convert_wit_type_string2<T>(arg: &T) -> Result<WitTypeString, Js2WitConvertErr>
+where T: TypeTrait
 {
     // primitive type
-    match js_type_string.0.as_str() {
-        "String" => return Ok(WitTypeString("string".to_string())),
-        "Boolean" => return Ok(WitTypeString("boolean".to_string())),
-        "Byte" =>  return Ok(WitTypeString("u8".to_string())),
-        "Number" => return Ok(WitTypeString("f64".to_string())),
-        "Integer" => return Ok(WitTypeString("s64".to_string())),
-        "void" => return Ok(WitTypeString("void".to_string())), // 特別
-        "Object" => return Ok(WitTypeString("object".to_string())), // 少し考える必要がある部分
-        _ => {
-            //wit_dress_list(js_type_string.clone())
+    if arg.get_url().is_none() // 説明のurlが無い -> プリミティブな型を疑う
+    {
+        match arg.get_name().as_str() {
+            "String" => return Ok(WitTypeString("string".to_string())),
+            "Boolean" => return Ok(WitTypeString("boolean".to_string())),
+            "Byte" =>  return Ok(WitTypeString("u8".to_string())),
+            "Number" => return Ok(WitTypeString("f64".to_string())),
+            "Integer" => return Ok(WitTypeString("s64".to_string())),
+            "void" => return Ok(WitTypeString("void".to_string())), // 特別
+            "Object" => return Ok(WitTypeString("object".to_string())), // 少し考える必要がある部分
+            "Date" => return Ok(WitTypeString("date".to_string())),
+            _ => {
+            }
         }
     }
 
     // primitive typeでない型,GAS API独自のクラスなど
-    if is_ascii_alnum_or_underscore(&js_type_string.0)
+    if is_ascii_alnum_or_underscore(&arg.get_name())
     {
         return Err(Js2WitConvertErr::NotPrimitiveType{
                 wit_type_string: WitTypeString(
-                    js_type_string.0
+                    arg.get_name()
                         .to_case(Case::Kebab)
                 ),
-                unknown_fields: vec![js_type_string]
+                unknown_fields: vec![JsTypeString(arg.get_name().clone())]
             }
         );
     }
 
-    wit_dress_list(js_type_string.clone())
-}
-
-fn wit_convert_arg_type_pair(name:JsTypeString, type_name:JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
-{
-    let a = 
-        convert_wit_type_string(type_name);
-    if let Ok(b) = a
-    {
-        Ok(WitTypeString(
-            format!("{}: {}", 
-                name.0, 
-                b.0
-            )
-        ))
-    }
-    else if let Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) = a
-    {
-        Err(Js2WitConvertErr::NotPrimitiveType{
-                wit_type_string: WitTypeString(
-                    format!("{}: {}", 
-                        name.0, 
-                        wit_type_string.0
-                    )
-                ),
-                unknown_fields
-            }
-        )
-    }
-    else 
-    {
-        return Err(Js2WitConvertErr::ParameterStringErr);
-    }
+    wit_dress_list2(arg)
 }
 
 /// witの関数宣言の引数部分を作成する
-pub fn wit_parameters_string(parameter_list: &Vec<Parameter>) -> Result<WitTypeString, Js2WitConvertErr>
+pub fn wit_parameters_string2(parameter_list: &Vec<Parameter>) -> Result<WitTypeString, Js2WitConvertErr>
 {
     let mut rlist:Vec<String> = vec![];
     let mut unknown_fields_gather = vec![];
@@ -131,9 +145,8 @@ pub fn wit_parameters_string(parameter_list: &Vec<Parameter>) -> Result<WitTypeS
     for i in parameter_list 
     {
         let arg_type = 
-            wit_convert_arg_type_pair(
-                JsTypeString(i.name.clone()), // 引数の名前
-                JsTypeString(i.param_type.name.clone()) // タイプの名前
+            wit_convert_arg_type_pair2(
+                i
             );
 
         if let Ok(b) = arg_type{
@@ -172,10 +185,12 @@ pub fn wit_gen_func_def(method: &Method) -> Result<WitTypeString, Js2WitConvertE
     let mut unknown_fields_gather = vec![];
 
     let wit_parameters = 
-        wit_parameters_string(&method.parameters);
+        wit_parameters_string2(&method.parameters);
 
-    let wit_return = 
-        convert_wit_type_string(JsTypeString(method.return_type.name.clone()));
+    let wit_return = convert_wit_type_string2(
+        &method.return_type
+    );
+    //convert_wit_type_string(JsTypeString(method.return_type.name.clone()));
 
     // ======================================== TODO:同じような内容のため後で修正
     let wit_parameters = if let Ok(b) = wit_parameters {
@@ -415,5 +430,4 @@ impl WitDefFile {
     }
 }
 */
-
 

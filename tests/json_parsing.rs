@@ -1,11 +1,5 @@
 use gas_api_json::{
-    convert_wit_type_string, 
-    wit_parameters_string, 
-    wit_gen_func_def,
-    read_service_definition, 
-    Js2WitConvertErr, 
-    JsTypeString,
-    read_all_service_definition
+    convert_wit_type_string2, read_all_service_definition, read_service_definition, wit_gen_func_def, wit_parameters_string2, Js2WitConvertErr, JsTypeString, Type
 };
 
 use std::path::Path;
@@ -41,8 +35,11 @@ fn test_convert_wit_type_string()
 {
     let a = "Blob[][]";
 
-    match convert_wit_type_string(
-        JsTypeString(a.to_string())
+    match convert_wit_type_string2(
+             &Type {
+                 name: a.to_string(),
+                 url: None
+             }
     ){
         Ok(b) => {
             println!("Primitive クラス: {}", b.0);

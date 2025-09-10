@@ -14,6 +14,7 @@ pub struct Class {
     pub description: String,
     pub methods: Vec<Method>,
     pub enum_members: Vec<EnumMember>,
+    pub implementing_classes: Vec<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -49,3 +50,35 @@ pub struct EnumMember {
     pub name: String,
     pub description: String,
 }
+
+
+pub trait TypeTrait {
+    fn get_name(&self) -> String;
+    fn get_url(&self) -> Option<String>;
+}
+
+
+// 型情報の取り扱いは返り値も引数も同じ
+
+impl TypeTrait for Type 
+{
+    fn get_name(&self) -> String {
+        self.name.clone()
+    }
+
+    fn get_url(&self) -> Option<String> {
+        self.url.clone()
+    }
+}
+
+impl TypeTrait for ReturnType
+{
+    fn get_name(&self) -> String {
+        self.name.clone()
+    }
+
+    fn get_url(&self) -> Option<String> {
+        self.url.clone()
+    }
+}
+

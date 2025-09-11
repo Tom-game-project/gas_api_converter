@@ -1,5 +1,5 @@
 use gas_api_json::{
-    convert_wit_type_string2, read_all_service_definition, read_service_definition, wit_gen_func_def, wit_parameters_string2, Js2WitConvertErr, JsTypeString, Type
+    convert_wit_type_string2, read_all_service_definition, read_service_definition, wit_gen_func_def, wit_parameters_string, Js2WitConvertErr, JsTypeString, Type
 };
 
 use std::path::Path;

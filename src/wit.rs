@@ -26,7 +26,7 @@ fn extract_method_name(signature: &str) -> Option<&str> {
 
 /// 残された可能性がリストの場合のみこの関数を呼び出す
 
-fn wit_convert_arg_type_pair2(parameter: &Parameter) -> Result<WitTypeString, Js2WitConvertErr>
+fn wit_convert_arg_type_pair(parameter: &Parameter) -> Result<WitTypeString, Js2WitConvertErr>
 {
     let a = 
         convert_wit_type_string2(&parameter.param_type);
@@ -58,13 +58,7 @@ fn wit_convert_arg_type_pair2(parameter: &Parameter) -> Result<WitTypeString, Js
     }
 }
 
-
-//fn wit_convert_arg_type_pair2() -> Result<WitTypeString, Js2WitConvertErr>
-//{
-//
-//}
-
-fn wit_dress_list2<T>(arg: &T) -> Result<WitTypeString, Js2WitConvertErr>
+fn wit_dress_list<T>(arg: &T) -> Result<WitTypeString, Js2WitConvertErr>
 where T:TypeTrait
 {
     if arg.get_name().ends_with("[]")
@@ -133,11 +127,11 @@ where T: TypeTrait
         );
     }
 
-    wit_dress_list2(arg)
+    wit_dress_list(arg)
 }
 
 /// witの関数宣言の引数部分を作成する
-pub fn wit_parameters_string2(parameter_list: &Vec<Parameter>) -> Result<WitTypeString, Js2WitConvertErr>
+pub fn wit_parameters_string(parameter_list: &Vec<Parameter>) -> Result<WitTypeString, Js2WitConvertErr>
 {
     let mut rlist:Vec<String> = vec![];
     let mut unknown_fields_gather = vec![];
@@ -145,7 +139,7 @@ pub fn wit_parameters_string2(parameter_list: &Vec<Parameter>) -> Result<WitType
     for i in parameter_list 
     {
         let arg_type = 
-            wit_convert_arg_type_pair2(
+            wit_convert_arg_type_pair(
                 i
             );
 
@@ -185,7 +179,7 @@ pub fn wit_gen_func_def(method: &Method) -> Result<WitTypeString, Js2WitConvertE
     let mut unknown_fields_gather = vec![];
 
     let wit_parameters = 
-        wit_parameters_string2(&method.parameters);
+        wit_parameters_string(&method.parameters);
 
     let wit_return = convert_wit_type_string2(
         &method.return_type
@@ -281,101 +275,6 @@ pub fn wit_gen_interface_name(js_type_name: &JsTypeString) -> Result<WitTypeStri
     }
 }
 
-/// ここから下は、Witファイルを構成するためのプログラム
-///
-
-struct WitDefFile
-{
-    package_name: WitTypeString,
-    deps_uses: Vec<WitUseSection>, // use ...; サービスを超えて必要になるinterfaceのimport
-    
-    defined_interfaces: Vec<WitInterface>,
-    world_section: WitWorldSection,
-}
-
-/// - Enumの場合
-/// interfaceの内部に定義される
-/// ```wit
-/// interface enum_name {
-///     enum enum_name{
-///     
-///     }
-/// }
-/// ```
-/// - Classの場合
-/// リソースになるうるか否かで区別される
-///
-/// - リソースとして扱わない場合　
-/// ```wit
-/// interface class_name{
-///    ... methods ...
-/// }
-/// ```
-/// - リソースとして扱う場合
-/// ```wit
-/// interface class_name {
-///     resource {
-///         ... methods ...
-///     }
-/// }
-/// ```
-/// - Interfaceの場合(TODO)
-/// Classと同様に処理される
-enum WitInterface 
-{
-    WitInterfaceConst(WitInterfaceConst),
-    WitInterfaceResource(WitInterfaceResource),
-    WitInterfaceEnum(WitInterfaceEnum)
-}
-
-// 自分自身が自分を含めた他のクラスのメソッドの返り値とならないような型
-struct WitInterfaceConst
-{
-    name: WitTypeString,
-    deps_uses: Vec<WitUseSection>,
-    func_defines:Vec<WitTypeString>,
-}
-
-// 自分自身が自分を含めた他のクラスのメソッドの返り値となるような型
-struct WitInterfaceResource
-{
-    name: WitTypeString,
-    deps_uses: Vec<WitUseSection>,
-    func_defines:Vec<WitTypeString>,
-}
-
-struct WitInterfaceEnum
-{
-    name: WitTypeString,
-    enum_members: Vec<WitTypeString>,
-}
-
-/// Use文のためのセクション
-/// witファイル先頭で使う場合(BeyondService)
-/// と、ファイルの中のinterfaceを超えて型を利用する場合(BetondInterface)
-/// で使い分ける
-enum WitUseSection
-{
-    BeyondService(WitUseSectionBeyondService),
-    BetondInterface(WitUseSectionBetondInterface),
-}
-
-struct WitUseSectionBeyondService{
-    service:WitTypeString,
-    interface: WitTypeString,
-}
-
-struct WitUseSectionBetondInterface{
-    interface: WitTypeString,
-    inners: Vec<WitTypeString>,
-}
-
-
-struct WitWorldSection
-{
-    imports: Vec<WitTypeString>,
-    exports: Vec<WitTypeString>,
-}
 
 pub fn wit_gen_package_name(prefix: &str, target_service:&ApiService, wit_version: Option<&WitTypeString>) -> WitTypeString
 {
@@ -407,7 +306,6 @@ pub fn wit_gen_service_use(prefix: &str, target_service:&JsTypeString, target_in
 }
 
 pub fn wit_gen_interface_use(target_resource: &JsTypeString) -> Result<WitTypeString, Js2WitConvertErr>
-
 {
     let a = wit_gen_interface_name(
         target_resource
@@ -417,17 +315,4 @@ pub fn wit_gen_interface_use(target_resource: &JsTypeString) -> Result<WitTypeSt
         format!("use {}.{{{}}}", a.0, a.0)
     ))
 }
-
-/*
-impl WitDefFile {
-    fn constructor(all_service:&[ApiService], target_service: &ApiService)
-    {
-        let package_name = wit_gen_package_name(
-            "gas",
-            target_service, 
-            Some(&WitTypeString("0.1.0-alpha".to_string())));
-        
-    }
-}
-*/
 

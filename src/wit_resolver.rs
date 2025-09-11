@@ -38,23 +38,30 @@ pub fn find_type_define_location(
     )
 }
 
+pub enum InterfaceType
+{
+    Interface,
+    Class,
+    Enum,
+}
+
 /// 決まったフォーマットで書かれているinterface相当のデータ構造の名前を取得
-pub fn get_interface_name_from_js_type(js_type: &JsTypeString) -> Option<(&str, &str)>
+pub fn get_interface_name_from_js_type(js_type: &JsTypeString) -> Option<(InterfaceType, &str)>
 {
     if js_type.0.starts_with("Class")
     {
         let sliced = &js_type.0[6..];
-        Some(("Class", sliced))
+        Some((InterfaceType::Class, sliced))
     }
     else if js_type.0.starts_with("Enum")
     {
         let sliced = &js_type.0[5..];
-        Some(("Enum", sliced))
+        Some((InterfaceType::Enum, sliced))
     }
     else if js_type.0.starts_with("Interface")
     {
         let sliced = &js_type.0[10..];
-        Some(("Interface", sliced))
+        Some((InterfaceType:: Interface, sliced))
     }
     else 
     {

@@ -124,7 +124,7 @@ fn test_wit_gen_func_def01()
 {
     let path = "./api-def"; // 対象のディレクトリ
     let service_list = read_all_service_definition(path).unwrap();
-    let result = service_list.iter().find(|a|a.service_name == "drive");
+    let result = service_list.iter().find(|a|a.service_name == "spreadsheet");
 
     if let Some(api_service) = result 
     {
@@ -133,6 +133,7 @@ fn test_wit_gen_func_def01()
             println!("class name \"{}\"", i.name);
             let mut deps_uses: HashSet<JsTypeString> = HashSet::new();
             for j in &i.methods {
+
                 match wit_gen_func_def(j){
                     Ok(b) => {
                         println!("Primitive クラス: {}", b.0.green());

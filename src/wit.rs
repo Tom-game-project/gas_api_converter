@@ -1,10 +1,14 @@
+use std::fmt::Debug;
+
 use crate::{get_interface_name_from_js_type, json_struct::{ApiService, Method, Parameter}, Type, TypeTrait};
 use convert_case::{Case, Casing};
 
 #[derive(Clone, Debug, Eq, PartialEq, Hash)]
 pub struct JsTypeString(pub String);
+#[derive(Debug)]
 pub struct WitTypeString(pub String);
 
+#[derive(Debug)]
 pub enum Js2WitConvertErr{
     NotPrimitiveType{
         wit_type_string: WitTypeString, 
@@ -29,7 +33,7 @@ fn extract_method_name(signature: &str) -> Option<&str> {
 fn wit_convert_arg_type_pair(parameter: &Parameter) -> Result<WitTypeString, Js2WitConvertErr>
 {
     let a = 
-        convert_wit_type_string2(&parameter.param_type);
+        convert_wit_type_string(&parameter.param_type);
     if let Ok(b) = a
     {
         Ok(WitTypeString(
@@ -65,7 +69,7 @@ where T:TypeTrait
     {
         let b = &arg.get_name()[0..arg.get_name().len() - 2];
         let wit_type = 
-            convert_wit_type_string2(&Type { name: b.to_string(), url: arg.get_url().clone() });
+            convert_wit_type_string(&Type { name: b.to_string(), url: arg.get_url().clone() });
 
         if let Ok(wit_type_inner) = wit_type
         {
@@ -94,7 +98,7 @@ where T:TypeTrait
 }
 
 /// 引数をjsonの型にした版
-pub fn convert_wit_type_string2<T>(arg: &T) -> Result<WitTypeString, Js2WitConvertErr>
+pub fn convert_wit_type_string<T>(arg: &T) -> Result<WitTypeString, Js2WitConvertErr>
 where T: TypeTrait
 {
     // primitive type
@@ -181,7 +185,7 @@ pub fn wit_gen_func_def(method: &Method) -> Result<WitTypeString, Js2WitConvertE
     let wit_parameters = 
         wit_parameters_string(&method.parameters);
 
-    let wit_return = convert_wit_type_string2(
+    let wit_return = convert_wit_type_string(
         &method.return_type
     );
     //convert_wit_type_string(JsTypeString(method.return_type.name.clone()));

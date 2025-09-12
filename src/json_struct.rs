@@ -8,7 +8,7 @@ pub struct ApiService {
 }
 
 #[derive(Debug, Deserialize)]
-pub struct Class {
+pub struct Class { // 型として扱われる可能性がある
     pub name: String,
     pub url: String,
     pub description: String,
@@ -82,3 +82,12 @@ impl TypeTrait for ReturnType
     }
 }
 
+impl TypeTrait for Class {
+    fn get_name(&self) -> String {
+        self.name.clone()
+    }
+
+    fn get_url(&self) -> Option<String> {
+        Some(self.url.clone())
+    }
+}

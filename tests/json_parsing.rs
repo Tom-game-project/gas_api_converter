@@ -1,5 +1,5 @@
 use gas_api_json::{
-    convert_wit_type_string2, read_all_service_definition, read_service_definition, wit_gen_func_def, wit_parameters_string, Js2WitConvertErr, JsTypeString, Type
+    convert_wit_type_string, read_all_service_definition, read_service_definition, wit_gen_func_def, wit_parameters_string, Js2WitConvertErr, JsTypeString, Type
 };
 
 use std::path::Path;
@@ -35,7 +35,7 @@ fn test_convert_wit_type_string()
 {
     let a = "Blob[][]";
 
-    match convert_wit_type_string2(
+    match convert_wit_type_string(
              &Type {
                  name: a.to_string(),
                  url: None

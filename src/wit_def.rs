@@ -1,7 +1,4 @@
-use crate::wit::WitTypeString;
-
-
-struct WitDefFile
+pub struct WitDefFile
 {
     package_name: String,
     package_version: Option<String>,
@@ -61,11 +58,11 @@ struct WitWorldSection
 
 
 /// witを生成する
-fn generate_wit_definition(wit_def_file: &WitDefFile)
+pub fn generate_wit_definition(wit_def_file: &WitDefFile) -> String
 {
     let mut rlist = vec![];
 
-    rlist.push(format!("gas:{}{};",
+    rlist.push(format!("package gas:{}{};",
             wit_def_file.package_name,   // サービス(パッケージ)の名前
             wit_def_file.package_version // サービス(サービス)のバージョン
                 .clone()
@@ -81,14 +78,22 @@ fn generate_wit_definition(wit_def_file: &WitDefFile)
     {
         rlist.push(generate_wit_interface_string(i));
     }
-    return ;
+    return rlist.join("\n");
 }
 
 fn generate_wit_uses(deps_uses: &[String]) -> Vec<String>
 {
     deps_uses
         .iter()
-        .map(|i| format!("use {}.{{{}}}", i, i))
+        .map(|i| {
+            let c = 
+                &JsTypeString(i.to_string());
+            let (_, a) = get_interface_name_from_js_type(
+                c
+            ).unwrap();
+            let aa = a.to_case(Case::Kebab);
+            format!("use {}.{{{}}}", aa, aa)
+        })
         .collect()
 }
 
@@ -96,16 +101,16 @@ fn generate_wit_interface_string(wit_interface: &WitInterface) -> String
 {
     // wit_interface.name
     let rstring = format!(
-"{} {{
+"interface {} {{
 {}
 {}
 }}",
     wit_interface.name,
     generate_wit_uses(&wit_interface.deps_uses)
     .iter()
-    .map(|i| format!("    {};",i))
+    .map(|i| format!("    {};\n",i))
     .collect::<String>(),
-generate_wit_inner_struct(&wit_interface.inner_data), // TODO : wit_interface.inner_data
+    generate_wit_inner_struct(&wit_interface.inner_data), // TODO : wit_interface.inner_data
 );
     rstring
 }
@@ -115,52 +120,49 @@ fn generate_wit_inner_struct(wit_data_type: &WitDataType) -> String
     match wit_data_type {
         WitDataType::WitInterfaceConst(inner) => {
             format!("
-    interface {} {{
 {}
-    }}",
-    inner.name, 
+",
     inner.func_defines
         .iter()
-        .map(|i| format!("        {};", i))
+        .map(|i| format!("        {};\n", i))
         .collect::<String>())
         }
         WitDataType::WitInterfaceEnum(inner) => {
             format!("
-    interface {} {{
+
         enum {} {{
 {}
         }}
-    }}",
-    inner.name, 
+",
     inner.name, 
     inner.enum_members
         .iter()
-        .map(|i| format!("            {};", i))
+        .map(|i| format!("            {},\n", i))
         .collect::<String>())
         }
         WitDataType::WitInterfaceResource(inner) => {
             format!("
-    interface {} {{
         resource {} {{
 {}
         }}
-    }}",
-    inner.name, 
+",
     inner.name, 
     inner.func_defines
         .iter()
-        .map(|i| format!("            {};", i))
+        .map(|i| format!("            {};\n", i))
         .collect::<String>())
         }
     }
 }
 
-use crate::{find_type_define_location, get_interface_name_from_js_type, wit_gen_func_def, wit_gen_interface_use, wit_gen_service_use, Class, InterfaceType, Js2WitConvertErr, Method, TypeDefineLocation};
+use crate::{find_type_define_location, get_interface_name_from_js_type, wit_gen_func_def,Class, InterfaceType, Js2WitConvertErr, Method, TypeDefineLocation};
 use crate::{ json_struct::{ApiService}, 
     wit::JsTypeString
 };
 
-use std::{collections::HashSet, hash::Hash, path::Path};
+use std::{collections::HashSet};
+
+use convert_case::{Case, Casing};
 
 use owo_colors::OwoColorize;
 
@@ -182,8 +184,6 @@ where
     rlist
 }
 
-
-
 fn eq_type_define_location_and_service(
     type_define_location:&TypeDefineLocation, // 型が定義されている部分の情報
     service: &ApiService                      // サービス(の名前)
@@ -199,14 +199,11 @@ fn get_func_def_string_vec(methods: &[Method]) -> Result<(Vec<String>, HashSet<J
     for j in methods {
         match wit_gen_func_def(j){
             Ok(b) => {
-                //println!("Primitive クラス: {}", b.0.green());
                 rlist.push(b.0);
             }
             Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) => {
-                //println!("Primitiveでない: {}", wit_type_string.0.purple());
                 rlist.push(wit_type_string.0);
                 deps_uses.extend(unknown_fields);
-                //println!("次の型の定義の確認が必要です {:?}", unknown_fields);
             }
             Err(e) => {
                 return Err(e);
@@ -227,7 +224,7 @@ fn generate_wit_data_type(
     class: &Class,
     target_service: &ApiService,
     service_list: &[ApiService]
-) -> Result<WitInterface, Js2WitConvertErr>
+) -> Result<(WitInterface, Vec<TypeDefineLocation>), Js2WitConvertErr>
 {
     let js_type = &JsTypeString(class.name.clone());
     let inter_face_type = get_interface_name_from_js_type(js_type);
@@ -251,6 +248,7 @@ fn generate_wit_data_type(
                 out_of_service // サービス外で定義された型
             ):(Vec<_>, Vec<_>) =
                 type_location
+                    .clone()
                     .into_iter()
                     .partition(
                         |inner| 
@@ -259,35 +257,46 @@ fn generate_wit_data_type(
                         //
                     );
 
-            return Ok(
+            let kebab_class_name = class_name.to_case(Case::Kebab);
+            return Ok((
                 WitInterface { 
-                    name: class_name.to_string(),
-                    deps_uses: todo!(),
+                    name: kebab_class_name.clone()
+                        ,
+                    deps_uses: type_location
+                                .iter()
+                                .map(
+                                    |i| i.class.0.clone())
+                                .collect(),
                     inner_data:
                         WitDataType::WitInterfaceResource(WitInterfaceResource { 
-                            name: class_name.to_string(), 
+                            name: kebab_class_name, 
                             func_defines: func_def_string_list
                         }
                     )
-                }
+                },
+                out_of_service
+                )
             );
+            
         } else {
-            //println!("{}", "Something Wrong!".red());
             return Err(Js2WitConvertErr::WrongFormatErr);
         }
     }
     else if let Some((InterfaceType::Enum, enum_name)) = inter_face_type
     {
-        return Ok(WitInterface { 
+        return Ok(
+            (WitInterface { 
                     name: enum_name.to_string(),
-                    deps_uses: todo!(),
+                    deps_uses: vec![],
                     inner_data: WitDataType::WitInterfaceEnum(
                         WitInterfaceEnum { 
                             name: enum_name.to_string(),
-                            enum_members: class.enum_members.iter().map(|i| i.name.clone()).collect()
+                            enum_members: class.enum_members.iter().map(|i| i.name.to_case(Case::Kebab)).collect()
                         }
                     )
-        });
+            }, 
+            vec![]
+        ));
     }
     // else if let Some((InterfaceType::Interface, _)) = inter_face_type
     // {
@@ -304,17 +313,41 @@ impl WitDefFile {
         service_list: &[ApiService],
     ) -> Self
     {
-        for i in &target_service.classes {
-            //println!("class name \"{}\"", i.name);
+        let mut out_service = vec![];
+        let mut wit_interface_list = vec![];
 
+        for i in &target_service.classes {
+            if let Ok((j, k))= generate_wit_data_type(
+                i, target_service, service_list
+            )
+            {
+                out_service = [out_service, k].concat();
+                wit_interface_list.push(j);
+            }
+            else
+            {
+                // TODO: Errorが起きて変換が出来ないclassがあった場合それを通知する方法を考える
+            }
         }
 
         Self {
-            package_name: target_service.service_name,
+            package_name: target_service.service_name.clone(),
             package_version: Some("0.1.0-alpha".to_string()),
-            deps_uses: (),
-            defined_interfaces: (),
-            world_section: () 
+            deps_uses: out_service
+                .iter()
+                .map(|i|{
+                    let c = 
+                        &JsTypeString(i.class.0.to_string());
+                    let (_, a) = get_interface_name_from_js_type(
+                        c
+                    ).unwrap();
+                    let aa = a.to_case(Case::Kebab);
+                    format!("use gas:{}/{}@0.1.0-alpha", i.service.0, aa)
+                }
+                )
+                .collect(),
+            defined_interfaces: wit_interface_list,
+            world_section: WitWorldSection { imports: vec![], exports: vec![] }
         }
     }
 }

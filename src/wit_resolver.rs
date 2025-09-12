@@ -2,7 +2,7 @@ use crate::{ json_struct::{ApiService, Class},
     wit::JsTypeString
 };
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct TypeDefineLocation
 {
     pub service: JsTypeString,

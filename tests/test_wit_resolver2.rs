@@ -7,7 +7,7 @@ fn test_wit_generator00()
 {
     let path = "./api-def"; // 対象のディレクトリ
     let service_list = read_all_service_definition(path).unwrap();
-    let result = service_list.iter().find(|a|a.service_name == "spreadsheet").unwrap();
+    let result = service_list.iter().find(|a|a.service_name == "drive").unwrap();
 
 
 

@@ -104,7 +104,8 @@ fn generate_wit_interface_string(wit_interface: &WitInterface) -> String
 "interface {} {{
 {}
 {}
-}}",
+}}
+",
     wit_interface.name,
     generate_wit_uses(&wit_interface.deps_uses)
     .iter()
@@ -286,11 +287,11 @@ fn generate_wit_data_type(
     {
         return Ok(
             (WitInterface { 
-                    name: enum_name.to_string(),
+                    name: enum_name.to_case(Case::Kebab),
                     deps_uses: vec![],
                     inner_data: WitDataType::WitInterfaceEnum(
                         WitInterfaceEnum { 
-                            name: enum_name.to_string(),
+                            name: enum_name.to_case(Case::Kebab),
                             enum_members: class.enum_members.iter().map(|i| i.name.to_case(Case::Kebab)).collect()
                         }
                     )
@@ -308,6 +309,7 @@ fn generate_wit_data_type(
 }
 
 impl WitDefFile {
+    /// WITファイルを出力するために必要な構造体の初期化
     pub fn new(
         target_service: &ApiService,
         service_list: &[ApiService],
@@ -345,6 +347,8 @@ impl WitDefFile {
                     format!("use gas:{}/{}@0.1.0-alpha", i.service.0, aa)
                 }
                 )
+                .collect::<HashSet<String>>()
+                .into_iter()
                 .collect(),
             defined_interfaces: wit_interface_list,
             world_section: WitWorldSection { imports: vec![], exports: vec![] }

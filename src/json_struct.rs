@@ -91,3 +91,4 @@ impl TypeTrait for Class {
         Some(self.url.clone())
     }
 }
+

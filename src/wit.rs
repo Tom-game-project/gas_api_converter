@@ -5,6 +5,12 @@ use convert_case::{Case, Casing};
 
 #[derive(Clone, Debug, Eq, PartialEq, Hash)]
 pub struct JsTypeString(pub String);
+
+pub trait Conv2JsTypeString {
+    fn conv2_js_type_string(self) -> JsTypeString;
+}
+
+
 #[derive(Debug)]
 pub struct WitTypeString(pub String);
 

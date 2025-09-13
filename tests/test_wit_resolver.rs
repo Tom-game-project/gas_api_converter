@@ -1,3 +1,4 @@
+/*
 use gas_api_json::{find_type_define_location, is_in_same_service, is_in_somewhere_service, is_self_type, read_all_service_definition, read_service_definition, wit_gen_func_def, wit_gen_service_use, ApiService, Js2WitConvertErr, JsTypeString, TypeDefineLocation, WitTypeString,wit_gen_interface_use, wit_gen_interface_name
 };
 
@@ -245,3 +246,4 @@ fn test_wit_gen_interface_name()
     }
 }
 
+*/

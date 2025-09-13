@@ -1,5 +1,5 @@
 use crate::{ json_struct::{ApiService, Class}, 
-    wit::JsTypeString
+    wit::JsTypeString, TypeRequirements
 };
 
 #[derive(Clone, Debug)]
@@ -13,7 +13,7 @@ pub struct TypeDefineLocation
 /// 
 pub fn find_type_define_location(
     self_service_set: &[ApiService],
-    js_type: &JsTypeString
+    js_type: &TypeRequirements
 ) -> Option<TypeDefineLocation>
 {
     self_service_set
@@ -69,7 +69,7 @@ pub fn get_interface_name_from_js_type(js_type: &JsTypeString) -> Option<(Interf
     }
 }
 
-pub fn is_self_type(self_class: &Class, js_type: &JsTypeString) -> bool
+pub fn is_self_type(self_class: &Class, type_requirements: &TypeRequirements) -> bool
 {
     if let Some((_, sliced)) = get_interface_name_from_js_type(
         &JsTypeString(
@@ -77,7 +77,7 @@ pub fn is_self_type(self_class: &Class, js_type: &JsTypeString) -> bool
         )
     )
     {
-        sliced == js_type.0
+        sliced == type_requirements.0
     }
     else 
     {
@@ -87,7 +87,7 @@ pub fn is_self_type(self_class: &Class, js_type: &JsTypeString) -> bool
 
 pub fn is_in_same_service(
     self_service: &ApiService,
-    js_type: &JsTypeString
+    js_type: &TypeRequirements
 ) -> bool
 {
     self_service.classes.iter().any(
@@ -97,7 +97,7 @@ pub fn is_in_same_service(
 
 pub fn is_in_somewhere_service(
     self_service_set: &[ApiService],
-    js_type: &JsTypeString
+    js_type: &TypeRequirements
 ) -> bool
 {
     self_service_set.iter().any(

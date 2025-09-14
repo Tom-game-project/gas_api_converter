@@ -1,4 +1,4 @@
-use gas_api_json::{generate_wit_definition, generate_wit_definition_string, read_all_service_definition, WitDefFile};
+use gas_api_json::{generate_wit_definition, generate_wit_definition_string, generate_wit_definition_with_filter, read_all_service_definition, JsTypeString, WitDefFile};
 use owo_colors::OwoColorize;
 
 
@@ -25,16 +25,47 @@ fn test_wit_generator01()
     let service_list = read_all_service_definition(path).unwrap();
     let result = service_list.iter().find(|a|a.service_name == "drive").unwrap();
 
-    if let Ok(wit_def_file) = generate_wit_definition(
+    let r = generate_wit_definition(
         &result,
         &service_list
-    )
-    {
+    );
+
+    if let Ok(wit_def_file) = r {
         let wit_def = generate_wit_definition_string(&wit_def_file);
         println!("{}", wit_def);
     }
-    else 
+    else if let Err(e) = r
     {
-        println!("{}", "Something Wrong!".red());
+        println!("{:?}", e.red());
+    }
+}
+
+#[test]
+fn test_wit_generator02()
+{
+    let path = "./api-def"; // 対象のディレクトリ
+    let service_list = read_all_service_definition(path).unwrap();
+    let result = service_list.iter().find(|a|a.service_name == "drive").unwrap();
+
+    let r = generate_wit_definition_with_filter(
+        &result,
+        &service_list,
+        &vec![
+            JsTypeString("FolderIterator".to_string()),
+            JsTypeString("FileIterator".to_string()),
+            JsTypeString("File".to_string()),
+            JsTypeString("Folder".to_string()),
+            JsTypeString("Blob".to_string()),
+            JsTypeString("DriveApp".to_string()),
+        ]
+    );
+
+    if let Ok(wit_def_file) = r {
+        let wit_def = generate_wit_definition_string(&wit_def_file);
+        println!("{}", wit_def);
+    }
+    else if let Err(e) = r
+    {
+        println!("{:?}", e.red());
     }
 }

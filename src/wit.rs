@@ -1,3 +1,5 @@
+/// Object...の扱い方を決める
+
 use std::fmt::Debug;
 
 use crate::{get_interface_name_from_js_type, json_struct::{ApiService, Method, Parameter}, Type, TypeTrait};
@@ -20,7 +22,7 @@ pub enum Js2WitConvertErr{
         wit_type_string: WitTypeString, 
         unknown_fields:Vec<JsTypeString>
     }, // このエラーは条件付きで正常に復帰可能
-    ParameterStringErr,
+    ParameterStringErr(String),
     ReturnStringErr,
     SyntaxErr,
     WrongFormatErr,
@@ -64,7 +66,7 @@ fn wit_convert_arg_type_pair(parameter: &Parameter) -> Result<WitTypeString, Js2
     }
     else 
     {
-        return Err(Js2WitConvertErr::ParameterStringErr);
+        return Err(Js2WitConvertErr::ParameterStringErr(format!("{:?}", parameter)));
     }
 }
 
@@ -118,6 +120,7 @@ where T: TypeTrait
             "Integer" => return Ok(WitTypeString("s64".to_string())),
             "void" => return Ok(WitTypeString("void".to_string())), // 特別
             "Object" => return Ok(WitTypeString("object".to_string())), // 少し考える必要がある部分
+            "Object..." => return Ok(WitTypeString("object/*...*/".to_string())), // 少し考える必要がある部分
             "Date" => return Ok(WitTypeString("date".to_string())),
             _ => {
             }
@@ -207,7 +210,9 @@ pub fn wit_gen_func_def(method: &Method) -> Result<WitTypeString, Js2WitConvertE
         wit_type_string
     }
     else {
-        return Err(Js2WitConvertErr::ParameterStringErr);
+        return Err(Js2WitConvertErr::ParameterStringErr(format!("
+{:?}
+", method.parameters)));
     };
 
     // ========================================
@@ -284,7 +289,6 @@ pub fn wit_gen_interface_name(js_type_name: &JsTypeString) -> Result<WitTypeStri
         Err(Js2WitConvertErr::WrongFormatErr)
     }
 }
-
 
 pub fn wit_gen_package_name(prefix: &str, target_service:&ApiService, wit_version: Option<&WitTypeString>) -> WitTypeString
 {

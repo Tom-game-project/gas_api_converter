@@ -5,11 +5,13 @@ mod wit;
 mod json_struct;
 mod wit_resolver;
 mod wit_def;
+mod wit_setting;
 
 pub use json_struct::*;
 pub use wit::*;
 pub use wit_resolver::*;
 pub use wit_def::*;
+pub use wit_setting::*;
 
 pub fn read_service_definition(file_path: &Path) -> Result<ApiService, Box<dyn std::error::Error>> 
 {

@@ -66,7 +66,7 @@ fn wit_convert_arg_type_pair(parameter: &Parameter) -> Result<WitTypeString, Js2
     }
     else 
     {
-        return Err(Js2WitConvertErr::ParameterStringErr(format!("{:?}", parameter)));
+        Err(Js2WitConvertErr::ParameterStringErr(format!("{parameter:?}")))
     }
 }
 

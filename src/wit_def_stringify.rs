@@ -55,48 +55,46 @@ fn generate_wit_uses(deps_uses: &[TypeRequirements]) -> Vec<String> {
 }
 
 fn generate_wit_inner_struct(wit_data_type: &WitDataType) -> String {
-    match wit_data_type {
-        WitDataType::WitInterfaceConst(inner) => {
-            format!(
-                "
+    if let WitDataType::WitInterfaceConst(inner) = wit_data_type {
+        format!(
+            "
 {}
 ",
-                inner
-                    .func_defines
-                    .iter()
-                    .map(|i| format!("    {i};\n"))
-                    .collect::<String>()
-            )
-        }
-        WitDataType::WitInterfaceEnum(inner) => {
-            format!(
-                "
-    enum {} {{
+            inner
+                .func_defines
+                .iter()
+                .map(|i| format!("    {i};\n"))
+                .collect::<String>()
+        )
+    } else if let WitDataType::WitInterfaceEnum(inner) = wit_data_type {
+        format!(
+            "
+enum {} {{
 {}
-    }}
+}}
 ",
-                inner.name.to_case(Case::Kebab),
-                inner
-                    .enum_members
-                    .iter()
-                    .map(|i| format!("        {},\n", i.to_case(Case::Kebab)))
-                    .collect::<String>()
-            )
-        }
-        WitDataType::WitInterfaceResource(inner) => {
-            format!(
-                "
-    resource {} {{
+            inner.name.to_case(Case::Kebab),
+            inner
+                .enum_members
+                .iter()
+                .map(|i| format!("        {},\n", i.to_case(Case::Kebab)))
+                .collect::<String>()
+        )
+    } else if let WitDataType::WitInterfaceResource(inner) = wit_data_type {
+        format!(
+            "
+resource {} {{
 {}
-    }}
+}}
 ",
-                inner.name.to_case(Case::Kebab),
-                inner
-                    .func_defines
-                    .iter()
-                    .map(|i| format!("        {i};\n"))
-                    .collect::<String>()
-            )
-        }
+            inner.name.to_case(Case::Kebab),
+            inner
+                .func_defines
+                .iter()
+                .map(|i| format!("        {i};\n"))
+                .collect::<String>()
+        )
+    } else {
+        unreachable!()
     }
 }

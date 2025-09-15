@@ -210,7 +210,7 @@ pub fn wit_gen_func_def(method: &Method) -> Result<WitTypeString, Js2WitConvertE
     } else {
         format!("func ({}) -> {}", wit_parameters.0, wit_return.0)
     };
-    let r_text = WitTypeString(format!("{}: {}", func_name, func_type));
+    let r_text = WitTypeString(format!("{func_name}: {func_type}"));
 
     if unknown_fields_gather.is_empty() {
         Ok(r_text)

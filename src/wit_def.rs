@@ -332,7 +332,7 @@ fn generate_wit_data_type(
                     .iter()
                     .map(|i| i.0.clone())
                     .collect();
-                if is_used_by_others(class, &service_requirements) {
+                if is_used_by_others(class, service_requirements) {
                     // resource
                     Ok(WitDataType::WitInterfaceResource(WitInterfaceResource {
                         name: wit_class_name.to_string(),

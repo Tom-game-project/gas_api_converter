@@ -3,10 +3,10 @@ use std::path::Path;
 
 mod json_struct;
 mod wit;
+mod wit_config;
 mod wit_def;
 mod wit_def_stringify;
 mod wit_resolver;
-mod wit_config;
 
 pub use json_struct::*;
 pub use wit::*;

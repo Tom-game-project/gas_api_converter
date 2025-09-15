@@ -6,7 +6,7 @@ mod wit;
 mod wit_def;
 mod wit_def_stringify;
 mod wit_resolver;
-mod wit_setting;
+mod wit_config;
 
 pub use json_struct::*;
 pub use wit::*;
@@ -14,7 +14,7 @@ pub use wit_def::*;
 pub use wit_def_stringify::*;
 pub use wit_resolver::*;
 
-pub use wit_setting::*;
+pub use wit_config::*;
 
 pub fn read_service_definition(file_path: &Path) -> Result<ApiService, Box<dyn std::error::Error>> {
     let content = fs::read_to_string(file_path)?;

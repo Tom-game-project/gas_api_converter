@@ -58,11 +58,6 @@ pub struct WitInterfaceEnum {
     pub enum_members: Vec<String>,
 }
 
-/// Use文のためのセクション
-/// witファイル先頭で使う場合(BeyondService)
-/// と、ファイルの中のinterfaceを超えて型を利用する場合(BetondInterface)
-/// で使い分ける
-
 #[derive(Debug)]
 pub struct WitWorldSection {
     pub imports: Vec<String>,
@@ -233,7 +228,7 @@ fn is_used_by_others(class: &Class, type_requirements_list: &HashSet<&TypeRequir
 pub fn generate_wit_definition_with_filter(
     target_service: &ApiService,
     api_services: &[ApiService],
-    allowed_interfaces: &[JsTypeString],
+    allowed_interfaces: &[JsTypeString], // ここは設定用構造体を渡すようにする
 ) -> Result<WitDefFile, Js2WitConvertErr> {
     let all_method =
         generate_wit_methods_in_service_with_filter(&target_service.classes, allowed_interfaces)?;
@@ -285,6 +280,7 @@ pub fn generate_wit_definition_with_filter(
     })
 }
 
+// `interface{}`としてまとめられるものを集める
 fn generate_wit_interface(
     class: &Class,
     class_hashmap: &HashMap<
@@ -317,7 +313,7 @@ fn generate_wit_interface(
     }
 }
 
-/// class interface enumの単位の出力
+/// class interface enum単位の出力
 fn generate_wit_data_type(
     class: &Class,
     class_hashmap: &HashMap<JsClassName, (Vec<WitFuncDef>, HashSet<TypeRequirements>)>,

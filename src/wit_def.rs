@@ -11,25 +11,27 @@ use convert_case::{Case, Casing};
 
 use owo_colors::OwoColorize;
 
-
+#[derive(Debug)]
 pub struct WitDefFile
 {
-    package_name: String,
-    package_version: Option<String>,
-    deps_uses: Vec<String>, // use ...; サービスを超えて必要になるinterfaceのimport
-    defined_interfaces: Vec<WitInterface>,
-    world_section: WitWorldSection,
+    pub package_name: String,
+    pub package_version: Option<String>,
+    pub deps_uses: Vec<String>, // use ...; サービスを超えて必要になるinterfaceのimport
+    pub defined_interfaces: Vec<WitInterface>,
+    pub world_section: WitWorldSection,
 }
 
-struct WitInterface
+#[derive(Debug)]
+pub struct WitInterface
 {
-    name: String,
+    pub name: String,
     /// (example: [blob, file])
-    deps_uses: Vec<TypeRequirements>, // 必要とされる型
-    inner_data: WitDataType,
+    pub deps_uses: Vec<TypeRequirements>, // 必要とされる型
+    pub inner_data: WitDataType,
 }
 
-enum WitDataType
+#[derive(Debug)]
+pub enum WitDataType
 {
     /// 自分自身が要素として返却されないクラス
     WitInterfaceConst(WitInterfaceConst),
@@ -40,23 +42,26 @@ enum WitDataType
 }
 
 // 自分自身が自分を含めた他のクラスのメソッドの返り値とならないような型
-struct WitInterfaceConst
+#[derive(Debug)]
+pub struct WitInterfaceConst
 {
-    name: String,
-    func_defines:Vec<String>,
+    pub name: String,
+    pub func_defines:Vec<String>,
 }
 
 // 自分自身が自分を含めた他のクラスのメソッドの返り値となるような型
-struct WitInterfaceResource
+#[derive(Debug)]
+pub struct WitInterfaceResource
 {
-    name: String,
-    func_defines:Vec<String>,
+    pub name: String,
+    pub func_defines:Vec<String>,
 }
 
-struct WitInterfaceEnum
+#[derive(Debug)]
+pub struct WitInterfaceEnum
 {
-    name: String,
-    enum_members: Vec<String>,
+    pub name: String,
+    pub enum_members: Vec<String>,
 }
 
 /// Use文のためのセクション
@@ -64,104 +69,11 @@ struct WitInterfaceEnum
 /// と、ファイルの中のinterfaceを超えて型を利用する場合(BetondInterface)
 /// で使い分ける
 
-struct WitWorldSection
+#[derive(Debug)]
+pub struct WitWorldSection
 {
-    imports: Vec<String>,
-    exports: Vec<String>,
-}
-
-
-/// witを生成する
-pub fn generate_wit_definition_string(wit_def_file: &WitDefFile) -> String
-{
-    let mut rlist = vec![];
-
-    rlist.push(format!("package gas:{}{};\n",
-            wit_def_file.package_name,   // サービス(パッケージ)の名前
-            wit_def_file.package_version // サービス(サービス)のバージョン
-                .clone()
-                .map_or(String::new(), |i| format!("@{}", i))
-    ));
-
-    // ==== useセクション(サービス全体で必要となるインターフェイスのimport) ====
-    for i in &wit_def_file.deps_uses{
-        rlist.push(format!("{};", i));
-    }
-
-    for i in &wit_def_file.defined_interfaces
-    {
-        rlist.push(generate_wit_interface_string(i));
-    }
-    return rlist.join("\n");
-}
-
-fn generate_wit_uses(deps_uses: &[TypeRequirements]) -> Vec<String>
-{
-    deps_uses
-        .iter()
-        .map(|i| {
-            let aa = i.0.to_case(Case::Kebab);
-            format!("use {}.{{{}}}", aa, aa)
-        })
-        .collect()
-}
-
-fn generate_wit_interface_string(wit_interface: &WitInterface) -> String
-{
-    // wit_interface.name
-    let rstring = format!(
-"interface {} {{
-{}
-{}
-}}
-",
-    wit_interface.name.to_case(Case::Kebab),
-    generate_wit_uses(&wit_interface.deps_uses)
-    .iter()
-    .map(|i| format!("    {};\n",i))
-    .collect::<String>(),
-    generate_wit_inner_struct(&wit_interface.inner_data),
-);
-    rstring
-}
-
-fn generate_wit_inner_struct(wit_data_type: &WitDataType) -> String
-{
-    match wit_data_type {
-        WitDataType::WitInterfaceConst(inner) => {
-            format!("
-{}
-",
-    inner.func_defines
-        .iter()
-        .map(|i| format!("    {};\n", i))
-        .collect::<String>())
-        }
-        WitDataType::WitInterfaceEnum(inner) => {
-            format!("
-    enum {} {{
-{}
-    }}
-",
-    inner.name.to_case(Case::Kebab), 
-    inner.enum_members
-        .iter()
-        .map(|i| format!("        {},\n", i.to_case(Case::Kebab)))
-        .collect::<String>())
-        }
-        WitDataType::WitInterfaceResource(inner) => {
-            format!("
-    resource {} {{
-{}
-    }}
-",
-    inner.name.to_case(Case::Kebab), 
-    inner.func_defines
-        .iter()
-        .map(|i| format!("        {};\n", i))
-        .collect::<String>())
-        }
-    }
+    pub imports: Vec<String>,
+    pub exports: Vec<String>,
 }
 
 fn required_find_type_define_location<'a, T>(
@@ -191,30 +103,6 @@ fn eq_type_define_location_and_service(
     type_define_location.service.0 == service.service_name
 }
 
-fn get_func_def_string_vec(
-    methods: &[Method]
-) -> Result<(Vec<WitFuncDef>, HashSet<JsTypeString>), Js2WitConvertErr>
-{
-    let mut rlist = vec![];                       // メソッドの定義をwit文字列にしたもの
-    let mut deps_uses: HashSet<JsTypeString> = HashSet::new(); // メソッド集合を定義するクラスが必要とする型
-    for j in methods {
-        match wit_gen_func_def(j){
-            Ok(b) => {
-                rlist.push(
-                    b.0.conv2_wit_func_def()
-                );
-            }
-            Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields: unknown_interface}) => {
-                rlist.push(wit_type_string.conv2_wit_func_def());
-                deps_uses.extend(unknown_interface);
-            }
-            Err(e) => {
-                return Err(e);
-            }
-        }
-    }
-    Ok((rlist, deps_uses))
-}
 
 fn get_func_def_string_vec_with_filter(
     methods: &[Method],
@@ -259,7 +147,6 @@ fn get_func_def_string_vec_with_filter(
 #[derive(Clone)]
 struct WitFuncDef(String);
 
-
 // TODO 本来であれば変換のたびに検証をしたい
 trait Conv2WitFuncDef {
     fn conv2_wit_func_def(self) -> WitFuncDef;
@@ -280,7 +167,7 @@ impl Conv2WitFuncDef for WitTypeString
     }
 }
 
-#[derive(Hash, PartialEq, Eq, Clone)]
+#[derive(Debug, Hash, PartialEq, Eq, Clone)]
 pub struct TypeRequirements(pub String);
 
 trait Conv2TypeRequirements {
@@ -328,41 +215,6 @@ impl Conv2JsTypeString for String
     }
 }
 
-/// サービスの中で定義された関数定義をすべてみる
-/// クラス(Key) メソッドのリストと必要な型情報のセット(value)を返却する
-fn generate_wit_methods_in_service(
-    class_list:&[Class] // サービス内に存在するすべてのinterface
-) -> Result<
-    HashMap<
-        JsClassName,
-        (
-            Vec<WitFuncDef>,
-            HashSet<TypeRequirements>
-        )>,
-    Js2WitConvertErr>
-{
-    let mut class_methods_dir = HashMap::new();
-    for class in class_list {
-        let b = get_func_def_string_vec(&class.methods);
-        if let Ok((i0, i1)) = b
-        {
-            let typed_list = i0;
-            let type_requirements = i1
-                .iter()
-                .map(|i| i.clone().conv2_type_requirements())
-                .collect();
-            class_methods_dir.insert(
-                class.name.clone().conv2_class_name(),
-                (typed_list, type_requirements));
-        }
-        else if let Err(e) = b
-        {
-            return Err(e);
-        }
-    }
-    Ok(class_methods_dir)
-}
-
 /// サービス内に存在するメソッドのうち条件に当てはまるものを
 fn generate_wit_methods_in_service_with_filter(
     class_list:&[Class], // サービス内に存在するすべてのinterface
@@ -406,65 +258,6 @@ fn is_used_by_others(class: &Class, type_requirements_list: &HashSet<&TypeRequir
     let js_type = get_interface_name_from_js_type(&js_type_string);
     let (_, j) = js_type.unwrap();
     type_requirements_list.contains(&TypeRequirements(j.to_string()))
-}
-
-/// wit定義を表現する構造体を生成する
-pub fn generate_wit_definition(
-    target_service: &ApiService,
-    api_services :&[ApiService],
-) -> Result<WitDefFile, Js2WitConvertErr>
-{
-    let all_method 
-        = generate_wit_methods_in_service(&target_service.classes)?;
-    let ts 
-        = all_method.values().flat_map(|(_, hs)| hs.iter()).collect();
-
-    let mut defined_interfaces = vec![];
-    // サービス内のすべてのクラス
-    for class in &target_service.classes {
-        // クラスごとに処理して
-        if let Ok(wit_interface) = 
-            generate_wit_interface(
-                class, 
-                &all_method,
-                &ts
-            )
-        {
-            defined_interfaces.push(wit_interface);
-        }
-        else
-        {
-        }
-    }
-
-    // サービスで必要となるもの
-    let deps_uses 
-        = required_find_type_define_location(
-            api_services,
-            ts
-        )
-        .iter()
-        .filter(|i| i.service.0 != target_service.service_name) // サービスを超えてimportするもの
-        .map(|i|{
-            let c = &i.class.0.clone().conv2_js_type_string();
-            let (_, a) = get_interface_name_from_js_type(
-                c
-            ).unwrap();
-            let aa = a.to_case(Case::Kebab);
-            format!("use gas:{}/{}@0.1.0-alpha", i.service.0, aa)
-        }
-        )
-        .collect::<HashSet<String>>()
-        .into_iter()
-        .collect();
-
-    Ok(WitDefFile { 
-        package_name: target_service.service_name.clone(),
-        package_version: Some("0.1.0-alpha".to_string()),
-        deps_uses,
-        defined_interfaces,
-        world_section: WitWorldSection { imports: vec![], exports: vec![] }
-    })
 }
 
 

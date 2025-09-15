@@ -63,7 +63,7 @@ fn test_wit_gen_func_def00()
     let file_path = Path::new("api-def/drive.json");
     let result = read_service_definition(file_path);
 
-    if let Ok(api_service) = result 
+    if let Ok(api_service) = result
     {
         for i in api_service.classes {
             println!("class name \"{}\"", i.name);
@@ -86,7 +86,7 @@ fn test_wit_gen_func_def00()
             }
             println!("===");
         }
-    
+
     }
     else
     {
@@ -98,7 +98,7 @@ fn required_find_type_define_location<'a, T>(
     self_service_set: &[ApiService],  // すべてのサービスを格納したリストなど
     deps_uses: T                      // unknown_fieldsから返されたJsTypeStringのリストなど
 ) -> Vec<TypeDefineLocation>
-where 
+where
     T: IntoIterator<Item = &'a JsTypeString>
 {
     let mut rlist = vec![];
@@ -127,7 +127,7 @@ fn test_wit_gen_func_def01()
     let service_list = read_all_service_definition(path).unwrap();
     let result = service_list.iter().find(|a|a.service_name == "spreadsheet");
 
-    if let Some(api_service) = result 
+    if let Some(api_service) = result
     {
         //let mut deps_uses_service = HashSet::new();
         for i in &api_service.classes {
@@ -141,7 +141,7 @@ fn test_wit_gen_func_def01()
                     }
                     Err(Js2WitConvertErr::NotPrimitiveType{wit_type_string, unknown_fields}) => {
                         println!("Primitiveでない: {}", wit_type_string.0.purple());
-                        
+
                         deps_uses.extend(unknown_fields);
                         //println!("次の型の定義の確認が必要です {:?}", unknown_fields);
                     }
@@ -150,40 +150,40 @@ fn test_wit_gen_func_def01()
                     }
                 }
             }
-            let type_location = 
+            let type_location =
                 required_find_type_define_location(&service_list, &deps_uses);
             // 依存する型の列挙
 
-            // JsTypeString(api_service.service_name) == 
+            // JsTypeString(api_service.service_name) ==
 
             let (in_of_service, out_of_service):(Vec<_>, Vec<_>) =
                 type_location
                     .into_iter()
                     .partition(
-                        |inner| 
-                        eq_type_define_location_and_service(inner, &api_service) 
+                        |inner|
+                        eq_type_define_location_and_service(inner, &api_service)
                         // 型の定義がサービスファイル内にあるかどうか？
                     );
 
             println!("=== in of service ===");
             for i in &in_of_service {
-                if let Ok(a) = 
+                if let Ok(a) =
                     wit_gen_interface_use(&i.class)
                 {
                     println!("{}",
                         a.0.cyan()
                     );
                 }
-                else 
+                else
                 {
                     println!("{}", "Something Wrong".red());
                 }
             }
             println!("=== out of service ===");
             for i in  &out_of_service {
-                if let Ok(a) = 
+                if let Ok(a) =
                     wit_gen_service_use(
-                        "gas", 
+                        "gas",
                         &i.service,
                         &i.class,
                         Some(
@@ -192,20 +192,20 @@ fn test_wit_gen_func_def01()
                 )
                 {
                     println!("{}", a.0.blue())
-                    
+
                 }
                 else
                 {
                     println!("{}", "Something Wrong!".red());
                 }
-                if let Ok(a) = 
+                if let Ok(a) =
                     wit_gen_interface_use(&i.class)
                 {
                     println!("{}",
                         a.0.cyan()
                     );
                 }
-                else 
+                else
                 {
                     println!("{}", "Something Wrong".red());
                 }
@@ -240,7 +240,7 @@ fn test_wit_gen_interface_name()
     {
         println!("{}", a.0);
     }
-    else 
+    else
     {
         println!("Error");
     }

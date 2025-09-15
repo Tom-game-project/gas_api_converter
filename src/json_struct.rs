@@ -8,7 +8,8 @@ pub struct ApiService {
 }
 
 #[derive(Debug, Deserialize)]
-pub struct Class { // 型として扱われる可能性がある
+pub struct Class {
+    // 型として扱われる可能性がある
     pub name: String,
     pub url: String,
     pub description: String,
@@ -51,17 +52,14 @@ pub struct EnumMember {
     pub description: String,
 }
 
-
 pub trait TypeTrait {
     fn get_name(&self) -> String;
     fn get_url(&self) -> Option<String>;
 }
 
-
 // 型情報の取り扱いは返り値も引数も同じ
 
-impl TypeTrait for Type 
-{
+impl TypeTrait for Type {
     fn get_name(&self) -> String {
         self.name.clone()
     }
@@ -71,8 +69,7 @@ impl TypeTrait for Type
     }
 }
 
-impl TypeTrait for ReturnType
-{
+impl TypeTrait for ReturnType {
     fn get_name(&self) -> String {
         self.name.clone()
     }
@@ -91,4 +88,3 @@ impl TypeTrait for Class {
         Some(self.url.clone())
     }
 }
-
